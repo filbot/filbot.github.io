@@ -1,0 +1,824 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"te",
+				"text-transform"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"con",
+				"controller"
+			],
+			[
+				"pa",
+				"padding-left"
+			],
+			[
+				"fon",
+				"font-weight"
+			],
+			[
+				"in",
+				"input"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"ba",
+				"background"
+			],
+			[
+				"bak",
+				"background-size"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"li",
+				"link	Tag"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"over",
+				"overlayText"
+			],
+			[
+				"get",
+				"getElementById"
+			],
+			[
+				"pro",
+				"projectName"
+			],
+			[
+				"project",
+				"project-name"
+			],
+			[
+				"fa",
+				"facebook"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"jsonp",
+				"jsonpService"
+			],
+			[
+				"coll",
+				"collectionsURL"
+			],
+			[
+				"da",
+				"dataService"
+			],
+			[
+				"pad",
+				"padding"
+			],
+			[
+				"fo",
+				"font-size"
+			],
+			[
+				"p",
+				"project"
+			],
+			[
+				"border",
+				"border-right"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"bo",
+				"border-width"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"m",
+				"margin"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"my",
+				"myAppControllers"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"h",
+				"href	Attr"
+			],
+			[
+				"r",
+				"rgb()"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"font-",
+				"font-weight"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"grid",
+				"grid-container"
+			],
+			[
+				"call",
+				"callbackFunction"
+			],
+			[
+				"do",
+				"documentElement"
+			],
+			[
+				"sc",
+				"scaleX"
+			],
+			[
+				"sca",
+				"scaleY"
+			],
+			[
+				"tra",
+				"translate3d"
+			],
+			[
+				"im",
+				"imageUrl"
+			],
+			[
+				"tran",
+				"transform"
+			],
+			[
+				"img",
+				"imageHTML"
+			],
+			[
+				"sm",
+				"smart-image-container"
+			],
+			[
+				"el",
+				"element"
+			],
+			[
+				"pe",
+				"parent"
+			],
+			[
+				"sma",
+				"smart-image"
+			],
+			[
+				"gp",
+				"gpioFunction"
+			],
+			[
+				"q",
+				"q-a-with-justin"
+			],
+			[
+				"vi",
+				"vertical-align"
+			],
+			[
+				"wek",
+				"webkit-flex"
+			],
+			[
+				"ro",
+				"rotate-device-message"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"soundtrack-now",
+				"soundtrack-now-playing-title"
+			],
+			[
+				"l",
+				"line-height"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"cl",
+				"clear"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"b",
+				"border-left"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"no",
+				"no-repeat"
+			],
+			[
+				"landing",
+				"landing-title"
+			],
+			[
+				"cont",
+				"content"
+			],
+			[
+				"tr",
+				"trivia-game"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"bot",
+				"bottom"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"lett",
+				"letter-from-justin"
+			],
+			[
+				"lette",
+				"letter-title"
+			],
+			[
+				"sec",
+				"sectionB"
+			],
+			[
+				"se",
+				"sectionB"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"letter",
+				"letter-from-justin"
+			],
+			[
+				"cur",
+				"cur:p	cursor:pointer"
+			],
+			[
+				"t",
+				"twitter-logo"
+			],
+			[
+				"na",
+				"navigator-container"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"BA",
+				"background-repeat"
+			],
+			[
+				"j",
+				"jquery"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"selected_items":
+		[
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"update",
+				"Package Control: Upgrade/Overwrite All Packages"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"tidy",
+				"TidyHTML"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/filipadamczyk/Downloads/erjjones-erjjones.github.com-a83ecc6/_config.yml",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/addfriends.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/main.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/options.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/js/app.js",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/person.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/css/base.css",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/index.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/js/controllers.js",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/login.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/startdev.sh",
+		"/Users/filipadamczyk/Sites/filbot/flare/package.json",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/css/app.css",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/css/global.css",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/settings.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/Gruntfile.js",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/css/screen.css",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/views/map.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/views/chat.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/partials/main.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/partials/signup.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/partials/login.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/partials/header.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/server.js",
+		"/Users/filipadamczyk/Sites/filbot/flare/readme.md",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/partials/footer.html",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/css/style.scss",
+		"/Users/filipadamczyk/Sites/filbot/flare/web/css/_login.scss",
+		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/filipadamczyk/Sites/filbot/personal/index.html",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/partials/main.html",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/_global.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/_project.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/_main.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/social.css",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/info.php",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/lib/clamp.min.js",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/sharrre.php",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/style.min.css",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/lib/sharrre.min.js",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/partials/project.html",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/partials/learn.html",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/partials/submit.html",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/_learn.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/_submit.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/style.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/_body.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/js/controllers.js",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/js/app.js",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/index.html",
+		"/Applications/XAMPP/xamppfiles/htdocs/index.php",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/_vars.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/lib/jquery/jquery-1.10.2.min.map",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/lib/jquery/jquery-1.10.2.min.js",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/lib/clamp.js",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/lib/clamp-min.js",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/css/_renault.scss",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/partials/renault.html",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/config.json",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/js/services.js",
+		"/Users/filipadamczyk/Sites/subatomic/adobe-dps/lib/fastclick.js",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/_renault.scss",
+		"/Users/filipadamczyk/Sites/subatomic/behance/partials/renault.html",
+		"/Users/filipadamczyk/Sites/subatomic/behance/index.html",
+		"/Users/filipadamczyk/Sites/subatomic/behance/lib/n2lib/styles/_n2.scss",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/_vars.scss",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/style.scss",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/_main.scss",
+		"/Users/filipadamczyk/Sites/subatomic/behance/partials/main.html",
+		"/Users/filipadamczyk/Sites/subatomic/behance/config.rb",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/style.min.css",
+		"/Users/filipadamczyk/Sites/subatomic/behance/js/app.js",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/_custom.scss",
+		"/Users/filipadamczyk/Sites/subatomic/behance/js/controllers.js",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/social.css",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/adobe.css",
+		"/Users/filipadamczyk/Downloads/webfontkit-20130715-164155/stylesheet.css",
+		"/Users/filipadamczyk/Sites/subatomic/behance/css/inuit.css/_csswizardry-grids.scss",
+		"/Users/filipadamczyk/Desktop/Bēhance Project.html",
+		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout03/_layout03.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout03/layout03.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/content/data/content.json",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/styles/_n2.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout07/_layout07.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout05/_layout05.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout04/_layout04.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout08/layout08.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout02/_layout02.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout01/_layout01.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout08/_layout08.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout06/_layout06.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout07/layout07.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout06/layout06.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout05/layout05.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout04/layout04.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/layouts/layout02/layout02.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/Layouts/layout01/layout01.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/Gruntfile.js",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/styles/style.css",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/styles/src/style.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/insect-template/insect.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/insect-template/_insect.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/content-templates/article/article.js",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/content/data/schemas.js",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/components/gallery/gallery.js",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/_appshell.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/inuit/generic/_widths.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/layout01/layout01.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/styles/src/_vars.scss",
+		"/Users/filipadamczyk/Sites/subatomic/layout-examples/css/inuit.css/_defaults.scss",
+		"/Users/filipadamczyk/Sites/subatomic/layout-examples/index.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/index.html",
+		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/HipsterIpsum/Hipster Ipsum.sublime-settings",
+		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/HipsterIpsum/README.mdown",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/components/smart-image/smart-image.js",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/column-test/column-test.html",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/column-test/_column-test.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/layout01/_layout01.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/dist/lib/inuit/objects/_columns.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/dist/styles/src/_vars.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/dist/lib/inuit/generic/_mixins.scss",
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/n2-appshells.sublime-project",
+		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/User/Soda Dark 3.sublime-theme",
+		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/User/Soda Dark.sublime-theme",
+		"/Users/filipadamczyk/Desktop/Soda Dark.sublime-theme",
+		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/Users/filipadamczyk/Sites/filbot/thepasteup/app/js/controllers.js"
+	],
+	"find":
+	{
+		"height": 37.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"",
+			"/Users/filipadamczyk/Sites/subatomic/n2-appshells",
+			"/Users/filipadamczyk/Sites/subatomic/n2",
+			"/Users/filipadamczyk/Sites/subatomic/jt-reskin",
+			"/Users/filipadamczyk/Sites/subatomic/n2",
+			"/Users/filipadamczyk/Sites/subatomic/jt-reskin",
+			"/Users/filipadamczyk/Sites/subatomic/n2",
+			"/Users/filipadamczyk/Sites/subatomic/jt-reskin",
+			"/Users/filipadamczyk/Sites/subatomic/n2",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"right",
+			"settings",
+			" ng-repeat=\"contact in contacts\"",
+			"texture3.png",
+			"100",
+			"assets",
+			"partials",
+			"p",
+			"main",
+			"account/",
+			"signup",
+			"map",
+			"signup",
+			"padding",
+			"40px",
+			"name",
+			"login",
+			"line-height: 40px;",
+			"cursor: pointer;",
+			"text-align: center;",
+			"border-radius: 4px;",
+			"8",
+			"video.js",
+			"pane",
+			"z-index",
+			"// url: 'http://www.paulund.co.uk',",
+			"title",
+			"header",
+			"p",
+			"div",
+			"pinterest",
+			"stumpleupon",
+			"stumbleupon",
+			"linkedin",
+			"url: 'http://www.paulund.co.uk',",
+			"// buttons: { twitter: {via: 'paulund_'}},",
+			"stumbleupon",
+			"facebook",
+			"pintrest",
+			"facebook",
+			"div",
+			"title",
+			"a",
+			"grid",
+			"title",
+			".project-detail",
+			"project",
+			"project-project",
+			".learn ",
+			"submit",
+			"title",
+			"container",
+			"title",
+			".overlay-text .title",
+			"h2",
+			"span",
+			"h1",
+			"rgb",
+			"gtp",
+			"arrow",
+			"overlay-text",
+			"nav",
+			".overlay",
+			".grid .img-container",
+			"submit",
+			"div",
+			"h3",
+			"renault",
+			"div",
+			"ngModel",
+			"ng-model",
+			"ng-controller",
+			"projects",
+			"id",
+			"collections",
+			"rem",
+			"5rem",
+			"span",
+			"border",
+			"panes",
+			"h2",
+			"li",
+			"footer",
+			"6",
+			"333",
+			"0",
+			".main-container ",
+			"span",
+			"p",
+			"sprite",
+			"span",
+			"font-family: 'helveticaregular';",
+			"919",
+			"945",
+			"main-container",
+			"ng-src",
+			"collections",
+			"projects",
+			"modules",
+			"collections",
+			"images",
+			"instagram",
+			"projects",
+			"$use-markup-fix",
+			"214x163",
+			"300x225",
+			"200x150",
+			"...",
+			"desk--two-thirds",
+			"lap--",
+			"layout08",
+			"Lato",
+			"layout03",
+			"layout07",
+			"h3",
+			"layout04",
+			"layout06",
+			"layout05",
+			"layout01",
+			"layout04",
+			"layout01",
+			"layout03",
+			"p",
+			"100%",
+			"grid__item ",
+			"layout02",
+			"layout01",
+			"watch"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 108.0
+	},
+	"output.sftp":
+	{
+		"height": 133.0
+	},
+	"project": "blog.sublime-project",
+	"replace":
+	{
+		"height": 46.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 275.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
