@@ -1,4 +1,2 @@
-filbot.github.io
-================
-
-Github User Page
+# Heather
+A Hyperminimal Jekyll Theme
