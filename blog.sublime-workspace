@@ -4,12 +4,24 @@
 		"selected_items":
 		[
 			[
-				"te",
-				"text-transform"
+				"mar",
+				"margin"
 			],
 			[
-				"mar",
-				"margin-top"
+				"te",
+				"text-decoration"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"fo",
+				"footer	Tag"
 			],
 			[
 				"back",
@@ -22,10 +34,6 @@
 			[
 				"pa",
 				"padding-left"
-			],
-			[
-				"fon",
-				"font-weight"
 			],
 			[
 				"in",
@@ -80,10 +88,6 @@
 				"facebook"
 			],
 			[
-				"font",
-				"font-size"
-			],
-			[
 				"le",
 				"letter-spacing"
 			],
@@ -106,10 +110,6 @@
 			[
 				"pad",
 				"padding"
-			],
-			[
-				"fo",
-				"font-size"
 			],
 			[
 				"p",
@@ -356,34 +356,34 @@
 	"buffers":
 	[
 		{
-			"file": ".gitignore",
+			"file": "style.css",
 			"settings":
 			{
-				"buffer_size": 15,
+				"buffer_size": 3758,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_config.yml",
+			"file": "_posts/2013-08-01-analog-bandwidth-monitor.md",
 			"settings":
 			{
-				"buffer_size": 165,
+				"buffer_size": 104,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "_layouts/default.html",
+			"file": "_posts/2013-08-02-raspberrypi-garage-opener.md",
 			"settings":
 			{
-				"buffer_size": 107,
+				"buffer_size": 122,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "README.md",
+			"file": "_posts/2013-08-10-timemachine-freenas.md",
 			"settings":
 			{
-				"buffer_size": 37,
+				"buffer_size": 126,
 				"line_ending": "Unix"
 			}
 		}
@@ -467,6 +467,15 @@
 	},
 	"file_history":
 	[
+		"/Users/filipadamczyk/Sites/filbot/blog/_includes/_footer.html",
+		"/Users/filipadamczyk/Sites/filbot/blog/_posts/2013-08-10-timemachine-freenas.md",
+		"/Users/filipadamczyk/Sites/filbot/blog/_posts/2013-08-21-jekyll-plus-github.md",
+		"/Users/filipadamczyk/Sites/filbot/blog/_posts/2013-08-22-webfont-conversion.md",
+		"/Users/filipadamczyk/Sites/filbot/blog/_config.yml",
+		"/Users/filipadamczyk/Sites/filbot/blog/favicon.png",
+		"/Users/filipadamczyk/Sites/filbot/blog/_includes/_head.html",
+		"/Users/filipadamczyk/Sites/filbot/blog/style.css",
+		"/Users/filipadamczyk/Sites/filbot/blog/_layouts/post.html",
 		"/Users/filipadamczyk/Downloads/erjjones-erjjones.github.com-a83ecc6/_config.yml",
 		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/addfriends.html",
 		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/main.html",
@@ -585,16 +594,7 @@
 		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/components/smart-image/smart-image.js",
 		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/column-test/column-test.html",
 		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/column-test/_column-test.scss",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/layout01/_layout01.scss",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/dist/lib/inuit/objects/_columns.scss",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/dist/styles/src/_vars.scss",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/dist/lib/inuit/generic/_mixins.scss",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/n2-appshells.sublime-project",
-		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/User/Soda Dark 3.sublime-theme",
-		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/User/Soda Dark.sublime-theme",
-		"/Users/filipadamczyk/Desktop/Soda Dark.sublime-theme",
-		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
-		"/Users/filipadamczyk/Sites/filbot/thepasteup/app/js/controllers.js"
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/layout01/_layout01.scss"
 	],
 	"find":
 	{
@@ -622,6 +622,8 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"../assets",
+			"p",
 			"yourusername",
 			"right",
 			"settings",
@@ -747,9 +749,7 @@
 			"layout03",
 			"p",
 			"100%",
-			"grid__item ",
-			"layout02",
-			"layout01"
+			"grid__item "
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -767,24 +767,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": ".gitignore",
+					"file": "style.css",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 15,
+						"buffer_size": 3758,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								15,
-								15
+								2087,
+								2087
 							]
 						],
 						"settings":
@@ -877,237 +877,7 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "_config.yml",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 165,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								24,
-								24
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": false,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": true,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/YAML/YAML.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_layouts/default.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 107,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								107,
-								107
-							]
-						],
-						"settings":
-						{
-							"annotations":
-							[
-								"TODO",
-								"README",
-								"FIXME"
-							],
-							"csslint_options":
-							{
-								"adjoining-classes": "warning",
-								"box-model": true,
-								"box-sizing": "warning",
-								"compatible-vendor-prefixes": "warning",
-								"display-property-grouping": true,
-								"duplicate-background-images": "warning",
-								"duplicate-properties": true,
-								"empty-rules": true,
-								"errors": true,
-								"fallback-colors": "warning",
-								"floats": "warning",
-								"font-faces": "warning",
-								"font-sizes": "warning",
-								"gradients": "warning",
-								"ids": "warning",
-								"import": "warning",
-								"important": "warning",
-								"known-properties": true,
-								"outline-none": "warning",
-								"overqualified-elements": "warning",
-								"qualified-headings": "warning",
-								"regex-selectors": "warning",
-								"rules-count": "warning",
-								"shorthand": "warning",
-								"star-property-hack": "warning",
-								"text-indent": "warning",
-								"underscore-property-hack": "warning",
-								"unique-headings": "warning",
-								"universal-selector": "warning",
-								"vendor-prefix": true,
-								"zero-units": "warning"
-							},
-							"gjslint_ignore":
-							[
-								110
-							],
-							"gjslint_options":
-							[
-							],
-							"javascript_linter": "jshint",
-							"jshint_options":
-							{
-								"browser": true,
-								"evil": true,
-								"regexdash": true,
-								"sub": true,
-								"trailing": true,
-								"wsh": true
-							},
-							"pep8": false,
-							"pep8_ignore":
-							[
-								"E501"
-							],
-							"perl_linter": "perlcritic",
-							"pyflakes_ignore":
-							[
-							],
-							"pyflakes_ignore_import_*": true,
-							"sublimelinter": true,
-							"sublimelinter_delay": 2,
-							"sublimelinter_disable":
-							[
-							],
-							"sublimelinter_executable_map":
-							{
-							},
-							"sublimelinter_fill_outlines": false,
-							"sublimelinter_gutter_marks": true,
-							"sublimelinter_mark_style": "none",
-							"sublimelinter_notes": true,
-							"sublimelinter_objj_check_ascii": false,
-							"sublimelinter_popup_errors_on_save": false,
-							"sublimelinter_syntax_map":
-							{
-								"C++": "c",
-								"Python Django": "python",
-								"Ruby on Rails": "ruby"
-							},
-							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/CSS/CSS.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -1118,12 +888,12 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "README.md",
+					"buffer": 1,
+					"file": "_posts/2013-08-01-analog-bandwidth-monitor.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 37,
+						"buffer_size": 104,
 						"regions":
 						{
 						},
@@ -1131,7 +901,61 @@
 						[
 							[
 								0,
-								0
+								104
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "_posts/2013-08-02-raspberrypi-garage-opener.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 122,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								71,
+								71
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "_posts/2013-08-10-timemachine-freenas.md",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								126
 							]
 						],
 						"settings":
