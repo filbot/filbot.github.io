@@ -2,7 +2,7 @@ name: "Field Notes"
 description: "This is where I show my work"
 author: "Filip Adamczyk"
 
-url: "http://localhost:4000"
+url: "http://filbot.github.io"
 
 exclude: [README.md, Rakefile]
 paginate: 16
