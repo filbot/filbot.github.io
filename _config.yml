@@ -4,6 +4,9 @@ author: "Filip Adamczyk"
 
 url: "http://filbot.github.io"
 
+# development url
+# url: "http://localhost:4000"
+
 exclude: [README.md, Rakefile]
 paginate: 16
 permalink: /:title
