@@ -4,8 +4,6 @@ article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,su
 
 
 body {
-    position: relative;
-    min-height: 100vh;
     color: #333;
     font-size: 100%;
     line-height: 1.75;
@@ -13,8 +11,6 @@ body {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
     padding: 20px 0 0;
     text-align: center;
