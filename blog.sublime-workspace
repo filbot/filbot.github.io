@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background-color"
+			],
+			[
 				"mar",
 				"margin"
 			],
@@ -22,10 +26,6 @@
 			[
 				"fo",
 				"footer	Tag"
-			],
-			[
-				"back",
-				"background-image"
 			],
 			[
 				"con",
@@ -356,34 +356,18 @@
 	"buffers":
 	[
 		{
-			"file": "style.css",
-			"settings":
-			{
-				"buffer_size": 3758,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_posts/2013-08-01-analog-bandwidth-monitor.md",
-			"settings":
-			{
-				"buffer_size": 104,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "_posts/2013-08-02-raspberrypi-garage-opener.md",
-			"settings":
-			{
-				"buffer_size": 122,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "_posts/2013-08-10-timemachine-freenas.md",
 			"settings":
 			{
-				"buffer_size": 126,
+				"buffer_size": 6304,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "_config.yml",
+			"settings":
+			{
+				"buffer_size": 249,
 				"line_ending": "Unix"
 			}
 		}
@@ -467,14 +451,17 @@
 	},
 	"file_history":
 	[
-		"/Users/filipadamczyk/Sites/filbot/blog/_includes/_footer.html",
 		"/Users/filipadamczyk/Sites/filbot/blog/_posts/2013-08-10-timemachine-freenas.md",
+		"/Users/filipadamczyk/Sites/filbot/blog/style.css",
+		"/Users/filipadamczyk/Sites/filbot/blog/_config.yml",
+		"/Users/filipadamczyk/Sites/filbot/blog/_posts/2013-08-01-analog-bandwidth-monitor.md",
+		"/Users/filipadamczyk/Sites/filbot/blog/_posts/2013-08-02-raspberrypi-garage-opener.md",
+		"/Users/filipadamczyk/Sites/filbot/blog/README.md",
+		"/Users/filipadamczyk/Sites/filbot/blog/_includes/_footer.html",
 		"/Users/filipadamczyk/Sites/filbot/blog/_posts/2013-08-21-jekyll-plus-github.md",
 		"/Users/filipadamczyk/Sites/filbot/blog/_posts/2013-08-22-webfont-conversion.md",
-		"/Users/filipadamczyk/Sites/filbot/blog/_config.yml",
 		"/Users/filipadamczyk/Sites/filbot/blog/favicon.png",
 		"/Users/filipadamczyk/Sites/filbot/blog/_includes/_head.html",
-		"/Users/filipadamczyk/Sites/filbot/blog/style.css",
 		"/Users/filipadamczyk/Sites/filbot/blog/_layouts/post.html",
 		"/Users/filipadamczyk/Downloads/erjjones-erjjones.github.com-a83ecc6/_config.yml",
 		"/Users/filipadamczyk/Sites/filbot/flare/web/pages/addfriends.html",
@@ -591,10 +578,7 @@
 		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/index.html",
 		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/HipsterIpsum/Hipster Ipsum.sublime-settings",
 		"/Users/filipadamczyk/Library/Application Support/Sublime Text 3/Packages/HipsterIpsum/README.mdown",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/components/smart-image/smart-image.js",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/column-test/column-test.html",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/column-test/_column-test.scss",
-		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/sections/appshell/layout-templates/layout01/_layout01.scss"
+		"/Users/filipadamczyk/Sites/subatomic/n2-appshells/web/lib/n2/components/smart-image/smart-image.js"
 	],
 	"find":
 	{
@@ -622,6 +606,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"li",
 			"../assets",
 			"p",
 			"yourusername",
@@ -748,8 +733,7 @@
 			"layout01",
 			"layout03",
 			"p",
-			"100%",
-			"grid__item "
+			"100%"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -767,24 +751,24 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "style.css",
+					"file": "_posts/2013-08-10-timemachine-freenas.md",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3758,
+						"buffer_size": 6304,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2087,
-								2087
+								4898,
+								4898
 							]
 						],
 						"settings":
@@ -877,85 +861,29 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/Markdown/Markdown.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1394.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "_posts/2013-08-01-analog-bandwidth-monitor.md",
+					"file": "_config.yml",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 104,
+						"buffer_size": 249,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								104
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "_posts/2013-08-02-raspberrypi-garage-opener.md",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 122,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								71,
-								71
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "_posts/2013-08-10-timemachine-freenas.md",
-					"semi_transient": true,
-					"settings":
-					{
-						"buffer_size": 126,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								126
+								110,
+								110
 							]
 						],
 						"settings":
@@ -1048,7 +976,7 @@
 								"Ruby on Rails": "ruby"
 							},
 							"sublimelinter_wrap_find": true,
-							"syntax": "Packages/Markdown/Markdown.tmLanguage"
+							"syntax": "Packages/YAML/YAML.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
