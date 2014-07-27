@@ -1,13 +1,22 @@
-name: "Field Notes"
-description: "This is where I show my work"
-author: "Filip Adamczyk"
+# Dependencies
+markdown:         redcarpet
+pygments:         true
 
-url: "http://filbot.github.io"
+# Permalinks
+permalink:        pretty
 
-# development url
-# url: "http://localhost:4000"
+# Setup
+title:            Poole
+tagline:          The Jekyll Butler
+url:              http://getpoole.com
+paginate:         1
+baseurl:          /
+author:
+  name:           Mark Otto
+  url:            https://twitter.com/mdo
+  email:          markdotto@gmail.com
 
-exclude: [README.md, Rakefile]
-paginate: 16
-permalink: /:title
-pygments: true
+# Custom vars
+version:          1.0.0
+github:
+  repo:           https://github.com/poole/poole
