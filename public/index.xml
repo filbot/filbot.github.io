@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Semicolons &amp; Side Projects</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Semicolons &amp; Side Projects</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 29 Mar 2025 11:47:25 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Sat, 29 Mar 2025 11:47:25 -0700</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hey, I’m a JavaScript developer who loves building things that are useful, efficient, and maybe a little whimsicle. This blog is where I document projects I&amp;rsquo;m working on, share tutorials, and explore whatever technical rabbit hole I’ve most recently fallen into. I’m especially into clean systems, thoughtful UX, and learning out loud. If you&amp;rsquo;re into practical dev workflows, weird hardware experiments, or just trying to write better code, you’re in the right place.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>PiAware Data Display</title>
+      <link>http://localhost:1313/piaware-lcd-display/</link>
+      <pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/piaware-lcd-display/</guid>
+      <description>&lt;p&gt;&lt;p class=&#34;markdown-image&#34;&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/assets/adsb-node-display/piaware-lcd-chatgpt-generated.jpg&#34; alt=&#34;ads-b node drawing from ChatGPT&#34;  /&gt;&#xA;&lt;/p&gt;&lt;/p&gt;&#xA;&lt;p&gt;After setting up my PiAware receiver to track live flight data, I wanted a simple way to glance at some key stats without SSH-ing into the Pi or opening a browser. Enter the humble 20x4 I2C LCD screen.&lt;/p&gt;&#xA;&lt;p&gt;This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>MicroMV on OS X in 2018</title>
+      <link>http://localhost:1313/micromv-on-osx-in-2018/</link>
+      <pubDate>Fri, 05 Oct 2018 11:51:48 -0700</pubDate>
+      <guid>http://localhost:1313/micromv-on-osx-in-2018/</guid>
+      <description>&lt;p&gt;&lt;p class=&#34;markdown-image&#34;&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/assets/micromv-on-osx-in-2018/micromv-header.png&#34; alt=&#34;micromv-header-image&#34;  /&gt;&#xA;&lt;/p&gt;&lt;/p&gt;&#xA;&lt;p&gt;What you need:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Apple Thunderbolt to FireWire Adapter&lt;/li&gt;&#xA;&lt;li&gt;MicroMV playback device with FireWire port&lt;/li&gt;&#xA;&lt;li&gt;FireWire cable&lt;/li&gt;&#xA;&lt;li&gt;MicroMV tapes with footage&lt;/li&gt;&#xA;&lt;li&gt;Apple computer running OS X 10.6 or higher&lt;/li&gt;&#xA;&lt;li&gt;AVCVideoCap software (&lt;a href=&#34;https://nofile.io/f/mNaGHHh9297/AVCVideoCap.app.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Once you have all the hardware needed to connect everything up to a computer, turn it all on, insert the tape you want to ingest, and fire up the free AVCVideoCap application (download), which is actually a small app written by Apple to show off some capabilities of the FireWire protocol in XCode back in the day when FireWire was a thing. If when opening the app, you get a message like:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

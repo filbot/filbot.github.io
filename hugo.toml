@@ -1,0 +1,11 @@
+baseURL = "https://filbot.com/"
+languageCode = "en-us"
+title = "Semicolons & Side Projects"
+theme = "mini"
+googleAnalytics = "G-P5HRT1QBKC"
+
+[params]
+customJS = ["js/custom.js"]
+customCSS = ["css/custom.css"]
+enableGoogleAnalytics = true
+Bio = "A personal blog about building, learning, and stumbling forward in dev"

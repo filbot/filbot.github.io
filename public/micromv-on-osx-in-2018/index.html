@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>MicroMV on OS X in 2018 | Semicolons &amp; Side Projects</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="How to digitize your old MicroMV tapes on a modern Apple computer using legacy hardware and software tools like AVCVideoCap and HandBrake">
+<meta name="generator" content="Hugo 0.145.0">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+  
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5HRT1QBKC"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P5HRT1QBKC');
+        }
+      </script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/">Home</a>
+	
+	
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">MicroMV on OS X in 2018</h1>
+
+    <div class="tip">
+        <time datetime="2018-10-05 11:51:48 -0700 PDT">Oct 5, 2018</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          471 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          3 minute read
+        </span>
+    </div>
+
+    
+    
+
+
+    <div class="content">
+      <p><p class="markdown-image">
+  <img src="/assets/micromv-on-osx-in-2018/micromv-header.png" alt="micromv-header-image"  />
+</p></p>
+<p>What you need:</p>
+<ul>
+<li>Apple Thunderbolt to FireWire Adapter</li>
+<li>MicroMV playback device with FireWire port</li>
+<li>FireWire cable</li>
+<li>MicroMV tapes with footage</li>
+<li>Apple computer running OS X 10.6 or higher</li>
+<li>AVCVideoCap software (<a href="https://nofile.io/f/mNaGHHh9297/AVCVideoCap.app.zip" target="_blank" rel="noopener">download</a>)</li>
+</ul>
+<p>Once you have all the hardware needed to connect everything up to a computer, turn it all on, insert the tape you want to ingest, and fire up the free AVCVideoCap application (download), which is actually a small app written by Apple to show off some capabilities of the FireWire protocol in XCode back in the day when FireWire was a thing. If when opening the app, you get a message like:</p>
+<p><p class="markdown-image">
+  <img src="/assets/micromv-on-osx-in-2018/micromv-warning-screenshot.png" alt="Opening an app from an unidentified developer"  />
+</p></p>
+<p>right-click on the file and select open from the menu. After all that you will be presented with a screen that looks like this:</p>
+<p><p class="markdown-image">
+  <img src="/assets/micromv-on-osx-in-2018/micromv-device-list.png" alt="AVCVideoCap app window with device listed"  />
+</p></p>
+<p>Your device should be listed in this window. I used a Sony DCR-IP5 camera for this but the procedure should be largely the same for most devices. Put your device in “playback” mode and rewind the tape to the start. The AVCVideoCap app has tape control functions which can start the tape playback on capture but it will start wherever the tape is currently so make sure to rewind to where you want to start capturing. When you are ready, hit “Capture From Device” and you will be presented with this window:</p>
+<p><p class="markdown-image">
+  <img src="/assets/micromv-on-osx-in-2018/micromv-capture-screenshot.png" alt="Capture file creation window"  />
+</p></p>
+<p>Here you have the opportunity to name the file, which will be captured as a raw stream with the file extension m2t, and to choose a location for the file. Hit save and then make sure to select “Tape Control” from the drop down so that the software knows to start playback of the tape for capturing. The other option is for capturing live streams of video coming through FireWire such as video coming out of a cable box.</p>
+<p><p class="markdown-image">
+  <img src="/assets/micromv-on-osx-in-2018/micromv-recording-mode-screenshot.png" alt="Window showing Tape Control as the selected option"  />
+</p></p>
+<p>Once you press “Continue” to start the capture, your device should start playback in real-time and the data stream coming through the FireWire cable will begin saving to the file and location you specified earlier. Again, this is real time so sit back and let it do its thing until its played through all the footage you wish to capture. Aborting the capture will stop the process and keep whatever was played through, or if you wait until either the footage on the tape runs out or the tape itself runs out, the app will stop the capture process automatically.</p>
+<p>From here, you are left with a file format that few apps can play back and even fewer apps can edit. The simplest solution is to use <a href="https://handbrake.fr/" target="_blank" rel="noopener">HandBrake</a>, a free video conversion app, to convert the m2t file into something more usable in today&rsquo;s ecosystem of playback and editing apps. I used the default mp4 settings from HandBrake but feel free to play with this to get the file exactly how you want.</p>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="http://localhost:1313/tags/howto">howto</a>
+            
+                <a href="http://localhost:1313/tags/osx">osx</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2025 
+       
+    
+    </div>
+</footer>
+
+
+    
+        
+        <script src="http://localhost:1313/js/custom.js"></script>
+    
+
+
+  </body>
+</html>
