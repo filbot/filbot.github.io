@@ -34,6 +34,10 @@ Then I ran `raspi-config` to enable I2C under *Interfacing Options*. I also inst
 pip install RPLCD
 ```
 
+## The code
+
+You can find the full python script here: https://gist.github.com/filbot/0e98902e0be5b642649541b9df85aaa3
+
 ## What It Displays
 
 The screen shows four lines, updated every second:
