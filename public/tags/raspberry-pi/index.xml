@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Raspberry-Pi on Semicolons &amp; Side Projects</title>
+    <link>http://localhost:1313/tags/raspberry-pi/</link>
+    <description>Recent content in Raspberry-Pi on Semicolons &amp; Side Projects</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 01 Mar 2025 19:05:55 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PiAware Data Display</title>
+      <link>http://localhost:1313/piaware-lcd-display/</link>
+      <pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/piaware-lcd-display/</guid>
+      <description>&lt;p&gt;&lt;p class=&#34;markdown-image&#34;&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/assets/adsb-node-display/piaware-lcd-chatgpt-generated.jpg&#34; alt=&#34;ads-b node drawing from ChatGPT&#34;  /&gt;&#xA;&lt;/p&gt;&lt;/p&gt;&#xA;&lt;p&gt;After setting up my PiAware receiver to track live flight data, I wanted a simple way to glance at some key stats without SSH-ing into the Pi or opening a browser. Enter the humble 20x4 I2C LCD screen.&lt;/p&gt;&#xA;&lt;p&gt;This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
