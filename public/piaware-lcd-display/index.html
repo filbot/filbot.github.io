@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>PiAware Data Display | Semicolons &amp; Side Projects</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="How I connected a 20x4 I2C LCD to my Raspberry Pi running PiAware to show live ADS-B message rates, CPU temperature, and uptime">
+<meta name="generator" content="Hugo 0.145.0">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+  
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5HRT1QBKC"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P5HRT1QBKC');
+        }
+      </script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/">Home</a>
+	
+	
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">PiAware Data Display</h1>
+
+    <div class="tip">
+        <time datetime="2025-03-01 19:05:55 -0700 -0700">Mar 1, 2025</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          458 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          3 minute read
+        </span>
+    </div>
+
+    
+    
+
+
+    <div class="content">
+      <p><p class="markdown-image">
+  <img src="/assets/adsb-node-display/piaware-lcd-chatgpt-generated.jpg" alt="ads-b node drawing from ChatGPT"  />
+</p></p>
+<p>After setting up my PiAware receiver to track live flight data, I wanted a simple way to glance at some key stats without SSH-ing into the Pi or opening a browser. Enter the humble 20x4 I2C LCD screen.</p>
+<p>This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.</p>
+<h2 id="what-i-used">What I Used <a href="#what-i-used" class="anchor">🔗</a></h2><ul>
+<li>Raspberry Pi running <a href="https://www.flightaware.com/adsb/piaware/build" target="_blank" rel="noopener">PiAware</a></li>
+<li>20x4 I2C character LCD (HD44780-compatible with PCF8574 backpack)</li>
+<li>Python 3 and the <code>RPLCD</code> library</li>
+<li>All my patientce until I figure out I needed to adjusting the contrast screw on the LCD</li>
+</ul>
+<h2 id="wiring-it-up">Wiring It Up <a href="#wiring-it-up" class="anchor">🔗</a></h2><p>This part was pretty straightforward:</p>
+<ul>
+<li><strong>VCC</strong> → Pi 5V pin</li>
+<li><strong>GND</strong> → Pi GND pin</li>
+<li><strong>SDA</strong> → Pi SDA (GPIO 2)</li>
+<li><strong>SCL</strong> → Pi SCL (GPIO 3)</li>
+</ul>
+<p>Then I ran <code>raspi-config</code> to enable I2C under <em>Interfacing Options</em>. I also installed the <code>RPLCD</code> library with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install RPLCD
+</span></span></code></pre></div><h2 id="what-it-displays">What It Displays <a href="#what-it-displays" class="anchor">🔗</a></h2><p>The screen shows four lines, updated every second:</p>
+<ul>
+<li><strong>Current ADS-B messages per second</strong></li>
+<li><strong>Peak observed ADS-B rate</strong></li>
+<li><strong>CPU temperature</strong></li>
+<li><strong>System uptime</strong></li>
+</ul>
+<p>Everything is pulled from system files or from PiAware’s <code>aircraft.json</code>, which lives at <code>/run/dump1090-fa/aircraft.json</code>. Here’s a sample of what the display looks like:</p>
+<pre tabindex="0"><code>ADS-B:             42 msg/s
+PEAK:             109 msg/s
+CPU TEMP:         49.7C
+UPTIME:         00:17:42
+</code></pre><p><p class="markdown-image">
+  <img src="/assets/adsb-node-display/product-photo.jpg" alt="Photo of physical ads-b node installation"  />
+</p></p>
+<p>The full script polls every second, tracks message rate over time, and updates the display with a minimal refresh. One thing that tripped me up early on was contrast—if you don’t see anything on your screen, it might not be your code. A tiny flathead screwdriver and a half-turn of the potentiometer made all the difference.</p>
+<h2 id="extra-credit-run-it-on-boot">Extra Credit: Run It on Boot <a href="#extra-credit-run-it-on-boot" class="anchor">🔗</a></h2><p>If you want your LCD dashboard to start automatically when the Pi powers on, you can turn your Python script into a systemd service. Here’s how to do it.</p>
+<h3 id="1-create-a-service-file">1. Create a service file <a href="#1-create-a-service-file" class="anchor">🔗</a></h3><p>First, create a new file called <code>lcd-display.service</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/lcd-display.service
+</span></span></code></pre></div><p>Paste this into the file (update the paths to match where your script lives):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">PiAware LCD Display</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span><span style="color:#f92672">=</span><span style="color:#e6db74">network.target</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Service]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/bin/python3 /home/pi/lcd-display.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WorkingDirectory</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/pi</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StandardOutput</span><span style="color:#f92672">=</span><span style="color:#e6db74">inherit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StandardError</span><span style="color:#f92672">=</span><span style="color:#e6db74">inherit</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Restart</span><span style="color:#f92672">=</span><span style="color:#e6db74">always</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">User</span><span style="color:#f92672">=</span><span style="color:#e6db74">pi</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Install]</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span>
+</span></span></code></pre></div><blockquote>
+<p>Make sure your script is executable and the path to <code>python3</code> is correct (you can run <code>which python3</code> to verify).</p></blockquote>
+<h3 id="2-enable-and-start-the-service">2. Enable and start the service <a href="#2-enable-and-start-the-service" class="anchor">🔗</a></h3><p>Run the following commands:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable lcd-display.service
+</span></span><span style="display:flex;"><span>sudo systemctl start lcd-display.service
+</span></span></code></pre></div><p>Now the display should update automatically every time the Pi boots up.</p>
+<p>To check on the status or debug output:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo journalctl -u lcd-display.service -f
+</span></span></code></pre></div><h3 id="bonus-tip">Bonus Tip <a href="#bonus-tip" class="anchor">🔗</a></h3><p>If you&rsquo;re still actively tweaking the script, you can stop the service temporarily with:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl stop lcd-display.service
+</span></span></code></pre></div><p>Then run your script manually as usual. Just don’t forget to restart the service when you&rsquo;re done!</p>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="http://localhost:1313/tags/raspberry-pi">raspberry-pi</a>
+            
+                <a href="http://localhost:1313/tags/piaware">piaware</a>
+            
+                <a href="http://localhost:1313/tags/ads-b">ads-b</a>
+            
+                <a href="http://localhost:1313/tags/lcd">lcd</a>
+            
+                <a href="http://localhost:1313/tags/python">python</a>
+            
+                <a href="http://localhost:1313/tags/flight-tracking">flight-tracking</a>
+            
+                <a href="http://localhost:1313/tags/howto">howto</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2025 
+       
+    
+    </div>
+</footer>
+
+
+    
+        
+        <script src="http://localhost:1313/js/custom.js"></script>
+    
+
+
+  </body>
+</html>
