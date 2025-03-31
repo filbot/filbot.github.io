@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>AEM Developer Cheat Sheet | Semicolons &amp; Side Projects</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="A quick-start resource I wish I had when I began working with AEM—meant to help new developers get up and running without having to learn everything the hard way on the job.">
+<meta name="generator" content="Hugo 0.145.0">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+  
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5HRT1QBKC"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P5HRT1QBKC');
+        }
+      </script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/">Home</a>
+	
+	
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">AEM Developer Cheat Sheet</h1>
+
+    <div class="tip">
+        <time datetime="2025-03-31 16:34:28 -0700 PDT">Mar 31, 2025</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          392 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          2 minute read
+        </span>
+    </div>
+
+    
+    
+
+
+    <div class="content">
+      <p>Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.</p>
+<h2 id="a-common-urls">A. Common URLs <a href="#a-common-urls" class="anchor">🔗</a></h2><table>
+  <thead>
+      <tr>
+          <th>Purpose</th>
+          <th>Path</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>AEM Author Login</td>
+          <td><code>http://localhost:4502</code></td>
+      </tr>
+      <tr>
+          <td>AEM Publish Instance</td>
+          <td><code>http://localhost:4503</code></td>
+      </tr>
+      <tr>
+          <td>CRXDE Lite</td>
+          <td><code>/crx/de</code></td>
+      </tr>
+      <tr>
+          <td>Felix Console (OSGi configs/bundles)</td>
+          <td><code>/system/console/configMgr</code></td>
+      </tr>
+      <tr>
+          <td>Sling Models console</td>
+          <td><code>/system/console/adapters</code></td>
+      </tr>
+      <tr>
+          <td>Dispatcher Flush Agent</td>
+          <td><code>/etc/replication/agents.author/dispatcher</code></td>
+      </tr>
+      <tr>
+          <td>Package Manager</td>
+          <td><code>/crx/packmgr/index.jsp</code></td>
+      </tr>
+      <tr>
+          <td>Useradmin</td>
+          <td><code>/useradmin</code></td>
+      </tr>
+      <tr>
+          <td>Sites Authoring</td>
+          <td><code>/sites.html/content</code></td>
+      </tr>
+      <tr>
+          <td>Template Editor</td>
+          <td><code>/libs/wcm/core/content/sites/templates.html/conf</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="b-useful-file-system-paths-jcr">B. Useful File System Paths (JCR) <a href="#b-useful-file-system-paths-jcr" class="anchor">🔗</a></h2><table>
+  <thead>
+      <tr>
+          <th>Purpose</th>
+          <th>JCR Path</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Page Content</td>
+          <td><code>/content/your-site/...</code></td>
+      </tr>
+      <tr>
+          <td>Components</td>
+          <td><code>/apps/your-project/components/...</code></td>
+      </tr>
+      <tr>
+          <td>Templates</td>
+          <td><code>/conf/your-project/settings/wcm/templates/...</code></td>
+      </tr>
+      <tr>
+          <td>Editable Template Policies</td>
+          <td><code>/conf/your-project/settings/wcm/policies/...</code></td>
+      </tr>
+      <tr>
+          <td>Core Components (Do not modify!)</td>
+          <td><code>/libs/core/components/...</code></td>
+      </tr>
+      <tr>
+          <td>Clientlibs</td>
+          <td><code>/apps/your-project/clientlibs/...</code></td>
+      </tr>
+      <tr>
+          <td>Designs (for legacy static templates)</td>
+          <td><code>/etc/designs/</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="c-maven-commands">C. Maven Commands <a href="#c-maven-commands" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn clean install
+</span></span><span style="display:flex;"><span>mvn clean install -PautoInstallPackage
+</span></span><span style="display:flex;"><span>mvn clean install -PautoInstallPackage -pl ui.apps
+</span></span><span style="display:flex;"><span>mvn clean install -PautoInstallBundle -pl core
+</span></span></code></pre></div><h2 id="d-crx-package-manager-curl">D. CRX Package Manager (Curl) <a href="#d-crx-package-manager-curl" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -u admin:admin -F <span style="color:#b8860b">file</span><span style="color:#666">=</span>@<span style="color:#b44">&#34;my-package.zip&#34;</span> -F <span style="color:#b8860b">name</span><span style="color:#666">=</span>my-package -F <span style="color:#b8860b">force</span><span style="color:#666">=</span><span style="color:#a2f">true</span> -F <span style="color:#b8860b">install</span><span style="color:#666">=</span><span style="color:#a2f">true</span> http://localhost:4502/crx/packmgr/service.jsp
+</span></span></code></pre></div><h2 id="e-htl-sightly-snippets">E. HTL (Sightly) Snippets <a href="#e-htl-sightly-snippets" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>${myModel.title}
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">ul</span> <span style="color:#b44">data-sly-list</span><span style="">.</span><span style="color:#b44">item</span><span style="color:#666">=</span><span style="color:#b44">&#34;${myModel.items}&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#008000;font-weight:bold">li</span>&gt;${item.name}&lt;/<span style="color:#008000;font-weight:bold">li</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#008000;font-weight:bold">ul</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#b44">data-sly-resource</span><span style="color:#666">=</span><span style="color:#b44">&#34;${ &#39;mycomponent&#39; @ resourceType=&#39;myproject/components/foo&#39; }&#34;</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#b44">data-sly-test</span><span style="color:#666">=</span><span style="color:#b44">&#34;${myModel.showThing}&#34;</span>&gt;Shown if true&lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
+</span></span></code></pre></div><h2 id="f-sling-models-java">F. Sling Models (Java) <a href="#f-sling-models-java" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f">@Model</span>(adaptables<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>Resource.<span style="color:#b44">class</span>)<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">ExampleModel</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Inject</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>title;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@ValueMapValue</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>subtitle;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Default</span>(values<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#b44">&#34;Default text&#34;</span>)<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>footer;<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#00a000">getTitle</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>title;<span style="color:#bbb"> </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="g-registering-an-osgi-servlet">G. Registering an OSGi Servlet <a href="#g-registering-an-osgi-servlet" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f">@Component</span>(service<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>Servlet.<span style="color:#b44">class</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">           </span>property<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">             </span><span style="color:#b44">&#34;sling.servlet.methods=GET&#34;</span>,<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">             </span><span style="color:#b44">&#34;sling.servlet.paths=/bin/myendpoint&#34;</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">           </span>})<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">MyServlet</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">extends</span><span style="color:#bbb"> </span>SlingSafeMethodsServlet<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Override</span><span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">protected</span><span style="color:#bbb"> </span><span style="color:#0b0;font-weight:bold">void</span><span style="color:#bbb"> </span><span style="color:#00a000">doGet</span>(SlingHttpServletRequest<span style="color:#bbb"> </span>req,<span style="color:#bbb"> </span>SlingHttpServletResponse<span style="color:#bbb"> </span>resp)<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">throws</span><span style="color:#bbb"> </span>IOException<span style="color:#bbb"> </span>{<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>resp.<span style="color:#b44">getWriter</span>().<span style="color:#b44">write</span>(<span style="color:#b44">&#34;Hello from servlet!&#34;</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="h-dispatcher-caching-quick-tips">H. Dispatcher Caching Quick Tips <a href="#h-dispatcher-caching-quick-tips" class="anchor">🔗</a></h2><ul>
+<li>Flush content via flush agent at <code>/etc/replication/agents.author/dispatcher</code></li>
+<li>Debug caching using <code>X-Cache: HIT/MISS</code> headers</li>
+<li>Deny example: <code>/filter { /0001 { /type &quot;deny&quot; /url &quot;*.json&quot; } }</code></li>
+</ul>
+<h2 id="i-troubleshooting-tips">I. Troubleshooting Tips <a href="#i-troubleshooting-tips" class="anchor">🔗</a></h2><table>
+  <thead>
+      <tr>
+          <th>Symptom</th>
+          <th>Tip</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Component not rendering</td>
+          <td>Check <code>resourceType</code> and Sling resolution</td>
+      </tr>
+      <tr>
+          <td>Model not working</td>
+          <td>Confirm <code>@Model</code> and Sling exporter</td>
+      </tr>
+      <tr>
+          <td>Bundle not active</td>
+          <td>Check <code>/system/console/bundles</code></td>
+      </tr>
+      <tr>
+          <td>No logs from code</td>
+          <td>Use logger, check <code>error.log</code></td>
+      </tr>
+      <tr>
+          <td>Dispatcher not updating</td>
+          <td>Clear cache or flush manually</td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="j-log-statements-java">J. Log Statements (Java) <a href="#j-log-statements-java" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>Logger<span style="color:#bbb"> </span>log<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>LoggerFactory.<span style="color:#b44">getLogger</span>(MyModel.<span style="color:#b44">class</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>log.<span style="color:#b44">info</span>(<span style="color:#b44">&#34;Something happened&#34;</span>);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>log.<span style="color:#b44">debug</span>(<span style="color:#b44">&#34;Variable value: {}&#34;</span>,<span style="color:#bbb"> </span>value);<span style="color:#bbb">
+</span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>log.<span style="color:#b44">error</span>(<span style="color:#b44">&#34;Something went wrong&#34;</span>,<span style="color:#bbb"> </span>e);<span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="k-common-component-file-structure">K. Common Component File Structure <a href="#k-common-component-file-structure" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>/apps/your-project/components/card/
+</span></span><span style="display:flex;"><span>  ├── card.html
+</span></span><span style="display:flex;"><span>  ├── _cq_dialog/.content.xml
+</span></span><span style="display:flex;"><span>  ├── _cq_editConfig.xml
+</span></span><span style="display:flex;"><span>  └── cq:template
+</span></span></code></pre></div><h2 id="l-editable-template-setup">L. Editable Template Setup <a href="#l-editable-template-setup" class="anchor">🔗</a></h2><ol>
+<li>Template type: <code>/apps/your-project/templates</code></li>
+<li>Templates: <code>/conf/your-project/settings/wcm/templates</code></li>
+<li>Policies: <code>/conf/your-project/settings/wcm/policies</code></li>
+</ol>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="http://localhost:1313/tags/aem">aem</a>
+            
+                <a href="http://localhost:1313/tags/frontend">frontend</a>
+            
+                <a href="http://localhost:1313/tags/developer-tools">developer-tools</a>
+            
+                <a href="http://localhost:1313/tags/aem-resources">aem-resources</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="https://github.com/filbot" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="31.99" height="31.2" viewBox="0 0 31.99 31.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #181616;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M16,0C7.16,0,0,7.16,0,16c0,7.07,4.58,13.06,10.94,15.18.8.15,1.05-.33,1.05-.75,0-.38,0-1.44,0-2.78-4.45.97-5.37-2.11-5.37-2.11-.73-1.85-1.78-2.34-1.78-2.34-1.45-.99.11-.97.11-.97,1.61.11,2.45,1.65,2.45,1.65,1.43,2.44,3.74,1.74,4.65,1.33.15-1.03.56-1.74,1.02-2.14-3.55-.4-7.29-1.78-7.29-7.91,0-1.75.62-3.17,1.65-4.29-.17-.4-.72-2.03.16-4.23,0,0,1.34-.43,4.4,1.64,1.28-.36,2.65-.53,4.01-.54,1.36,0,2.73.18,4.01.54,3.06-2.07,4.4-1.64,4.4-1.64.87,2.2.32,3.83.16,4.23,1.02,1.12,1.64,2.55,1.64,4.29,0,6.15-3.74,7.5-7.3,7.89.57.5,1.09,1.45,1.09,2.95v4.43c0,.43.26.9,1.07.75,6.35-2.12,10.93-8.11,10.93-15.18C31.99,7.16,24.83,0,16,0Z"/>
+  </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://instagram.com/filipekadamczyk" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="OUTLINE_copy_2" data-name="OUTLINE copy 2">
+      <g>
+        <path d="M20.84,16.14c0,2.58-2.16,4.68-4.83,4.68s-4.83-2.1-4.83-4.68c0-.46.07-.91.2-1.33l-1.21-.26v6.8c0,.34.15.49.49.49h10.69c.34,0,.49-.15.49-.49v-6.8l-1.19.26c.13.42.2.87.2,1.33Z"/>
+        <ellipse cx="16.01" cy="15.97" rx="3.12" ry="3.03"/>
+        <path d="M16,0C7.16,0,0,7.16,0,16s7.16,16,16,16,16-7.16,16-16S24.84,0,16,0ZM23.77,21.83c0,1.1-.85,1.94-1.94,1.94h-11.66c-1.1,0-1.94-.85-1.94-1.94v-11.66c0-1.1.85-1.94,1.94-1.94h11.66c1.1,0,1.94.85,1.94,1.94v11.66Z"/>
+        <path d="M21.34,10.17h-1.94c-.27,0-.49.22-.49.49v1.94c0,.27.22.49.49.49h1.94c.27,0,.49-.22.49-.49v-1.94c0-.27-.22-.49-.49-.49Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://linkedin.com/in/filip-grace-1255b06" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="30.5" height="30.5" viewBox="0 0 30.5 30.5">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path d="M15.25,0C6.84,0,0,6.84,0,15.25s6.84,15.25,15.25,15.25,15.25-6.84,15.25-15.25S23.66,0,15.25,0ZM10.71,22.19h-3.56v-10.7h3.56v10.7ZM8.93,10.03h0s-.02,0-.02,0c-1.2,0-1.97-.82-1.97-1.85s.79-1.85,2.01-1.85,1.97.8,1.99,1.85c0,1.03-.77,1.85-2.01,1.85ZM23.54,22.19h-3.56s0-5.73,0-5.73c0-1.44-.52-2.42-1.8-2.42-.98,0-1.57.66-1.83,1.3-.09.23-.12.55-.12.87v5.98h-3.56s.05-9.7,0-10.7h3.56v1.52c.47-.73,1.32-1.77,3.21-1.77,2.34,0,4.1,1.53,4.1,4.82v6.14Z"/>
+  </g>
+</svg>
+    </a>
+
+
+</div>
+
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2025 
+       
+    
+    </div>
+</footer>
+
+
+    
+        
+        <script src="http://localhost:1313/js/custom.js"></script>
+    
+
+
+  </body>
+</html>
