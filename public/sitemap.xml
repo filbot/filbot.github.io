@@ -2,8 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/aem/</loc>
+    <lastmod>2025-03-31T16:34:28-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/aem-developer-cheat-sheet/</loc>
+    <lastmod>2025-03-31T16:34:28-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/aem-resources/</loc>
+    <lastmod>2025-03-31T16:34:28-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/developer-tools/</loc>
+    <lastmod>2025-03-31T16:34:28-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/frontend/</loc>
+    <lastmod>2025-03-31T16:34:28-07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-03-29T13:35:19-07:00</lastmod>
+    <lastmod>2025-03-31T16:34:28-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-03-31T16:34:28-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-03-29T11:47:25-07:00</lastmod>
@@ -30,9 +48,6 @@
     <lastmod>2025-03-01T19:05:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/raspberry-pi/</loc>
-    <lastmod>2025-03-01T19:05:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-03-01T19:05:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/micromv-on-osx-in-2018/</loc>
