@@ -49,11 +49,11 @@ The screen shows four lines, updated every second:
 
 Everything is pulled from system files or from PiAware’s `aircraft.json`, which lives at `/run/dump1090-fa/aircraft.json`. Here’s a sample of what the display looks like:
 
-```
-ADS-B:             42 msg/s
-PEAK:             109 msg/s
-CPU TEMP:         49.7C
-UPTIME:         00:17:42
+```bash
+ADS-B:       42 msg/s
+PEAK:       109 msg/s
+CPU TEMP:       49.7C
+UPTIME:      00:17:42
 ```
 
 ![Photo of physical ads-b node installation](/images/adsb-node-display/product-photo.jpg)
@@ -74,7 +74,7 @@ sudo nano /etc/systemd/system/lcd-display.service
 
 Paste this into the file (update the paths to match where your script lives):
 
-```ini
+```bash
 [Unit]
 Description=PiAware LCD Display
 After=network.target

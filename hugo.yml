@@ -1,0 +1,27 @@
+baseURL: https://filbot.com/
+languageCode: en-us
+title: Semicolons & Side Projects
+theme: mini
+pagination:
+    pagerSize: 5
+googleAnalytics: G-P5HRT1QBKC
+
+permalinks:
+    posts: /posts/:title/
+
+markup:
+    highlight:
+        guessSyntax: true
+        style: emacs
+
+params:
+  social:
+    linkedin: https://linkedin.com/in/filip-grace-1255b06
+    github: https://github.com/filbot
+    instagram: https://instagram.com/filipekadamczyk
+  customJS:
+      - "js/custom.js"
+  customCSS:
+      - "css/custom.css"
+  enableGoogleAnalytics: true
+  bio: "A personal blog about building, learning, and stumbling forward in dev"
