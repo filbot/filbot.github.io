@@ -78,7 +78,7 @@
           ·
         </span>
         <span>
-          458 words
+          469 words
         </span>
         <span class="split">
           ·
@@ -112,8 +112,9 @@
 <li><strong>SCL</strong> → Pi SCL (GPIO 3)</li>
 </ul>
 <p>Then I ran <code>raspi-config</code> to enable I2C under <em>Interfacing Options</em>. I also installed the <code>RPLCD</code> library with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install RPLCD
-</span></span></code></pre></div><h2 id="what-it-displays">What It Displays <a href="#what-it-displays" class="anchor">🔗</a></h2><p>The screen shows four lines, updated every second:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install RPLCD
+</span></span></code></pre></div><h2 id="the-code">The code <a href="#the-code" class="anchor">🔗</a></h2><p>You can find the full python script here: <a href="https://gist.github.com/filbot/0e98902e0be5b642649541b9df85aaa3" target="_blank" rel="noopener">https://gist.github.com/filbot/0e98902e0be5b642649541b9df85aaa3</a></p>
+<h2 id="what-it-displays">What It Displays <a href="#what-it-displays" class="anchor">🔗</a></h2><p>The screen shows four lines, updated every second:</p>
 <ul>
 <li><strong>Current ADS-B messages per second</strong></li>
 <li><strong>Peak observed ADS-B rate</strong></li>
@@ -121,42 +122,42 @@
 <li><strong>System uptime</strong></li>
 </ul>
 <p>Everything is pulled from system files or from PiAware’s <code>aircraft.json</code>, which lives at <code>/run/dump1090-fa/aircraft.json</code>. Here’s a sample of what the display looks like:</p>
-<pre tabindex="0"><code>ADS-B:             42 msg/s
-PEAK:             109 msg/s
-CPU TEMP:         49.7C
-UPTIME:         00:17:42
-</code></pre><p><p class="markdown-image">
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ADS-B:       <span style="color:#666">42</span> msg/s
+</span></span><span style="display:flex;"><span>PEAK:       <span style="color:#666">109</span> msg/s
+</span></span><span style="display:flex;"><span>CPU TEMP:       49.7C
+</span></span><span style="display:flex;"><span>UPTIME:      00:17:42
+</span></span></code></pre></div><p><p class="markdown-image">
   <img src="/images/adsb-node-display/product-photo.jpg" alt="Photo of physical ads-b node installation"  />
 </p></p>
 <p>The full script polls every second, tracks message rate over time, and updates the display with a minimal refresh. One thing that tripped me up early on was contrast—if you don’t see anything on your screen, it might not be your code. A tiny flathead screwdriver and a half-turn of the potentiometer made all the difference.</p>
 <h2 id="extra-credit-run-it-on-boot">Extra Credit: Run It on Boot <a href="#extra-credit-run-it-on-boot" class="anchor">🔗</a></h2><p>If you want your LCD dashboard to start automatically when the Pi powers on, you can turn your Python script into a systemd service. Here’s how to do it.</p>
 <h3 id="1-create-a-service-file">1. Create a service file <a href="#1-create-a-service-file" class="anchor">🔗</a></h3><p>First, create a new file called <code>lcd-display.service</code>:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/lcd-display.service
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/lcd-display.service
 </span></span></code></pre></div><p>Paste this into the file (update the paths to match where your script lives):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#66d9ef">[Unit]</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Description</span><span style="color:#f92672">=</span><span style="color:#e6db74">PiAware LCD Display</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">After</span><span style="color:#f92672">=</span><span style="color:#e6db74">network.target</span>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#666">[</span>Unit<span style="color:#666">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">Description</span><span style="color:#666">=</span>PiAware LCD Display
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">After</span><span style="color:#666">=</span>network.target
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Service]</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">ExecStart</span><span style="color:#f92672">=</span><span style="color:#e6db74">/usr/bin/python3 /home/pi/lcd-display.py</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WorkingDirectory</span><span style="color:#f92672">=</span><span style="color:#e6db74">/home/pi</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StandardOutput</span><span style="color:#f92672">=</span><span style="color:#e6db74">inherit</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">StandardError</span><span style="color:#f92672">=</span><span style="color:#e6db74">inherit</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">Restart</span><span style="color:#f92672">=</span><span style="color:#e6db74">always</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">User</span><span style="color:#f92672">=</span><span style="color:#e6db74">pi</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span>Service<span style="color:#666">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">ExecStart</span><span style="color:#666">=</span>/usr/bin/python3 /home/pi/lcd-display.py
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">WorkingDirectory</span><span style="color:#666">=</span>/home/pi
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">StandardOutput</span><span style="color:#666">=</span>inherit
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">StandardError</span><span style="color:#666">=</span>inherit
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">Restart</span><span style="color:#666">=</span>always
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">User</span><span style="color:#666">=</span>pi
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">[Install]</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">WantedBy</span><span style="color:#f92672">=</span><span style="color:#e6db74">multi-user.target</span>
+</span></span><span style="display:flex;"><span><span style="color:#666">[</span>Install<span style="color:#666">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#b8860b">WantedBy</span><span style="color:#666">=</span>multi-user.target
 </span></span></code></pre></div><blockquote>
 <p>Make sure your script is executable and the path to <code>python3</code> is correct (you can run <code>which python3</code> to verify).</p></blockquote>
 <h3 id="2-enable-and-start-the-service">2. Enable and start the service <a href="#2-enable-and-start-the-service" class="anchor">🔗</a></h3><p>Run the following commands:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl enable lcd-display.service
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl <span style="color:#a2f">enable</span> lcd-display.service
 </span></span><span style="display:flex;"><span>sudo systemctl start lcd-display.service
 </span></span></code></pre></div><p>Now the display should update automatically every time the Pi boots up.</p>
 <p>To check on the status or debug output:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo journalctl -u lcd-display.service -f
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo journalctl -u lcd-display.service -f
 </span></span></code></pre></div><h3 id="bonus-tip">Bonus Tip <a href="#bonus-tip" class="anchor">🔗</a></h3><p>If you&rsquo;re still actively tweaking the script, you can stop the service temporarily with:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl stop lcd-display.service
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl stop lcd-display.service
 </span></span></code></pre></div><p>Then run your script manually as usual. Just don’t forget to restart the service when you&rsquo;re done!</p>
 
     </div>
@@ -189,6 +190,55 @@ UPTIME:         00:17:42
     </main>
     
     <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="https://github.com/filbot" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="31.99" height="31.2" viewBox="0 0 31.99 31.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #181616;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M16,0C7.16,0,0,7.16,0,16c0,7.07,4.58,13.06,10.94,15.18.8.15,1.05-.33,1.05-.75,0-.38,0-1.44,0-2.78-4.45.97-5.37-2.11-5.37-2.11-.73-1.85-1.78-2.34-1.78-2.34-1.45-.99.11-.97.11-.97,1.61.11,2.45,1.65,2.45,1.65,1.43,2.44,3.74,1.74,4.65,1.33.15-1.03.56-1.74,1.02-2.14-3.55-.4-7.29-1.78-7.29-7.91,0-1.75.62-3.17,1.65-4.29-.17-.4-.72-2.03.16-4.23,0,0,1.34-.43,4.4,1.64,1.28-.36,2.65-.53,4.01-.54,1.36,0,2.73.18,4.01.54,3.06-2.07,4.4-1.64,4.4-1.64.87,2.2.32,3.83.16,4.23,1.02,1.12,1.64,2.55,1.64,4.29,0,6.15-3.74,7.5-7.3,7.89.57.5,1.09,1.45,1.09,2.95v4.43c0,.43.26.9,1.07.75,6.35-2.12,10.93-8.11,10.93-15.18C31.99,7.16,24.83,0,16,0Z"/>
+  </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://instagram.com/filipekadamczyk" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="OUTLINE_copy_2" data-name="OUTLINE copy 2">
+      <g>
+        <path d="M20.84,16.14c0,2.58-2.16,4.68-4.83,4.68s-4.83-2.1-4.83-4.68c0-.46.07-.91.2-1.33l-1.21-.26v6.8c0,.34.15.49.49.49h10.69c.34,0,.49-.15.49-.49v-6.8l-1.19.26c.13.42.2.87.2,1.33Z"/>
+        <ellipse cx="16.01" cy="15.97" rx="3.12" ry="3.03"/>
+        <path d="M16,0C7.16,0,0,7.16,0,16s7.16,16,16,16,16-7.16,16-16S24.84,0,16,0ZM23.77,21.83c0,1.1-.85,1.94-1.94,1.94h-11.66c-1.1,0-1.94-.85-1.94-1.94v-11.66c0-1.1.85-1.94,1.94-1.94h11.66c1.1,0,1.94.85,1.94,1.94v11.66Z"/>
+        <path d="M21.34,10.17h-1.94c-.27,0-.49.22-.49.49v1.94c0,.27.22.49.49.49h1.94c.27,0,.49-.22.49-.49v-1.94c0-.27-.22-.49-.49-.49Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://linkedin.com/in/filip-grace-1255b06" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="30.5" height="30.5" viewBox="0 0 30.5 30.5">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path d="M15.25,0C6.84,0,0,6.84,0,15.25s6.84,15.25,15.25,15.25,15.25-6.84,15.25-15.25S23.66,0,15.25,0ZM10.71,22.19h-3.56v-10.7h3.56v10.7ZM8.93,10.03h0s-.02,0-.02,0c-1.2,0-1.97-.82-1.97-1.85s.79-1.85,2.01-1.85,1.97.8,1.99,1.85c0,1.03-.77,1.85-2.01,1.85ZM23.54,22.19h-3.56s0-5.73,0-5.73c0-1.44-.52-2.42-1.8-2.42-.98,0-1.57.66-1.83,1.3-.09.23-.12.55-.12.87v5.98h-3.56s.05-9.7,0-10.7h3.56v1.52c.47-.73,1.32-1.77,3.21-1.77,2.34,0,4.1,1.53,4.1,4.82v6.14Z"/>
+  </g>
+</svg>
+    </a>
+
+
+</div>
+
     
 
     <div class="copyright">
