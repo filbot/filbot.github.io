@@ -1,24 +1,3 @@
-.profile .avatar {
-  display: inline-block;
-  width: 110px;
-  height: auto;
-}
-
-h1 {
-  font-family: "Roboto Slab", serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;
-}
-
-
-.profile h2 {
-  font-optical-sizing: auto;
-  font-size: 17px;
-  font-weight: 400;
-  font-style: normal;
-}
-
 .markdown-image {
     text-align: center;
   }
@@ -104,7 +83,10 @@ h1 {
   h1,
   h2,
   h3 {
+    font-family: "Roboto Slab", serif;
+    font-optical-sizing: auto;
     font-weight: 400;
+    font-style: normal;
   }
   p {
     margin-block-start: 1.5em;
@@ -281,8 +263,8 @@ h1 {
   
   .profile .avatar {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 110px;
+    height: auto;
     border-radius: 50%;
   }
   
@@ -296,8 +278,8 @@ h1 {
   }
   
   .profile h2 {
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 17px;
+    font-weight: 400;
     color: #757575;
     margin-top: 0;
   }
