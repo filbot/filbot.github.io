@@ -1,0 +1,76 @@
+{{ $src := .Get "src" }}
+{{ $image := resources.GetMatch $src }}
+
+{{ if not $image }}
+  <figure class="responsive-image{{ with .Get "class" }} {{ . }}{{ end }}">
+    <div style="padding: 20px; background: #f8f8f8; border: 1px solid #ddd; text-align: center;">
+      <p>Image not found: {{ $src }}</p>
+      <p>Please check that the image exists at the specified path.</p>
+    </div>
+    {{ with .Get "caption" }}
+    <figcaption>{{ . }}</figcaption>
+    {{ end }}
+  </figure>
+{{ else }}
+  {{ $widths := slice 320 480 768 1024 1366 1536 1920 2560 3840 }}
+  {{ $quality := 90 }}
+  {{ $debug := .Get "debug" | default false }}
+
+  {{ $srcset := slice }}
+  {{ range $widths }}
+    {{ $widthInt := . }}
+    {{ $resized := $image.Resize (print $widthInt "x webp q" $quality) }}
+    {{ $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink $widthInt) }}
+  {{ end }}
+
+  {{ $placeholder := $image.Resize "42x webp q60" }}
+  {{ $defaultWidth := 1024 }}
+  {{ $defaultImage := $image.Resize (print $defaultWidth "x webp q" $quality) }}
+
+  <figure class="responsive-image{{ with .Get "class" }} {{ . }}{{ end }}">
+    <img 
+      src="{{ $defaultImage.RelPermalink }}"
+      srcset="{{ delimit $srcset ", " }}"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,{{ $placeholder.Content | base64Encode }});"
+      loading="lazy"
+      decoding="async"
+      {{ with .Get "alt" }}alt="{{ . }}"{{ else }}alt=""{{ end }} />
+    
+    {{ if $debug }}
+    <div class="image-debug" style="padding: 5px; background: #f0f0f0; font-size: 12px;">
+      <p>Original dimensions: {{ $image.Width }}x{{ $image.Height }}</p>
+      <p>Available sizes: {{ delimit $widths ", " }}</p>
+      <p>Window width: <span id="window-width"></span>px</p>
+      <p>Device pixel ratio: <span id="device-pixel-ratio"></span></p>
+      <p>Effective resolution needed: <span id="effective-resolution"></span>px</p>
+      <p>Selected image: <span id="selected-image"></span></p>
+      <script>
+        document.addEventListener('DOMContentLoaded', function() {
+          const updateDebug = () => {
+            const windowWidth = window.innerWidth;
+            const dpr = window.devicePixelRatio || 1;
+            const img = document.currentScript.parentElement.parentElement.querySelector('img');
+            
+            document.getElementById('window-width').textContent = windowWidth;
+            document.getElementById('device-pixel-ratio').textContent = dpr;
+            document.getElementById('effective-resolution').textContent = Math.round(windowWidth * dpr);
+            
+            // This is approximate as browsers decide which image to load
+            const selectedSrc = img.currentSrc || img.src;
+            document.getElementById('selected-image').textContent = selectedSrc.split('/').pop();
+          };
+          
+          updateDebug();
+          window.addEventListener('resize', updateDebug);
+        });
+      </script>
+    </div>
+    {{ end }}
+    
+    {{ with .Get "caption" }}
+    <figcaption>{{ . }}</figcaption>
+    {{ end }}
+  </figure>
+{{ end }}
