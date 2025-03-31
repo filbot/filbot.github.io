@@ -93,9 +93,73 @@
 
 
     <div class="content">
-      <p><p class="markdown-image">
-  <img src="/images/adsb-node-display/piaware-lcd-chatgpt-generated.jpg" alt="ads-b node drawing from ChatGPT"  />
-</p></p>
+      
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_cd0cba0d659be1e8.webp"
+      srcset="/images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_ae8bf96b21d45ed9.webp 320w, /images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_2cef0c1514f24b4.webp 480w, /images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_9f6bc1f7d58d596a.webp 768w, /images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_cd0cba0d659be1e8.webp 1024w, /images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_cda584bca09e7262.webp 1366w, /images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_b64117f354ce4cc8.webp 1536w, /images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_3718102d5e11443f.webp 1920w, /images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_221b2ef9c0957c34.webp 2560w, /images/adsb-node-display/piaware-lcd-chatgpt-generated_hu_275d735de4525e91.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRu4AAABXRUJQVlA4IOIAAACwBQCdASoqABoAPs1MnkejoiEYCq1UOwzE8QAXd0BTK/nBU1ZqxbQba8RLQLoI0qA6bAnKAgAA/vfn&#43;xphXcN6HQT9OhUYKo86MLbX/w7ubr4LpQvwZt30GSEgsPew&#43;K7gCQMcpDRY3JAkiCt0i2aba29S2LItHW14yWebyVsvsufi0nm4k7IzfA0KlSDxU4ynpeZcNwS&#43;wyO2b18mojNTqZaO21GjzNmTwehSygW0k90w8PEm4Hcp7SPVuSI5nv34K4dZr55x5d5Znhc&#43;YZdU&#43;N9hfQWce1ZOAonBoVFH3CAA);"
+      loading="lazy"
+      decoding="async"
+      alt="ChatGPT generated image of ADS-B Node" />
+    
+    
+    
+    
+  </figure>
+
 <p>After setting up my PiAware receiver to track live flight data, I wanted a simple way to glance at some key stats without SSH-ing into the Pi or opening a browser. Enter the humble 20x4 I2C LCD screen.</p>
 <p>This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.</p>
 <h2 id="what-i-used">What I Used <a href="#what-i-used" class="anchor">🔗</a></h2><ul>
@@ -126,9 +190,73 @@
 </span></span><span style="display:flex;"><span>PEAK:       <span style="color:#666">109</span> msg/s
 </span></span><span style="display:flex;"><span>CPU TEMP:       49.7C
 </span></span><span style="display:flex;"><span>UPTIME:      00:17:42
-</span></span></code></pre></div><p><p class="markdown-image">
-  <img src="/images/adsb-node-display/product-photo.jpg" alt="Photo of physical ads-b node installation"  />
-</p></p>
+</span></span></code></pre></div>
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/adsb-node-display/product-photo_hu_7c56f7785d0414bd.webp"
+      srcset="/images/adsb-node-display/product-photo_hu_5e1dd9112bb3308.webp 320w, /images/adsb-node-display/product-photo_hu_7ef9a19744d53769.webp 480w, /images/adsb-node-display/product-photo_hu_ab745e9b2d67785c.webp 768w, /images/adsb-node-display/product-photo_hu_7c56f7785d0414bd.webp 1024w, /images/adsb-node-display/product-photo_hu_32c126689c343992.webp 1366w, /images/adsb-node-display/product-photo_hu_efffa38350d2f47f.webp 1536w, /images/adsb-node-display/product-photo_hu_44b9e7b0c42c6b25.webp 1920w, /images/adsb-node-display/product-photo_hu_fd95a92d317fb981.webp 2560w, /images/adsb-node-display/product-photo_hu_9061b19b5bda32fb.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRiADAABXRUJQVlA4IBQDAADQDQCdASoqAD4APs1MpEkjoaGUDVXEOwzE4AsR/78hgHHbba3sneuyMX3NMsFx4TRoPvIaGLK2zJpqN2NYWQcXuf0vP9xV7HdXgamdTx9GoXbYKpAUsjadPqR&#43;BGhIw2lqhrIlkpUZgoZ1VsvmLMc1Qj5VfWPTAAD&#43;8AVc4zsvPcwt11lAjywzyyoc5ErpRfJYW05PjHMfd2Oa2MXW&#43;SyTUaoc4cQELdEWHiu1w7/IkwCLKwV1rn3SIBZTVkYub5xRSHFVE3v4T9MNVx6UwFLKfLURt/AoF8auM/1D6/iDM7mlOT50ZT9foayICiVfXPYmR//wYfjm20z84NCziFRx&#43;8CcbxLevh/Bx6JmHF/gbnQsl2DfkKDYnTn4TUq/39Bij6&#43;Few7zUAJZbYp57Rm/9IPsQOBgiLVIo2Cw26U4wY/uw7F8brb5GDfJGoVc6Jaz2hQqAC02OHoI/cf/n/h7UgH1Rex3l9b9n79QhsARGC&#43;k3IYV3mJ9RCPq3r4ckLtATPWBHsrzWnIjJs5L4YO98S8ZvptZGyLp78k95n&#43;/trEPoVvOaLIHfxMheg2gBSGqaXViLYPZ/pfm6Y5SQZz6ltrzT74J5NOivExtN4N7CAQbUk6U7PBCnfFlaP7fTz12X/Dn522X4sQcEwJugycsBQfbt/UWae98QojP5QzhVokhj8uU3FeSB37wBW1hGcdNjrh1TlG4NwI5ioO5emRXL14Tmowc/fYJXX8h17qWA00nb/ZKcYuUbrE1UZ0lixLUrAi6&#43;Hm5YuLIwdPzH4SAwrSygRKdSREPAQpqBRqQwNHZRK/Im4cwpDyXnxht4dEfkO73O2wVyo4BIOA1HSujSGLPBP05reeRJ0//w79I/hZXIr/I55hoZ0YTJCQ6oKs84gY55pBmwdVBWxb1NvpqzNCEB/oKmaPgcw9y35wYbYgtZORHXPsGPzvcVm7CgA6msGvv1XxACPwDUMCscglY/NWfTSUlDVRewzlcG5fxxk6Vs1qH1ogwZ3C4cahddmanHpp/hRHvrc96w8/4g6vNaL0AAA==);"
+      loading="lazy"
+      decoding="async"
+      alt="ADS-B Node box photo" />
+    
+    
+    
+    
+  </figure>
+
 <p>The full script polls every second, tracks message rate over time, and updates the display with a minimal refresh. One thing that tripped me up early on was contrast—if you don’t see anything on your screen, it might not be your code. A tiny flathead screwdriver and a half-turn of the potentiometer made all the difference.</p>
 <h2 id="extra-credit-run-it-on-boot">Extra Credit: Run It on Boot <a href="#extra-credit-run-it-on-boot" class="anchor">🔗</a></h2><p>If you want your LCD dashboard to start automatically when the Pi powers on, you can turn your Python script into a systemd service. Here’s how to do it.</p>
 <h3 id="1-create-a-service-file">1. Create a service file <a href="#1-create-a-service-file" class="anchor">🔗</a></h3><p>First, create a new file called <code>lcd-display.service</code>:</p>
