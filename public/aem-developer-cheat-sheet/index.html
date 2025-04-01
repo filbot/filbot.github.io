@@ -78,7 +78,7 @@
           ·
         </span>
         <span>
-          392 words
+          380 words
         </span>
         <span class="split">
           ·
@@ -93,8 +93,75 @@
 
 
     <div class="content">
-      <p>Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.</p>
-<h2 id="a-common-urls">A. Common URLs <a href="#a-common-urls" class="anchor">🔗</a></h2><table>
+      
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2ca3b45ba1f85a42.webp"
+      srcset="/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_be0d695873427519.webp 320w, /images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_d2c3bbd270ff3845.webp 480w, /images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_b41f8676e952514a.webp 768w, /images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2ca3b45ba1f85a42.webp 1024w, /images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_222739433435d869.webp 1366w, /images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_11865e19155ff1fa.webp 1536w, /images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_972736e7b691554e.webp 1920w, /images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_e597b63fb152d0dc.webp 2560w, /images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_af0fa26b0b83b215.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADwBQCdASoqABoAPs1anUgjoqEVXAYAOwzE4AHaOleB7mYfa9MCIS0z7Ngwm0BWo8rPPEs&#43;g4mkAAD&#43;/BMPyU0nk/NRdcZUG7RQwf/BskU3I/q0mjyk&#43;Gz7Gj0tIax0Fyulra1jzM88VA0RU8r5hxuRr8Xuzk5f7RgXG49xcHTvlR91UEwhPLoQhAGu9gzp3MSAkKCe0ukxba3AhjvH7yFY/amt5wU7Aw9clt865/HQb/HwbiLADpncE91aFdGRXKBvMltmd&#43;j5aHzOClyOfWIDquXxZndTtj38nHWIAAA=);"
+      loading="lazy"
+      decoding="async"
+      alt="ChatGPT generated image of man riding Adobe logo" />
+    
+    
+    
+    
+  </figure>
+
+<p>Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.</p>
+<h2 id="common-urls">Common URLs <a href="#common-urls" class="anchor">🔗</a></h2><table>
   <thead>
       <tr>
           <th>Purpose</th>
@@ -144,7 +211,7 @@
       </tr>
   </tbody>
 </table>
-<h2 id="b-useful-file-system-paths-jcr">B. Useful File System Paths (JCR) <a href="#b-useful-file-system-paths-jcr" class="anchor">🔗</a></h2><table>
+<h2 id="useful-file-system-paths-jcr">Useful File System Paths (JCR) <a href="#useful-file-system-paths-jcr" class="anchor">🔗</a></h2><table>
   <thead>
       <tr>
           <th>Purpose</th>
@@ -182,25 +249,25 @@
       </tr>
   </tbody>
 </table>
-<h2 id="c-maven-commands">C. Maven Commands <a href="#c-maven-commands" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn clean install
+<h2 id="maven-commands">Maven Commands <a href="#maven-commands" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>mvn clean install
 </span></span><span style="display:flex;"><span>mvn clean install -PautoInstallPackage
 </span></span><span style="display:flex;"><span>mvn clean install -PautoInstallPackage -pl ui.apps
 </span></span><span style="display:flex;"><span>mvn clean install -PautoInstallBundle -pl core
-</span></span></code></pre></div><h2 id="d-crx-package-manager-curl">D. CRX Package Manager (Curl) <a href="#d-crx-package-manager-curl" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -u admin:admin -F <span style="color:#b8860b">file</span><span style="color:#666">=</span>@<span style="color:#b44">&#34;my-package.zip&#34;</span> -F <span style="color:#b8860b">name</span><span style="color:#666">=</span>my-package -F <span style="color:#b8860b">force</span><span style="color:#666">=</span><span style="color:#a2f">true</span> -F <span style="color:#b8860b">install</span><span style="color:#666">=</span><span style="color:#a2f">true</span> http://localhost:4502/crx/packmgr/service.jsp
-</span></span></code></pre></div><h2 id="e-htl-sightly-snippets">E. HTL (Sightly) Snippets <a href="#e-htl-sightly-snippets" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>${myModel.title}
+</span></span></code></pre></div><h2 id="crx-package-manager-curl">CRX Package Manager (Curl) <a href="#crx-package-manager-curl" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>curl -u admin:admin -F <span style="color:#b8860b">file</span><span style="color:#666">=</span>@<span style="color:#b44">&#34;my-package.zip&#34;</span> -F <span style="color:#b8860b">name</span><span style="color:#666">=</span>my-package -F <span style="color:#b8860b">force</span><span style="color:#666">=</span><span style="color:#a2f">true</span> -F <span style="color:#b8860b">install</span><span style="color:#666">=</span><span style="color:#a2f">true</span> http://localhost:4502/crx/packmgr/service.jsp
+</span></span></code></pre></div><h2 id="htl-sightly-snippets">HTL (Sightly) Snippets <a href="#htl-sightly-snippets" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>${myModel.title}
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">ul</span> <span style="color:#b44">data-sly-list</span><span style="">.</span><span style="color:#b44">item</span><span style="color:#666">=</span><span style="color:#b44">&#34;${myModel.items}&#34;</span>&gt;
 </span></span><span style="display:flex;"><span>  &lt;<span style="color:#008000;font-weight:bold">li</span>&gt;${item.name}&lt;/<span style="color:#008000;font-weight:bold">li</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;/<span style="color:#008000;font-weight:bold">ul</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#b44">data-sly-resource</span><span style="color:#666">=</span><span style="color:#b44">&#34;${ &#39;mycomponent&#39; @ resourceType=&#39;myproject/components/foo&#39; }&#34;</span>&gt;&lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
 </span></span><span style="display:flex;"><span>&lt;<span style="color:#008000;font-weight:bold">div</span> <span style="color:#b44">data-sly-test</span><span style="color:#666">=</span><span style="color:#b44">&#34;${myModel.showThing}&#34;</span>&gt;Shown if true&lt;/<span style="color:#008000;font-weight:bold">div</span>&gt;
-</span></span></code></pre></div><h2 id="f-sling-models-java">F. Sling Models (Java) <a href="#f-sling-models-java" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f">@Model</span>(adaptables<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>Resource.<span style="color:#b44">class</span>)<span style="color:#bbb">
+</span></span></code></pre></div><h2 id="sling-models-java">Sling Models (Java) <a href="#sling-models-java" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f">@Model</span>(adaptables<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>Resource.<span style="color:#b44">class</span>)<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">class</span> <span style="color:#00f">ExampleModel</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Inject</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>title;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@ValueMapValue</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>subtitle;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f">@Default</span>(values<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#b44">&#34;Default text&#34;</span>)<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span>footer;<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span><span style="color:#a2f;font-weight:bold">public</span><span style="color:#bbb"> </span>String<span style="color:#bbb"> </span><span style="color:#00a000">getTitle</span>()<span style="color:#bbb"> </span>{<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">return</span><span style="color:#bbb"> </span>title;<span style="color:#bbb"> </span>}<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
-</span></span></span></code></pre></div><h2 id="g-registering-an-osgi-servlet">G. Registering an OSGi Servlet <a href="#g-registering-an-osgi-servlet" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f">@Component</span>(service<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>Servlet.<span style="color:#b44">class</span>,<span style="color:#bbb">
+</span></span></span></code></pre></div><h2 id="registering-an-osgi-servlet">Registering an OSGi Servlet <a href="#registering-an-osgi-servlet" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f">@Component</span>(service<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>Servlet.<span style="color:#b44">class</span>,<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">           </span>property<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>{<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">             </span><span style="color:#b44">&#34;sling.servlet.methods=GET&#34;</span>,<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">             </span><span style="color:#b44">&#34;sling.servlet.paths=/bin/myendpoint&#34;</span><span style="color:#bbb">
@@ -211,12 +278,12 @@
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">        </span>resp.<span style="color:#b44">getWriter</span>().<span style="color:#b44">write</span>(<span style="color:#b44">&#34;Hello from servlet!&#34;</span>);<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb">    </span>}<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>}<span style="color:#bbb">
-</span></span></span></code></pre></div><h2 id="h-dispatcher-caching-quick-tips">H. Dispatcher Caching Quick Tips <a href="#h-dispatcher-caching-quick-tips" class="anchor">🔗</a></h2><ul>
+</span></span></span></code></pre></div><h2 id="dispatcher-caching-quick-tips">Dispatcher Caching Quick Tips <a href="#dispatcher-caching-quick-tips" class="anchor">🔗</a></h2><ul>
 <li>Flush content via flush agent at <code>/etc/replication/agents.author/dispatcher</code></li>
 <li>Debug caching using <code>X-Cache: HIT/MISS</code> headers</li>
 <li>Deny example: <code>/filter { /0001 { /type &quot;deny&quot; /url &quot;*.json&quot; } }</code></li>
 </ul>
-<h2 id="i-troubleshooting-tips">I. Troubleshooting Tips <a href="#i-troubleshooting-tips" class="anchor">🔗</a></h2><table>
+<h2 id="troubleshooting-tips">Troubleshooting Tips <a href="#troubleshooting-tips" class="anchor">🔗</a></h2><table>
   <thead>
       <tr>
           <th>Symptom</th>
@@ -246,16 +313,16 @@
       </tr>
   </tbody>
 </table>
-<h2 id="j-log-statements-java">J. Log Statements (Java) <a href="#j-log-statements-java" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>Logger<span style="color:#bbb"> </span>log<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>LoggerFactory.<span style="color:#b44">getLogger</span>(MyModel.<span style="color:#b44">class</span>);<span style="color:#bbb">
+<h2 id="log-statements-java">Log Statements (Java) <a href="#log-statements-java" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-java" data-lang="java"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">private</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">static</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">final</span><span style="color:#bbb"> </span>Logger<span style="color:#bbb"> </span>log<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span>LoggerFactory.<span style="color:#b44">getLogger</span>(MyModel.<span style="color:#b44">class</span>);<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>log.<span style="color:#b44">info</span>(<span style="color:#b44">&#34;Something happened&#34;</span>);<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>log.<span style="color:#b44">debug</span>(<span style="color:#b44">&#34;Variable value: {}&#34;</span>,<span style="color:#bbb"> </span>value);<span style="color:#bbb">
 </span></span></span><span style="display:flex;"><span><span style="color:#bbb"></span>log.<span style="color:#b44">error</span>(<span style="color:#b44">&#34;Something went wrong&#34;</span>,<span style="color:#bbb"> </span>e);<span style="color:#bbb">
-</span></span></span></code></pre></div><h2 id="k-common-component-file-structure">K. Common Component File Structure <a href="#k-common-component-file-structure" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>/apps/your-project/components/card/
+</span></span></span></code></pre></div><h2 id="common-component-file-structure">Common Component File Structure <a href="#common-component-file-structure" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>/apps/your-project/components/card/
 </span></span><span style="display:flex;"><span>  ├── card.html
 </span></span><span style="display:flex;"><span>  ├── _cq_dialog/.content.xml
 </span></span><span style="display:flex;"><span>  ├── _cq_editConfig.xml
 </span></span><span style="display:flex;"><span>  └── cq:template
-</span></span></code></pre></div><h2 id="l-editable-template-setup">L. Editable Template Setup <a href="#l-editable-template-setup" class="anchor">🔗</a></h2><ol>
+</span></span></code></pre></div><h2 id="editable-template-setup">Editable Template Setup <a href="#editable-template-setup" class="anchor">🔗</a></h2><ol>
 <li>Template type: <code>/apps/your-project/templates</code></li>
 <li>Templates: <code>/conf/your-project/settings/wcm/templates</code></li>
 <li>Policies: <code>/conf/your-project/settings/wcm/policies</code></li>

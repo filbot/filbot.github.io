@@ -6,9 +6,11 @@ description = 'A quick-start resource I wish I had when I began working with AEM
 tags = ['aem', 'frontend', 'developer-tools', 'aem-resources']
 +++
 
+{{< img src="images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image.jpg" alt="ChatGPT generated image of man riding Adobe logo" >}}
+
 Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.
 
-## A. Common URLs
+## Common URLs
 
 | Purpose | Path |
 |--------|------|
@@ -23,7 +25,7 @@ Just a little something I wish I had when I first started working with AEM. Adob
 | Sites Authoring | `/sites.html/content` |
 | Template Editor | `/libs/wcm/core/content/sites/templates.html/conf` |
 
-## B. Useful File System Paths (JCR)
+## Useful File System Paths (JCR)
 
 | Purpose | JCR Path |
 |--------|----------|
@@ -35,7 +37,7 @@ Just a little something I wish I had when I first started working with AEM. Adob
 | Clientlibs | `/apps/your-project/clientlibs/...` |
 | Designs (for legacy static templates) | `/etc/designs/` |
 
-## C. Maven Commands
+## Maven Commands
 
 ```bash
 mvn clean install
@@ -44,13 +46,13 @@ mvn clean install -PautoInstallPackage -pl ui.apps
 mvn clean install -PautoInstallBundle -pl core
 ```
 
-## D. CRX Package Manager (Curl)
+## CRX Package Manager (Curl)
 
 ```bash
 curl -u admin:admin -F file=@"my-package.zip" -F name=my-package -F force=true -F install=true http://localhost:4502/crx/packmgr/service.jsp
 ```
 
-## E. HTL (Sightly) Snippets
+## HTL (Sightly) Snippets
 
 ```html
 ${myModel.title}
@@ -61,7 +63,7 @@ ${myModel.title}
 <div data-sly-test="${myModel.showThing}">Shown if true</div>
 ```
 
-## F. Sling Models (Java)
+## Sling Models (Java)
 
 ```java
 @Model(adaptables = Resource.class)
@@ -73,7 +75,7 @@ public class ExampleModel {
 }
 ```
 
-## G. Registering an OSGi Servlet
+## Registering an OSGi Servlet
 
 ```java
 @Component(service = Servlet.class,
@@ -89,13 +91,13 @@ public class MyServlet extends SlingSafeMethodsServlet {
 }
 ```
 
-## H. Dispatcher Caching Quick Tips
+## Dispatcher Caching Quick Tips
 
 - Flush content via flush agent at `/etc/replication/agents.author/dispatcher`
 - Debug caching using `X-Cache: HIT/MISS` headers
 - Deny example: `/filter { /0001 { /type "deny" /url "*.json" } }`
 
-## I. Troubleshooting Tips
+## Troubleshooting Tips
 
 | Symptom | Tip |
 |--------|-----|
@@ -105,7 +107,7 @@ public class MyServlet extends SlingSafeMethodsServlet {
 | No logs from code | Use logger, check `error.log` |
 | Dispatcher not updating | Clear cache or flush manually |
 
-## J. Log Statements (Java)
+## Log Statements (Java)
 
 ```java
 private static final Logger log = LoggerFactory.getLogger(MyModel.class);
@@ -114,7 +116,7 @@ log.debug("Variable value: {}", value);
 log.error("Something went wrong", e);
 ```
 
-## K. Common Component File Structure
+## Common Component File Structure
 
 ```
 /apps/your-project/components/card/
@@ -124,7 +126,7 @@ log.error("Something went wrong", e);
   └── cq:template
 ```
 
-## L. Editable Template Setup
+## Editable Template Setup
 
 1. Template type: `/apps/your-project/templates`
 2. Templates: `/conf/your-project/settings/wcm/templates`
