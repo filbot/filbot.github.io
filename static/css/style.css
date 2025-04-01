@@ -26,6 +26,13 @@
   figure {
     margin: 0;
   }
+
+  .content table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
   
   /* markdown content styles */
   blockquote {
