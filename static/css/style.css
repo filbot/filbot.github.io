@@ -22,6 +22,10 @@
   a:hover {
     color: #000;
   }
+
+  figure {
+    margin: 0;
+  }
   
   /* markdown content styles */
   blockquote {
