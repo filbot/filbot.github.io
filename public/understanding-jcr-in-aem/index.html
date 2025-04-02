@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Understanding JCR in AEM | Semicolons &amp; Side Projects</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="A beginner-friendly analogy that breaks down AEM’s content repository by stacking concepts like LEGO bricks—literally">
+<meta name="generator" content="Hugo 0.145.0">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+  
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5HRT1QBKC"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P5HRT1QBKC');
+        }
+      </script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/">Home</a>
+	
+	
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Understanding JCR in AEM</h1>
+
+    <div class="tip">
+        <time datetime="2025-04-02 07:47:37 -0700 PDT">Apr 2, 2025</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          604 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          3 minute read
+        </span>
+    </div>
+
+    
+    
+
+
+    <div class="content">
+      
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/understanding-jcr-in-aem/header_hu_6d7a370c32e7a141.webp"
+      srcset="/images/understanding-jcr-in-aem/header_hu_abb6ae94d2e7a096.webp 320w, /images/understanding-jcr-in-aem/header_hu_9c3cc7089f6222cc.webp 480w, /images/understanding-jcr-in-aem/header_hu_3079fec868063dea.webp 768w, /images/understanding-jcr-in-aem/header_hu_6d7a370c32e7a141.webp 1024w, /images/understanding-jcr-in-aem/header_hu_6f9b2311c3a3e846.webp 1366w, /images/understanding-jcr-in-aem/header_hu_4c09cf047f672fe9.webp 1536w, /images/understanding-jcr-in-aem/header_hu_40f387201452ac20.webp 1920w, /images/understanding-jcr-in-aem/header_hu_6635beb3f8b25b6b.webp 2560w, /images/understanding-jcr-in-aem/header_hu_e1e02959ecff8802.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRuABAABXRUJQVlA4INQBAABQCQCdASoqABoAPs1QoEkjoiGYCqwAOwzE9gBYj57cH7FeA2wHPw2TYvwVy6AD3Diva&#43;bzbuZ4&#43;f3etauxtWFi0QLJA2i5vamLNcfTt9Ua92I1gAD&#43;wu/u1Bc3PvEpQHti75bWrv8YoJNLqQUq2zH1fKX9eBIj7zk/djS6mDO//WYvnYKlvL0Cyhfr/IWOa3G5YgPRBiTAZK0eQr9lfTbrK3PF9&#43;5vZ&#43;H66KnUkYrX7cL7KKtiUmTGKZKWK3QY97fEu9r7iruKsjoJfCaSIoBaQiN9bo1Srcb8DthjzRD&#43;1ijdwkPLvL6gFatZD4kH68lki33QGlbTEE7pMV&#43;DWYUbZrKkE&#43;vPTuOH7dhWXg7bEKeJ&#43;oeoKruPXKkOp4/MzbK2tG1M5ZR5V/ejfORbVvpslKOit7dWZxY0zBfUVRU727GRPG0P&#43;grvIGUETW9Ye33Ln0/MTy2&#43;UOZ8EE4M4eX5Yf1&#43;tqbFD95XHj4rniltbrjPliigbhc4SRVeW6ExeC5bCwq6rVBBS8icMv&#43;7XD0RXpSXzx&#43;ghsxUpQP1fxLBkR77z6tf3MnIQ6DJGYNocCQ5cOJoWFPrDMWVnHYUbkPiyq/jJx7G56PD5dVRzBkVSUAAAAA=);"
+      loading="lazy"
+      decoding="async"
+      alt="ChatGPT generated image lego ad" />
+    
+    
+    
+    
+  </figure>
+
+<p>If you’re brand new to Adobe Experience Manager (AEM), one of the first things you’ll hear about is something called the <strong>JCR</strong>—short for <strong>Java Content Repository</strong>. That might sound intimidating, especially if you don’t have a Java background (I didn’t either), but don’t worry. This post is here to give you a simple, high-level mental model.</p>
+<p>And the model we’re going to use? Legos.</p>
+<hr>
+<h2 id="what-is-the-jcr">What Is the JCR? <a href="#what-is-the-jcr" class="anchor">🔗</a></h2><p>Let’s say you walk into a giant Lego store—not just any Lego store, but one where every single brick is cataloged, labeled, and stored in a way that you can find it instantly. That’s the <strong>JCR</strong>.</p>
+<p>In technical terms, the JCR is a hierarchical content repository. But practically speaking, it’s <strong>where all of your site’s content and configuration lives inside AEM.</strong></p>
+<p>That includes:</p>
+<ul>
+<li>Pages</li>
+<li>Components</li>
+<li>Images and assets</li>
+<li>Templates</li>
+<li>Dialog configuration</li>
+<li>Even permissions and user settings</li>
+</ul>
+<p>Think of the JCR as the giant, well-organized <strong>Lego warehouse</strong> behind your AEM project.</p>
+<hr>
+<h2 id="the-jcr-is-a-tree-not-a-database-table">The JCR Is a Tree, Not a Database Table <a href="#the-jcr-is-a-tree-not-a-database-table" class="anchor">🔗</a></h2><p>Most of us coming from modern web development are used to databases with rows and columns, or APIs that return JSON. JCR doesn’t work like that. Instead, it works more like a <strong>file system</strong>—everything is stored as a <strong>node in a tree</strong>, like folders and files.</p>
+<p>So, instead of thinking:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#666">*</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#bbb"> </span>pages<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>id<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#666">123</span>;<span style="color:#bbb">
+</span></span></span></code></pre></div><p>You think:</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/content/mysite/en/products/shoes
+</span></span></code></pre></div><p>That path points to a <strong>node</strong>, and that node can contain:</p>
+<ul>
+<li><strong>Properties</strong> (think key/value pairs: title = &ldquo;Red Sneakers&rdquo;)</li>
+<li><strong>Child nodes</strong> (like a paragraph, an image, or metadata)</li>
+<li><strong>Resource types</strong> (which tell AEM how to render that node)</li>
+</ul>
+<p>This makes it really easy to visualize and navigate the structure of your site—especially once you start using tools like CRXDE Lite or the AEM Developer Console.</p>
+<hr>
+<h2 id="how-the-lego-analogy-fits">How the Lego Analogy Fits <a href="#how-the-lego-analogy-fits" class="anchor">🔗</a></h2><p>Let&rsquo;s break it down brick by brick:</p>
+<ul>
+<li><strong>Each node is a Lego piece.</strong> Some are tiny (like a color value), some are big assemblies (like a whole product page).</li>
+<li><strong>The JCR tree is the instruction manual + storage bin.</strong> It shows how each piece connects and where it lives.</li>
+<li><strong>Component data = custom sticker sheet.</strong> You can slap different values or settings onto the same Lego brick depending on the context. That’s how one component can show different content on different pages.</li>
+</ul>
+<p>You’re not just stacking bricks—you’re building a <strong>structured heiarchy</strong>, and the JCR keeps it all organized so AEM can render it.</p>
+<hr>
+<h2 id="what-lives-where">What Lives Where? <a href="#what-lives-where" class="anchor">🔗</a></h2><p>Some common places you’ll run into in the JCR:</p>
+<ul>
+<li><code>/content/your-site-name</code> – actual pages and authored content</li>
+<li><code>/apps/</code> – code and templates written by developers</li>
+<li><code>/etc/</code> – configurations, like tags and workflows</li>
+<li><code>/content/dam/</code> – uploaded assets (images, PDFs, videos)</li>
+<li><code>/conf/</code> – editable templates and site-level settings</li>
+<li><code>/var/</code> – temporary or system-generated data</li>
+</ul>
+<p>These aren’t arbitrary—they follow conventions that make AEM powerful and extensible. As you get deeper into AEM, knowing where to look in the JCR is like knowing which bin to open when you need a 2x4 yellow brick.</p>
+<hr>
+<h2 id="why-jcr-matters-even-if-youre-not-writing-java">Why JCR Matters (Even if You’re Not Writing Java) <a href="#why-jcr-matters-even-if-youre-not-writing-java" class="anchor">🔗</a></h2><p>Even if you’re never going to write Java or interact with the JCR directly in code, understanding how it’s organized helps you:</p>
+<ul>
+<li>Debug why something isn’t rendering</li>
+<li>Figure out what data authors can edit and where it lives</li>
+<li>Know how to inspect and tweak component behavior</li>
+<li>Understand how permissions, templates, and assets are wired together</li>
+</ul>
+<hr>
+<p>You don’t need to memorize every node path in the JCR. You just need to know that everything in AEM lives <strong>somewhere</strong> in this organized tree of Lego bricks—and that knowing where to look is often the first step toward solving a problem or building something new.</p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="https://github.com/filbot" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="31.99" height="31.2" viewBox="0 0 31.99 31.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #181616;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M16,0C7.16,0,0,7.16,0,16c0,7.07,4.58,13.06,10.94,15.18.8.15,1.05-.33,1.05-.75,0-.38,0-1.44,0-2.78-4.45.97-5.37-2.11-5.37-2.11-.73-1.85-1.78-2.34-1.78-2.34-1.45-.99.11-.97.11-.97,1.61.11,2.45,1.65,2.45,1.65,1.43,2.44,3.74,1.74,4.65,1.33.15-1.03.56-1.74,1.02-2.14-3.55-.4-7.29-1.78-7.29-7.91,0-1.75.62-3.17,1.65-4.29-.17-.4-.72-2.03.16-4.23,0,0,1.34-.43,4.4,1.64,1.28-.36,2.65-.53,4.01-.54,1.36,0,2.73.18,4.01.54,3.06-2.07,4.4-1.64,4.4-1.64.87,2.2.32,3.83.16,4.23,1.02,1.12,1.64,2.55,1.64,4.29,0,6.15-3.74,7.5-7.3,7.89.57.5,1.09,1.45,1.09,2.95v4.43c0,.43.26.9,1.07.75,6.35-2.12,10.93-8.11,10.93-15.18C31.99,7.16,24.83,0,16,0Z"/>
+  </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://instagram.com/filipekadamczyk" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="OUTLINE_copy_2" data-name="OUTLINE copy 2">
+      <g>
+        <path d="M20.84,16.14c0,2.58-2.16,4.68-4.83,4.68s-4.83-2.1-4.83-4.68c0-.46.07-.91.2-1.33l-1.21-.26v6.8c0,.34.15.49.49.49h10.69c.34,0,.49-.15.49-.49v-6.8l-1.19.26c.13.42.2.87.2,1.33Z"/>
+        <ellipse cx="16.01" cy="15.97" rx="3.12" ry="3.03"/>
+        <path d="M16,0C7.16,0,0,7.16,0,16s7.16,16,16,16,16-7.16,16-16S24.84,0,16,0ZM23.77,21.83c0,1.1-.85,1.94-1.94,1.94h-11.66c-1.1,0-1.94-.85-1.94-1.94v-11.66c0-1.1.85-1.94,1.94-1.94h11.66c1.1,0,1.94.85,1.94,1.94v11.66Z"/>
+        <path d="M21.34,10.17h-1.94c-.27,0-.49.22-.49.49v1.94c0,.27.22.49.49.49h1.94c.27,0,.49-.22.49-.49v-1.94c0-.27-.22-.49-.49-.49Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://linkedin.com/in/filip-grace-1255b06" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="30.5" height="30.5" viewBox="0 0 30.5 30.5">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path d="M15.25,0C6.84,0,0,6.84,0,15.25s6.84,15.25,15.25,15.25,15.25-6.84,15.25-15.25S23.66,0,15.25,0ZM10.71,22.19h-3.56v-10.7h3.56v10.7ZM8.93,10.03h0s-.02,0-.02,0c-1.2,0-1.97-.82-1.97-1.85s.79-1.85,2.01-1.85,1.97.8,1.99,1.85c0,1.03-.77,1.85-2.01,1.85ZM23.54,22.19h-3.56s0-5.73,0-5.73c0-1.44-.52-2.42-1.8-2.42-.98,0-1.57.66-1.83,1.3-.09.23-.12.55-.12.87v5.98h-3.56s.05-9.7,0-10.7h3.56v1.52c.47-.73,1.32-1.77,3.21-1.77,2.34,0,4.1,1.53,4.1,4.82v6.14Z"/>
+  </g>
+</svg>
+    </a>
+
+
+</div>
+
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2025 
+       
+    
+    </div>
+</footer>
+
+
+    
+        
+        <script src="http://localhost:1313/js/custom.js"></script>
+    
+
+
+  </body>
+</html>
