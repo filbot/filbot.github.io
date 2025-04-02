@@ -2,14 +2,15 @@
 date = '2025-04-02T07:47:37-07:00'
 draft = false
 title = 'Understanding JCR in AEM'
-description = 'A beginner-friendly analogy that breaks down AEM’s content repository by stacking concepts like LEGO bricks—literally'
+description = "A beginner-friendly analogy that breaks down AEM's content repository by stacking concepts like LEGO bricks—literally"
+tags = ['AEM', 'JCR', 'Content Repository']
 +++
 
 {{< img src="images/understanding-jcr-in-aem/header.jpg" alt="ChatGPT generated image lego ad" >}}
 
 If you’re brand new to Adobe Experience Manager (AEM), one of the first things you’ll hear about is something called the **JCR**—short for **Java Content Repository**. That might sound intimidating, especially if you don’t have a Java background (I didn’t either), but don’t worry. This post is here to give you a simple, high-level mental model.
 
-And the model we’re going to use? Legos.
+And the model we’re going to use? Lego.
 
 ---
 
