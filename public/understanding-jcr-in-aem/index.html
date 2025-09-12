@@ -47,7 +47,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600&family=Sora:wght@400;600;700&family=Source+Sans+Pro:wght@400&family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
 
   </head>
 
@@ -178,9 +179,9 @@
 <hr>
 <h2 id="the-jcr-is-a-tree-not-a-database-table">The JCR Is a Tree, Not a Database Table <a href="#the-jcr-is-a-tree-not-a-database-table" class="anchor">🔗</a></h2><p>Most of us coming from modern web development are used to databases with rows and columns, or APIs that return JSON. JCR doesn’t work like that. Instead, it works more like a <strong>file system</strong>—everything is stored as a <strong>node in a tree</strong>, like folders and files.</p>
 <p>So, instead of thinking:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">SELECT</span><span style="color:#bbb"> </span><span style="color:#666">*</span><span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">FROM</span><span style="color:#bbb"> </span>pages<span style="color:#bbb"> </span><span style="color:#a2f;font-weight:bold">WHERE</span><span style="color:#bbb"> </span>id<span style="color:#bbb"> </span><span style="color:#666">=</span><span style="color:#bbb"> </span><span style="color:#666">123</span>;<span style="color:#bbb">
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#cf222e">SELECT</span><span style="color:#fff"> </span><span style="color:#0550ae">*</span><span style="color:#fff"> </span><span style="color:#cf222e">FROM</span><span style="color:#fff"> </span>pages<span style="color:#fff"> </span><span style="color:#cf222e">WHERE</span><span style="color:#fff"> </span>id<span style="color:#fff"> </span><span style="color:#0550ae">=</span><span style="color:#fff"> </span><span style="color:#0550ae">123</span><span style="color:#1f2328">;</span><span style="color:#fff">
 </span></span></span></code></pre></div><p>You think:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/content/mysite/en/products/shoes
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>/content/mysite/en/products/shoes
 </span></span></code></pre></div><p>That path points to a <strong>node</strong>, and that node can contain:</p>
 <ul>
 <li><strong>Properties</strong> (think key/value pairs: title = &ldquo;Red Sneakers&rdquo;)</li>

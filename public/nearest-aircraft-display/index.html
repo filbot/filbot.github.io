@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <title>Nearby Aircraft Display | Semicolons &amp; Side Projects</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="A custom-built OLED display with mechanical relays and aircraft-type indicators that shows the nearest plane overhead">
+<meta name="generator" content="Hugo 0.145.0">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+  
+    
+    <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
+  
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5HRT1QBKC"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-P5HRT1QBKC');
+        }
+      </script>
+
+
+
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600&family=Sora:wght@400;600;700&family=Source+Sans+Pro:wght@400&family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/">Home</a>
+	
+	
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+</nav>
+
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">Nearby Aircraft Display</h1>
+
+    <div class="tip">
+        <time datetime="2025-09-09 19:05:55 -0700 PDT">Sep 9, 2025</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1733 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          9 minute read
+        </span>
+    </div>
+
+    
+    
+
+
+    <div class="content">
+      
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp"
+      srcset="/images/flight-display/chatgpt-header-image_hu_153939f10a12373d.webp 320w, /images/flight-display/chatgpt-header-image_hu_d4c9a35156bde7dc.webp 480w, /images/flight-display/chatgpt-header-image_hu_59890c2ad19508e.webp 768w, /images/flight-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp 1024w, /images/flight-display/chatgpt-header-image_hu_77129e117855f9eb.webp 1366w, /images/flight-display/chatgpt-header-image_hu_8a5602adb3d2f838.webp 1536w, /images/flight-display/chatgpt-header-image_hu_7f0fb93a88b74818.webp 1920w, /images/flight-display/chatgpt-header-image_hu_2136d08c7aa574cb.webp 2560w, /images/flight-display/chatgpt-header-image_hu_20972247bce3265f.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAABQBgCdASoqABoAPrlEmEUjoiEYBqg7C4TygFt9uTLei/e96t2&#43;q5fcwJdIuf34j3Rt9uCsMLgN2snTAAD&#43;83J6NAQyAToqF8VrR/hC2KdTPgL&#43;pX5vR7p9VE02kQ4eGqEjEOlLRG5KR3yAwoEoU7JD6CdMg/Ya28zPeciIcAB43DQKxwHhAJgqsvUqRyVkxcXzAiy4iUGCwyKzJf2ULaFiFxD8x&#43;hf4KMYeXI5jRpRoEh1w1FgMKNhjO7jBL0CrJQf9cYNx6K&#43;Dby33ZFzHAHLLz9KQ25dOpMa7IYGjY/uiff&#43;pHxIs4uuXcVfIWYvwSGUAOuf79DcTIdt/zYBwgAA);"
+      loading="lazy"
+      decoding="async"
+      alt="ChatGPT generated image of Flight Display" />
+    
+    
+    
+    
+  </figure>
+
+<p>I have an <a href="/piaware-lcd-display/">ADS-B node</a> feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.</p>
+<h2 id="what-i-used">What I Used <a href="#what-i-used" class="anchor">🔗</a></h2><ul>
+<li>ESP32 development board with external antenna</li>
+<li>5.5 inch Green Graphic OLED Module from Newhaven Display</li>
+<li>4 Relay module</li>
+<li>Bambu Lab PLA-CF filament</li>
+<li>3mm cast acrylic sheet for the faceplate and aircraft type tiles</li>
+<li>5v LED tape</li>
+<li>A bunch of tools including a X1-Carbon 3D printer, Nomad 3 CNC, and OpenAI Codex for the code</li>
+</ul>
+<p>A note about the hardware: I used some pricey tools and a high-end display, but you do not need those to build a functional version of this project. Any decent 3D printer will work; it does not have to be a Bambu Lab. You could also repurpose a project box or even use cardboard. The display was the big splurge, mainly because it&rsquo;s a newer OLED in this large a size and I wanted to play with it, but almost any display could be adapted depending on your build. Everything else came from Amazon and was relatively inexpensive.</p>
+<hr>
+<h2 id="the-seed">The Seed <a href="#the-seed" class="anchor">🔗</a></h2><p>I had an idea in my head and a box of electronics from past projects or impulse buys that never made it past the first step. Before spending any money, which is usually how I kick off a project because they tend to be an excuse for something new, I decided to dig through the reserves and see if I could cobble together a prototype.</p>
+<p>Presenting… a prototype:</p>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/humble-start_hu_7eff0a1da2c1f16c.webp"
+      srcset="/images/flight-display/humble-start_hu_97cd6f4a86518f9.webp 320w, /images/flight-display/humble-start_hu_1f8ba93fd5b715a.webp 480w, /images/flight-display/humble-start_hu_283cbbfb7b846f45.webp 768w, /images/flight-display/humble-start_hu_7eff0a1da2c1f16c.webp 1024w, /images/flight-display/humble-start_hu_69423ced57213af8.webp 1366w, /images/flight-display/humble-start_hu_65b512f8170a3500.webp 1536w, /images/flight-display/humble-start_hu_aea7525f8c44e462.webp 1920w, /images/flight-display/humble-start_hu_c1c4a4a6a573ce13.webp 2560w, /images/flight-display/humble-start_hu_ff3d7e1a3b9c98b.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRqIBAABXRUJQVlA4IJYBAADwCACdASoqACAAPs1OoEkjoaGYCqwAOwzE8QBOmX9dF6A28ex/2DyuNu68r5iQkMmMSv&#43;7GUIFdntBjRlwu9NTLSCQVrMzkDjjCsMf3bhrwAD87fOGHW8l&#43;VnERcyw5heF7i/Vjxh2SFjPs7qNxdde/HBivshWmD91HlrFwX/qw1d8V6Kc2Y/&#43;Dl5NWZD&#43;utSiq9UB5iHem3u1NQSeu7li9GeOGZ6zw9ah5oJ3wzvStY8ptHaLGakzGOH19ETeXHEMPO7D5dvWAQC7lBm&#43;u0mhzdFafFfNSVuT2nvQwl/lNrYnVLHpvLYVNKPQpmidfRCS6FfBHKKGcfH8VSIFWLm5QwDTcL7ukxLjnv0gHPT0ttJpOMYR2cdkhVNcV1TkKYXWtiDK74VE/9AhsbJa2X8Fq&#43;cr1HUty3h695a/vwXBD4C4e13T1f4smmu4eKc&#43;oW/8FQgPgeLhFAW96C3XRot15GALX&#43;sIOmUm5dh9VVXCMwNA5QmQJjyDWT&#43;OVF0AHwIiiaw1vWcJkxjiOEH3rqkG4&#43;z2AAAA);"
+      loading="lazy"
+      decoding="async"
+      alt="prototype" />
+    
+    
+    
+    
+  </figure>
+
+<blockquote>
+<p>A breadboard with the ESP32 development board, a 0.96” OLED display I picked up from TEMU at some point for about a dollar, and a 4-relay module I purchased back in 2012 for a smart garage door opener project, which was the first electronics project I ever did. Link to a video of said project: <a href="https://youtu.be/XCi2deI26FY" target="_blank" rel="noopener">Raspberry Pi Smart Garage</a></p></blockquote>
+<hr>
+<h2 id="the-screen">The Screen <a href="#the-screen" class="anchor">🔗</a></h2><p>Once I had a proof of concept running, that’s when the real fun began, buying new stuff. For me, this entire project revolved around finding a bright display that would be readable at a distance. I typed “large character display” into Google Images and started browsing, eventually landing on this…</p>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/newhavendisplay_hu_2d09c3f03350bebb.webp"
+      srcset="/images/flight-display/newhavendisplay_hu_3db4ea9daf0f3e3c.webp 320w, /images/flight-display/newhavendisplay_hu_8ac625acecbda6b3.webp 480w, /images/flight-display/newhavendisplay_hu_9373b403e82481d8.webp 768w, /images/flight-display/newhavendisplay_hu_2d09c3f03350bebb.webp 1024w, /images/flight-display/newhavendisplay_hu_3c99b750bef2b3e8.webp 1366w, /images/flight-display/newhavendisplay_hu_30a564dbd385ce39.webp 1536w, /images/flight-display/newhavendisplay_hu_f8a1db44377c32bc.webp 1920w, /images/flight-display/newhavendisplay_hu_9285bd277575900e.webp 2560w, /images/flight-display/newhavendisplay_hu_c3be6f2d487793f1.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRsIBAABXRUJQVlA4ILYBAACwCACdASoqAB4APs1io0ojoqGVXAQAOwzE9gBOmYja6CRa0sOUz2MZgDgIWn5jXfVX222&#43;WjllQtP1EOrjBu44RtBdJPFLsk6LXMs2FAAA/mS8Pce&#43;iktU605RokpSB9jdYW1d&#43;vrZKyHq&#43;tk7eKBn3UJCNMclgiAYPG6zLsbt7Nwi30jQtvfG088Vye5X5o6DiWK6AVFZiVEdfUzEpRT0ACqC9rJgf0spaJxz2DS2wN6PDvFhLAepe/eVeVf5IAdqyuuR2jFgd36B5Kpxd9B3i7ygftm9&#43;LxV&#43;0oVpsSX6fTfPTXIxJhVl5jcRMpbABrnjWXFb0AN5&#43;enlZJdHh73KEjvcQTcc8gyl1U6sUzA/IjrI2YydEk7cv9q6LglrTYYwItsYgxlhTnYJCtv162FgQe0b8DwzNnYMDKtho/ebJo58bE7FRt4cdnm9ckoeJL2v6D/Gbx8W5ZpJ70EID4KeAL8Gu16W&#43;hrkKFC1wMvlI6j/lYNd/E0Eaey9Es&#43;Kjw0SYDAOijGkC8kmQjQjYqfOfT/3uz5ssV5EFVBY&#43;3Ds&#43;mmk6Aa6cQZY/7jkz&#43;hUBM0&#43;wuoAAA=);"
+      loading="lazy"
+      decoding="async"
+      alt="display" />
+    
+    
+    
+    
+  </figure>
+
+<p>The display I found was a <a href="https://newhavendisplay.com/5-5-inch-green-graphic-oled-module/" target="_blank" rel="noopener">Newhaven Display 5.5 inch Green Graphic OLED Module</a>. It is new to the market, and it is beautiful. Just look at those inky blacks, that super high contrast. I threw it into a 3D-printed test faceplate as quickly as possible so I could stare at it. Take note of all the wires in this photo, we will get to that.</p>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/screen-wires_hu_2a2486e08bd23b47.webp"
+      srcset="/images/flight-display/screen-wires_hu_884fa6f46ebf993d.webp 320w, /images/flight-display/screen-wires_hu_98d697748ae9ebdf.webp 480w, /images/flight-display/screen-wires_hu_2d3cbd5aa2a2d516.webp 768w, /images/flight-display/screen-wires_hu_2a2486e08bd23b47.webp 1024w, /images/flight-display/screen-wires_hu_d5a10c8b95c4f56b.webp 1366w, /images/flight-display/screen-wires_hu_89da803aa5ac661.webp 1536w, /images/flight-display/screen-wires_hu_f6b5a7426a8b0cdf.webp 1920w, /images/flight-display/screen-wires_hu_92e1b2aa87afeb91.webp 2560w, /images/flight-display/screen-wires_hu_b65642a03a7e1b37.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRuABAABXRUJQVlA4INQBAAAwCQCdASoqACAAPs1QoEgjoiGVXAYAOwzE9gBOmV6/18uelVND&#43;dQI1QPeZB3/NAINbdNFn9Aju2G9gTwDF8ZyOMZK7Va7eghLI7uNKjiGFYWAAP76OC5sapKIdtl////OlUiaC/v0RCERs2gMiYBnNRcQPQnKI9YNSoLFud6QofelnJmuYa5waSQBNMUGI9&#43;jri0VFFBZk/MyUnRxe7Mno7pqK4dmB1m048FB&#43;KPoqJOxQ6hMtgFznjNL0QzfqWIi9r7vdJgZARl07wRXH9wHtz48xUaLVhBhk&#43;0BrvtD/ez950&#43;ixPwjGMKMEPf2Xq7CqY06PnUuayLm79fOVY7Jk08ufFD2Lp/J1J7nDKTCjObYnfZrQkKmJ5riuEmzo1taHHiwXH9sqXwoGWoiqQr/WHeXyPOaCDkhCo&#43;NCngY2yrhlM8KTQY3zOcNIg8uEfIuFQOI&#43;oF6Z7AXZZmANc6bbgGq/rsLgQ6GzKEaqOy1aIDXKkBAT054MtVlSKz0FCarJiki04yjN&#43;6bRjxsuAGomxEcxIYe1YnP5cwkR5kUQocwoP1VoO&#43;gKGb6nnxffz&#43;XEUQ6vh9I9LA8tYP8oD/nieNagDIg6wuEmcQwV9EpR/P&#43;AAA=);"
+      loading="lazy"
+      decoding="async"
+      alt="screen wiring" />
+    
+    
+    
+    
+  </figure>
+
+<p>Every green wire coming off the back of the screen is a ground connection. There are a lot of them, and wiring it up was a pain. Out of the 16 pins required, 10 are ground.</p>
+<hr>
+<h2 id="the-face">The Face <a href="#the-face" class="anchor">🔗</a></h2><p>Up until now, I had been using a 3D-printed faceplate during development, but the plan was always to finish with a painted, CNC-cut acrylic faceplate with engraved lettering. Here’s a screenshot of an early draft. The lettering would come later, and since Fusion doesn’t handle typography very well, the layout process was a bit clunky.</p>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/fusion-faceplate_hu_525ee68c094a2b68.webp"
+      srcset="/images/flight-display/fusion-faceplate_hu_7b40e5109471ae07.webp 320w, /images/flight-display/fusion-faceplate_hu_29df215584ec807e.webp 480w, /images/flight-display/fusion-faceplate_hu_cff8b1086622de12.webp 768w, /images/flight-display/fusion-faceplate_hu_525ee68c094a2b68.webp 1024w, /images/flight-display/fusion-faceplate_hu_6edd1a1a0b515a5d.webp 1366w, /images/flight-display/fusion-faceplate_hu_d84e212faa00d38e.webp 1536w, /images/flight-display/fusion-faceplate_hu_66fc1e7acd257763.webp 1920w, /images/flight-display/fusion-faceplate_hu_aa4b5f5397b93910.webp 2560w, /images/flight-display/fusion-faceplate_hu_b734282d5bb1f72.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRiYBAABXRUJQVlA4IBoBAACQBgCdASoqABgAPs1Sn0cjoiEStzA7DMTygAWAEsv8enz97AHRgOyt3XhdhmgJn205zLnv23TmGUJlz0wQAP77QWGWY9ysDwDzaWdi34yZhhvsg4NA&#43;v&#43;J/IH&#43;XLl/Wlk2B/yfIF8rZJJgU96&#43;Xf3znlkfERSzVeCbjWsLc7KXTfufcvc/&#43;q0GoPUhCzJXzDrAnLyJi4JgxJusPAa/GktNJCeRmSDGny8jOuA8QJN277ofVyU6kchzkOfUi&#43;BnUGJO41wPP4TGaxrqgjP6LuzmmbwTgr3HuTNfOb38VLtL/pdYSn79/olu9NHcBMlAjUv0sGKo//OAEGQJ7Vi0hSnhOpAkj3ly/60/mP4JG99PW1SGlvflnhghgAA=);"
+      loading="lazy"
+      decoding="async"
+      alt="faceplate fusion screenshot" />
+    
+    
+    
+    
+  </figure>
+
+<blockquote>
+<p>faceplate sans lettering</p></blockquote>
+<p>I designed the part and cut it out so I could paint it and let it cure before moving on to the engraving step. I normally have a hard time letting spray paint cure long enough to harden properly, but that wasn’t a problem on this project. I had a pile of wire and tiny crimp connections to make.</p>
+<p>The following picture and video are from my first attempt, where I reversed the order of operations: I painted the acrylic, engraved it, and then cut the faceplate out. That left white edges on the inside of the cutouts, which I didn’t want in the final product. So, when it came time to make the real deal, I changed the order of operations even though it meant having to register the faceplate correctly for the engraving which turned out okay.</p>
+<video class="video"  controls playsinline>
+  <source src="/videos/flight-display/faceplate-engraving.mov" type="video/mp4">
+  
+</video>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/fresh-faceplate_hu_9b13736d7fd3729f.webp"
+      srcset="/images/flight-display/fresh-faceplate_hu_79e8109c81e433b2.webp 320w, /images/flight-display/fresh-faceplate_hu_b41687824f78de97.webp 480w, /images/flight-display/fresh-faceplate_hu_c7b930bdd7e83c89.webp 768w, /images/flight-display/fresh-faceplate_hu_9b13736d7fd3729f.webp 1024w, /images/flight-display/fresh-faceplate_hu_b4819c9b331bfaa6.webp 1366w, /images/flight-display/fresh-faceplate_hu_debef6b492dfb458.webp 1536w, /images/flight-display/fresh-faceplate_hu_f7f02ba51e57f065.webp 1920w, /images/flight-display/fresh-faceplate_hu_888ea485439f37b8.webp 2560w, /images/flight-display/fresh-faceplate_hu_d0d0439dfa88519e.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRr4BAABXRUJQVlA4ILIBAAAQCQCdASoqACAAPs1InkijoaEYCq1UOwzE8QBYj3z4EteC6p4TmiNVO328e0AN&#43;SfnqCHy0qoqhLdVI1Q6FKgA&#43;fobv4EGMHvZ4erUut&#43;XTQAA/vtjKK3mv1m3ey0i&#43;DHdfQnqLOaVYlC7wDo3t0dG358rIWYCh2X06viXd5NKgBVNYR3zNlgcfWrqMRvL7F4BRMs5JccIp5co7srss5NQ9/xn1LBaQ4UxzT2A8/au&#43;7swjUOap94hF60HxYiPTH8jMaWk54Q0TaynrtVNmachWq9PTowg7mWB0727wbLPRA1OjBY6oeYOLpLGETls6A6KySdMatGDwrRQOjQVMLFi8E8oJfTqvPuHyZx/TGcTiRA/y8ocHvdRGmMr8BrDvkZHhnUh&#43;VIwP44kiJRmteIbgwb&#43;5w4NQ9&#43;ZwxTYSe8dG/FuV77XJfl6MuLIJix7AQdyut9NdNqaXirq8ygJ&#43;zeXXsn9Ly6oFv3nHf6O2tYHQKLc3IhzzwLk4gt36/3jSgIMw2WsafZ/7dqZViFRel7ZnnKvi14P6BQHDrHc/889XtMfaGQTpy&#43;j2&#43;4i4xNpBAAAAA==);"
+      loading="lazy"
+      decoding="async"
+      alt="faceplate engraved" />
+    
+    
+    
+    
+  </figure>
+
+<hr>
+<h2 id="the-light">The Light <a href="#the-light" class="anchor">🔗</a></h2><p>The device has four discrete acrylic panes that are backlit: power indicator, “PVT,” “COM,” and “MIL” panels. I wanted each one to be as evenly lit as possible with no hot spots. A single LED for each would not be enough light to do much of anything, I knew I’d have to use an LED strip, but I wasn’t sure how much I would need for each panel. It wouldn’t matter because I was constrained by the way I designed the light pod, as I call it, and just ended up shoving in as much as I could. Having distance between the light source and backlit area is key to diffusion, a lesson learned on an earlier project that ended up getting featured on hackaday.com ages ago: <a href="https://hackaday.com/2016/08/05/defcon-thermometer/" target="_blank" rel="noopener">DEFCON Thermometer</a>.</p>
+<p>The keen-eyed among you will notice that the light pods are a few millimeters proud of the joining rib. That’s to allow a press fit into the backing plate shown in the photo with the LEDs lit up.</p>
+<video class="video"  controls playsinline>
+  <source src="/videos/flight-display/light-pods.mp4" type="video/mp4">
+  
+</video>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/light-pod-illuminated_hu_22b607b65342e177.webp"
+      srcset="/images/flight-display/light-pod-illuminated_hu_f2cb3da9d9449cd2.webp 320w, /images/flight-display/light-pod-illuminated_hu_94a949caa45667f0.webp 480w, /images/flight-display/light-pod-illuminated_hu_22d923848d072033.webp 768w, /images/flight-display/light-pod-illuminated_hu_22b607b65342e177.webp 1024w, /images/flight-display/light-pod-illuminated_hu_c227eedba4b10e00.webp 1366w, /images/flight-display/light-pod-illuminated_hu_358374280430966b.webp 1536w, /images/flight-display/light-pod-illuminated_hu_e09d4ff254ba935c.webp 1920w, /images/flight-display/light-pod-illuminated_hu_6a28cea545512486.webp 2560w, /images/flight-display/light-pod-illuminated_hu_2781225a0d3dd95f.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRuICAABXRUJQVlA4INYCAACwDwCdASoqACAAPslKk0UjogwCqh2GQnsAJ0yhIAvptuHbKuHepPbW/sZ07foA3h3eYrOQagZ/vcOAqy2iTHAyYH&#43;F40e2H4waEz6rWhN6j9gj9Wf&#43;J6s3r39EZlVbRqYU6ZNgZhEyHdrZhIds8TmaGLOGQgQGfPx&#43;kxWmi/qLDfRQwlecAAD&#43;/7CVCntSkpU8hnyc9wIZf/Lm5/0YqfY6UH/4PTEegao7bPX/xPuTIIRKEQFMyS4hE6EzVM7/qo&#43;3GLn/e/mrC&#43;rdn/k1w0534&#43;knfWdTlOYO37hcsS5/&#43;/SikJnej7/UPWBvXAwmsCWLqpx9MS7ZV5zF/&#43;qkBql/in7fGQZziKC&#43;DIZie5e6XbqYq05jbKr2PuAS8y//zBSL5jzR6U1uLdaaN8J8oSYxtZ2cPcvN&#43;9MYXbQf2P0l/pXZprZPEVkgCRtTeqcR&#43;KIL&#43;xdW9R&#43;kTrLx4wWmaWxdVaGlDiaKoxZElD8KIvnFGOhslpn45Bk&#43;3VohX0VEGF8FCxV0fDTH15EkbqPoqNDHN/jfjLzLvMWhcKSTfzXL0f6dmNqj1wo7vHnl11DocIcLutRfd&#43;nhW&#43;SIB2GIoot/mxJnj6RKW66zRNj2IFrabZONpVjtQIDGMTyDz5n/PIrq0HQXjaBu0r&#43;iTTOmbt4gVxWTgCd0XWBDe&#43;VIhwE2L2sppa7nJ7DeVY5h/s7dceWw9Eiwu6lJrPNDBMZveZ0bijrijJHDg4&#43;uCqr&#43;fOp657E2dBIetBdTelREbZFn&#43;Vf44LGr6wRbEleilMxfmpVIFhJMPP/Dc9gqgwoNFBSv3NqcF/p1VUh8MkVaklToFdvc4Hvxi3iiRvwxn//vk/&#43;UiIdNQgKO&#43;l1QdWr8S1C84f7u&#43;dxdEJCYfI/mzQF&#43;AAsnIM2j3rqV87YvyRoSs3MeeE&#43;&#43;3OtlGc0i8SB&#43;OdZCJCr7mjgvPSQ5212lV7r88BUN60qzAAA=);"
+      loading="lazy"
+      decoding="async"
+      alt="light-pod" />
+    
+    
+    
+    
+  </figure>
+
+<hr>
+<h2 id="the-structure">The Structure <a href="#the-structure" class="anchor">🔗</a></h2><p>The unsung hero of this build is the inner backing plate that positions the display, holds the light pods, and allows the housing to be screwed to it via bosses that extend the entire depth of the housing. I initially tried to use heat-set threaded inserts in the bosses because, like with any one-off project, I knew I’d be taking this thing apart to fix or change things. For the 3 mm screws I had on hand, though, there just wasn’t enough material in the bosses for that. Instead, I opted to use coarse-threaded screws that would cut their own threads into the bosses, and I was just careful about how many times I screwed and unscrewed this thing.</p>
+<p>Turns out, it wasn’t a problem. This thing probably came apart and went back together dozens of times with no loss of screwability.</p>
+<video class="video"  controls playsinline>
+  <source src="/videos/flight-display/internal-frame.mp4" type="video/mp4">
+  
+</video>
+<p>And here’s a quick shot of the housing, which is nothing special — just a large open-sided box that took three hours to print.</p>
+<video class="video"  controls playsinline>
+  <source src="/videos/flight-display/housing.mp4" type="video/mp4">
+  
+</video>
+<hr>
+<h2 id="the-internals">The Internals <a href="#the-internals" class="anchor">🔗</a></h2><p>Because this project was already consuming too much of my time, I decided to stop trying to design mounts incorporated into the housing for the ESP32 and 4-relay module. Instead, I just 3D printed some base plates for both of them and glued them into the back of the housing. Simple and effective. Just don’t glue them in if you are still prototyping… ask me how I know.</p>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/wiring-it-up_hu_3364bd6699c4a97e.webp"
+      srcset="/images/flight-display/wiring-it-up_hu_41719dbb99aa2752.webp 320w, /images/flight-display/wiring-it-up_hu_a0270107f3a97290.webp 480w, /images/flight-display/wiring-it-up_hu_f875fca61265fbf0.webp 768w, /images/flight-display/wiring-it-up_hu_3364bd6699c4a97e.webp 1024w, /images/flight-display/wiring-it-up_hu_ce2f98235cd1fe4f.webp 1366w, /images/flight-display/wiring-it-up_hu_71860b39af694fe.webp 1536w, /images/flight-display/wiring-it-up_hu_85a18874c55d0ef9.webp 1920w, /images/flight-display/wiring-it-up_hu_62cd09bff7029aa3.webp 2560w, /images/flight-display/wiring-it-up_hu_20343ae0c7e0bedd.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRj4CAABXRUJQVlA4IDICAADQCQCdASoqACAAPs1On0cjoiEYDVQAOwzE9gBYj2By2TdWTXPjmmNTI7scfK3veWylzK7jqpuYLjj/oSaI6pK28HQwgjGJ/voe1DGkjR1igjwCIxJB74AA/vm5nMtjX4CQvv11v&#43;M&#43;hauMJz7m3wwTisjujg6QkERLP0SzNJK6Z00DnM38t&#43;temp/c1Nne6qQOH8fHdKXDl7&#43;1Dor69y&#43;t2pGqcZXEDcn0yuDOEM5lVpoAvjvqchHn2gAf/H345MSUI/wtT3kYkSZ2F2s6xPRKPf8qdrKQEU5hwrevuVe037XtziV9UiTxpCt4YDjR8AerTvMz5TfC&#43;2&#43;jkJQMnGxpOAVfx2Y2agaV6lGmdrs2PLpjPj9YqGrduMD&#43;lce5h8O2mM/vOR4HGeiq1MC0Jk&#43;qNQADwyp9x3X9dtdp/2ziyDece5/mXTDA1kuZCHyieKN2qdUBqRNvyHK9vdk6h17WM5FBTw2MA4ubvG16&#43;U8eRfm&#43;JoTTQPDHQQIDwCmQPndhGDX7SmXYyMRINyZTzmGiY//flSm0TF1MYcSwgN&#43;EwdHaTme34QRXnIO1JwEM4AN2W67QvVgFhlfTlNqlM4D94GyqbJVH/34OKfuDBe0JNI7zyBtfnxJZPNuz3RgKNybjfeqGmr9a/M&#43;Wm&#43;8karPx/6tc3okwZN3iZ3z4qwQZlaOX9ui8Cetxe1OAkaF6dOtcZAaIoZ4J0eZUmuvunf0MPXvIu8ycfyKW&#43;B9ZkrJogAAA);"
+      loading="lazy"
+      decoding="async"
+      alt="All the pieces inside" />
+    
+    
+    
+    
+  </figure>
+
+<p>To prevent light from bleeding into neighboring pods, I ultimately painted the outside of the light pods with the same spray paint I used on the rest of the project and covered the back of the light pod with aluminum tape. Below is a picture of a failed attempt at preventing light bleed with cloth tape instead of paint. I just didn’t want to wait for paint to dry, but shortcuts rarely work out.</p>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/aluminum-tape_hu_2b960f171fe26395.webp"
+      srcset="/images/flight-display/aluminum-tape_hu_f491d4d465d14b45.webp 320w, /images/flight-display/aluminum-tape_hu_ea1fa6edc985042d.webp 480w, /images/flight-display/aluminum-tape_hu_7a12555f7b219c41.webp 768w, /images/flight-display/aluminum-tape_hu_2b960f171fe26395.webp 1024w, /images/flight-display/aluminum-tape_hu_4f684a3d04cddc46.webp 1366w, /images/flight-display/aluminum-tape_hu_b586f97cd3e7ceb8.webp 1536w, /images/flight-display/aluminum-tape_hu_f893796a95385b69.webp 1920w, /images/flight-display/aluminum-tape_hu_8d1d9e60bc8737b.webp 2560w, /images/flight-display/aluminum-tape_hu_6e52731d99f3f5e5.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRkADAABXRUJQVlA4IDQDAADwDwCdASoqACkAPs1MmkWjoiEXFMw7DMT0AE6ZjZ3I4u/p6FNtTzzvoA3l3ouvV9rk3Ejyt&#43;x4wZwH02fOeV3entR71rBTSds5/tb7AvSbEDDlZ/G259km31j3MCVBhdoMunPW&#43;mWVBL9cOAWNmmtO9JmY7UKQlEZ0IZ98tY9/JYctpVZdrqAAAP4IFzmOR/9cAZJP0RPkASW2rAhUg&#43;vnhK6&#43;45NTaVadChY8LT2Z18KfM&#43;U0SQj4hAi7v&#43;Pv3Sxyq8ahOFzShRd3M53YX426wOGXvN2LviXuvbiOLQQTp&#43;tRENqCRC&#43;HpXh0s6o5sv5dbQqgSxAluirQxoZyXzgAZykLueM6ZdBD3DgqifVSNth2JBH5jn91nqz/scPtp1moolr1&#43;AEa7FRtXjTcbrz0tSF1pmgWjoMOpTZw6sD7RMjlFcD3YQsXkNMCxj9sF&#43;nCFZX0K2dpZ8qLfaX3W6XrXHoOcjGYNm/yw7PQcZMejbPFA5pZF6Vuns8g8lVy5ta9wJIOuJCWf5&#43;hYqgKD1pOAV6ocAjBD8qequUTy9gvRg77FDsGzXwFQmBmMlx1dm0PljFZbz4O3Rw2ly5sQMJcghau4UO16vQNbrmV1r4dewIWQCZUuZXmPZoNEzC&#43;kG8JokVj4W6/ODv0V4Um5XUcevrL5kmq9ULDwBTsX0fEKQOf3QPS4216jC43OQlZvFRwoaeDf5FN76KSL83yDxXna5iBfWJHEpA1xH4jvzPLW5/2Rojkf4/kdlXqUdAmjbpfm9axENqJe0tP0kwd9AHMFjtqRSCOeIMbADhi&#43;ihEcZRhWto7pXE9G/ct&#43;hCj0nARg3lyq0KL9HJgWdnaQQ9lyvmFyP7IPpMOhM6V5PnvPUOfLzdD3Y3Z6VRvcopz0W0rgtmNt54lWgnjhJ7&#43;eMxXJ7pDXS6yp3hlcw2kQv56D2JMaqfQHdg2BZYdfx0sq7HjcsXyjeBtH9seQpvGAyyS44&#43;aLrfDclfEnLvwXtEOb5gnN2likBM8/KuOaBTmPwm85/91e3MlwVNsCRam1QqQfa1Tm81BnNhUVoOtFpIiuwaPOchEY&#43;LkosNteHgMCdKQAAAA);"
+      loading="lazy"
+      decoding="async"
+      alt="Light-pod with tape" />
+    
+    
+    
+    
+  </figure>
+
+<hr>
+<h2 id="the-result">The Result <a href="#the-result" class="anchor">🔗</a></h2><p>With the paint and glue all dried, it was finally time to hide all my crimes and screw this bad boy together for the last time.</p>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/final-product_hu_e80551aea5eb9d3b.webp"
+      srcset="/images/flight-display/final-product_hu_d0801b3f6f0a2f89.webp 320w, /images/flight-display/final-product_hu_61400757b9bbd325.webp 480w, /images/flight-display/final-product_hu_5a9921c1fa3d26e7.webp 768w, /images/flight-display/final-product_hu_e80551aea5eb9d3b.webp 1024w, /images/flight-display/final-product_hu_8af458f000ba37e3.webp 1366w, /images/flight-display/final-product_hu_9ccd41d3ca049131.webp 1536w, /images/flight-display/final-product_hu_865f790918da8202.webp 1920w, /images/flight-display/final-product_hu_f127863b91a4ffeb.webp 2560w, /images/flight-display/final-product_hu_d9c7674c70c79a34.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRrwBAABXRUJQVlA4ILABAADQBwCdASoqAB4APs1Wo0ejoiGVVQA7DMT2AFiGbR1Rz/9ktEq38oGW8Q2FJBgElECF&#43;dF2vhAU&#43;XIgPFhJDemHscmBbSc4AAD&#43;90q2jVvbWCP/8TLVkzovvGDde7/v&#43;GvzGTBCmiSHIyr5rnTCJPL46ahdRYV5ttd9d0eo27OqfXM/x7KK&#43;&#43;e66xIxd5Pzzl0STeb5NmQfhnz02p1rKFVL4L86calzkUy6XGLMvH0EOXh&#43;jZyopT6jSZxMbpCicO3SWxTI0xFp6ezol3xgfB&#43;HhzaZrejQMSAGY/yGvLBeOKvWKFGRdM2JLzcwW3GuTvvmkngL8NNqtKBwK3ONC6xwQ83wrqwyhdxIVnOC2pGY74BYCtxb8Q1qAuofdavGGL976NESrChSTSIu9VpVsq8UVgAc0lc4/I7tYhOB9T/zlfM&#43;Msn4H1P/ajsTqqIOoZUaHCgMai6TEZb5VSyBXgH8LdnNyC8seQbT9bZpErLE80uAnM&#43;aqLHt4SwtInTH&#43;xlwftXaZRD3&#43;G3gtN/W8BbVCyuxF&#43;mNCkRMYF0LCRicdOhWZr2rykBI6D7rOOAAAAA=);"
+      loading="lazy"
+      decoding="async"
+      alt="The final product" />
+    
+    
+    
+    
+  </figure>
+
+<video class="video"  controls playsinline>
+  <source src="/videos/flight-display/final-product-demo.mov" type="video/mp4">
+  
+</video>
+<p>The plan was always to have it wall mounted next to my monitor so it would be in view while I was at my desk. Even though that was the plan from the start, I didn’t include any provisions in the three-hour print of the housing to actually mount it on a wall, and I wasn’t about to reprint it just for that. I could have gone with double-sided tape, but I had always wanted to try embedding magnets into a print. So, I designed a split-frame mount: one half is screwed to the back of the housing, and the other to the wall. The center is open for the power cable passthrough as well as to cut down on material.</p>
+<p>I used small magnets around the entire perimeter, and I underestimated how dense this little project was. The magnets were just strong enough. Even though they did hold, I was worried about sag, so I added a small shelf to the bracket. That way the display had something to keep it aligned and prevent sagging.</p>
+<video class="video"  controls playsinline>
+  <source src="/videos/flight-display/wall-mount.mov" type="video/mp4">
+  
+</video>
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+    
+    
+    
+  
+
+  
+  
+  
+
+  <figure class="responsive-image">
+    <img 
+      src="/images/flight-display/wall-mounted_hu_aed5dafb43d07479.webp"
+      srcset="/images/flight-display/wall-mounted_hu_791bbd347b53b313.webp 320w, /images/flight-display/wall-mounted_hu_1bdc48b99035f44b.webp 480w, /images/flight-display/wall-mounted_hu_47ee4a10073e6cec.webp 768w, /images/flight-display/wall-mounted_hu_aed5dafb43d07479.webp 1024w, /images/flight-display/wall-mounted_hu_a14b8801878bf3fe.webp 1366w, /images/flight-display/wall-mounted_hu_325895ed0f4c49fc.webp 1536w, /images/flight-display/wall-mounted_hu_7bbf3837e80b86fc.webp 1920w, /images/flight-display/wall-mounted_hu_2c2d34bd4624e184.webp 2560w, /images/flight-display/wall-mounted_hu_b921840659f5df2.webp 3840w"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRmIBAABXRUJQVlA4IFYBAACwBgCdASoqACAAPs1WnkejoiEVVQA7DMT0gFcn2NfAA0fwP5A9pB6JactUqiDTKIRXK4diPsRBYdmD6OlTwAD&#43;tC/O5CPfQ93TG1VtD6ErMrtoOWj7T148602PlopMvu5cUD5EDC6&#43;smUZUbS1chEe58xS6LGFBnFj9HfgeAsju9IJMePkHnk/JUcR&#43;rl7BpMQllcAEv9&#43;cfesFas96Dp27WDh9DxMCc5WBhQoG3AfMVIcGtmfL6x/2Z0T&#43;NMD0cFZERkOATaLa81ES445b4rehBNaBof/3BnwOWpqnNZVGPCfli&#43;QKz9nSU6p8Fn9jaXJY&#43;YGeL9Rf/e8MH&#43;6nqKjLesZKR6/oU3UUzU85JrWV8/rc7jGNeDTknooR1Fry/NRip/Qwb2yMATTowoVj8SP6pKNXGAXlzudKIFswmPjuljbAEFgT7dbB7S8qazCcmL9/aVo0AA=);"
+      loading="lazy"
+      decoding="async"
+      alt="Wall mounted" />
+    
+    
+    
+    
+  </figure>
+
+<hr>
+<h2 id="faq">FAQ <a href="#faq" class="anchor">🔗</a></h2><p>Where does the “souls on board” figure come from?</p>
+<blockquote>
+<p>It’s just the typical seat count for that aircraft type — not real-time passenger data.</p></blockquote>
+<p>What data source or API are you using?</p>
+<blockquote>
+<p>I started with ADS-B Exchange but switched to a (currently) free API <a href="https://api.adsb.lol" target="_blank" rel="noopener">adsb.lol</a></p></blockquote>
+<p>Can this device work offline with my own ADS-B receiver?</p>
+<blockquote>
+<p>Yes, I’m working on pulling data from <a href="/piaware-lcd-display/">my own ADS-B node</a> so it won’t rely on an external API.</p></blockquote>
+<p>How do you distinguish private vs. commercial flights?</p>
+<blockquote>
+<p>Commercial flights show airline callsigns (like AA2122), while private ones usually use N-numbers.</p></blockquote>
+<p>What hardware is used for the display?</p>
+<blockquote>
+<p>It’s a <a href="https://newhavendisplay.com/5-5-inch-green-graphic-oled-module/" target="_blank" rel="noopener">Newhaven Display 5.5 inch Green Graphic OLED Module</a> — I picked it for readability and awesomeness even though it’s pricey.</p></blockquote>
+<p>Why does it make a clicking noise?</p>
+<blockquote>
+<p>The aircraft-type indicators run through relays, and I like the industrial clicking sound they add.</p></blockquote>
+<p>Will there be a build guide and list of materials?</p>
+<blockquote>
+<p>Not exactly, the technical information will be part of <a href="https://github.com/filbot/flight-display" target="_blank" rel="noopener">the GitHub repository</a> for this project. Anyone who wants to build one like this can have at it, I’d be excited to see what people build.</p></blockquote>
+<p>Are you going to sell these, and how much would they cost?</p>
+<blockquote>
+<p>Not right now, but I might explore a kit version once I finalize using local ADS-B data. If anyone out there is a product person and has experience, I’m all ears.</p></blockquote>
+<p>How do you fetch and parse ADS-B data on an ESP32?</p>
+<blockquote>
+<p>The ESP32 fetches JSON from the API and parses it with the <a href="https://arduinojson.org" target="_blank" rel="noopener">ArduinoJson library</a>.</p></blockquote>
+<p>Why is the OLED display so expensive?</p>
+<blockquote>
+<p>It costs around $70, it’s not necessary but it sure is cool.</p></blockquote>
+<p>Will there be additional features like bearing, course, or transponder codes?</p>
+<blockquote>
+<p>No, but that doesn’t mean others can’t remix this with whatever features make sense for them.</p></blockquote>
+<hr>
+<p>If you’ve made it this far, thanks for showing interest in my project and I hope it inspires you to build something.</p>
+
+    </div>
+
+    
+        <div class="tags">
+            
+                <a href="http://localhost:1313/tags/esp32">esp32</a>
+            
+                <a href="http://localhost:1313/tags/arduino">arduino</a>
+            
+                <a href="http://localhost:1313/tags/ads-b">ads-b</a>
+            
+                <a href="http://localhost:1313/tags/lcd">lcd</a>
+            
+                <a href="http://localhost:1313/tags/flight-tracking">flight-tracking</a>
+            
+                <a href="http://localhost:1313/tags/howto">howto</a>
+            
+                <a href="http://localhost:1313/tags/cnc">cnc</a>
+            
+                <a href="http://localhost:1313/tags/3d-printing">3d printing</a>
+            
+        </div>
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+        <div id="social">
+
+
+    <a class="symbol" href="https://github.com/filbot" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="31.99" height="31.2" viewBox="0 0 31.99 31.2">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #181616;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path class="cls-1" d="M16,0C7.16,0,0,7.16,0,16c0,7.07,4.58,13.06,10.94,15.18.8.15,1.05-.33,1.05-.75,0-.38,0-1.44,0-2.78-4.45.97-5.37-2.11-5.37-2.11-.73-1.85-1.78-2.34-1.78-2.34-1.45-.99.11-.97.11-.97,1.61.11,2.45,1.65,2.45,1.65,1.43,2.44,3.74,1.74,4.65,1.33.15-1.03.56-1.74,1.02-2.14-3.55-.4-7.29-1.78-7.29-7.91,0-1.75.62-3.17,1.65-4.29-.17-.4-.72-2.03.16-4.23,0,0,1.34-.43,4.4,1.64,1.28-.36,2.65-.53,4.01-.54,1.36,0,2.73.18,4.01.54,3.06-2.07,4.4-1.64,4.4-1.64.87,2.2.32,3.83.16,4.23,1.02,1.12,1.64,2.55,1.64,4.29,0,6.15-3.74,7.5-7.3,7.89.57.5,1.09,1.45,1.09,2.95v4.43c0,.43.26.9,1.07.75,6.35-2.12,10.93-8.11,10.93-15.18C31.99,7.16,24.83,0,16,0Z"/>
+  </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://instagram.com/filipekadamczyk" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <g id="OUTLINE_copy_2" data-name="OUTLINE copy 2">
+      <g>
+        <path d="M20.84,16.14c0,2.58-2.16,4.68-4.83,4.68s-4.83-2.1-4.83-4.68c0-.46.07-.91.2-1.33l-1.21-.26v6.8c0,.34.15.49.49.49h10.69c.34,0,.49-.15.49-.49v-6.8l-1.19.26c.13.42.2.87.2,1.33Z"/>
+        <ellipse cx="16.01" cy="15.97" rx="3.12" ry="3.03"/>
+        <path d="M16,0C7.16,0,0,7.16,0,16s7.16,16,16,16,16-7.16,16-16S24.84,0,16,0ZM23.77,21.83c0,1.1-.85,1.94-1.94,1.94h-11.66c-1.1,0-1.94-.85-1.94-1.94v-11.66c0-1.1.85-1.94,1.94-1.94h11.66c1.1,0,1.94.85,1.94,1.94v11.66Z"/>
+        <path d="M21.34,10.17h-1.94c-.27,0-.49.22-.49.49v1.94c0,.27.22.49.49.49h1.94c.27,0,.49-.22.49-.49v-1.94c0-.27-.22-.49-.49-.49Z"/>
+      </g>
+    </g>
+  </g>
+</svg>
+    </a>
+
+    <a class="symbol" href="https://linkedin.com/in/filip-grace-1255b06" rel="me" target="_blank">
+        
+        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="30.5" height="30.5" viewBox="0 0 30.5 30.5">
+  <g id="Layer_1-2" data-name="Layer 1">
+    <path d="M15.25,0C6.84,0,0,6.84,0,15.25s6.84,15.25,15.25,15.25,15.25-6.84,15.25-15.25S23.66,0,15.25,0ZM10.71,22.19h-3.56v-10.7h3.56v10.7ZM8.93,10.03h0s-.02,0-.02,0c-1.2,0-1.97-.82-1.97-1.85s.79-1.85,2.01-1.85,1.97.8,1.99,1.85c0,1.03-.77,1.85-2.01,1.85ZM23.54,22.19h-3.56s0-5.73,0-5.73c0-1.44-.52-2.42-1.8-2.42-.98,0-1.57.66-1.83,1.3-.09.23-.12.55-.12.87v5.98h-3.56s.05-9.7,0-10.7h3.56v1.52c.47-.73,1.32-1.77,3.21-1.77,2.34,0,4.1,1.53,4.1,4.82v6.14Z"/>
+  </g>
+</svg>
+    </a>
+
+
+</div>
+
+    
+
+    <div class="copyright">
+    
+       © Copyright 
+       2025 
+       
+    
+    </div>
+</footer>
+
+
+    
+        
+        <script src="http://localhost:1313/js/custom.js"></script>
+    
+
+
+  </body>
+</html>

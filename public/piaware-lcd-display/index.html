@@ -47,7 +47,8 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600&family=Sora:wght@400;600;700&family=Source+Sans+Pro:wght@400&family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+
 
   </head>
 
@@ -176,7 +177,7 @@
 <li><strong>SCL</strong> → Pi SCL (GPIO 3)</li>
 </ul>
 <p>Then I ran <code>raspi-config</code> to enable I2C under <em>Interfacing Options</em>. I also installed the <code>RPLCD</code> library with:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install RPLCD
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install RPLCD
 </span></span></code></pre></div><h2 id="the-code">The code <a href="#the-code" class="anchor">🔗</a></h2><p>You can find the full python script here: <a href="https://gist.github.com/filbot/0e98902e0be5b642649541b9df85aaa3" target="_blank" rel="noopener">https://gist.github.com/filbot/0e98902e0be5b642649541b9df85aaa3</a></p>
 <h2 id="what-it-displays">What It Displays <a href="#what-it-displays" class="anchor">🔗</a></h2><p>The screen shows four lines, updated every second:</p>
 <ul>
@@ -186,8 +187,8 @@
 <li><strong>System uptime</strong></li>
 </ul>
 <p>Everything is pulled from system files or from PiAware’s <code>aircraft.json</code>, which lives at <code>/run/dump1090-fa/aircraft.json</code>. Here’s a sample of what the display looks like:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ADS-B:       <span style="color:#666">42</span> msg/s
-</span></span><span style="display:flex;"><span>PEAK:       <span style="color:#666">109</span> msg/s
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ADS-B:       <span style="color:#0550ae">42</span> msg/s
+</span></span><span style="display:flex;"><span>PEAK:       <span style="color:#0550ae">109</span> msg/s
 </span></span><span style="display:flex;"><span>CPU TEMP:       49.7C
 </span></span><span style="display:flex;"><span>UPTIME:      00:17:42
 </span></span></code></pre></div>
@@ -260,32 +261,32 @@
 <p>The full script polls every second, tracks message rate over time, and updates the display with a minimal refresh. One thing that tripped me up early on was contrast—if you don’t see anything on your screen, it might not be your code. A tiny flathead screwdriver and a half-turn of the potentiometer made all the difference.</p>
 <h2 id="extra-credit-run-it-on-boot">Extra Credit: Run It on Boot <a href="#extra-credit-run-it-on-boot" class="anchor">🔗</a></h2><p>If you want your LCD dashboard to start automatically when the Pi powers on, you can turn your Python script into a systemd service. Here’s how to do it.</p>
 <h3 id="1-create-a-service-file">1. Create a service file <a href="#1-create-a-service-file" class="anchor">🔗</a></h3><p>First, create a new file called <code>lcd-display.service</code>:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/lcd-display.service
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo nano /etc/systemd/system/lcd-display.service
 </span></span></code></pre></div><p>Paste this into the file (update the paths to match where your script lives):</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#666">[</span>Unit<span style="color:#666">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">Description</span><span style="color:#666">=</span>PiAware LCD Display
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">After</span><span style="color:#666">=</span>network.target
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#0550ae">[</span>Unit<span style="color:#0550ae">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#953800">Description</span><span style="color:#0550ae">=</span>PiAware LCD Display
+</span></span><span style="display:flex;"><span><span style="color:#953800">After</span><span style="color:#0550ae">=</span>network.target
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#666">[</span>Service<span style="color:#666">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">ExecStart</span><span style="color:#666">=</span>/usr/bin/python3 /home/pi/lcd-display.py
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">WorkingDirectory</span><span style="color:#666">=</span>/home/pi
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">StandardOutput</span><span style="color:#666">=</span>inherit
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">StandardError</span><span style="color:#666">=</span>inherit
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">Restart</span><span style="color:#666">=</span>always
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">User</span><span style="color:#666">=</span>pi
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">[</span>Service<span style="color:#0550ae">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#953800">ExecStart</span><span style="color:#0550ae">=</span>/usr/bin/python3 /home/pi/lcd-display.py
+</span></span><span style="display:flex;"><span><span style="color:#953800">WorkingDirectory</span><span style="color:#0550ae">=</span>/home/pi
+</span></span><span style="display:flex;"><span><span style="color:#953800">StandardOutput</span><span style="color:#0550ae">=</span>inherit
+</span></span><span style="display:flex;"><span><span style="color:#953800">StandardError</span><span style="color:#0550ae">=</span>inherit
+</span></span><span style="display:flex;"><span><span style="color:#953800">Restart</span><span style="color:#0550ae">=</span>always
+</span></span><span style="display:flex;"><span><span style="color:#953800">User</span><span style="color:#0550ae">=</span>pi
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#666">[</span>Install<span style="color:#666">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#b8860b">WantedBy</span><span style="color:#666">=</span>multi-user.target
+</span></span><span style="display:flex;"><span><span style="color:#0550ae">[</span>Install<span style="color:#0550ae">]</span>
+</span></span><span style="display:flex;"><span><span style="color:#953800">WantedBy</span><span style="color:#0550ae">=</span>multi-user.target
 </span></span></code></pre></div><blockquote>
 <p>Make sure your script is executable and the path to <code>python3</code> is correct (you can run <code>which python3</code> to verify).</p></blockquote>
 <h3 id="2-enable-and-start-the-service">2. Enable and start the service <a href="#2-enable-and-start-the-service" class="anchor">🔗</a></h3><p>Run the following commands:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl <span style="color:#a2f">enable</span> lcd-display.service
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl <span style="color:#6639ba">enable</span> lcd-display.service
 </span></span><span style="display:flex;"><span>sudo systemctl start lcd-display.service
 </span></span></code></pre></div><p>Now the display should update automatically every time the Pi boots up.</p>
 <p>To check on the status or debug output:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo journalctl -u lcd-display.service -f
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo journalctl -u lcd-display.service -f
 </span></span></code></pre></div><h3 id="bonus-tip">Bonus Tip <a href="#bonus-tip" class="anchor">🔗</a></h3><p>If you&rsquo;re still actively tweaking the script, you can stop the service temporarily with:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl stop lcd-display.service
+<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl stop lcd-display.service
 </span></span></code></pre></div><p>Then run your script manually as usual. Just don’t forget to restart the service when you&rsquo;re done!</p>
 
     </div>
