@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3d Printing on Semicolons &amp; Side Projects</title>
+    <link>http://localhost:1313/tags/3d-printing/</link>
+    <description>Recent content in 3d Printing on Semicolons &amp; Side Projects</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 09 Sep 2025 19:05:55 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/3d-printing/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nearest Aircraft Display Build</title>
+      <link>http://localhost:1313/nearest-aircraft-display/</link>
+      <pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/nearest-aircraft-display/</guid>
+      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/images/flight-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/images/flight-display/chatgpt-header-image_hu_153939f10a12373d.webp 320w, http://localhost:1313/images/flight-display/chatgpt-header-image_hu_d4c9a35156bde7dc.webp 480w, http://localhost:1313/images/flight-display/chatgpt-header-image_hu_59890c2ad19508e.webp 768w, http://localhost:1313/images/flight-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp 1024w, http://localhost:1313/images/flight-display/chatgpt-header-image_hu_77129e117855f9eb.webp 1366w, http://localhost:1313/images/flight-display/chatgpt-header-image_hu_8a5602adb3d2f838.webp 1536w, http://localhost:1313/images/flight-display/chatgpt-header-image_hu_7f0fb93a88b74818.webp 1920w, http://localhost:1313/images/flight-display/chatgpt-header-image_hu_2136d08c7aa574cb.webp 2560w, http://localhost:1313/images/flight-display/chatgpt-header-image_hu_20972247bce3265f.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAABQBgCdASoqABoAPrlEmEUjoiEYBqg7C4TygFt9uTLei/e96t2&amp;#43;q5fcwJdIuf34j3Rt9uCsMLgN2snTAAD&amp;#43;83J6NAQyAToqF8VrR/hC2KdTPgL&amp;#43;pX5vR7p9VE02kQ4eGqEjEOlLRG5KR3yAwoEoU7JD6CdMg/Ya28zPeciIcAB43DQKxwHhAJgqsvUqRyVkxcXzAiy4iUGCwyKzJf2ULaFiFxD8x&amp;#43;hf4KMYeXI5jRpRoEh1w1FgMKNhjO7jBL0CrJQf9cYNx6K&amp;#43;Dby33ZFzHAHLLz9KQ25dOpMa7IYGjY/uiff&amp;#43;pHxIs4uuXcVfIWYvwSGUAOuf79DcTIdt/zYBwgAA);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of Flight Display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have an ADS-B node feeding data to the vast network of flight trackers out there, but it’s on my roof and hums along with no interaction from me. I can, and have, looked at the webpage of my local flight data, the planes on a map, but that didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a good build.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
