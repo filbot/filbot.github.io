@@ -57,7 +57,7 @@ I designed the part and cut it out so I could paint it and let it cure before mo
 
 The following picture and video are from my first attempt, where I reversed the order of operations: I painted the acrylic, engraved it, and then cut the faceplate out. That left white edges on the inside of the cutouts, which I didn’t want in the final product. So, when it came time to make the real deal, I changed the order of operations even though it meant having to register the faceplate correctly for the engraving which turned out okay.
 
-{{< video src="/videos/flight-display/faceplate-engraving.mov" >}}
+{{< video src="/videos/flight-display/faceplate-engraving-clip.mov" >}}
 
 {{< img src="images/flight-display/fresh-faceplate.jpeg" alt="faceplate engraved" >}}
 
@@ -109,7 +109,7 @@ The plan was always to have it wall mounted next to my monitor so it would be in
 
 I used small magnets around the entire perimeter, and I underestimated how dense this little project was. The magnets were just strong enough. Even though they did hold, I was worried about sag, so I added a small shelf to the bracket. That way the display had something to keep it aligned and prevent sagging.
 
-{{< video src="/videos/flight-display/wall-mount.mov" >}}
+{{< video src="/videos/flight-display/wall-mount-clip.mov" >}}
 
 {{< img src="images/flight-display/wall-mounted.jpg" alt="Wall mounted" >}}
 
