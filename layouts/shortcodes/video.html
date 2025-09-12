@@ -1,0 +1,4 @@
+<video class="video" {{ with .Get "attrs" }}{{ . | safeHTMLAttr }}{{ end }} controls playsinline>
+  <source src="{{ .Get "src" }}" type="video/mp4">
+  {{ if .Get "fallback" }}{{ .Get "fallback" }}{{ end }}
+</video>
