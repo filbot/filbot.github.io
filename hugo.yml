@@ -25,3 +25,5 @@ params:
       - "css/custom.css"
   enableGoogleAnalytics: true
   bio: "A personal blog about building, learning, and stumbling forward in dev"
+
+timeout: 5m
