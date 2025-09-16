@@ -6,8 +6,50 @@
     <description>Recent content in Tags on Semicolons &amp; Side Projects</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Sep 2025 19:05:55 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 14 Sep 2025 19:05:55 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Howto</title>
+      <link>http://localhost:1313/tags/howto/</link>
+      <pubDate>Sun, 14 Sep 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/tags/howto/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lcd</title>
+      <link>http://localhost:1313/tags/lcd/</link>
+      <pubDate>Sun, 14 Sep 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/tags/lcd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspberry-Pi</title>
+      <link>http://localhost:1313/tags/raspberry-pi/</link>
+      <pubDate>Sun, 14 Sep 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/tags/raspberry-pi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rtsp</title>
+      <link>http://localhost:1313/tags/rtsp/</link>
+      <pubDate>Sun, 14 Sep 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/tags/rtsp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubiquity</title>
+      <link>http://localhost:1313/tags/ubiquity/</link>
+      <pubDate>Sun, 14 Sep 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/tags/ubiquity/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unifi</title>
+      <link>http://localhost:1313/tags/unifi/</link>
+      <pubDate>Sun, 14 Sep 2025 19:05:55 -0700</pubDate>
+      <guid>http://localhost:1313/tags/unifi/</guid>
+      <description></description>
+    </item>
     <item>
       <title>3d Printing</title>
       <link>http://localhost:1313/tags/3d-printing/</link>
@@ -48,20 +90,6 @@
       <link>http://localhost:1313/tags/flight-tracking/</link>
       <pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate>
       <guid>http://localhost:1313/tags/flight-tracking/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Howto</title>
-      <link>http://localhost:1313/tags/howto/</link>
-      <pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate>
-      <guid>http://localhost:1313/tags/howto/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Lcd</title>
-      <link>http://localhost:1313/tags/lcd/</link>
-      <pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate>
-      <guid>http://localhost:1313/tags/lcd/</guid>
       <description></description>
     </item>
     <item>
@@ -118,13 +146,6 @@
       <link>http://localhost:1313/tags/python/</link>
       <pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate>
       <guid>http://localhost:1313/tags/python/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Raspberry-Pi</title>
-      <link>http://localhost:1313/tags/raspberry-pi/</link>
-      <pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate>
-      <guid>http://localhost:1313/tags/raspberry-pi/</guid>
       <description></description>
     </item>
     <item>
