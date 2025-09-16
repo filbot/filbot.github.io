@@ -1,5 +1,5 @@
 +++
-date = '2025-09-14T19:05:55-07:00'
+date = '2025-09-15T08:03:55-07:00'
 draft = false
 title = 'RTSP Video Stream on Raspberry Pi'
 description = 'How to build a Raspberry Pi configured to act as a simple, dedicated fullscreen RTSP video display.'
