@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/howto/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/lcd/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/raspberry-pi/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/rtsp/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/raspberry-pi-rtsp-viewer/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ubiquity/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/unifi/</loc>
+    <lastmod>2025-09-14T19:05:55-07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/3d-printing/</loc>
     <lastmod>2025-09-09T19:05:55-07:00</lastmod>
   </url><url>
@@ -20,19 +47,7 @@
     <loc>http://localhost:1313/tags/flight-tracking/</loc>
     <lastmod>2025-09-09T19:05:55-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/howto/</loc>
-    <lastmod>2025-09-09T19:05:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/lcd/</loc>
-    <lastmod>2025-09-09T19:05:55-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/nearest-aircraft-display/</loc>
-    <lastmod>2025-09-09T19:05:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-09T19:05:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-09-09T19:05:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/aem/</loc>
@@ -69,9 +84,6 @@
     <lastmod>2025-03-01T19:05:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/python/</loc>
-    <lastmod>2025-03-01T19:05:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/raspberry-pi/</loc>
     <lastmod>2025-03-01T19:05:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/micromv-on-osx-in-2018/</loc>
