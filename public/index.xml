@@ -6,8 +6,15 @@
     <description>Recent content on Semicolons &amp; Side Projects</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 15 Sep 2025 08:03:55 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 09 Nov 2025 08:03:55 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Realtime BART Arrival Display</title>
+      <link>http://localhost:1313/real-time-bart-display/</link>
+      <pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate>
+      <guid>http://localhost:1313/real-time-bart-display/</guid>
+      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/images/real-time-bart-display/hero_hu_5437165c78e81629.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/images/real-time-bart-display/hero_hu_384d86333cef2c5f.webp 320w, http://localhost:1313/images/real-time-bart-display/hero_hu_374ea9c597eb8080.webp 480w, http://localhost:1313/images/real-time-bart-display/hero_hu_3b7a87d9784d7720.webp 768w, http://localhost:1313/images/real-time-bart-display/hero_hu_5437165c78e81629.webp 1024w, http://localhost:1313/images/real-time-bart-display/hero_hu_e8af07cb6b8db4b2.webp 1366w, http://localhost:1313/images/real-time-bart-display/hero_hu_5ef2b6a07839bc46.webp 1536w, http://localhost:1313/images/real-time-bart-display/hero_hu_570e686afe88de15.webp 1920w, http://localhost:1313/images/real-time-bart-display/hero_hu_4ede7083b909d837.webp 2560w, http://localhost:1313/images/real-time-bart-display/hero_hu_fd14a829b2d2aec3.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwBACdASoqABoAPs1Mm0YjoiEYDVVUOwzE9IBkph0&amp;#43;swQUqRXXHCEMNg/eXFaeggAA/vYA55UHWY1vYfbxsBF42UESXpfwg9itQcpS7mH&amp;#43;RfsO9Y3DM&amp;#43;H8RNYNMDaT9pS7FqGCZfIfCpxI2sSo8ZLRCrgJpJ7XAecAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;AI generated image of the physical BART display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>RTSP Video Stream on Raspberry Pi</title>
       <link>http://localhost:1313/raspberry-pi-rtsp-viewer/</link>
@@ -35,6 +42,13 @@
       <pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate>
       <guid>http://localhost:1313/aem-developer-cheat-sheet/</guid>
       <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2ca3b45ba1f85a42.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_be0d695873427519.webp 320w, http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_d2c3bbd270ff3845.webp 480w, http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_b41f8676e952514a.webp 768w, http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2ca3b45ba1f85a42.webp 1024w, http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_222739433435d869.webp 1366w, http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_11865e19155ff1fa.webp 1536w, http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_972736e7b691554e.webp 1920w, http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_e597b63fb152d0dc.webp 2560w, http://localhost:1313/images/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_af0fa26b0b83b215.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADwBQCdASoqABoAPs1anUgjoqEVXAYAOwzE4AHaOleB7mYfa9MCIS0z7Ngwm0BWo8rPPEs&amp;#43;g4mkAAD&amp;#43;/BMPyU0nk/NRdcZUG7RQwf/BskU3I/q0mjyk&amp;#43;Gz7Gj0tIax0Fyulra1jzM88VA0RU8r5hxuRr8Xuzk5f7RgXG49xcHTvlR91UEwhPLoQhAGu9gzp3MSAkKCe0ukxba3AhjvH7yFY/amt5wU7Aw9clt865/HQb/HwbiLADpncE91aFdGRXKBvMltmd&amp;#43;j5aHzOClyOfWIDquXxZndTtj38nHWIAAA=);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of man riding Adobe logo&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Archive</title>
+      <link>http://localhost:1313/archive/</link>
+      <pubDate>Sat, 29 Mar 2025 13:35:19 -0700</pubDate>
+      <guid>http://localhost:1313/archive/</guid>
+      <description>&lt;p&gt;archive stuff goes here&lt;/p&gt;</description>
     </item>
     <item>
       <title>About</title>
