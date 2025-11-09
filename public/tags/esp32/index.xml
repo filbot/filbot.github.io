@@ -6,8 +6,15 @@
     <description>Recent content in Esp32 on Semicolons &amp; Side Projects</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 09 Sep 2025 19:05:55 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 09 Nov 2025 08:03:55 -0700</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/esp32/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Realtime BART Arrival Display</title>
+      <link>http://localhost:1313/real-time-bart-display/</link>
+      <pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate>
+      <guid>http://localhost:1313/real-time-bart-display/</guid>
+      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/images/real-time-bart-display/hero_hu_5437165c78e81629.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/images/real-time-bart-display/hero_hu_384d86333cef2c5f.webp 320w, http://localhost:1313/images/real-time-bart-display/hero_hu_374ea9c597eb8080.webp 480w, http://localhost:1313/images/real-time-bart-display/hero_hu_3b7a87d9784d7720.webp 768w, http://localhost:1313/images/real-time-bart-display/hero_hu_5437165c78e81629.webp 1024w, http://localhost:1313/images/real-time-bart-display/hero_hu_e8af07cb6b8db4b2.webp 1366w, http://localhost:1313/images/real-time-bart-display/hero_hu_5ef2b6a07839bc46.webp 1536w, http://localhost:1313/images/real-time-bart-display/hero_hu_570e686afe88de15.webp 1920w, http://localhost:1313/images/real-time-bart-display/hero_hu_4ede7083b909d837.webp 2560w, http://localhost:1313/images/real-time-bart-display/hero_hu_fd14a829b2d2aec3.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwBACdASoqABoAPs1Mm0YjoiEYDVVUOwzE9IBkph0&amp;#43;swQUqRXXHCEMNg/eXFaeggAA/vYA55UHWY1vYfbxsBF42UESXpfwg9itQcpS7mH&amp;#43;RfsO9Y3DM&amp;#43;H8RNYNMDaT9pS7FqGCZfIfCpxI2sSo8ZLRCrgJpJ7XAecAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;AI generated image of the physical BART display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have a love/hate relationship with BART. I&amp;rsquo;m greatful for it but lets just say its not always the most reliable. There are many projects out there that give you real time BART arrival information. This one does that, its not special, but I wanted to make my own that has the vintage BART platform sign vibe that I most associate with my time using BART to commute between the east bay and my job in the city.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Nearby Aircraft Display</title>
       <link>http://localhost:1313/nearest-aircraft-display/</link>

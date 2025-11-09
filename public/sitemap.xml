@@ -2,11 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/bart/</loc>
+    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/esp32/</loc>
+    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/howto/</loc>
-    <lastmod>2025-09-15T08:03:55-07:00</lastmod>
+    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/lcd/</loc>
-    <lastmod>2025-09-15T08:03:55-07:00</lastmod>
+    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/real-time-bart-display/</loc>
+    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/raspberry-pi/</loc>
     <lastmod>2025-09-15T08:03:55-07:00</lastmod>
@@ -15,12 +30,6 @@
     <lastmod>2025-09-15T08:03:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/raspberry-pi-rtsp-viewer/</loc>
-    <lastmod>2025-09-15T08:03:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-09-15T08:03:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-09-15T08:03:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ubiquity/</loc>
@@ -39,9 +48,6 @@
     <lastmod>2025-09-09T19:05:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/cnc/</loc>
-    <lastmod>2025-09-09T19:05:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/esp32/</loc>
     <lastmod>2025-09-09T19:05:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/flight-tracking/</loc>
@@ -73,6 +79,9 @@
   </url><url>
     <loc>http://localhost:1313/tags/frontend/</loc>
     <lastmod>2025-03-31T16:34:28-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/archive/</loc>
+    <lastmod>2025-03-29T13:35:19-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
     <lastmod>2025-03-29T11:47:25-07:00</lastmod>
