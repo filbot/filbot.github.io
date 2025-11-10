@@ -23,8 +23,8 @@ So, now you’re in on the joke. On to the build…
 ## Official vs Mine
 
 Here is a screen grab of the original prop as seen in Iron Man 2 vs the "finished" prop as built by yours truly with a hope and prayer:
-{{< img src="images/medical-scanner/screen-prop.webp" alt="AI generated image of the Stark Medical Scanner" >}}
-{{< img src="images/medical-scanner/finished-prop.webp" alt="AI generated image of the Stark Medical Scanner" >}}
+{{< img src="images/medical-scanner/screen-prop.webp" alt="Screenshot from movie" >}}
+{{< img src="images/medical-scanner/finished-prop.webp" alt="Screenshot from demo video" >}}
 
 ---
 
@@ -61,7 +61,7 @@ The other key components are the ESP32-C6 microcontroller and a small rechargeab
 
 Working on small devices like this has its pros and cons. Printing smaller parts is quick, but fitting all the components inside such a tiny enclosure is a challenge. Fortunately, the recent trend of manufacturers providing accurate CAD models of their parts makes it much easier to plan everything in Fusion 360 before printing.
 
-I wasn’t the first to recreate the Stark Medical Scanner — there are a few models online — but those aim for screen-accurate replicas. I needed to design my case around the specific display, which was the main constraint.
+I wasn’t the first to recreate the Stark Medical Scanner, there are a few models online, but those aim for screen-accurate replicas. I needed to design my case around the specific display, which was the main constraint.
 
 My process started with importing the 3D model of the Waveshare display into Fusion and also importing a screenshot of the movie prop and aligned the two so the openings on the face matched my screen as closely as possible. That defined the overall scale, and from there, I sketched out the rest of the body to match those proportions.
 
