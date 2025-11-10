@@ -2,25 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://localhost:1313/tags/esp32/</loc>
+    <lastmod>2025-11-10T05:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/howto/</loc>
+    <lastmod>2025-11-10T05:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ironman/</loc>
+    <lastmod>2025-11-10T05:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/lcd/</loc>
+    <lastmod>2025-11-10T05:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/marvel/</loc>
+    <lastmod>2025-11-10T05:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-11-10T05:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/medical-scanner/</loc>
+    <lastmod>2025-11-10T05:03:55-07:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2025-11-10T05:03:55-07:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/tags/bart/</loc>
     <lastmod>2025-11-09T08:03:55-07:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/esp32/</loc>
-    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/howto/</loc>
-    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/lcd/</loc>
-    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/real-time-bart-display/</loc>
-    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
-    <lastmod>2025-11-09T08:03:55-07:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2025-11-09T08:03:55-07:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/raspberry-pi/</loc>

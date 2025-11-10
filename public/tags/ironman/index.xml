@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ironman on Semicolons &amp; Side Projects</title>
+    <link>http://localhost:1313/tags/ironman/</link>
+    <description>Recent content in Ironman on Semicolons &amp; Side Projects</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 10 Nov 2025 05:03:55 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/ironman/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Stark Medical Scanner... sort of</title>
+      <link>http://localhost:1313/medical-scanner/</link>
+      <pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate>
+      <guid>http://localhost:1313/medical-scanner/</guid>
+      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_d85031371c03cbe6.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_735743d6667c7051.webp 320w, http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_d93563cb7a550433.webp 480w, http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_ebdc7d462047347c.webp 768w, http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_d85031371c03cbe6.webp 1024w, http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_fb8a82b5ed5dbd40.webp 1366w, http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_f31fe4e133c296f2.webp 1536w, http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_23654be70d3174bb.webp 1920w, http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_47099bec758d2576.webp 2560w, http://localhost:1313/images/medical-scanner/Gemini_Generated_Hero_Image_hu_f7a8c83a1b4f6178.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpIBAABXRUJQVlA4IIYBAADQCACdASoqABgAPsVAlkUjoaEarAYAOwxE9gBOnKCprxCEP7AVyvnjvQBeuqNuWwUEPtGj4X9m7SCCzQh4DOmkVv1CXNSkfmFDi2osoFPwAP6znnqSvv7hUB2Iq4sXqkWdcIzDXePxg1gOoUBkVNDf82S9CyfXDnrXFVy5Kp&amp;#43;1mF0c&amp;#43;gH&amp;#43;8LmAb2/sc3QxX8W8R1OJkQeQQhFyoxTiprJdDc1u7E/ooYAEeEcQ&amp;#43;4xp7CPRqe/sk&amp;#43;9lVCcarLypq0ebPDc2VOpv/6S3L5kLQrbmaYe9ERkZxW4kkPWXaSHvGfAwgHijDXTq6NXudvw4tMjCMUG/zjoht&amp;#43;VbS2OtNJ9NLZUzML8NA6HOz2vAJN56BVNpQN0cUj9UyPqqmdo/8ElyyFYFqJCv5BTGtIkiHpU1PJO4HWg2LZe186xkb8PXIuACyWQyh4Uxd53Wobd&amp;#43;UguQPFy78ElLyNwjrtWca/m6DkuhUd8Rb9wSwKipdLGL3Bcrjzb6A9TyWB83Y2e&amp;#43;F8ZsQlAAAAA=);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;AI generated image of the Stark Medical Scanner&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Let’s get this out of the way — what is “gravy blood”, and who is “Damp”?&lt;/p&gt;&#xA;&lt;p&gt;This whole project started as an inside joke. My buddy and I would say we had gravy blood whenever we overindulged in a meal. That sluggish, heavy feeling afterward? In our lore, that’s the gravy blood kicking in.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
