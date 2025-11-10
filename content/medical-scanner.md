@@ -2,7 +2,7 @@
 date = '2025-11-10T05:03:55-07:00'
 draft = false
 title = 'Stark Medical Scanner... sort of'
-description = 'Not so screan accurate version of the Stark Medical Scanner'
+description = 'Not so screen accurate version of the Stark Medical Scanner'
 tags = ["esp32", "lcd", "howto", "marvel", "ironman"]
 +++
 
@@ -43,7 +43,7 @@ Modern movies often rely on CGI for their device screens instead of practical di
 For this project, I ended up using a Waveshare 1.9-inch display. The tradeoff was that I didn’t have room for the two small status LEDs if I wanted to maintain proportions close to the original prop. My workaround was to use the LCD itself to light up those openings in the case — not perfect, but close enough for a joke prop.
 
 {{< img src="images/medical-scanner/early-screen-test.webp" alt="Early screen test" >}}
-> Early test of the display shown here on a temparary 3d printed stand for development and displaying the screen accurate graphics
+> Early test of the display shown here on a temporary 3D-printed stand used for development and showcasing the screen-accurate graphics.
 ---
 
 ### Electronics and Components
