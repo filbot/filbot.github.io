@@ -47,7 +47,7 @@ Once I had all the pieces together, including some early 3D prints of the housin
 
 ## Finishing
 
-All that was left to do was some post processing of the 3d prints and paint, along with some little details like screws and stickers of the compoany that made the real deal platform signs and which platform the sign was for. I used a Brothers label maker for both.
+All that was left to do was some post processing of the 3d prints and paint, along with some little details like screws and stickers of the company that made the real deal platform signs and which platform the sign was for. I used a Brothers label maker for both.
 
 {{< img src="images/real-time-bart-display/sanding-priming.webp" alt="3D parts post processing" >}}
 {{< img src="images/real-time-bart-display/brand-sticker.webp" alt="Brother label printed stickers" >}}
