@@ -47,7 +47,7 @@ Once I had all the pieces together, including some early 3D prints of the housin
 
 ## Finishing
 
-All that was left to do was some post processing of the 3d prints and paint, along with some little details like screws and stickers of the company that made the real deal platform signs and which platform the sign was for. I used a Brothers label maker for both.
+All that was left to do was some post processing of the 3d prints and paint, along with some little details like screws and stickers of the company that made the real deal platform signs and which platform the sign was for. I used a Brothers label maker for both. 3D files are available to download on [Makerworld](https://makerworld.com/en/models/1979236-mini-bart-platform-display).
 
 {{< img src="images/real-time-bart-display/sanding-priming.webp" alt="3D parts post processing" >}}
 {{< img src="images/real-time-bart-display/brand-sticker.webp" alt="Brother label printed stickers" >}}
