@@ -456,10 +456,13 @@
 <h3 id="modeling-and-design-process">Modeling and Design Process <a href="#modeling-and-design-process" class="anchor">🔗</a></h3><p>Working on small devices like this has its pros and cons. Printing smaller parts is quick, but fitting all the components inside such a tiny enclosure is a challenge. Fortunately, the recent trend of manufacturers providing accurate CAD models of their parts makes it much easier to plan everything in Fusion 360 before printing.</p>
 <p>I wasn’t the first to recreate the Stark Medical Scanner, there are a few models online, but those aim for screen-accurate replicas. I needed to design my case around the specific display, which was the main constraint.</p>
 <p>My process started with importing the 3D model of the Waveshare display into Fusion and also importing a screenshot of the movie prop and aligned the two so the openings on the face matched my screen as closely as possible. That defined the overall scale, and from there, I sketched out the rest of the body to match those proportions.</p>
-<video class="video"  controls playsinline>
+
+
+<video class="video" preload="metadata" playsinline controls>
   <source src="/videos/medical-scanner/exploded-3d-view.mp4" type="video/mp4">
   
 </video>
+
 <hr>
 <h3 id="internal-layout-and-assembly">Internal Layout and Assembly <a href="#internal-layout-and-assembly" class="anchor">🔗</a></h3><p>Since I had nearly all the components as 3D models, I was able to position them in the digital workspace and pack everything as tightly as possible. That layout determined the overall thickness of the case and the shape of the internal supports and mounting points. It’s not precisely engineered, more like sculpting in digital clay, just extruding shapes until there’s something solid to screw or glue parts to.</p>
 
@@ -608,10 +611,13 @@
 <p>All the code is available on my <a href="https://github.com/filbot/stark-medical-scanner" target="_blank" rel="noopener">GitHub</a>.</p>
 <hr>
 <h2 id="demo">Demo <a href="#demo" class="anchor">🔗</a></h2><p>A quick demo of me pressing the button to take multiple readings. In this video, I also show the “Three Color” mode I added just for fun. In this mode, readings of 80% or higher display in red, below 60% in green, and anything in between shows in yellow. Since the readings are random, it takes me a few tries to show all three colors.</p>
-<video class="video"  controls playsinline>
+
+
+<video class="video" preload="metadata" playsinline controls>
   <source src="/videos/medical-scanner/demo-optomized.mp4" type="video/mp4">
   
 </video>
+
 <blockquote>
 <p>holding down the button for three seconds switches between modes</p></blockquote>
 
