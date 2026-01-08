@@ -1,6 +1,6 @@
 {{ $poster := .Get "poster" }}
 {{ $preload := .Get "preload" | default "metadata" }}
 <video class="video" preload="{{ $preload }}" playsinline controls{{ with $poster }} poster="{{ . }}"{{ end }}{{ with .Get "attrs" }} {{ . | safeHTMLAttr }}{{ end }}>
-  <source src="{{ .Get "src" }}" type="video/mp4">
+  <source src="{{ .Get "src" }}#t=0.001" type="video/mp4">
   {{ if .Get "fallback" }}{{ .Get "fallback" }}{{ end }}
 </video>
