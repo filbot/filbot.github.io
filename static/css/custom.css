@@ -113,6 +113,8 @@
   pre {
     font-size: 13px;
     line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
   }
   .markdown-image img {
     max-width: 100%;
@@ -150,12 +152,16 @@
   }
   pre code {
     font-family: SFMono-Regular, Consolas, Liberation Mono, Menlo, Courier, monospace;
-    font-size: 13px;
+    font-size: 13px !important;
     line-height: 1.5;
   }
   
-  pre code * {
-    font-size: inherit !important;
+  pre code *,
+  .highlight pre *,
+  .highlight code *,
+  pre .chroma * {
+    font-size: 13px !important;
+    font-family: inherit !important;
   }
   
   
