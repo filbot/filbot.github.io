@@ -154,6 +154,10 @@
     line-height: 1.5;
   }
   
+  pre code * {
+    font-size: inherit !important;
+  }
+  
   
   /* navigation */
   
