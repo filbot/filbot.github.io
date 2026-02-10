@@ -21,9 +21,14 @@ What I wanted, though, was something much simpler: a stripped-down view of the d
 
 ---
 
-### Setup
+## Setup
 
 Using Raspberry Pi Imager, I flashed FullPageOS onto the Raspberry Pi and configured it according to the project’s instructions to display the dashboard page on boot.
+
+The code for the Hero Dashboard can be found on my GitHub:
+https://github.com/filbot/emergency-map
+
+It’s a simple React app that can be run in a Docker container or deployed however you normally run your React applications.
 
 The display itself is mounted to an IKEA Skådis pegboard using a 3D-printed VESA mount designed specifically for the Skådis system. It’s a clean, flexible setup and makes the whole thing feel a bit more like a “command center” movie prop, which was the vibe I was after.
 
