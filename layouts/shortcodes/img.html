@@ -1,5 +1,11 @@
 {{ $src := .Get "src" }}
-{{ $image := resources.GetMatch $src }}
+{{ $image := "" }}
+{{ if .Page.Resources }}
+  {{ $image = .Page.Resources.GetMatch $src }}
+{{ end }}
+{{ if not $image }}
+  {{ $image = resources.GetMatch $src }}
+{{ end }}
 
 {{ if not $image }}
   <figure class="responsive-image{{ with .Get "class" }} {{ . }}{{ end }}">
