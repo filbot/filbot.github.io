@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Application on Semicolons &amp; Side Projects</title>
+    <link>http://localhost:1313/tags/application/</link>
+    <description>Recent content in Application on Semicolons &amp; Side Projects</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/application/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hero Dashboard</title>
+      <link>http://localhost:1313/hero-dashboard/</link>
+      <pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate>
+      <guid>http://localhost:1313/hero-dashboard/</guid>
+      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/hero-dashboard/dashboard-angle_hu_47dc7a547e01efb2.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/hero-dashboard/dashboard-angle_hu_862503719e8a6028.webp 320w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_d2d5be5773c8ff03.webp 480w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_8fc2349ea168dec3.webp 768w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_47dc7a547e01efb2.webp 1024w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_4d8580283b84d08e.webp 1366w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_cdd84ccb634818e2.webp 1536w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_c4935939826e25e4.webp 1920w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_5cdd6e65ef3239f9.webp 2560w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_6c1543a78bf2f7fa.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRsoBAABXRUJQVlA4IL4BAADQCACdASoqABwAPs1cokkjoqGVXAUAOwzE84BdkG0Es6VAu4nFLjZlXcDdOc0UlINavXBS4qwpGVoYSdB39UHH12dYfu8L4lXugYgLbVQAAP7/K4ikZ/jzUS8s77/pK6i12wMhlnK6FjgvKW9p4C0zwX3IrHzcXXH7JhF8rzyNKzSxEZdxtl14qnPbG4IrRAg8ypB5AbiAxgektNR7ORd9/tN36O2NIQJlECp1K6bbmqJ0tY6Tr0w3FfxSydWmVA/xw&amp;#43;pNX1ov5aAvixkdYTFZmVcNSmAGXJ6FCi6HePigv7QvncCooy8rn66bnO8n73Di3317t8recocQ74GM0X91Bwfetst9uBzm4g7kX1AzxGwaexa4kLApIApFEeQ8y4i7dt94yJNa8aLT4B69muwuKatooe0UO88o&amp;#43;mht0a5aUOL1&amp;#43;TU2S3ucHXX85vHzCcWG0BgspY8yLThX6rRMEL1Chg77sdJgMBoKyp5WpD1B10oG8o8wGUink8E6Q8Yhs0NSX5ksWhwZTdIKGTgDg6mU/2DyeR2amH5G2bumUViK5QtzTgSxzrqVaZtgi849qM9DwCjpMB4emJzkvqAAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;Hero Dashboard&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href=&#34;https://sfdlive.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;&#xA;&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
