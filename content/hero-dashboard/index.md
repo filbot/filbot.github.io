@@ -30,6 +30,9 @@ https://github.com/filbot/emergency-map
 
 It’s a simple React app that can be run in a Docker container or deployed however you normally run your React applications.
 
+{{< img src="dashboard-running.png" alt="Hero Dashboard app running" >}}
+> Screenshot of app running
+
 The display itself is mounted to an IKEA Skådis pegboard using a 3D-printed VESA mount designed specifically for the Skådis system. It’s a clean, flexible setup and makes the whole thing feel a bit more like a “command center” movie prop, which was the vibe I was after.
 
 ---
