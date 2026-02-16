@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep:*)",
+      "Bash(wc:*)",
+      "Bash(HUGO_ENVIRONMENT=production hugo:*)",
+      "Bash(ls:*)",
+      "Bash(if ps aux)",
+      "Bash(then echo \"Still running\")",
+      "Bash(else echo \"Completed\")",
+      "Bash(fi)"
+    ]
+  }
+}
