@@ -440,7 +440,12 @@ nav.navigation a.button {
 .post-card {
   display: grid;
   grid-template-columns: 200px 1fr;
-  gap: var(--space-lg);
+  grid-template-rows: auto 1fr;
+  grid-template-areas:
+    "image date"
+    "image body";
+  column-gap: var(--space-lg);
+  row-gap: var(--space-xs);
   align-items: start;
   padding: var(--space-lg) 0;
   border-bottom: 1px solid var(--color-border);
@@ -463,6 +468,7 @@ nav.navigation a.button {
 }
 
 .post-card__image {
+  grid-area: image;
   width: 100%;
   aspect-ratio: 1 / 1;
   object-fit: cover;
@@ -470,18 +476,21 @@ nav.navigation a.button {
   background: var(--color-surface);
 }
 
-.post-card__body {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-  min-width: 0;
-}
-
 .post-card__date {
+  grid-area: date;
   font-family: var(--font-mono);
   font-size: var(--text-sm);
   color: var(--color-text-faint);
   letter-spacing: var(--tracking-wide);
+  align-self: end;
+}
+
+.post-card__body {
+  grid-area: body;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  min-width: 0;
 }
 
 .post-card__title {
@@ -507,23 +516,47 @@ nav.navigation a.button {
   overflow: hidden;
 }
 
-/* --- Responsive: stack on small screens --- */
+/* --- Responsive: stacked card layout --- */
 
 @media (max-width: 540px) {
-  .post-card {
-    grid-template-columns: 120px 1fr;
-    gap: var(--space-md);
+  #list-page {
+    padding: 0 var(--space-md);
   }
-}
 
-@media (max-width: 400px) {
   .post-card {
     grid-template-columns: 1fr;
-    gap: var(--space-sm);
+    grid-template-areas:
+      "image"
+      "body"
+      "date";
+    row-gap: 0;
+    column-gap: 0;
+    padding: var(--space-lg) 0;
   }
 
   .post-card__image {
     aspect-ratio: 16 / 9;
+    border-radius: 8px;
+  }
+
+  .post-card__date {
+    align-self: unset;
+    text-align: right;
+    margin-top: var(--space-sm);
+  }
+
+  .post-card__body {
+    margin-top: var(--space-sm);
+  }
+
+  .post-card__title {
+    font-size: var(--text-base);
+  }
+
+  .post-card__description {
+    font-size: var(--text-sm);
+    -webkit-line-clamp: 3;
+    line-height: var(--leading-snug);
   }
 }
 
