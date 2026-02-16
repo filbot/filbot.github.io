@@ -1,0 +1,50 @@
+{{- $src := .Destination -}}
+{{- $alt := .Text -}}
+{{- $title := .Title -}}
+
+{{/* Try to find image as page resource first */}}
+{{- $image := "" -}}
+{{- if .Page.Resources -}}
+  {{- $image = .Page.Resources.GetMatch $src -}}
+{{- end -}}
+
+{{/* Fallback to global resources */}}
+{{- if not $image -}}
+  {{- $image = resources.Get $src -}}
+{{- end -}}
+
+{{- if $image -}}
+  {{/* Image found - process with responsive treatment */}}
+  {{- $widths := slice 320 480 768 1024 1366 1920 2560 3840 -}}
+  {{- $quality := 90 -}}
+
+  {{- $srcset := slice -}}
+  {{- range $widths -}}
+    {{- $widthInt := . -}}
+    {{- if le $widthInt $image.Width -}}
+      {{- $resized := $image.Resize (print $widthInt "x webp q" $quality) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $resized.RelPermalink $widthInt) -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- $placeholder := $image.Resize "42x webp q60" -}}
+  {{- $defaultImage := $image.Resize (print "1024x webp q" $quality) -}}
+
+  <figure class="markdown-image">
+    <img
+      src="{{ $defaultImage.RelPermalink }}"
+      srcset="{{ delimit $srcset ", " }}"
+      sizes="100vw"
+      width="100%"
+      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,{{ $placeholder.Content | base64Encode }});"
+      loading="lazy"
+      decoding="async"
+      alt="{{ $alt }}" />
+    {{- if $title -}}
+    <figcaption>{{ $title }}</figcaption>
+    {{- end -}}
+  </figure>
+{{- else -}}
+  {{/* Image not found or external URL - fallback to standard img tag */}}
+  <img src="{{ $src }}" alt="{{ $alt }}" {{- with $title }} title="{{ . }}"{{ end }}>
+{{- end -}}

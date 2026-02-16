@@ -1,0 +1,26 @@
+<footer id="footer">
+    {{ if .Site.Params.Social }}
+        {{ partial "social.html" . }}
+    {{ end }}
+
+    <div class="copyright">
+    {{ with .Site.Params.copyright }}
+        {{ . | markdownify }}
+    {{ else }}
+       © Copyright
+       {{ now.Format "2006"}}
+       {{ .Site.Params.Author }}
+    {{ end }}
+    </div>
+</footer>
+
+{{/* Custom JS via Hugo Pipes for minification and fingerprinting */}}
+{{ $customJS := resources.Get "js/custom.js" }}
+{{ if $customJS }}
+  {{ if hugo.IsProduction }}
+    {{ $customJS = $customJS | js.Build | minify | fingerprint }}
+    <script src="{{ $customJS.RelPermalink }}" integrity="{{ $customJS.Data.Integrity }}" crossorigin="anonymous" defer></script>
+  {{ else }}
+    <script src="{{ $customJS.RelPermalink }}" defer></script>
+  {{ end }}
+{{ end }}
