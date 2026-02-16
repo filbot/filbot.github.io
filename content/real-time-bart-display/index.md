@@ -4,6 +4,7 @@ draft = false
 title = 'Realtime BART Arrival Display'
 description = 'Mini model of the old school BART platform displays with live data from the official BART API'
 tags = ["esp32", "lcd", "howto", "bart"]
+cover = 'hero.webp'
 +++
 
 {{< img src="hero.webp" alt="AI generated image of the physical BART display" >}}

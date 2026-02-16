@@ -4,6 +4,7 @@ draft = false
 title = 'AEM Developer Cheat Sheet'
 description = 'A quick-start resource I wish I had when I began working with AEM—meant to help new developers get up and running without having to learn everything the hard way on the job.'
 tags = ['aem', 'frontend', 'developer-tools', 'aem-resources']
+cover = 'aem-developer-cheat-sheet-header-image.jpg'
 +++
 
 {{< img src="aem-developer-cheat-sheet-header-image.jpg" alt="ChatGPT generated image of man riding Adobe logo" >}}
