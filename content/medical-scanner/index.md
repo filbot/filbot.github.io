@@ -4,6 +4,7 @@ draft = false
 title = 'Stark Medical Scanner... sort of'
 description = 'Not so screen accurate version of the Stark Medical Scanner'
 tags = ["esp32", "lcd", "howto", "marvel", "ironman"]
+cover = 'hero.webp'
 +++
 
 {{< img src="hero.webp" alt="AI generated image of the Stark Medical Scanner" >}}

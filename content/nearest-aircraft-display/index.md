@@ -4,6 +4,7 @@ draft = false
 title = 'Nearby Aircraft Display'
 description = 'A custom-built OLED display with mechanical relays and aircraft-type indicators that shows the nearest plane overhead'
 tags = ["esp32", "arduino", "ads-b", "lcd", "flight-tracking", "howto", "cnc", "3d printing"]
+cover = 'chatgpt-header-image.jpg'
 +++
 
 {{< img src="chatgpt-header-image.jpg" alt="ChatGPT generated image of Flight Display" >}}

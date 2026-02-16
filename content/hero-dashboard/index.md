@@ -4,6 +4,7 @@ draft = false
 title = 'Hero Dashboard'
 description = 'Emergency Services dashboard running on a Raspberry Pi kiosk'
 tags = ["raspberry pi", "application", "howto"]
+cover = 'dashboard-angle.jpg'
 +++
 
 {{< img src="dashboard-angle.jpg" alt="Hero Dashboard" >}}
