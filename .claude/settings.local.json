@@ -8,7 +8,8 @@
       "Bash(if ps aux)",
       "Bash(then echo \"Still running\")",
       "Bash(else echo \"Completed\")",
-      "Bash(fi)"
+      "Bash(fi)",
+      "Bash(curl:*)"
     ]
   }
 }
