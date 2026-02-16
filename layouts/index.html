@@ -18,8 +18,8 @@
               {{- end -}}
             {{- end -}}
           {{- end -}}
+          <time class="post-card__date" datetime="{{ $page.PublishDate }}">{{ $page.PublishDate.Format "Jan 2, 2006" }}</time>
           <div class="post-card__body">
-            <time class="post-card__date" datetime="{{ $page.PublishDate }}">{{ $page.PublishDate.Format "Jan 2, 2006" }}</time>
             <h2 class="post-card__title">{{ $page.Title }}</h2>
             {{ with $page.Params.description }}
               <p class="post-card__description">{{ . | plainify | htmlUnescape }}</p>
