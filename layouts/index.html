@@ -13,8 +13,17 @@
               <img class="post-card__image" src="{{ $cover }}" alt="{{ $page.Title }}" loading="lazy">
             {{- else -}}
               {{- with $page.Resources.GetMatch $cover -}}
-                {{- $thumb := .Fill "200x200 webp" -}}
-                <img class="post-card__image" src="{{ $thumb.RelPermalink }}" alt="{{ $page.Title }}" loading="lazy" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}">
+                {{- $sq := .Fill "400x400 webp" -}}
+                {{- $wide := .Fill "640x360 webp" -}}
+                <img
+                  class="post-card__image"
+                  src="{{ $sq.RelPermalink }}"
+                  srcset="{{ $sq.RelPermalink }} 400w, {{ $wide.RelPermalink }} 640w"
+                  sizes="(max-width: 540px) calc(100vw - 2rem), 200px"
+                  alt="{{ $page.Title }}"
+                  loading="lazy"
+                  width="{{ $sq.Width }}"
+                  height="{{ $sq.Height }}">
               {{- end -}}
             {{- end -}}
           {{- end -}}
