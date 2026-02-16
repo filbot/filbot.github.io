@@ -4,6 +4,7 @@ draft = false
 title = 'PiAware Data Display'
 description = 'How I connected a 20x4 I2C LCD to my Raspberry Pi running PiAware to show live ADS-B message rates, CPU temperature, and uptime'
 tags = ["raspberry-pi", "piaware", "ads-b", "lcd", "python", "flight-tracking", "howto"]
+cover = 'piaware-lcd-chatgpt-generated.jpg'
 +++
 
 {{< img src="piaware-lcd-chatgpt-generated.jpg" alt="ChatGPT generated image of ADS-B Node" >}}

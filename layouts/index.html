@@ -2,24 +2,30 @@
 {{ partial "profile.html" . }}
 
 <div id="list-page">
-    {{ $pages := where .Site.RegularPages "Type" "!=" "about" }} <!-- Exclude pages with type "about" -->
+    {{ $pages := where .Site.RegularPages "Type" "!=" "about" }}
     {{ $paginator := .Paginate ($pages) }}
     {{ range $paginator.Pages }}
-        {{ $title := .Title }}
-        {{ $description := .Params.description }} <!-- Use the description field -->
-        <section class="item">
-          <div>
-            <h1 class="title"><a href='{{ .RelPermalink }}'>{{ $title }}</a></h1>
-            <div class ="date">
-                <time datetime="{{ .PublishDate }}">{{ i18n "publishDate" . }}</time>  
-            </div>
+        {{ $page := . }}
+        <a href="{{ .RelPermalink }}" class="post-card">
+          {{- with .Params.cover -}}
+            {{- $cover := . -}}
+            {{- if strings.HasPrefix $cover "/" -}}
+              <img class="post-card__image" src="{{ $cover }}" alt="{{ $page.Title }}" loading="lazy">
+            {{- else -}}
+              {{- with $page.Resources.GetMatch $cover -}}
+                {{- $thumb := .Fill "200x200 webp" -}}
+                <img class="post-card__image" src="{{ $thumb.RelPermalink }}" alt="{{ $page.Title }}" loading="lazy" width="{{ $thumb.Width }}" height="{{ $thumb.Height }}">
+              {{- end -}}
+            {{- end -}}
+          {{- end -}}
+          <div class="post-card__body">
+            <time class="post-card__date" datetime="{{ $page.PublishDate }}">{{ $page.PublishDate.Format "Jan 2, 2006" }}</time>
+            <h2 class="post-card__title">{{ $page.Title }}</h2>
+            {{ with $page.Params.description }}
+              <p class="post-card__description">{{ . | plainify | htmlUnescape }}</p>
+            {{ end }}
           </div>
-
-          {{ if ne .Site.Params.hiddenPostSummaryInHomePage true }}
-              <div class="summary">{{ $description | plainify | htmlUnescape }}</div> <!-- Display the description -->
-          {{ end }}
-
-        </section>
+        </a>
     {{ end }}
 
     {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
@@ -31,7 +37,7 @@
                   </a>
             </span>
           {{ end }}
-          
+
           {{ if $paginator.HasNext }}
               <span class="next">
                   <a href="{{.Paginator.Next.URL}}">
@@ -41,7 +47,6 @@
           {{ end }}
         </div>
     {{ end }}
-
 
 </div>
 {{ end }}

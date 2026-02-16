@@ -4,6 +4,7 @@ draft = true
 title = 'E-Ink Habit Tracker'
 description = 'Simple one button habit tracker powered by a Raspberry Pi W 2.'
 tags = ['button', 'display', 'eink', 'raspberrypi']
+cover = 'wyao-device.jpg'
 +++
 
 {{< img src="wyao-device.jpg" alt="WYAO device in wall" >}}
