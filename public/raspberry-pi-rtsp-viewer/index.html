@@ -1,728 +1,86 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
-    <title>RTSP Video Stream on Raspberry Pi | Semicolons &amp; Side Projects</title>
-
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-<meta name="viewport" content="width=device-width,minimum-scale=1">
-<meta name="description" content="How to build a Raspberry Pi configured to act as a simple, dedicated fullscreen RTSP video display.">
-<meta name="generator" content="Hugo 0.152.2">
-
-
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-  
-    
-    <link rel="stylesheet" href="http://localhost:1313/css/custom.css">
-  
-
-
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
- 
-  
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-P5HRT1QBKC"></script>
-      <script>
-        var doNotTrack = false;
-        if ( false ) {
-          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
-          var doNotTrack = (dnt == "1" || dnt == "yes");
-        }
-        if (!doNotTrack) {
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-          gtag('config', 'G-P5HRT1QBKC');
-        }
-      </script>
-
-
-
-
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;600&family=Sora:wght@400;600;700&family=Source+Sans+Pro:wght@400&family=JetBrains+Mono:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
-
-
-  </head>
-
-  <body>
-    <nav class="navigation">
-	
-		<a href="/">Home</a>
-	
-	
-	<a href="/tags">Tags</a>
-	<a href="/about">About</a>
-
-	
-
-	
-</nav>
-
-
-    <main class="main">
-      
-
-<section id="single">
-    <h1 class="title">RTSP Video Stream on Raspberry Pi</h1>
-
-    <div class="tip">
-        <time datetime="2025-09-15 08:03:55 -0700 PDT">Sep 15, 2025</time>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          859 words
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          5 minute read
-        </span>
-    </div>
-
-    
-    
-
-
-    <div class="content">
-      
-
-
-  
-
-
-
-
-  
-  
-  
-
-  
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  
-  
-  
-
-  <figure class="responsive-image">
-    <img 
-      src="/raspberry-pi-rtsp-viewer/hero_hu_312a9ebb2d81fe61.webp"
-      srcset="/raspberry-pi-rtsp-viewer/hero_hu_9ce08cf3c29933f2.webp 320w, /raspberry-pi-rtsp-viewer/hero_hu_f9819bc2569f9d83.webp 480w, /raspberry-pi-rtsp-viewer/hero_hu_9c5df3da93ef4d34.webp 768w, /raspberry-pi-rtsp-viewer/hero_hu_312a9ebb2d81fe61.webp 1024w, /raspberry-pi-rtsp-viewer/hero_hu_123452250f03bb9c.webp 1366w, /raspberry-pi-rtsp-viewer/hero_hu_fcb5c8331ac18a21.webp 1536w, /raspberry-pi-rtsp-viewer/hero_hu_d2532ef6ef9bd89d.webp 1920w, /raspberry-pi-rtsp-viewer/hero_hu_dd1bb3f24aefc9bc.webp 2560w, /raspberry-pi-rtsp-viewer/hero_hu_9bbea36665686f78.webp 3840w"
-      sizes="100vw"
-      width="100%"
-      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRoQBAABXRUJQVlA4IHgBAAAwBwCdASoqABwAPs1eokqjoqGVXAQAOwzE8wBXEVruEeZ3HpZBq/tcqZnn69ciexr05v6P1SpCSzj4dHba4mSJQAAA/v16l65TZ2bZvGCp8BLwj2H6C/dmznRbsuv&#43;BWx92n/Y19CVbbRjptI&#43;MOn9qAOCSR&#43;lV1CN2Uu/TgUu8bTsOK5b9C3gq/9JzT769vj5H/NRA/&#43;T/N6l6LzgEFq/pr&#43;cD71Ava4W636kiAyfBwaYTuwAeiOD7WEBqJp5EiMe/JWOOAUzUQpZdA3q/Uehf2lVy/wzUDho3I/xR90qEAG9qtMtc9cUeWoJP9TRa1OHLRiLEwIJQfIqT1ssRcXgrwu1UtcToF4PdH90I1iCDC5/V&#43;YgxQ4mDHey/to&#43;ZtceL4EExW/dNDFBOPKC14fTWTRfqtCkwcMFjsFHpAkeMtXTMjCyv1GajBGYDmN/aqFX1ysSJm2qAZ6U7QS7NlgdmHIi3PgxIRdplb2svSw6MDOPvcl3A3AA);"
-      loading="lazy"
-      decoding="async"
-      alt="ChatGPT generated image of the cube" />
-    
-    
-    
-    
-  </figure>
-
-<p>My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent <a href="https://www.doscher.com/arm-terminal-2-the-cube/" target="_blank" rel="noopener">ARM Terminal 2 - The Cube</a>. I highly recommend taking a look at his blog, because if you&rsquo;re reading this, you&rsquo;re gonna love his stuff, <a href="https://www.doscher.com" target="_blank" rel="noopener">doscher.com</a>.</p>
-<hr>
-<h2 id="the-hardware">The Hardware <a href="#the-hardware" class="anchor">🔗</a></h2><ul>
-<li>Raspberry Pi 4 running Raspberry Pi OS Lite (Bookworm)</li>
-<li><a href="https://www.amazon.com/dp/B08N5VZN8R?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;th=1" target="_blank" rel="noopener">Geekworm Raspberry Pi 4 Heatsink</a></li>
-<li><a href="https://www.waveshare.com/wiki/4inch_HDMI_LCD_%28C%29" target="_blank" rel="noopener">Waveshare 4inch HDMI LCD (C)</a></li>
-<li><a href="https://www.doscher.com/arm-terminal-2-the-cube/" target="_blank" rel="noopener">ARM Terminal 2 - The Cube</a></li>
-<li>Repurposed metal adjustable arm - <a href="https://www.amazon.com/dp/B08FNQC6TZ?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_6&amp;th=1" target="_blank" rel="noopener">Example on Amazon</a></li>
-</ul>
-
-
-
-  
-
-
-
-
-  
-  
-  
-
-  
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  
-  
-  
-
-  <figure class="responsive-image">
-    <img 
-      src="/raspberry-pi-rtsp-viewer/top-down-labels_hu_9111c6df2f51583.webp"
-      srcset="/raspberry-pi-rtsp-viewer/top-down-labels_hu_a5754cac2b02fab3.webp 320w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_f0b258cc44b726a2.webp 480w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_9557447584fc7947.webp 768w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_9111c6df2f51583.webp 1024w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_b1b4a156089b4bb1.webp 1366w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_a674f986eb088ffc.webp 1536w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_9886fac4ad8d63d9.webp 1920w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_ffce06bbee41ee3d.webp 2560w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_e7d21dbd94795b3b.webp 3840w"
-      sizes="100vw"
-      width="100%"
-      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRg4CAABXRUJQVlA4IAICAABQCwCdASoqAB0APs1MnkcjoiEYDVQAOwzE9gBOmba5q5B1QrQwwH2zb5jnfNM79ADyyPZm/zyPniAa2or3L&#43;Evl5jsHWl5GViqNESasF7ikyaBRuLhBo5cbyX/N/2RlxjkDYAA/rQJdKM5nboShQ&#43;UPXC9/Pu0RBuHiWfd4lkRkjeb91UR975exdHATjRldVkPn1zmV2EQ&#43;0/yIBp3DY4xpYMASFYmYK3OvoBkqgYUUL6gDMbMXdHwIkAaO6CEeYHtWD1EdedvnLrl0E1mBCF4UFvuaY6HU1&#43;ricT1QPw0JGv5XOii1U0AiquJs9ljV06vGpIBjBGGSYPmdn/torC//XWPMFQ7Jv/Uktof&#43;HOR/Xo&#43;ALScG/5zkJNsDPV77bj6FcAygNp0UTKEegNYDqAV6yc30JHuz0ZoksZVfhktLv2e9OWnztVJvkzBjPR5klZHthcDqmeeD/lSuFoA50XB5hBdQdEr8EABZIWiG2NFvR2OMkcGpG1Ghjb78HiWL72afnxqqtBlbVR2ZSv6hyiYPO53n6fu6yyPkZnFttuqErDtVrmNLEKA6CRmvPCKWsqicU&#43;IJedV2jjmwAfk7ktkevHrRsyqeZ&#43;AnhS06aQSTsAUJbkU6Fs3pcQWdb6xVVLIxGPAlcXVYzhvzuxthb5269WF5ZBybo8bl57pw3L2CqAA);"
-      loading="lazy"
-      decoding="async"
-      alt="Labeled photo of hardware" />
-    
-    
-    
-    
-  </figure>
-
-<p>My metal arm originally had a lamp attached, so I removed the lamp and saved it for parts. The clamp that came with the arm is not the strongest, but it works fine for the weight of this project. With a little creativity, you can attach it almost anywhere. I mounted mine to a monitor arm so I could position the screen just above my secondary monitor.</p>
-<p>The 3D-printed frame pieces from doscher.com came out great. I followed the instructions and parts list from Jay’s blog.</p>
-<p>Fitting the Pi and display into the frame takes a little patience, but once they are in place, it is very solid. I used a 90-degree USB-C cable to route power neatly out the back and zip-tied it along the arm for clean cable management.</p>
-
-
-
-  
-
-
-
-
-  
-  
-  
-
-  
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  
-  
-  
-
-  <figure class="responsive-image">
-    <img 
-      src="/raspberry-pi-rtsp-viewer/pi-closeup_hu_9a74b45e0c8762fc.webp"
-      srcset="/raspberry-pi-rtsp-viewer/pi-closeup_hu_8efd3cab31ac2ef5.webp 320w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_5854b82802af8e5c.webp 480w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_34d713c37e149662.webp 768w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_9a74b45e0c8762fc.webp 1024w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_fd91c64fd2db93a3.webp 1366w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_8614f7efad9a5085.webp 1536w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_5bc3a0fa50b24db2.webp 1920w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_e932a42f5a55af55.webp 2560w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_b1f400fad3e1a221.webp 3840w"
-      sizes="100vw"
-      width="100%"
-      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRsIBAABXRUJQVlA4ILYBAAAwCQCdASoqABwAPs1Sn0WjoiGVVgA7DMT0AE6ZQkFmQHXRoUJ9Lj2xhjmv6BEKmhP12dnskbDjMd1HGUXQio0Mw2lPBsV74oIchYGz83N7HoAAAP7Uok0aZ0MxXQ7oyG5HukRtCrWdXZRuOKkxbzfrjVZORqE8UES/OXhSNFB0LBllG4qs9/xDZ/YI&#43;mrrHpk79kVoW&#43;jmHQhrXUdSC/Ind7u8A5oJo&#43;qQ0Ov4N5jsA5SZ&#43;1VafKglsqoiMwIIITs8FgWxaXSSDD5E1Z6ck4Q7Y49eapiNQD3MLGpA&#43;mch6AHwZJigML69aUFokcSObGGr&#43;1kIX5phQmOk2uNNn/n8WAhlEaFWc0A3QoXeohPJQY6JG61&#43;v9bliCNhfuISp2N/scuV2XMPo1p8eBozkMTLuzb3kw3WTd2DvK&#43;L8wi7TJoHwx4p9tjdPJ4tfvir3Ft&#43;Ne1QOMwXM49WyxR9PotyyNoptt8RlYe529mGO3thzA2GuB8JAY7z8xVIhvN60hXc2p8kQlUA6qLdluSyibGFioklwmKNCNaTWy3Z&#43;DK9NVI0NusKgbhDZboHd/bU318/nG1qUAA=);"
-      loading="lazy"
-      decoding="async"
-      alt="raspberry pi closeup" />
-    
-    
-    
-    
-  </figure>
-
-<blockquote>
-<p>The display connects to the Pi with an HDMI adapter and draws power through pogo pins so no wires involved, which is a nice touch.</p>
-</blockquote>
-<p>The only custom part I made was a small adapter plate to attach the cube to the arm using the peg from the old lamp mount. The metal peg had a curved plate to match the radius of the lamp housing but I was able to hammer it flat. The 3d printed adapter is just a square with screw holes and a larger hole for the peg. Thumb screws came from jar of screws I keep exactly for these types of situations.</p>
-
-
-
-  
-
-
-
-
-  
-  
-  
-
-  
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  
-  
-  
-
-  <figure class="responsive-image">
-    <img 
-      src="/raspberry-pi-rtsp-viewer/mounting-bracket_hu_27f2349a6120c6ab.webp"
-      srcset="/raspberry-pi-rtsp-viewer/mounting-bracket_hu_b2c86035e67613f6.webp 320w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_3f9d2c72551b39d.webp 480w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_eb22cb3415ac74d8.webp 768w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_27f2349a6120c6ab.webp 1024w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_cca548cdbe5c6aa2.webp 1366w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_4c840e28e3f5c0d8.webp 1536w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_2bd7646e199e3f62.webp 1920w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_cbfddf4238e26eab.webp 2560w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_1566488a3e6721ca.webp 3840w"
-      sizes="100vw"
-      width="100%"
-      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRiYCAABXRUJQVlA4IBoCAAAQCgCdASoqABwAPr1IlUUjoiEarAYAOwvE9gBbJuBrld/9kaz6PkpstlNcCdMGzwIg/h/mgC3APZAjysUE0Y2KSP0IN4ns8WAaLKN5K89FAaMLDGfkx1LwcAD&#43;bDDSsklxRlMFvMtZ82/A23539IJXt7zVpttmKpI3XtExxiYx8zklmdPhsuTx25lHHlwicnIjy7SNimD8WPk8Ep3nhk/KpUGw6KCON2ckJcpDow6LMIdaUD1CdBO5yQZLkYABD1h5akzAo5uzWQFBeAedN7/g1fRtOW2jLMxIRv&#43;PhXdGjzm5gCMJG9tfHbb7JtNJ0h9Hw0pAJcRjF4TnsY9jyFSXL39BfZo/ApQLeGKvxnVNN8z6HI5r32oF06mfnudoYl7uOetBLgjM569/y/nT2uG3ja8bHgH4pJMFLmHrf6Hq0EzSf5p/&#43;//S2ly92j/3FYFPSOPTwYF3FXz/TWMR1B/yr3GkUFA9szODM19yMLnN&#43;k7c9s2T5NQSb64fPdc4MsivAOMwunuoagKX6FBxMSZ&#43;qK8ccWRT4ufJN/&#43;eyf2WRxMTliGVazcCa6arPo4Cf4PUpeYeHPOX4z0yfGwLlCjQHdLp5aHEJN9sd57nWroZVRTgFteFZWfrLpb/I5jc/jQWl4f4kCOfCdm1rx6hf5SetM/5cAFjZ4rW&#43;28oWpyspvwlZUB/s1lfmVeD9Mexwa69/pdT&#43;xuhBlQA);"
-      loading="lazy"
-      decoding="async"
-      alt="mounting bracket" />
-    
-    
-    
-    
-  </figure>
-
-<hr>
-<h2 id="the-software">The Software <a href="#the-software" class="anchor">🔗</a></h2><p>For playback I used GStreamer with a set of plugins for RTSP decoding and video handling, along with Cage, a minimal Wayland compositor that runs a single app in fullscreen mode.</p>
-
-
-
-  
-
-
-
-
-  
-  
-  
-
-  
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  
-  
-  
-
-  <figure class="responsive-image">
-    <img 
-      src="/raspberry-pi-rtsp-viewer/pi-booting_hu_7fbbae21e938c01e.webp"
-      srcset="/raspberry-pi-rtsp-viewer/pi-booting_hu_3482c94fa31d347e.webp 320w, /raspberry-pi-rtsp-viewer/pi-booting_hu_86e24f89c3dc0a26.webp 480w, /raspberry-pi-rtsp-viewer/pi-booting_hu_59b0304cd05ef1d2.webp 768w, /raspberry-pi-rtsp-viewer/pi-booting_hu_7fbbae21e938c01e.webp 1024w, /raspberry-pi-rtsp-viewer/pi-booting_hu_f72bfccec9f4690a.webp 1366w, /raspberry-pi-rtsp-viewer/pi-booting_hu_c26866e4cc820ed3.webp 1536w, /raspberry-pi-rtsp-viewer/pi-booting_hu_3b8d30a431435f86.webp 1920w, /raspberry-pi-rtsp-viewer/pi-booting_hu_10fe45d4ed98a3a5.webp 2560w, /raspberry-pi-rtsp-viewer/pi-booting_hu_fd68f85623879b3c.webp 3840w"
-      sizes="100vw"
-      width="100%"
-      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRjQCAABXRUJQVlA4ICgCAABQCgCdASoqABwAPs1KnEajoiEaqgQAOwzE9gBOmXQdp3mdmDAbdXnpm3j8H63Zq83hJ4TjgUA5ozF3QJsdwSFGjKY8G00N1&#43;yRtVjVXo0barFDyBc4suhrMhgAAP7lieGlyZ3lpadbPlDfB&#43;s95esH1a1Lz3FjRVarSaSCeDhhUQrc2j46zbHvQRybibtZBab&#43;tgXSe8sd4ll2&#43;5St2NDnRHDrZWcN/mJVT9F8LG&#43;IUQnflpK/hWxRp2DDbJfZLDYLXsZUI7SDXYI3MxzWIiIJUbdih2lpGMX6iujg/Uz/gLQW9enSsBbosN2/yPBWupMT5Vt2FPrb6v7&#43;1/iDvY//1I4rVteX7VWFlpRTAsLZ5n6u48Pa7cxv3jjGP/Tvy/7qF6Jt7YH/Ly0CheL2&#43;B1ePS&#43;s/Bda24WPQ2h47Xk/j7DDHdjD5GYQRK0sN5Q&#43;oTFsMJsOyicdN3L/JG52u/jkvzs2CEnIGAshM42ZJQOMsXNHUb50SkqA156FzuqubCladOFXcYvoakR7D6I2zx3fg3I7HWltBSdHrmRyKwkd1DB95jNA0IlY1u3KcIvgMdhplKgHX7OeSh90FuMDqFJxR11oDlw8OZw3iIKpz9ZyRJtGU86g/w49H&#43;yQQuSrX1MZ3b329lpWJt/FvvhLdmHv19Nyo8k42v&#43;X7P9kFRazJ14prrsXu9wYuZj&#43;TxXHinMzaQ0bSA9jBbbxG1jh4VcVN4wNIlsoAAA=);"
-      loading="lazy"
-      decoding="async"
-      alt="raspberry pi booting" />
-    
-    
-    
-    
-  </figure>
-
-<p>Here is what the pipeline does:</p>
-<ul>
-<li>Connects to the RTSP stream (rtspsrc)</li>
-<li>Depayloads and parses H.264 (rtph264depay ! h264parse)</li>
-<li>Hardware-decodes with the Pi’s V4L2 (v4l2h264dec)</li>
-<li>Crops the 960×720 source to keep the right-hand 720×720 region (videocrop left=240)</li>
-<li>Scales to the LCD resolution (videoscale ! video/x-raw,width=720,height=720)</li>
-<li>Displays fullscreen inside Cage (waylandsink)</li>
-</ul>
-<p>The first script is the meat of this project. It should be easy enough to edit for anyone thinking about using it for their own display, if your display has a different resolutions, and if your video feed needs a different resolution or crop.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a">#!/usr/bin/env bash
-</span></span></span><span style="display:flex;"><span><span style="color:#57606a"></span><span style="color:#6639ba">set</span> -euo pipefail
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a"># --- CONFIG ---</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">URL</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#39;rtsp://192.168.1.1:7447/tDm5IQb26KLGtQ4t&#39;</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">CROP_LEFT</span><span style="color:#0550ae">=</span><span style="color:#0550ae">240</span> <span style="color:#57606a"># 960x720 source -&gt; keep RIGHT side</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">OUT_W</span><span style="color:#0550ae">=</span>720<span style="color:#1f2328">;</span> <span style="color:#953800">OUT_H</span><span style="color:#0550ae">=</span><span style="color:#0550ae">720</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">FPS</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;30/1&#34;</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">RETRY_SEC</span><span style="color:#0550ae">=</span><span style="color:#0550ae">3</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">CONNECT_TIMEOUT_US</span><span style="color:#0550ae">=</span><span style="color:#0550ae">5000000</span> <span style="color:#57606a"># 5s timeout</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a"># --- Pipelines ---</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">stream_cmd</span><span style="color:#0550ae">=(</span>
-</span></span><span style="display:flex;"><span>  gst-launch-1.0 -v
-</span></span><span style="display:flex;"><span>  rtspsrc <span style="color:#953800">location</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;</span><span style="color:#953800">$URL</span><span style="color:#0a3069">&#34;</span> <span style="color:#953800">latency</span><span style="color:#0550ae">=</span><span style="color:#0550ae">0</span> <span style="color:#953800">timeout</span><span style="color:#0550ae">=</span><span style="color:#953800">$CONNECT_TIMEOUT_US</span> <span style="color:#953800">protocols</span><span style="color:#0550ae">=</span>tcp
-</span></span><span style="display:flex;"><span>    ! rtph264depay ! h264parse ! v4l2h264dec
-</span></span><span style="display:flex;"><span>    ! videoconvert
-</span></span><span style="display:flex;"><span>    ! videocrop <span style="color:#953800">left</span><span style="color:#0550ae">=</span><span style="color:#953800">$CROP_LEFT</span>
-</span></span><span style="display:flex;"><span>    ! videoscale
-</span></span><span style="display:flex;"><span>    ! <span style="color:#0a3069">&#34;video/x-raw,width=</span><span style="color:#953800">$OUT_W</span><span style="color:#0a3069">,height=</span><span style="color:#953800">$OUT_H</span><span style="color:#0a3069">,framerate=</span><span style="color:#953800">$FPS</span><span style="color:#0a3069">&#34;</span>
-</span></span><span style="display:flex;"><span>    ! waylandsink <span style="color:#953800">fullscreen</span><span style="color:#0550ae">=</span><span style="color:#6639ba">true</span> <span style="color:#953800">sync</span><span style="color:#0550ae">=</span><span style="color:#6639ba">false</span>
-</span></span><span style="display:flex;"><span><span style="color:#0550ae">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">nosignal_cmd</span><span style="color:#0550ae">=(</span>
-</span></span><span style="display:flex;"><span>  gst-launch-1.0 -q
-</span></span><span style="display:flex;"><span>  videotestsrc <span style="color:#953800">pattern</span><span style="color:#0550ae">=</span>black
-</span></span><span style="display:flex;"><span>    ! <span style="color:#0a3069">&#34;video/x-raw,width=</span><span style="color:#953800">$OUT_W</span><span style="color:#0a3069">,height=</span><span style="color:#953800">$OUT_H</span><span style="color:#0a3069">,framerate=</span><span style="color:#953800">$FPS</span><span style="color:#0a3069">&#34;</span>
-</span></span><span style="display:flex;"><span>    ! textoverlay <span style="color:#953800">text</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;NO SIGNAL&#34;</span> font-desc<span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;Sans 64&#34;</span> <span style="color:#953800">halignment</span><span style="color:#0550ae">=</span>center <span style="color:#953800">valignment</span><span style="color:#0550ae">=</span>middle <span style="color:#953800">color</span><span style="color:#0550ae">=</span>0xFFFFFFFF
-</span></span><span style="display:flex;"><span>    ! waylandsink <span style="color:#953800">fullscreen</span><span style="color:#0550ae">=</span><span style="color:#6639ba">true</span> <span style="color:#953800">sync</span><span style="color:#0550ae">=</span><span style="color:#6639ba">false</span>
-</span></span><span style="display:flex;"><span><span style="color:#0550ae">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">probe_cmd</span><span style="color:#0550ae">=(</span>
-</span></span><span style="display:flex;"><span>  gst-launch-1.0 -q
-</span></span><span style="display:flex;"><span>  rtspsrc <span style="color:#953800">location</span><span style="color:#0550ae">=</span><span style="color:#0a3069">&#34;</span><span style="color:#953800">$URL</span><span style="color:#0a3069">&#34;</span> <span style="color:#953800">timeout</span><span style="color:#0550ae">=</span><span style="color:#953800">$CONNECT_TIMEOUT_US</span> <span style="color:#953800">protocols</span><span style="color:#0550ae">=</span>tcp
-</span></span><span style="display:flex;"><span>    ! rtph264depay ! h264parse ! avdec_h264
-</span></span><span style="display:flex;"><span>    ! fakesink <span style="color:#953800">sync</span><span style="color:#0550ae">=</span><span style="color:#6639ba">false</span>
-</span></span><span style="display:flex;"><span><span style="color:#0550ae">)</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#57606a"># --- Loop forever: stream or fallback ---</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">while</span> true<span style="color:#1f2328">;</span> <span style="color:#cf222e">do</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#0a3069">&#34;</span><span style="color:#0a3069">${</span><span style="color:#953800">stream_cmd</span><span style="color:#1f2328">[@]</span><span style="color:#0a3069">}</span><span style="color:#0a3069">&#34;</span> <span style="color:#0550ae">&amp;&amp;</span> <span style="color:#cf222e">continue</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#0a3069">&#34;</span><span style="color:#0a3069">${</span><span style="color:#953800">nosignal_cmd</span><span style="color:#1f2328">[@]</span><span style="color:#0a3069">}</span><span style="color:#0a3069">&#34;</span> <span style="color:#1f2328">&amp;</span> <span style="color:#953800">NS_PID</span><span style="color:#0550ae">=</span><span style="color:#953800">$!</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">until</span> <span style="color:#0a3069">&#34;</span><span style="color:#0a3069">${</span><span style="color:#953800">probe_cmd</span><span style="color:#1f2328">[@]</span><span style="color:#0a3069">}</span><span style="color:#0a3069">&#34;</span> &gt;/dev/null 2&gt;<span style="color:#1f2328">&amp;</span>1<span style="color:#1f2328">;</span> <span style="color:#cf222e">do</span>
-</span></span><span style="display:flex;"><span>    sleep <span style="color:#0a3069">&#34;</span><span style="color:#953800">$RETRY_SEC</span><span style="color:#0a3069">&#34;</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#cf222e">done</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#6639ba">kill</span> <span style="color:#0a3069">&#34;</span><span style="color:#953800">$NS_PID</span><span style="color:#0a3069">&#34;</span> 2&gt;/dev/null <span style="color:#0550ae">||</span> <span style="color:#6639ba">true</span>
-</span></span><span style="display:flex;"><span>  <span style="color:#6639ba">wait</span> <span style="color:#0a3069">&#34;</span><span style="color:#953800">$NS_PID</span><span style="color:#0a3069">&#34;</span> 2&gt;/dev/null <span style="color:#0550ae">||</span> <span style="color:#6639ba">true</span>
-</span></span><span style="display:flex;"><span><span style="color:#cf222e">done</span>
-</span></span></code></pre></div><hr>
-<h2 id="running-as-a-service">Running as a Service <a href="#running-as-a-service" class="anchor">🔗</a></h2><p>The second part of this is the potatoes. Create a systemd service file so the Pi runs this automatically at boot.</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#57606a"># /etc/systemd/system/cam-kiosk.service</span>
-</span></span><span style="display:flex;"><span><span style="color:#0550ae">[</span>Unit<span style="color:#0550ae">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">Description</span><span style="color:#0550ae">=</span>RTSP Kiosk <span style="color:#0550ae">(</span>Cage + GStreamer<span style="color:#0550ae">)</span> with NO SIGNAL fallback
-</span></span><span style="display:flex;"><span><span style="color:#953800">After</span><span style="color:#0550ae">=</span>network-online.target
-</span></span><span style="display:flex;"><span><span style="color:#953800">Wants</span><span style="color:#0550ae">=</span>network-online.target
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0550ae">[</span>Service<span style="color:#0550ae">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">User</span><span style="color:#0550ae">=</span>pi
-</span></span><span style="display:flex;"><span><span style="color:#953800">PAMName</span><span style="color:#0550ae">=</span>login
-</span></span><span style="display:flex;"><span><span style="color:#953800">TTYPath</span><span style="color:#0550ae">=</span>/dev/tty1
-</span></span><span style="display:flex;"><span><span style="color:#953800">StandardInput</span><span style="color:#0550ae">=</span>tty
-</span></span><span style="display:flex;"><span><span style="color:#953800">Environment</span><span style="color:#0550ae">=</span><span style="color:#953800">XCURSOR_THEME</span><span style="color:#0550ae">=</span>blank
-</span></span><span style="display:flex;"><span><span style="color:#953800">Environment</span><span style="color:#0550ae">=</span><span style="color:#953800">XCURSOR_SIZE</span><span style="color:#0550ae">=</span><span style="color:#0550ae">1</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">ExecStart</span><span style="color:#0550ae">=</span>/usr/bin/cage -m -- /usr/local/bin/cam-player.sh
-</span></span><span style="display:flex;"><span><span style="color:#953800">Restart</span><span style="color:#0550ae">=</span>always
-</span></span><span style="display:flex;"><span><span style="color:#953800">RestartSec</span><span style="color:#0550ae">=</span><span style="color:#0550ae">2</span>
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#0550ae">[</span>Install<span style="color:#0550ae">]</span>
-</span></span><span style="display:flex;"><span><span style="color:#953800">WantedBy</span><span style="color:#0550ae">=</span>multi-user.target
-</span></span></code></pre></div><p>Enable and start the service:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl <span style="color:#6639ba">enable</span> cam-kiosk.service
-</span></span><span style="display:flex;"><span>sudo systemctl start cam-kiosk.service
-</span></span></code></pre></div><p>Check logs if you need to debug:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo journalctl -u cam-kiosk.service -f
-</span></span></code></pre></div><p>If you are still editing the script, stop the service first:</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl stop cam-kiosk.service
-</span></span></code></pre></div><p>Then run your script manually. Remember to restart the service when finished. Each time the pi reboots, the feed should show up on its own.</p>
-<hr>
-<h2 id="the-result">The Result <a href="#the-result" class="anchor">🔗</a></h2><p>The LCD has a native 720x720 resolution, but the doorbell feed is 960x720. The script crops 240 pixels from the left side so the image fits perfectly. The cropped area was just more of my front door, so nothing important was lost. The video delay is minimal, about the same as viewing through the official app. The one thing still left to do on this is to &ldquo;hide&rdquo; the cursor. Its so small on this display that it doesn&rsquo;t really bother me, but I don&rsquo;t think it would be hard to do and would be a nice finishing touch.</p>
-
-
-
-  
-
-
-
-
-  
-  
-  
-
-  
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-    
-    
-    
-  
-
-  
-  
-  
-
-  <figure class="responsive-image">
-    <img 
-      src="/raspberry-pi-rtsp-viewer/rtsp-stream_hu_b0b6073dcac7d13f.webp"
-      srcset="/raspberry-pi-rtsp-viewer/rtsp-stream_hu_d318289c641083cd.webp 320w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_9e1f71c856b24e6a.webp 480w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_190b7a825ea225aa.webp 768w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_b0b6073dcac7d13f.webp 1024w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_a8843378d9cd2d77.webp 1366w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_f34d291fba17c114.webp 1536w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_503765e1c984d617.webp 1920w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_f0b928fc79defb53.webp 2560w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_f07a31b934aca20f.webp 3840w"
-      sizes="100vw"
-      width="100%"
-      style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRvoBAABXRUJQVlA4IO4BAADQCACdASoqABwAPs1apUojoqGStZg7DMT2AE6coKnfCcW6j/s1QMtYJ6U1pQch5&#43;dxoB40sFp5OevhBUxJ2BmzomlUDijzILtuH73MHWp4AP7xcw/HjQRexE&#43;QfuwKfxCco6Hilf5UoEKNCFrJghO0bMlj2AWuw/NzjbPUFQ6Qj&#43;qo1uhcg3O0MSGgGg&#43;sLLqQ3dKRf6Vbo82b8u9UrrjlQKx1KltRf&#43;da8zewgTVRo3TuJ4GSEEBYO4cBVVguwSMhgDRQ1iy7A8izfKQdZWllgUnA80hYLahcMj6l3v0koLiBa3oZPYULf3V91Bzu&#43;C0ioubIr1tDGqzlkoHd5Zou5INOVc6sU0wxb4qQkM9EDPZ9PbkM6jzXurqrZbfPe7J5bZgMREHoo&#43;/v3&#43;Yi5ENVtlL1ScADImrhm3W&#43;xOioCYRlsbcLAgbSzsXQPDjAq6t8PyMTKH2&#43;WCJWtIQbDj1/kJt9UNZRfb9HmYCrC3Iff//N/R2UQn5fyyWm7oT&#43;Tv5vzFV9ZGL05K6q5FqXQsfDi0CiBLsa&#43;G45yLxezrEmRrSB7LO3IX3UiIKFGVWK5TtnjyvXfpaPraaKrK9J0wf4ZZ/dtGIodMaN6WR&#43;QTlKAOfybgKnuJez0izv3fgBAxRGfruzrBVMfZz6zBUAAA==);"
-      loading="lazy"
-      decoding="async"
-      alt="RTSP stream" />
-    
-    
-    
-    
-  </figure>
-
-<p>This has been more useful than I expected. It is great to glance over and see what is happening at the front door. You can of course use any RTSP stream. Maybe you want to display a public webcam or a traffic camera in your area. The possibilities are wide open.</p>
-
-    </div>
-
-    
-        <div class="tags">
-            
-                <a href="http://localhost:1313/tags/raspberry-pi">raspberry-pi</a>
-            
-                <a href="http://localhost:1313/tags/lcd">lcd</a>
-            
-                <a href="http://localhost:1313/tags/howto">howto</a>
-            
-                <a href="http://localhost:1313/tags/unifi">unifi</a>
-            
-                <a href="http://localhost:1313/tags/ubiquity">ubiquity</a>
-            
-                <a href="http://localhost:1313/tags/rtsp">rtsp</a>
-            
-        </div>
-    
-    
-    
-
-</section>
-
-
-    </main>
-    
-    <footer id="footer">
-    
-        <div id="social">
-
-
-    <a class="symbol" href="https://github.com/filbot" rel="me" target="_blank">
-        
-        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="31.99" height="31.2" viewBox="0 0 31.99 31.2">
-  <defs>
-    <style>
-      .cls-1 {
-        fill: #181616;
-        fill-rule: evenodd;
-      }
-    </style>
-  </defs>
-  <g id="Layer_1-2" data-name="Layer 1">
-    <path class="cls-1" d="M16,0C7.16,0,0,7.16,0,16c0,7.07,4.58,13.06,10.94,15.18.8.15,1.05-.33,1.05-.75,0-.38,0-1.44,0-2.78-4.45.97-5.37-2.11-5.37-2.11-.73-1.85-1.78-2.34-1.78-2.34-1.45-.99.11-.97.11-.97,1.61.11,2.45,1.65,2.45,1.65,1.43,2.44,3.74,1.74,4.65,1.33.15-1.03.56-1.74,1.02-2.14-3.55-.4-7.29-1.78-7.29-7.91,0-1.75.62-3.17,1.65-4.29-.17-.4-.72-2.03.16-4.23,0,0,1.34-.43,4.4,1.64,1.28-.36,2.65-.53,4.01-.54,1.36,0,2.73.18,4.01.54,3.06-2.07,4.4-1.64,4.4-1.64.87,2.2.32,3.83.16,4.23,1.02,1.12,1.64,2.55,1.64,4.29,0,6.15-3.74,7.5-7.3,7.89.57.5,1.09,1.45,1.09,2.95v4.43c0,.43.26.9,1.07.75,6.35-2.12,10.93-8.11,10.93-15.18C31.99,7.16,24.83,0,16,0Z"/>
-  </g>
-</svg>
-    </a>
-
-    <a class="symbol" href="https://instagram.com/filipekadamczyk" rel="me" target="_blank">
-        
-        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <g id="Layer_1-2" data-name="Layer 1">
-    <g id="OUTLINE_copy_2" data-name="OUTLINE copy 2">
-      <g>
-        <path d="M20.84,16.14c0,2.58-2.16,4.68-4.83,4.68s-4.83-2.1-4.83-4.68c0-.46.07-.91.2-1.33l-1.21-.26v6.8c0,.34.15.49.49.49h10.69c.34,0,.49-.15.49-.49v-6.8l-1.19.26c.13.42.2.87.2,1.33Z"/>
-        <ellipse cx="16.01" cy="15.97" rx="3.12" ry="3.03"/>
-        <path d="M16,0C7.16,0,0,7.16,0,16s7.16,16,16,16,16-7.16,16-16S24.84,0,16,0ZM23.77,21.83c0,1.1-.85,1.94-1.94,1.94h-11.66c-1.1,0-1.94-.85-1.94-1.94v-11.66c0-1.1.85-1.94,1.94-1.94h11.66c1.1,0,1.94.85,1.94,1.94v11.66Z"/>
-        <path d="M21.34,10.17h-1.94c-.27,0-.49.22-.49.49v1.94c0,.27.22.49.49.49h1.94c.27,0,.49-.22.49-.49v-1.94c0-.27-.22-.49-.49-.49Z"/>
-      </g>
-    </g>
-  </g>
-</svg>
-    </a>
-
-    <a class="symbol" href="https://linkedin.com/in/filip-grace-1255b06" rel="me" target="_blank">
-        
-        <svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" width="30.5" height="30.5" viewBox="0 0 30.5 30.5">
-  <g id="Layer_1-2" data-name="Layer 1">
-    <path d="M15.25,0C6.84,0,0,6.84,0,15.25s6.84,15.25,15.25,15.25,15.25-6.84,15.25-15.25S23.66,0,15.25,0ZM10.71,22.19h-3.56v-10.7h3.56v10.7ZM8.93,10.03h0s-.02,0-.02,0c-1.2,0-1.97-.82-1.97-1.85s.79-1.85,2.01-1.85,1.97.8,1.99,1.85c0,1.03-.77,1.85-2.01,1.85ZM23.54,22.19h-3.56s0-5.73,0-5.73c0-1.44-.52-2.42-1.8-2.42-.98,0-1.57.66-1.83,1.3-.09.23-.12.55-.12.87v5.98h-3.56s.05-9.7,0-10.7h3.56v1.52c.47-.73,1.32-1.77,3.21-1.77,2.34,0,4.1,1.53,4.1,4.82v6.14Z"/>
-  </g>
-</svg>
-    </a>
-
-
-</div>
-
-    
-
-    <div class="copyright">
-    
-       © Copyright 
-       2026 
-       
-    
-    </div>
-</footer>
-
-
-    
-        
-        <script src="http://localhost:1313/js/custom.js"></script>
-    
-
-
-  </body>
-</html>
+<!doctype html><html lang=en-us><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><title>RTSP Video Stream on Raspberry Pi | Semicolons & Side Projects</title><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><meta name=viewport content="width=device-width,minimum-scale=1"><meta name=description content="How to build a Raspberry Pi configured to act as a simple, dedicated fullscreen RTSP video display."><meta name=generator content="Hugo 0.152.2"><meta name=ROBOTS content="NOINDEX, NOFOLLOW"><link rel=stylesheet href=/css/style.css><link rel=stylesheet href=/css/custom.css><link rel="shortcut icon" href=/images/favicon.ico type=image/x-icon><script async src="https://www.googletagmanager.com/gtag/js?id=G-P5HRT1QBKC"></script><script>var dnt,doNotTrack=!1;if(!1&&(dnt=navigator.doNotTrack||window.doNotTrack||navigator.msDoNotTrack,doNotTrack=dnt=="1"||dnt=="yes"),!doNotTrack){window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag("js",new Date),gtag("config","G-P5HRT1QBKC")}</script><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400&family=Sora:wght@700&family=Source+Sans+Pro:wght@400&family=JetBrains+Mono:wght@400&display=swap" rel=stylesheet media=print onload='this.media="all"'><noscript><link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400&family=Sora:wght@700&family=Source+Sans+Pro:wght@400&family=JetBrains+Mono:wght@400&display=swap" rel=stylesheet></noscript></head><body><nav class=navigation><a href=/>Home</a>
+<a href=/tags>Tags</a>
+<a href=/about>About</a></nav><main class=main><section id=single><h1 class=title>RTSP Video Stream on Raspberry Pi</h1><div class=tip><time datetime="2025-09-15 08:03:55 -0700 PDT">Sep 15, 2025</time>
+<span class=split>·
+</span><span>859 words
+</span><span class=split>·
+</span><span>5 minute read</span></div><div class=content><figure class=responsive-image><img src=/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp srcset="/raspberry-pi-rtsp-viewer/hero_hu_d6edaea1a921cf1.webp 320w, /raspberry-pi-rtsp-viewer/hero_hu_a06d31a72ebf6e72.webp 480w, /raspberry-pi-rtsp-viewer/hero_hu_3d289d4d13974f9c.webp 768w, /raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp 1024w, /raspberry-pi-rtsp-viewer/hero_hu_c576e0c6a1a66b8c.webp 1366w, /raspberry-pi-rtsp-viewer/hero_hu_4399f4c3c5e42616.webp 1536w, /raspberry-pi-rtsp-viewer/hero_hu_c525388834f139a4.webp 1920w, /raspberry-pi-rtsp-viewer/hero_hu_327a3bd16ee6db01.webp 2560w, /raspberry-pi-rtsp-viewer/hero_hu_73b437e8d5d4cf3e.webp 3840w" sizes=100vw width=100% style=max-width:100%;height:auto;background-size:cover;background-image:url(data:image/webp;base64,UklGRpABAABXRUJQVlA4IIQBAACwBwCdASoqABwAPs1eo0qjoqGVXAQAOwzE9ABOmbHhTXoEq0GbeOX6RQiAsQmV1sJA+/H2zZ/NWC3MAw/n9wHbvqHGxUAAAP79epa7Agyu7NaR9iYi/a4/rLsz0KLyNKLcVvU/U/PblQbzAuFZtd/ud+I9kFULNDy/++s6As/6/5Gpeqe4FiIp9ZfShLuj/r11XwRoIyAYUJ/l9pcZtNNYA0AecYsBuib4FdkC75nF4y/oi+FNKh1hOriHS6sS0AXqxlUdGbdw8exwa8mVCNecWRkTqcZi4jlpMaBa4uorO9wD1XFhM4J9/pOraYkQSVKC8o9Sfsu/L/9zecSKSfPkOVe6D92Igx4ESonQOWjk8mliw+G7CA6tw+p8ODz4fqiagO6Q+ltzcjENzVGEEreailCyX+yhF+qCSfNl6a6uyCHNbTZ0Ll9YvIT+b4pQQxBMnFszmsqpNEnoczkuzfaXmNkKZjnuom54knD7ktA0hT0b9DKVLDygkuuqwhkYsZBAAAAA) loading=lazy decoding=async alt="ChatGPT generated image of the cube"></figure><p>My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent <a href=https://www.doscher.com/arm-terminal-2-the-cube/ target=_blank rel=noopener>ARM Terminal 2 - The Cube</a>. I highly recommend taking a look at his blog, because if you&rsquo;re reading this, you&rsquo;re gonna love his stuff, <a href=https://www.doscher.com target=_blank rel=noopener>doscher.com</a>.</p><hr><h2 id=the-hardware>The Hardware <a href=#the-hardware class=anchor>🔗</a></h2><ul><li>Raspberry Pi 4 running Raspberry Pi OS Lite (Bookworm)</li><li><a href="https://www.amazon.com/dp/B08N5VZN8R?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;th=1" target=_blank rel=noopener>Geekworm Raspberry Pi 4 Heatsink</a></li><li><a href=https://www.waveshare.com/wiki/4inch_HDMI_LCD_%28C%29 target=_blank rel=noopener>Waveshare 4inch HDMI LCD (C)</a></li><li><a href=https://www.doscher.com/arm-terminal-2-the-cube/ target=_blank rel=noopener>ARM Terminal 2 - The Cube</a></li><li>Repurposed metal adjustable arm - <a href="https://www.amazon.com/dp/B08FNQC6TZ?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_6&amp;th=1" target=_blank rel=noopener>Example on Amazon</a></li></ul><figure class=responsive-image><img src=/raspberry-pi-rtsp-viewer/top-down-labels_hu_6ac6d3b2f81935ee.webp srcset="/raspberry-pi-rtsp-viewer/top-down-labels_hu_6bcd0ce09fa6d6f3.webp 320w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_a03636ac60fc1baf.webp 480w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_a3120f89b5ee301f.webp 768w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_6ac6d3b2f81935ee.webp 1024w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_58e8a7a7b52968dc.webp 1366w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_7ae1f18ce49f162b.webp 1536w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_2836eb520c83084c.webp 1920w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_266052e1d4a67532.webp 2560w, /raspberry-pi-rtsp-viewer/top-down-labels_hu_bae15f5b4ffaff05.webp 3840w" sizes=100vw width=100% style="max-width:100%;height:auto;background-size:cover;background-image:url(data:image/webp;base64,UklGRioCAABXRUJQVlA4IB4CAACwCgCdASoqAB0APs1InkWjoiEYDVVUOwzE9gBOmbXuYNFjAfbNvgOeI0zn9gPYA8rf2eLM4/+Y2PDklWyLQd0P6pMBUswDmd4fSqCerO/ui1P3qBOZjnn/FpSv2KpgAP60CX2Tr1BYXmD2InZI1q/BeyKF3CavbScEWnPTyyLWqobmekvgY4lJvvPpJF+00zKekhQ22ABMjoUYgq9j1nlRRFs+dhwSrmE0I9nqqY+9O62uLisEb6saG6dl03RW9MOS6+gg2gsEARkNMh0CbYBKd/cTpRMK7mun12giy6vOKFp89c6o04kr08hjxLW2LZkRohKMyeZJxe3ZMCOBofPFlzYbt7KV8AC6D/44R2/5Twf/u6bilvgR+P+p3C//X1/h39PpkHoP/+I6GJQz4n5oeUl/GZVtiVDyxBqm3QN5K4kncsPuGiSPliIc6XjdPAZ5DC1HK5mIlE+NIVvc7AE5ELSTh3fHaPOdbBWFHvc1Wczhfh3J0wtfJZ9v96//JiJUZ/znzR/Zod+6+wwE8ZXBmn3WnObwRyVnW83z80Pc8mzHDZ8VpRwsSoAuO8ihl8KmXj+RVwBTJNACgXOdgVsGBMdWsAhMVAC4L9/jJhRayTnDvb6y7yW4OoslTb/8Dp9at0oL6kjd1mR3Sw0fZIupLi25gNJ/g9Ua6vc2zad4gPG2L8+f3SbgX93R2XE/5jVLaKAF8s+aMmfI5fgAAA==)" loading=lazy decoding=async alt="Labeled photo of hardware"></figure><p>My metal arm originally had a lamp attached, so I removed the lamp and saved it for parts. The clamp that came with the arm is not the strongest, but it works fine for the weight of this project. With a little creativity, you can attach it almost anywhere. I mounted mine to a monitor arm so I could position the screen just above my secondary monitor.</p><p>The 3D-printed frame pieces from doscher.com came out great. I followed the instructions and parts list from Jay’s blog.</p><p>Fitting the Pi and display into the frame takes a little patience, but once they are in place, it is very solid. I used a 90-degree USB-C cable to route power neatly out the back and zip-tied it along the arm for clean cable management.</p><figure class=responsive-image><img src=/raspberry-pi-rtsp-viewer/pi-closeup_hu_4a9c55bcbe20f084.webp srcset="/raspberry-pi-rtsp-viewer/pi-closeup_hu_cd60f7c8ecdc6bb5.webp 320w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_b6b2dcaa62d7965f.webp 480w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_40d9bc88149fc188.webp 768w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_4a9c55bcbe20f084.webp 1024w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_4f3cd23a4ca38f2.webp 1366w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_35fa2665c5f8107d.webp 1536w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_35a844e9937e61ac.webp 1920w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_d056adf8fe00f68f.webp 2560w, /raspberry-pi-rtsp-viewer/pi-closeup_hu_2bbc1c879b1fb414.webp 3840w" sizes=100vw width=100% style=max-width:100%;height:auto;background-size:cover;background-image:url(data:image/webp;base64,UklGRswBAABXRUJQVlA4IMABAADQCACdASoqABwAPs1Wn0gjoiEVXAYAOwzE9ABOmUIICQcCIxXxW6iIN8YB32K6QsOOLdg9Dr/1/C5FAV5QlDJfmPutKF7hvQFddg4LeYAAAP7UonpEOCiY3eYRwemIZBhpd9FXCi8qIA8WDH0zgdfq2vk7gvfh/Xw/Fb277y+sdzNgCf/j30k+f1aO3DmVOUI8+xs8QdlpFhXNVt8Aea3DKdA553AynM1O/cGxJ/XgHhKZQuFDp17ID7rKg3WPStR2z1lgbvLcNTT41pKCuKn53dn4XVHpuKzLqwjUA/KkXucmALS7EZfU1fQEHqIGgVEcNjnugMpt8ZEgi00CylscMPhi35tudFKmMIN1RQihu9QkIaIM2LCA2n4T5QhYA8KsSz/X5P16l/qOw0wBu66Q6Xuc+TbtoYdF6O2BuO0HXm3VVjeALQEUSbOCLMaXGByXuqmPbJ6peGt4YscaPeE1aWwhqCgHe8aaZtwMLA4StXfsT82Er1xSlI3Owo2I79Pr3kRJPo9SOIvCgw0pwAUE+Wty5R03ZTu4ciincCK+97dBL2roVpMm3oV7QcQogvTTdgwC9+h2pTjT6IVci0AA) loading=lazy decoding=async alt="raspberry pi closeup"></figure><blockquote><p>The display connects to the Pi with an HDMI adapter and draws power through pogo pins so no wires involved, which is a nice touch.</p></blockquote><p>The only custom part I made was a small adapter plate to attach the cube to the arm using the peg from the old lamp mount. The metal peg had a curved plate to match the radius of the lamp housing but I was able to hammer it flat. The 3d printed adapter is just a square with screw holes and a larger hole for the peg. Thumb screws came from jar of screws I keep exactly for these types of situations.</p><figure class=responsive-image><img src=/raspberry-pi-rtsp-viewer/mounting-bracket_hu_45536ab220baaacc.webp srcset="/raspberry-pi-rtsp-viewer/mounting-bracket_hu_3cecde6ada9f944f.webp 320w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_2c317dac35d2efa7.webp 480w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_9e6edc533546809d.webp 768w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_45536ab220baaacc.webp 1024w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_d52e20a4a794fed7.webp 1366w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_8707e9e8c3858b32.webp 1536w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_99152da8474f53e4.webp 1920w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_d9c64b8e500e572a.webp 2560w, /raspberry-pi-rtsp-viewer/mounting-bracket_hu_6739e2f4c1cb2fb4.webp 3840w" sizes=100vw width=100% style="max-width:100%;height:auto;background-size:cover;background-image:url(data:image/webp;base64,UklGRjwCAABXRUJQVlA4IDACAACQCgCdASoqABwAPr1GlUUjoaEarAYAOwvE9gBdmbtilDMdtC/93gfsB8HE+Zx9ysWBGk1Z7Dj/sHOsFjiwV5qNL5RNo4gPYngTUKYxuBUHqr960DPW6JHFRjMQHwAA/gmLPK9aS8E6SrytA1EOST0keGcElrPOvv7DdnPNgH0Rwz6IICjVNmqQaEH0C+I/Jwb7iD/FLLv81rqg7fX45nqyoocMc8Il/2rPqZTJt/0qlhNTLw525OZ9mQ673A2NBR9NmfnDOlc1/95x7MiF3K9NCzOfRcWUf54MbdKWkE5QgzGfJg0km4aMAY046uAowFgCDRcv1yh/ASFSyp/hSR7NdtDW39HX4w9g+ehob+4NVrUH4YFn8dzs3HanX5gTaBVu9NrjWEof+0XS21WWgBVvjZM0U0QFD3knCdf9++J4YXMBr80//f/pbZncV/98ZOr4lkf5K8+m/9P+WheL1X+VcsFGHD6/6vV7S6l/Zz6J8n2dw1zfHtZH6k9UU4irx1pPVCXK0Hf+gtRtTqj4EMes+FS7WLH5NSYei47h8ECqfx0RF0tN6W7tOc2OKXVKiiCy0+1c5/Whz+t0SAB9vw8z9cahQaLREgPmiLYU+cz0/dkL6fcqAoWONSNGNfrJHjTP+WqAYdAPkblg5oG6b/Wjtuf0u4e/F/rBMMy3gzzJ29xwHzJhXNKUIx2IiIRe8t5lEg/CVttdOwCsL1TVZZagj1oN446zt5R+UraDugAAAA==)" loading=lazy decoding=async alt="mounting bracket"></figure><hr><h2 id=the-software>The Software <a href=#the-software class=anchor>🔗</a></h2><p>For playback I used GStreamer with a set of plugins for RTSP decoding and video handling, along with Cage, a minimal Wayland compositor that runs a single app in fullscreen mode.</p><figure class=responsive-image><img src=/raspberry-pi-rtsp-viewer/pi-booting_hu_866450bdf2bbcbea.webp srcset="/raspberry-pi-rtsp-viewer/pi-booting_hu_744466e16cf0396d.webp 320w, /raspberry-pi-rtsp-viewer/pi-booting_hu_65e3f5acf76ad48a.webp 480w, /raspberry-pi-rtsp-viewer/pi-booting_hu_87fdd4064ded89c4.webp 768w, /raspberry-pi-rtsp-viewer/pi-booting_hu_866450bdf2bbcbea.webp 1024w, /raspberry-pi-rtsp-viewer/pi-booting_hu_fbc0919b00012c60.webp 1366w, /raspberry-pi-rtsp-viewer/pi-booting_hu_a955bbcc8aba72db.webp 1536w, /raspberry-pi-rtsp-viewer/pi-booting_hu_4543efc680091d5f.webp 1920w, /raspberry-pi-rtsp-viewer/pi-booting_hu_c23970ce7b6cd754.webp 2560w, /raspberry-pi-rtsp-viewer/pi-booting_hu_85501e8e8caaabae.webp 3840w" sizes=100vw width=100% style="max-width:100%;height:auto;background-size:cover;background-image:url(data:image/webp;base64,UklGRkYCAABXRUJQVlA4IDoCAABQCwCdASoqABwAPs1MnEYjoiEaqgQAOwzE9gBOmUI9U0GdtPPOe0soiuYvrngjW7Vaf4Dwjlj8GNLRgAc1Ji8G7Dd2mw2ahgkAkUJWSBBStz/HzFfM+Vzm+ZmEeBcBmdbxQOAA/uWIKtGmu2nj1Pf0npL1fPmeGM3OcW9nLBNGvVxEN11ChqxXMJO4XeY4F40z5otX7xQBPC1Rs+tkhTp5AGY/fnshsJgi11StgPNJ/Gf7v87svijXlGy8fV3tgUaqI8VuWXwYAu1gKcWpYGlgVeu5LZsNiXEvhGIgx9FH+D0+2fEijq8exlzGrXyhPE+GnF+oh7USZ+NKR9gRbyMk7ob5Df179k/x/yTsB//RILujiohUlUzZhvWnyWZmpE+UuLLCEYBrwrZhzL78zpNSL7kny8fcdYDkjVAvfuu3pc85OnQVlbX8fQvhUBx/48d6qnGVK/3VpGGG3CWdBqm5h75sJXX6P154/3gbSX4UC+zTEvn0fzoC0CS+avRd4fJrhR/ky8v3JAeelJ1QKHz3w+hsnVN1UcICfGsPwbkhH93DB4uvIsLeBjZp3YBo/IFshtL0K3eQq99uv0ztDs+R4SitAXYzlIjCct35T3bHhYHwfBbN6lBEBmHSDLK0SfduqepXU+JekT/6jVqIeicAMdt7DGP/5rmpPbvNvX6vP+firmrO2ZopJm+v/7CUZbSg+f1Qt2P8mTo04k/j/fTZi61nM4/IHY+kzgYarx/7GrFsmeOx4EFgAAA=)" loading=lazy decoding=async alt="raspberry pi booting"></figure><p>Here is what the pipeline does:</p><ul><li>Connects to the RTSP stream (rtspsrc)</li><li>Depayloads and parses H.264 (rtph264depay ! h264parse)</li><li>Hardware-decodes with the Pi’s V4L2 (v4l2h264dec)</li><li>Crops the 960×720 source to keep the right-hand 720×720 region (videocrop left=240)</li><li>Scales to the LCD resolution (videoscale ! video/x-raw,width=720,height=720)</li><li>Displays fullscreen inside Cage (waylandsink)</li></ul><p>The first script is the meat of this project. It should be easy enough to edit for anyone thinking about using it for their own display, if your display has a different resolutions, and if your video feed needs a different resolution or crop.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#57606a>#!/usr/bin/env bash
+</span></span></span><span style=display:flex><span><span style=color:#57606a></span><span style=color:#6639ba>set</span> -euo pipefail
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#57606a># --- CONFIG ---</span>
+</span></span><span style=display:flex><span><span style=color:#953800>URL</span><span style=color:#0550ae>=</span><span style=color:#0a3069>&#39;rtsp://192.168.1.1:7447/tDm5IQb26KLGtQ4t&#39;</span>
+</span></span><span style=display:flex><span><span style=color:#953800>CROP_LEFT</span><span style=color:#0550ae>=</span><span style=color:#0550ae>240</span> <span style=color:#57606a># 960x720 source -&gt; keep RIGHT side</span>
+</span></span><span style=display:flex><span><span style=color:#953800>OUT_W</span><span style=color:#0550ae>=</span>720<span style=color:#1f2328>;</span> <span style=color:#953800>OUT_H</span><span style=color:#0550ae>=</span><span style=color:#0550ae>720</span>
+</span></span><span style=display:flex><span><span style=color:#953800>FPS</span><span style=color:#0550ae>=</span><span style=color:#0a3069>&#34;30/1&#34;</span>
+</span></span><span style=display:flex><span><span style=color:#953800>RETRY_SEC</span><span style=color:#0550ae>=</span><span style=color:#0550ae>3</span>
+</span></span><span style=display:flex><span><span style=color:#953800>CONNECT_TIMEOUT_US</span><span style=color:#0550ae>=</span><span style=color:#0550ae>5000000</span> <span style=color:#57606a># 5s timeout</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#57606a># --- Pipelines ---</span>
+</span></span><span style=display:flex><span><span style=color:#953800>stream_cmd</span><span style=color:#0550ae>=(</span>
+</span></span><span style=display:flex><span>  gst-launch-1.0 -v
+</span></span><span style=display:flex><span>  rtspsrc <span style=color:#953800>location</span><span style=color:#0550ae>=</span><span style=color:#0a3069>&#34;</span><span style=color:#953800>$URL</span><span style=color:#0a3069>&#34;</span> <span style=color:#953800>latency</span><span style=color:#0550ae>=</span><span style=color:#0550ae>0</span> <span style=color:#953800>timeout</span><span style=color:#0550ae>=</span><span style=color:#953800>$CONNECT_TIMEOUT_US</span> <span style=color:#953800>protocols</span><span style=color:#0550ae>=</span>tcp
+</span></span><span style=display:flex><span>    ! rtph264depay ! h264parse ! v4l2h264dec
+</span></span><span style=display:flex><span>    ! videoconvert
+</span></span><span style=display:flex><span>    ! videocrop <span style=color:#953800>left</span><span style=color:#0550ae>=</span><span style=color:#953800>$CROP_LEFT</span>
+</span></span><span style=display:flex><span>    ! videoscale
+</span></span><span style=display:flex><span>    ! <span style=color:#0a3069>&#34;video/x-raw,width=</span><span style=color:#953800>$OUT_W</span><span style=color:#0a3069>,height=</span><span style=color:#953800>$OUT_H</span><span style=color:#0a3069>,framerate=</span><span style=color:#953800>$FPS</span><span style=color:#0a3069>&#34;</span>
+</span></span><span style=display:flex><span>    ! waylandsink <span style=color:#953800>fullscreen</span><span style=color:#0550ae>=</span><span style=color:#6639ba>true</span> <span style=color:#953800>sync</span><span style=color:#0550ae>=</span><span style=color:#6639ba>false</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#953800>nosignal_cmd</span><span style=color:#0550ae>=(</span>
+</span></span><span style=display:flex><span>  gst-launch-1.0 -q
+</span></span><span style=display:flex><span>  videotestsrc <span style=color:#953800>pattern</span><span style=color:#0550ae>=</span>black
+</span></span><span style=display:flex><span>    ! <span style=color:#0a3069>&#34;video/x-raw,width=</span><span style=color:#953800>$OUT_W</span><span style=color:#0a3069>,height=</span><span style=color:#953800>$OUT_H</span><span style=color:#0a3069>,framerate=</span><span style=color:#953800>$FPS</span><span style=color:#0a3069>&#34;</span>
+</span></span><span style=display:flex><span>    ! textoverlay <span style=color:#953800>text</span><span style=color:#0550ae>=</span><span style=color:#0a3069>&#34;NO SIGNAL&#34;</span> font-desc<span style=color:#0550ae>=</span><span style=color:#0a3069>&#34;Sans 64&#34;</span> <span style=color:#953800>halignment</span><span style=color:#0550ae>=</span>center <span style=color:#953800>valignment</span><span style=color:#0550ae>=</span>middle <span style=color:#953800>color</span><span style=color:#0550ae>=</span>0xFFFFFFFF
+</span></span><span style=display:flex><span>    ! waylandsink <span style=color:#953800>fullscreen</span><span style=color:#0550ae>=</span><span style=color:#6639ba>true</span> <span style=color:#953800>sync</span><span style=color:#0550ae>=</span><span style=color:#6639ba>false</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#953800>probe_cmd</span><span style=color:#0550ae>=(</span>
+</span></span><span style=display:flex><span>  gst-launch-1.0 -q
+</span></span><span style=display:flex><span>  rtspsrc <span style=color:#953800>location</span><span style=color:#0550ae>=</span><span style=color:#0a3069>&#34;</span><span style=color:#953800>$URL</span><span style=color:#0a3069>&#34;</span> <span style=color:#953800>timeout</span><span style=color:#0550ae>=</span><span style=color:#953800>$CONNECT_TIMEOUT_US</span> <span style=color:#953800>protocols</span><span style=color:#0550ae>=</span>tcp
+</span></span><span style=display:flex><span>    ! rtph264depay ! h264parse ! avdec_h264
+</span></span><span style=display:flex><span>    ! fakesink <span style=color:#953800>sync</span><span style=color:#0550ae>=</span><span style=color:#6639ba>false</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>)</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#57606a># --- Loop forever: stream or fallback ---</span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>while</span> true<span style=color:#1f2328>;</span> <span style=color:#cf222e>do</span>
+</span></span><span style=display:flex><span>  <span style=color:#0a3069>&#34;</span><span style=color:#0a3069>${</span><span style=color:#953800>stream_cmd</span><span style=color:#1f2328>[@]</span><span style=color:#0a3069>}</span><span style=color:#0a3069>&#34;</span> <span style=color:#0550ae>&amp;&amp;</span> <span style=color:#cf222e>continue</span>
+</span></span><span style=display:flex><span>  <span style=color:#0a3069>&#34;</span><span style=color:#0a3069>${</span><span style=color:#953800>nosignal_cmd</span><span style=color:#1f2328>[@]</span><span style=color:#0a3069>}</span><span style=color:#0a3069>&#34;</span> <span style=color:#1f2328>&amp;</span> <span style=color:#953800>NS_PID</span><span style=color:#0550ae>=</span><span style=color:#953800>$!</span>
+</span></span><span style=display:flex><span>  <span style=color:#cf222e>until</span> <span style=color:#0a3069>&#34;</span><span style=color:#0a3069>${</span><span style=color:#953800>probe_cmd</span><span style=color:#1f2328>[@]</span><span style=color:#0a3069>}</span><span style=color:#0a3069>&#34;</span> &gt;/dev/null 2&gt;<span style=color:#1f2328>&amp;</span>1<span style=color:#1f2328>;</span> <span style=color:#cf222e>do</span>
+</span></span><span style=display:flex><span>    sleep <span style=color:#0a3069>&#34;</span><span style=color:#953800>$RETRY_SEC</span><span style=color:#0a3069>&#34;</span>
+</span></span><span style=display:flex><span>  <span style=color:#cf222e>done</span>
+</span></span><span style=display:flex><span>  <span style=color:#6639ba>kill</span> <span style=color:#0a3069>&#34;</span><span style=color:#953800>$NS_PID</span><span style=color:#0a3069>&#34;</span> 2&gt;/dev/null <span style=color:#0550ae>||</span> <span style=color:#6639ba>true</span>
+</span></span><span style=display:flex><span>  <span style=color:#6639ba>wait</span> <span style=color:#0a3069>&#34;</span><span style=color:#953800>$NS_PID</span><span style=color:#0a3069>&#34;</span> 2&gt;/dev/null <span style=color:#0550ae>||</span> <span style=color:#6639ba>true</span>
+</span></span><span style=display:flex><span><span style=color:#cf222e>done</span>
+</span></span></code></pre></div><hr><h2 id=running-as-a-service>Running as a Service <a href=#running-as-a-service class=anchor>🔗</a></h2><p>The second part of this is the potatoes. Create a systemd service file so the Pi runs this automatically at boot.</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span><span style=color:#57606a># /etc/systemd/system/cam-kiosk.service</span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>[</span>Unit<span style=color:#0550ae>]</span>
+</span></span><span style=display:flex><span><span style=color:#953800>Description</span><span style=color:#0550ae>=</span>RTSP Kiosk <span style=color:#0550ae>(</span>Cage + GStreamer<span style=color:#0550ae>)</span> with NO SIGNAL fallback
+</span></span><span style=display:flex><span><span style=color:#953800>After</span><span style=color:#0550ae>=</span>network-online.target
+</span></span><span style=display:flex><span><span style=color:#953800>Wants</span><span style=color:#0550ae>=</span>network-online.target
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>[</span>Service<span style=color:#0550ae>]</span>
+</span></span><span style=display:flex><span><span style=color:#953800>User</span><span style=color:#0550ae>=</span>pi
+</span></span><span style=display:flex><span><span style=color:#953800>PAMName</span><span style=color:#0550ae>=</span>login
+</span></span><span style=display:flex><span><span style=color:#953800>TTYPath</span><span style=color:#0550ae>=</span>/dev/tty1
+</span></span><span style=display:flex><span><span style=color:#953800>StandardInput</span><span style=color:#0550ae>=</span>tty
+</span></span><span style=display:flex><span><span style=color:#953800>Environment</span><span style=color:#0550ae>=</span><span style=color:#953800>XCURSOR_THEME</span><span style=color:#0550ae>=</span>blank
+</span></span><span style=display:flex><span><span style=color:#953800>Environment</span><span style=color:#0550ae>=</span><span style=color:#953800>XCURSOR_SIZE</span><span style=color:#0550ae>=</span><span style=color:#0550ae>1</span>
+</span></span><span style=display:flex><span><span style=color:#953800>ExecStart</span><span style=color:#0550ae>=</span>/usr/bin/cage -m -- /usr/local/bin/cam-player.sh
+</span></span><span style=display:flex><span><span style=color:#953800>Restart</span><span style=color:#0550ae>=</span>always
+</span></span><span style=display:flex><span><span style=color:#953800>RestartSec</span><span style=color:#0550ae>=</span><span style=color:#0550ae>2</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#0550ae>[</span>Install<span style=color:#0550ae>]</span>
+</span></span><span style=display:flex><span><span style=color:#953800>WantedBy</span><span style=color:#0550ae>=</span>multi-user.target
+</span></span></code></pre></div><p>Enable and start the service:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo systemctl <span style=color:#6639ba>enable</span> cam-kiosk.service
+</span></span><span style=display:flex><span>sudo systemctl start cam-kiosk.service
+</span></span></code></pre></div><p>Check logs if you need to debug:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo journalctl -u cam-kiosk.service -f
+</span></span></code></pre></div><p>If you are still editing the script, stop the service first:</p><div class=highlight><pre tabindex=0 style=background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-bash data-lang=bash><span style=display:flex><span>sudo systemctl stop cam-kiosk.service
+</span></span></code></pre></div><p>Then run your script manually. Remember to restart the service when finished. Each time the pi reboots, the feed should show up on its own.</p><hr><h2 id=the-result>The Result <a href=#the-result class=anchor>🔗</a></h2><p>The LCD has a native 720x720 resolution, but the doorbell feed is 960x720. The script crops 240 pixels from the left side so the image fits perfectly. The cropped area was just more of my front door, so nothing important was lost. The video delay is minimal, about the same as viewing through the official app. The one thing still left to do on this is to &ldquo;hide&rdquo; the cursor. Its so small on this display that it doesn&rsquo;t really bother me, but I don&rsquo;t think it would be hard to do and would be a nice finishing touch.</p><figure class=responsive-image><img src=/raspberry-pi-rtsp-viewer/rtsp-stream_hu_26b6644e47763bed.webp srcset="/raspberry-pi-rtsp-viewer/rtsp-stream_hu_6d9937ab9434d70f.webp 320w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_493820edf131397e.webp 480w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_1d8a73f17cde4b33.webp 768w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_26b6644e47763bed.webp 1024w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_7a50457b4c96922f.webp 1366w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_bc5e2028854534ea.webp 1536w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_36f6f695e297460d.webp 1920w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_94980e4451c2241f.webp 2560w, /raspberry-pi-rtsp-viewer/rtsp-stream_hu_a73ec19542ba5f0b.webp 3840w" sizes=100vw width=100% style="max-width:100%;height:auto;background-size:cover;background-image:url(data:image/webp;base64,UklGRhICAABXRUJQVlA4IAYCAABQCgCdASoqABwAPs1QpEmjoiGVXAUAOwzE9gBOnKCo/yBDivT/xb7rz47NWbj1i++mVxwU0pTShM2lSzJ3Pgbn9VO8Bfx8pp8CQZ0h8g7IHYISR4O1QS3j6cOAAP7zHaprolPBsNtNFnttxiD/IK01pB+16xks/3K/eQGxxb7KwbQVWGqrqD5RMWs+YdGz+d9gu3EXrm1+L02MquGiePP5S+ddOpBb3T6JtGUfYQJQU7HTb0xSAbldXeUDAoFYzVSmxit7Olnrh6OpACd7DpreXYqL/Ew+wT6tssbTx7SvGTNE1WiR2Isr76hPXgMSVe+V0MeiOJbqn8NK/JT/XIxj/6iA/3GUGYDBN4bYkvzuuEr9VSeXG8yHv6HfX7VGFx8ld7kbdf3gcGe/YTuuD01QLP2J263nItvScsUbLsYCPaTeFDmYudlv26nQfqoZudZhPdEqlhEP0NNwI7BS/56jOYoTEAkoNm+HF9Rip5w34b4Fu+fnVK3af9oaZuU+ahzKwWkjDNHOMCBTQX/7//5v6OfaK7VhyYGH/yd/N/edn30LBHOIGGiwe5UZTpbZUSW2S1K0qI7reJ8/93aOmNMHgIca46SHjTRxuGLBn+v0IrFHiKtb+IPhP4kTvtJUfgztfT+GJ5DRRM6y6yxd5RSN6LrW+RYqYblcplS2XEtp+PufbHAAAA==)" loading=lazy decoding=async alt="RTSP stream"></figure><p>This has been more useful than I expected. It is great to glance over and see what is happening at the front door. You can of course use any RTSP stream. Maybe you want to display a public webcam or a traffic camera in your area. The possibilities are wide open.</p></div><div class=tags><a href=http://localhost:1313/tags/raspberry-pi>raspberry-pi</a>
+<a href=http://localhost:1313/tags/lcd>lcd</a>
+<a href=http://localhost:1313/tags/howto>howto</a>
+<a href=http://localhost:1313/tags/unifi>unifi</a>
+<a href=http://localhost:1313/tags/ubiquity>ubiquity</a>
+<a href=http://localhost:1313/tags/rtsp>rtsp</a></div></section></main><footer id=footer><div id=social><a class=symbol href=https://github.com/filbot rel=me target=_blank><svg id="Layer_2" data-name="Layer 2" width="31.99" height="31.2" viewBox="0 0 31.99 31.2"><defs><style>.cls-1{fill:#181616;fill-rule:evenodd}</style></defs><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M16 0C7.16.0.0 7.16.0 16c0 7.07 4.58 13.06 10.94 15.18.8.15 1.05-.33 1.05-.75.0-.38.0-1.44.0-2.78-4.45.97-5.37-2.11-5.37-2.11-.73-1.85-1.78-2.34-1.78-2.34-1.45-.99.11-.97.11-.97 1.61.11 2.45 1.65 2.45 1.65 1.43 2.44 3.74 1.74 4.65 1.33.15-1.03.56-1.74 1.02-2.14-3.55-.4-7.29-1.78-7.29-7.91.0-1.75.62-3.17 1.65-4.29-.17-.4-.72-2.03.16-4.23.0.0 1.34-.43 4.4 1.64 1.28-.36 2.65-.53 4.01-.54 1.36.0 2.73.18 4.01.54 3.06-2.07 4.4-1.64 4.4-1.64.87 2.2.32 3.83.16 4.23 1.02 1.12 1.64 2.55 1.64 4.29.0 6.15-3.74 7.5-7.3 7.89.57.5 1.09 1.45 1.09 2.95v4.43c0 .43.26.9 1.07.75C27.42 29.06 32 23.07 32 16 31.99 7.16 24.83.0 16 0z"/></g></svg>
+</a><a class=symbol href=https://instagram.com/filipekadamczyk rel=me target=_blank><svg id="Layer_2" data-name="Layer 2" width="32" height="32" viewBox="0 0 32 32"><g id="Layer_1-2" data-name="Layer 1"><g id="OUTLINE_copy_2" data-name="OUTLINE copy 2"><g><path d="M20.84 16.14c0 2.58-2.16 4.68-4.83 4.68s-4.83-2.1-4.83-4.68c0-.46.07-.91.2-1.33l-1.21-.26v6.8c0 .34.15.49.49.49h10.69c.34.0.49-.15.49-.49v-6.8l-1.19.26c.13.42.2.87.2 1.33z"/><ellipse cx="16.01" cy="15.97" rx="3.12" ry="3.03"/><path d="M16 0C7.16.0.0 7.16.0 16s7.16 16 16 16 16-7.16 16-16S24.84.0 16 0zm7.77 21.83c0 1.1-.85 1.94-1.94 1.94H10.17c-1.1.0-1.94-.85-1.94-1.94V10.17c0-1.1.85-1.94 1.94-1.94h11.66c1.1.0 1.94.85 1.94 1.94v11.66z"/><path d="M21.34 10.17H19.4c-.27.0-.49.22-.49.49v1.94c0 .27.22.49.49.49h1.94c.27.0.49-.22.49-.49v-1.94c0-.27-.22-.49-.49-.49z"/></g></g></g></svg>
+</a><a class=symbol href=https://linkedin.com/in/filip-grace-1255b06 rel=me target=_blank><svg id="Layer_2" data-name="Layer 2" width="30.5" height="30.5" viewBox="0 0 30.5 30.5"><g id="Layer_1-2" data-name="Layer 1"><path d="M15.25.0C6.84.0.0 6.84.0 15.25S6.84 30.5 15.25 30.5 30.5 23.66 30.5 15.25 23.66.0 15.25.0zM10.71 22.19H7.15v-10.7h3.56v10.7zM8.93 10.03h0-.02c-1.2.0-1.97-.82-1.97-1.85s.79-1.85 2.01-1.85 1.97.8 1.99 1.85c0 1.03-.77 1.85-2.01 1.85zM23.54 22.19h-3.56v-5.73c0-1.44-.52-2.42-1.8-2.42-.98.0-1.57.66-1.83 1.3-.09.23-.12.55-.12.87v5.98h-3.56s.05-9.7.0-10.7h3.56v1.52c.47-.73 1.32-1.77 3.21-1.77 2.34.0 4.1 1.53 4.1 4.82v6.14z"/></g></svg></a></div><div class=copyright>© Copyright
+2026</div></footer><script src=/js/custom.js defer></script></body></html>

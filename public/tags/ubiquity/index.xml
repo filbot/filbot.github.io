@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Ubiquity on Semicolons &amp; Side Projects</title>
-    <link>http://localhost:1313/tags/ubiquity/</link>
-    <description>Recent content in Ubiquity on Semicolons &amp; Side Projects</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 15 Sep 2025 08:03:55 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ubiquity/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>RTSP Video Stream on Raspberry Pi</title>
-      <link>http://localhost:1313/raspberry-pi-rtsp-viewer/</link>
-      <pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate>
-      <guid>http://localhost:1313/raspberry-pi-rtsp-viewer/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_312a9ebb2d81fe61.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_9ce08cf3c29933f2.webp 320w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f9819bc2569f9d83.webp 480w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_9c5df3da93ef4d34.webp 768w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_312a9ebb2d81fe61.webp 1024w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_123452250f03bb9c.webp 1366w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_fcb5c8331ac18a21.webp 1536w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_d2532ef6ef9bd89d.webp 1920w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_dd1bb3f24aefc9bc.webp 2560w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_9bbea36665686f78.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRoQBAABXRUJQVlA4IHgBAAAwBwCdASoqABwAPs1eokqjoqGVXAQAOwzE8wBXEVruEeZ3HpZBq/tcqZnn69ciexr05v6P1SpCSzj4dHba4mSJQAAA/v16l65TZ2bZvGCp8BLwj2H6C/dmznRbsuv&amp;#43;BWx92n/Y19CVbbRjptI&amp;#43;MOn9qAOCSR&amp;#43;lV1CN2Uu/TgUu8bTsOK5b9C3gq/9JzT769vj5H/NRA/&amp;#43;T/N6l6LzgEFq/pr&amp;#43;cD71Ava4W636kiAyfBwaYTuwAeiOD7WEBqJp5EiMe/JWOOAUzUQpZdA3q/Uehf2lVy/wzUDho3I/xR90qEAG9qtMtc9cUeWoJP9TRa1OHLRiLEwIJQfIqT1ssRcXgrwu1UtcToF4PdH90I1iCDC5/V&amp;#43;YgxQ4mDHey/to&amp;#43;ZtceL4EExW/dNDFBOPKC14fTWTRfqtCkwcMFjsFHpAkeMtXTMjCyv1GajBGYDmN/aqFX1ysSJm2qAZ6U7QS7NlgdmHIi3PgxIRdplb2svSw6MDOPvcl3A3AA);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of the cube&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent &lt;a href=&#34;https://www.doscher.com/arm-terminal-2-the-cube/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ARM Terminal 2 - The Cube&lt;/a&gt;. I highly recommend taking a look at his blog, because if you&amp;rsquo;re reading this, you&amp;rsquo;re gonna love his stuff, &lt;a href=&#34;https://www.doscher.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doscher.com&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubiquity on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/ubiquity/</link><description>Recent content in Ubiquity on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 15 Sep 2025 08:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/ubiquity/index.xml" rel="self" type="application/rss+xml"/><item><title>RTSP Video Stream on Raspberry Pi</title><link>http://localhost:1313/raspberry-pi-rtsp-viewer/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/raspberry-pi-rtsp-viewer/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp"
+ srcset="http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_d6edaea1a921cf1.webp 320w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_a06d31a72ebf6e72.webp 480w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_3d289d4d13974f9c.webp 768w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp 1024w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_c576e0c6a1a66b8c.webp 1366w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_4399f4c3c5e42616.webp 1536w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_c525388834f139a4.webp 1920w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_327a3bd16ee6db01.webp 2560w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_73b437e8d5d4cf3e.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpABAABXRUJQVlA4IIQBAACwBwCdASoqABwAPs1eo0qjoqGVXAQAOwzE9ABOmbHhTXoEq0GbeOX6RQiAsQmV1sJA&amp;#43;/H2zZ/NWC3MAw/n9wHbvqHGxUAAAP79epa7Agyu7NaR9iYi/a4/rLsz0KLyNKLcVvU/U/PblQbzAuFZtd/ud&amp;#43;I9kFULNDy/&amp;#43;&amp;#43;s6As/6/5Gpeqe4FiIp9ZfShLuj/r11XwRoIyAYUJ/l9pcZtNNYA0AecYsBuib4FdkC75nF4y/oi&amp;#43;FNKh1hOriHS6sS0AXqxlUdGbdw8exwa8mVCNecWRkTqcZi4jlpMaBa4uorO9wD1XFhM4J9/pOraYkQSVKC8o9Sfsu/L/9zecSKSfPkOVe6D92Igx4ESonQOWjk8mliw&amp;#43;G7CA6tw&amp;#43;p8ODz4fqiagO6Q&amp;#43;ltzcjENzVGEEreailCyX&amp;#43;yhF&amp;#43;qCSfNl6a6uyCHNbTZ0Ll9YvIT&amp;#43;b4pQQxBMnFszmsqpNEnoczkuzfaXmNkKZjnuom54knD7ktA0hT0b9DKVLDygkuuqwhkYsZBAAAAA);"
+ loading="lazy"
+ decoding="async"
+ alt="ChatGPT generated image of the cube" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent &lt;a href="https://www.doscher.com/arm-terminal-2-the-cube/" target="_blank" rel="noopener"&gt;ARM Terminal 2 - The Cube&lt;/a&gt;. I highly recommend taking a look at his blog, because if you&amp;rsquo;re reading this, you&amp;rsquo;re gonna love his stuff, &lt;a href="https://www.doscher.com" target="_blank" rel="noopener"&gt;doscher.com&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>

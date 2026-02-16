@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Aem-Resources on Semicolons &amp; Side Projects</title>
-    <link>http://localhost:1313/tags/aem-resources/</link>
-    <description>Recent content in Aem-Resources on Semicolons &amp; Side Projects</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 31 Mar 2025 16:34:28 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/aem-resources/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AEM Developer Cheat Sheet</title>
-      <link>http://localhost:1313/aem-developer-cheat-sheet/</link>
-      <pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate>
-      <guid>http://localhost:1313/aem-developer-cheat-sheet/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2ca3b45ba1f85a42.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_be0d695873427519.webp 320w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_d2c3bbd270ff3845.webp 480w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_b41f8676e952514a.webp 768w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2ca3b45ba1f85a42.webp 1024w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_222739433435d869.webp 1366w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_11865e19155ff1fa.webp 1536w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_972736e7b691554e.webp 1920w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_e597b63fb152d0dc.webp 2560w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_af0fa26b0b83b215.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRuoAAABXRUJQVlA4IN4AAADwBQCdASoqABoAPs1anUgjoqEVXAYAOwzE4AHaOleB7mYfa9MCIS0z7Ngwm0BWo8rPPEs&amp;#43;g4mkAAD&amp;#43;/BMPyU0nk/NRdcZUG7RQwf/BskU3I/q0mjyk&amp;#43;Gz7Gj0tIax0Fyulra1jzM88VA0RU8r5hxuRr8Xuzk5f7RgXG49xcHTvlR91UEwhPLoQhAGu9gzp3MSAkKCe0ukxba3AhjvH7yFY/amt5wU7Aw9clt865/HQb/HwbiLADpncE91aFdGRXKBvMltmd&amp;#43;j5aHzOClyOfWIDquXxZndTtj38nHWIAAA=);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of man riding Adobe logo&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Aem-Resources on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/aem-resources/</link><description>Recent content in Aem-Resources on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 31 Mar 2025 16:34:28 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/aem-resources/index.xml" rel="self" type="application/rss+xml"/><item><title>AEM Developer Cheat Sheet</title><link>http://localhost:1313/aem-developer-cheat-sheet/</link><pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate><guid>http://localhost:1313/aem-developer-cheat-sheet/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_60d4b3ff176fdd27.webp"
+ srcset="http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_e53ffad64abb9263.webp 320w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_5ea52dd0d0fad2ac.webp 480w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_959ad41643b55aa8.webp 768w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_60d4b3ff176fdd27.webp 1024w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_824eb9843c8212b2.webp 1366w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2aa0ff3263ff5b77.webp 1536w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_4b771cf48607484.webp 1920w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_ec0550216c7f26.webp 2560w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_edd0cc2a38ee3cf8.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAABQBgCdASoqABoAPs1YnUijoqEVXAYAOwzE4AHaMleB7kIfa9MCI7L6b&amp;#43;q78xfzCwIC7bT19JFzbezQAAD&amp;#43;/BMPyU0mT7LbvWTJMxW0OR4//VVPX43fwZbapNsrskhw4/0O7CnpJmmCbzjRbGKi3kxwctPc3D2dqxi9BoNfpsgW1cxTTh71fbjp/HNIqC4HDOwhuOK&amp;#43;hRwM2l0mIjSRcOpfqf3LFOC0YV/YPaAKjhe0&amp;#43;dLn7S77l&amp;#43;zuzwGoCnrMtdwpEw3DDcXqA2OgWJaBWGL3t6txgh/HeUqJm1JFaGQ3GANThfMcAA==);"
+ loading="lazy"
+ decoding="async"
+ alt="ChatGPT generated image of man riding Adobe logo" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.&lt;/p&gt;</description></item></channel></rss>

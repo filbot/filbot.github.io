@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Bart on Semicolons &amp; Side Projects</title>
-    <link>http://localhost:1313/tags/bart/</link>
-    <description>Recent content in Bart on Semicolons &amp; Side Projects</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 09 Nov 2025 08:03:55 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/bart/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Realtime BART Arrival Display</title>
-      <link>http://localhost:1313/real-time-bart-display/</link>
-      <pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate>
-      <guid>http://localhost:1313/real-time-bart-display/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/real-time-bart-display/hero_hu_5437165c78e81629.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/real-time-bart-display/hero_hu_384d86333cef2c5f.webp 320w, http://localhost:1313/real-time-bart-display/hero_hu_374ea9c597eb8080.webp 480w, http://localhost:1313/real-time-bart-display/hero_hu_3b7a87d9784d7720.webp 768w, http://localhost:1313/real-time-bart-display/hero_hu_5437165c78e81629.webp 1024w, http://localhost:1313/real-time-bart-display/hero_hu_e8af07cb6b8db4b2.webp 1366w, http://localhost:1313/real-time-bart-display/hero_hu_5ef2b6a07839bc46.webp 1536w, http://localhost:1313/real-time-bart-display/hero_hu_570e686afe88de15.webp 1920w, http://localhost:1313/real-time-bart-display/hero_hu_4ede7083b909d837.webp 2560w, http://localhost:1313/real-time-bart-display/hero_hu_fd14a829b2d2aec3.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwBACdASoqABoAPs1Mm0YjoiEYDVVUOwzE9IBkph0&amp;#43;swQUqRXXHCEMNg/eXFaeggAA/vYA55UHWY1vYfbxsBF42UESXpfwg9itQcpS7mH&amp;#43;RfsO9Y3DM&amp;#43;H8RNYNMDaT9pS7FqGCZfIfCpxI2sSo8ZLRCrgJpJ7XAecAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;AI generated image of the physical BART display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bart on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/bart/</link><description>Recent content in Bart on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 09 Nov 2025 08:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/bart/index.xml" rel="self" type="application/rss+xml"/><item><title>Realtime BART Arrival Display</title><link>http://localhost:1313/real-time-bart-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/real-time-bart-display/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp"
+ srcset="http://localhost:1313/real-time-bart-display/hero_hu_450017297b1abdc7.webp 320w, http://localhost:1313/real-time-bart-display/hero_hu_7aef5596bce783c9.webp 480w, http://localhost:1313/real-time-bart-display/hero_hu_e12db5ce41397ca6.webp 768w, http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp 1024w, http://localhost:1313/real-time-bart-display/hero_hu_3315e40f3884d08.webp 1366w, http://localhost:1313/real-time-bart-display/hero_hu_ac7df583e9680712.webp 1536w, http://localhost:1313/real-time-bart-display/hero_hu_29e2fb8d38215dd9.webp 1920w, http://localhost:1313/real-time-bart-display/hero_hu_1d6e1990805d26cb.webp 2560w, http://localhost:1313/real-time-bart-display/hero_hu_c2bfe44487542c35.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBQCdASoqABoAPs1UoUejoiGVXAYAOwzE9IBhuCL2s2XBROoWIzmV0LtWT4H1RP4AAP74rKjISoUR6oH/ll2LUvxzRXqVKj/NFTdejIBbBGRNyDaYux7sUCP3h3IPeEPYft5Da4THpqzDB/dbKpZjsS6zdUz97aA2uBNEm9yBvLPbXKRABqlimYAAAA==);"
+ loading="lazy"
+ decoding="async"
+ alt="AI generated image of the physical BART display" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description></item></channel></rss>

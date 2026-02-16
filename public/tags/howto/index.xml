@@ -1,61 +1,111 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Howto on Semicolons &amp; Side Projects</title>
-    <link>http://localhost:1313/tags/howto/</link>
-    <description>Recent content in Howto on Semicolons &amp; Side Projects</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/howto/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Hero Dashboard</title>
-      <link>http://localhost:1313/hero-dashboard/</link>
-      <pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate>
-      <guid>http://localhost:1313/hero-dashboard/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/hero-dashboard/dashboard-angle_hu_47dc7a547e01efb2.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/hero-dashboard/dashboard-angle_hu_862503719e8a6028.webp 320w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_d2d5be5773c8ff03.webp 480w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_8fc2349ea168dec3.webp 768w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_47dc7a547e01efb2.webp 1024w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_4d8580283b84d08e.webp 1366w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_cdd84ccb634818e2.webp 1536w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_c4935939826e25e4.webp 1920w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_5cdd6e65ef3239f9.webp 2560w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_6c1543a78bf2f7fa.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRsoBAABXRUJQVlA4IL4BAADQCACdASoqABwAPs1cokkjoqGVXAUAOwzE84BdkG0Es6VAu4nFLjZlXcDdOc0UlINavXBS4qwpGVoYSdB39UHH12dYfu8L4lXugYgLbVQAAP7/K4ikZ/jzUS8s77/pK6i12wMhlnK6FjgvKW9p4C0zwX3IrHzcXXH7JhF8rzyNKzSxEZdxtl14qnPbG4IrRAg8ypB5AbiAxgektNR7ORd9/tN36O2NIQJlECp1K6bbmqJ0tY6Tr0w3FfxSydWmVA/xw&amp;#43;pNX1ov5aAvixkdYTFZmVcNSmAGXJ6FCi6HePigv7QvncCooy8rn66bnO8n73Di3317t8recocQ74GM0X91Bwfetst9uBzm4g7kX1AzxGwaexa4kLApIApFEeQ8y4i7dt94yJNa8aLT4B69muwuKatooe0UO88o&amp;#43;mht0a5aUOL1&amp;#43;TU2S3ucHXX85vHzCcWG0BgspY8yLThX6rRMEL1Chg77sdJgMBoKyp5WpD1B10oG8o8wGUink8E6Q8Yhs0NSX5ksWhwZTdIKGTgDg6mU/2DyeR2amH5G2bumUViK5QtzTgSxzrqVaZtgi849qM9DwCjpMB4emJzkvqAAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;Hero Dashboard&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href=&#34;https://sfdlive.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;&#xA;&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Stark Medical Scanner... sort of</title>
-      <link>http://localhost:1313/medical-scanner/</link>
-      <pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate>
-      <guid>http://localhost:1313/medical-scanner/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/medical-scanner/hero_hu_c64e4a6c27a0b3a9.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/medical-scanner/hero_hu_a13ddbe9859e1f2f.webp 320w, http://localhost:1313/medical-scanner/hero_hu_27d2a4d0070798d.webp 480w, http://localhost:1313/medical-scanner/hero_hu_2503b0ef71210622.webp 768w, http://localhost:1313/medical-scanner/hero_hu_c64e4a6c27a0b3a9.webp 1024w, http://localhost:1313/medical-scanner/hero_hu_c175b2cabb5c85f6.webp 1366w, http://localhost:1313/medical-scanner/hero_hu_323079e5b035e624.webp 1536w, http://localhost:1313/medical-scanner/hero_hu_aa2d8ff5f6d0589a.webp 1920w, http://localhost:1313/medical-scanner/hero_hu_cd348162beb417d6.webp 2560w, http://localhost:1313/medical-scanner/hero_hu_b61396103279e550.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRkwBAABXRUJQVlA4IEABAAAwBwCdASoqABcAPs1anUgjoqEVVQA7DMTgCsM9R9Vn/PBjGnyuSDfbvPwJm/lbbMwcbJUQKifTUEYCPpVTvoQDzEAAzMMHmT3jT6NjOuZs95v//ZGB&amp;#43;7i&amp;#43;/NSDFZhjx3q&amp;#43;bq1y/8XQhgfm&amp;#43;VZz/PH4qdhi8SWC&amp;#43;bkKlpPBUu4Pt9XudYIdRqm2Sggh4ZyUpT3cXyP0RKy76YHnjWpC&amp;#43;a0MWKmR3BdGqtB&amp;#43;pqMBUaX0l55JpbO1&amp;#43;pDszzcE6TU2H&amp;#43;ijoz7JTiqIDckSvE1rVU/1UvNcc02F819aiqnxqrjzLri8GV6mr5rKu0cxh5jLzq68ai0c&amp;#43;&amp;#43;PxTrpHHd3BoaIavuvhAnyXE3Zuqlgw8FKdFMITjPUideOlO0Uw&amp;#43;W/ZOITzuLT9rm24cbUyfk0k8e23oNsIdl2frbgmXoa3tAAAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;AI generated image of the Stark Medical Scanner&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Let’s get this out of the way — what is “gravy blood”, and who is “Damp”?&lt;/p&gt;&#xA;&lt;p&gt;This whole project started as an inside joke. My buddy and I would say we had gravy blood whenever we overindulged in a meal. That sluggish, heavy feeling afterward? In our lore, that’s the gravy blood kicking in.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Realtime BART Arrival Display</title>
-      <link>http://localhost:1313/real-time-bart-display/</link>
-      <pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate>
-      <guid>http://localhost:1313/real-time-bart-display/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/real-time-bart-display/hero_hu_5437165c78e81629.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/real-time-bart-display/hero_hu_384d86333cef2c5f.webp 320w, http://localhost:1313/real-time-bart-display/hero_hu_374ea9c597eb8080.webp 480w, http://localhost:1313/real-time-bart-display/hero_hu_3b7a87d9784d7720.webp 768w, http://localhost:1313/real-time-bart-display/hero_hu_5437165c78e81629.webp 1024w, http://localhost:1313/real-time-bart-display/hero_hu_e8af07cb6b8db4b2.webp 1366w, http://localhost:1313/real-time-bart-display/hero_hu_5ef2b6a07839bc46.webp 1536w, http://localhost:1313/real-time-bart-display/hero_hu_570e686afe88de15.webp 1920w, http://localhost:1313/real-time-bart-display/hero_hu_4ede7083b909d837.webp 2560w, http://localhost:1313/real-time-bart-display/hero_hu_fd14a829b2d2aec3.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwBACdASoqABoAPs1Mm0YjoiEYDVVUOwzE9IBkph0&amp;#43;swQUqRXXHCEMNg/eXFaeggAA/vYA55UHWY1vYfbxsBF42UESXpfwg9itQcpS7mH&amp;#43;RfsO9Y3DM&amp;#43;H8RNYNMDaT9pS7FqGCZfIfCpxI2sSo8ZLRCrgJpJ7XAecAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;AI generated image of the physical BART display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>RTSP Video Stream on Raspberry Pi</title>
-      <link>http://localhost:1313/raspberry-pi-rtsp-viewer/</link>
-      <pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate>
-      <guid>http://localhost:1313/raspberry-pi-rtsp-viewer/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_312a9ebb2d81fe61.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_9ce08cf3c29933f2.webp 320w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f9819bc2569f9d83.webp 480w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_9c5df3da93ef4d34.webp 768w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_312a9ebb2d81fe61.webp 1024w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_123452250f03bb9c.webp 1366w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_fcb5c8331ac18a21.webp 1536w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_d2532ef6ef9bd89d.webp 1920w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_dd1bb3f24aefc9bc.webp 2560w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_9bbea36665686f78.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRoQBAABXRUJQVlA4IHgBAAAwBwCdASoqABwAPs1eokqjoqGVXAQAOwzE8wBXEVruEeZ3HpZBq/tcqZnn69ciexr05v6P1SpCSzj4dHba4mSJQAAA/v16l65TZ2bZvGCp8BLwj2H6C/dmznRbsuv&amp;#43;BWx92n/Y19CVbbRjptI&amp;#43;MOn9qAOCSR&amp;#43;lV1CN2Uu/TgUu8bTsOK5b9C3gq/9JzT769vj5H/NRA/&amp;#43;T/N6l6LzgEFq/pr&amp;#43;cD71Ava4W636kiAyfBwaYTuwAeiOD7WEBqJp5EiMe/JWOOAUzUQpZdA3q/Uehf2lVy/wzUDho3I/xR90qEAG9qtMtc9cUeWoJP9TRa1OHLRiLEwIJQfIqT1ssRcXgrwu1UtcToF4PdH90I1iCDC5/V&amp;#43;YgxQ4mDHey/to&amp;#43;ZtceL4EExW/dNDFBOPKC14fTWTRfqtCkwcMFjsFHpAkeMtXTMjCyv1GajBGYDmN/aqFX1ysSJm2qAZ6U7QS7NlgdmHIi3PgxIRdplb2svSw6MDOPvcl3A3AA);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of the cube&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent &lt;a href=&#34;https://www.doscher.com/arm-terminal-2-the-cube/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ARM Terminal 2 - The Cube&lt;/a&gt;. I highly recommend taking a look at his blog, because if you&amp;rsquo;re reading this, you&amp;rsquo;re gonna love his stuff, &lt;a href=&#34;https://www.doscher.com&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;doscher.com&lt;/a&gt;.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nearby Aircraft Display</title>
-      <link>http://localhost:1313/nearest-aircraft-display/</link>
-      <pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate>
-      <guid>http://localhost:1313/nearest-aircraft-display/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_153939f10a12373d.webp 320w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_d4c9a35156bde7dc.webp 480w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_59890c2ad19508e.webp 768w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp 1024w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_77129e117855f9eb.webp 1366w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_8a5602adb3d2f838.webp 1536w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_7f0fb93a88b74818.webp 1920w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_2136d08c7aa574cb.webp 2560w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_20972247bce3265f.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAABQBgCdASoqABoAPrlEmEUjoiEYBqg7C4TygFt9uTLei/e96t2&amp;#43;q5fcwJdIuf34j3Rt9uCsMLgN2snTAAD&amp;#43;83J6NAQyAToqF8VrR/hC2KdTPgL&amp;#43;pX5vR7p9VE02kQ4eGqEjEOlLRG5KR3yAwoEoU7JD6CdMg/Ya28zPeciIcAB43DQKxwHhAJgqsvUqRyVkxcXzAiy4iUGCwyKzJf2ULaFiFxD8x&amp;#43;hf4KMYeXI5jRpRoEh1w1FgMKNhjO7jBL0CrJQf9cYNx6K&amp;#43;Dby33ZFzHAHLLz9KQ25dOpMa7IYGjY/uiff&amp;#43;pHxIs4uuXcVfIWYvwSGUAOuf79DcTIdt/zYBwgAA);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of Flight Display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have an &lt;a href=&#34;http://localhost:1313/piaware-lcd-display/&#34;&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>PiAware Data Display</title>
-      <link>http://localhost:1313/piaware-lcd-display/</link>
-      <pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate>
-      <guid>http://localhost:1313/piaware-lcd-display/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_cd0cba0d659be1e8.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_ae8bf96b21d45ed9.webp 320w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_2cef0c1514f24b4.webp 480w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_9f6bc1f7d58d596a.webp 768w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_cd0cba0d659be1e8.webp 1024w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_cda584bca09e7262.webp 1366w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_b64117f354ce4cc8.webp 1536w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_3718102d5e11443f.webp 1920w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_221b2ef9c0957c34.webp 2560w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_275d735de4525e91.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRu4AAABXRUJQVlA4IOIAAACwBQCdASoqABoAPs1MnkejoiEYCq1UOwzE8QAXd0BTK/nBU1ZqxbQba8RLQLoI0qA6bAnKAgAA/vfn&amp;#43;xphXcN6HQT9OhUYKo86MLbX/w7ubr4LpQvwZt30GSEgsPew&amp;#43;K7gCQMcpDRY3JAkiCt0i2aba29S2LItHW14yWebyVsvsufi0nm4k7IzfA0KlSDxU4ynpeZcNwS&amp;#43;wyO2b18mojNTqZaO21GjzNmTwehSygW0k90w8PEm4Hcp7SPVuSI5nv34K4dZr55x5d5Znhc&amp;#43;YZdU&amp;#43;N9hfQWce1ZOAonBoVFH3CAA);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of ADS-B Node&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;After setting up my PiAware receiver to track live flight data, I wanted a simple way to glance at some key stats without SSH-ing into the Pi or opening a browser. Enter the humble 20x4 I2C LCD screen.&lt;/p&gt;&#xA;&lt;p&gt;This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>MicroMV on OS X in 2018</title>
-      <link>http://localhost:1313/micromv-on-osx-in-2018/</link>
-      <pubDate>Fri, 05 Oct 2018 11:51:48 -0700</pubDate>
-      <guid>http://localhost:1313/micromv-on-osx-in-2018/</guid>
-      <description>&lt;p&gt;&lt;p class=&#34;markdown-image&#34;&gt;&#xA;  &lt;img src=&#34;http://localhost:1313/images/micromv-on-osx-in-2018/micromv-header.png&#34; alt=&#34;micromv-header-image&#34;  /&gt;&#xA;&lt;/p&gt;&lt;/p&gt;&#xA;&lt;p&gt;What you need:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Apple Thunderbolt to FireWire Adapter&lt;/li&gt;&#xA;&lt;li&gt;MicroMV playback device with FireWire port&lt;/li&gt;&#xA;&lt;li&gt;FireWire cable&lt;/li&gt;&#xA;&lt;li&gt;MicroMV tapes with footage&lt;/li&gt;&#xA;&lt;li&gt;Apple computer running OS X 10.6 or higher&lt;/li&gt;&#xA;&lt;li&gt;AVCVideoCap software (&lt;a href=&#34;https://nofile.io/f/mNaGHHh9297/AVCVideoCap.app.zip&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;download&lt;/a&gt;)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Once you have all the hardware needed to connect everything up to a computer, turn it all on, insert the tape you want to ingest, and fire up the free AVCVideoCap application (download), which is actually a small app written by Apple to show off some capabilities of the FireWire protocol in XCode back in the day when FireWire was a thing. If when opening the app, you get a message like:&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Howto on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/howto/</link><description>Recent content in Howto on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/howto/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>http://localhost:1313/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>http://localhost:1313/hero-dashboard/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/hero-dashboard/dashboard-angle_hu_50230a0bcc463134.webp"
+ srcset="http://localhost:1313/hero-dashboard/dashboard-angle_hu_8110a10100222cc6.webp 320w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_eb560b7317618563.webp 480w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_212def6f4b28a81e.webp 768w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_50230a0bcc463134.webp 1024w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_dd37250b2e14cdbe.webp 1366w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_99a16d31bcc65fd8.webp 1536w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_fb4979b43811cabf.webp 1920w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_3b6506cfc3560fe5.webp 2560w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_a00f724287a89458.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRtIBAABXRUJQVlA4IMYBAADQCACdASoqABwAPs1YnkojoiEVXAUAOwzE84BevHgEx7Jd8kCKYGNlogZ2qxb1cwNk0UwutPMsAA9VOmmIlGDw1VDc01cJvgX/zd6eY2gAAP7/Cgl0zryJWB&amp;#43;rVuNhkcfM7JxkFXkKdxD0&amp;#43;X1lkNnYhlNQ&amp;#43;PeCmF7RLFu5TmuSZn3affs7T5uy5lglUhX2mztt&amp;#43;SmDN8Uv8GA/HWFlXjd1woMxv/&amp;#43;wz9cMIurvXnKz3cWQtk&amp;#43;HblpCnnzE49/oNMGc95GgJa8d5QCVPvAISASyKmL92BryBXGtBQK5baNe4ImQCNQdGt0T3nhbN/Qb9K9eS8IQaDZkXMJN5gQbirc2FY0Lo2ahBfpMzT3uSdgNMPXU138r&amp;#43;QCbprLPkR1vigoP6mtSGosca/T&amp;#43;nav&amp;#43;NK59OVBDymncSxs21S82tojiHNikVgyEh9ij0R8yD6FeGxknOAyQcf2CSHq58L0lICdrXMqOWQjxxl71RM2ZauXeooS555nE47EleHhXQLrWAMeR384tcxwdtXaQfE3NDr5axtdIeNSBuGtdf/4&amp;#43;8GSPE&amp;#43;9kccSAgLPRQewUEqFFiJyxlUJcYoZCvpjW46PQ3hGzijoKAAAA);"
+ loading="lazy"
+ decoding="async"
+ alt="Hero Dashboard" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href="https://sfdlive.com" target="_blank" rel="noopener"&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;
+&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description></item><item><title>Stark Medical Scanner... sort of</title><link>http://localhost:1313/medical-scanner/</link><pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate><guid>http://localhost:1313/medical-scanner/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/medical-scanner/hero_hu_3c5cf53c6ea38049.webp"
+ srcset="http://localhost:1313/medical-scanner/hero_hu_189be58636b69c08.webp 320w, http://localhost:1313/medical-scanner/hero_hu_b0872fb49446a2ca.webp 480w, http://localhost:1313/medical-scanner/hero_hu_ef9a00f41df241b.webp 768w, http://localhost:1313/medical-scanner/hero_hu_3c5cf53c6ea38049.webp 1024w, http://localhost:1313/medical-scanner/hero_hu_dc7a4457f8fbbc09.webp 1366w, http://localhost:1313/medical-scanner/hero_hu_a8bdda918bfc63e5.webp 1536w, http://localhost:1313/medical-scanner/hero_hu_c238e26b2cb93bf6.webp 1920w, http://localhost:1313/medical-scanner/hero_hu_7aed346eacae0938.webp 2560w, http://localhost:1313/medical-scanner/hero_hu_a72ec916085fd28f.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRmYBAABXRUJQVlA4IFoBAACQBwCdASoqABcAPs1WnEijoiEVVQA7DMTgC/a3C/iRn6ACHNBwyvVp/AZPlVIKjxUOITmsLrtK6xckknymPb9fB1fZiAAAzU5b2b2itSCu5TDhlVA&amp;#43;l4M8CWaGHzjCKR7XrUKxlymKarUMPI/OkQcjZz1uba0VOx0RsJ45/YHjocfo6hmm5ZnJbJeaCK0c6Xe6JkzzgfTvmVmckpIjTgHpRgqkATXf26SoMf9&amp;#43;LAHkmRkSOymKMKSVy2YCy0lhtju&amp;#43;RK62xD9J2mUXV&amp;#43;GxMqUkpO836kZLIkt52NFufi8eXFOjyQq/kG7op7TVlRMAbclrUxhDCevFCr5ruc6KdtzRJJSbpK0P62G67u9W9VKb1JjfSSrGSPb7TM0tht3OM5PgnPm/u77MJ71q1ru5V&amp;#43;yLoFqEwgHKs7VMiogddPwovZCQlPchYSBaJ8kFq30RBZflVksQb4zoAAAA);"
+ loading="lazy"
+ decoding="async"
+ alt="AI generated image of the Stark Medical Scanner" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;Let’s get this out of the way — what is “gravy blood”, and who is “Damp”?&lt;/p&gt;
+&lt;p&gt;This whole project started as an inside joke. My buddy and I would say we had gravy blood whenever we overindulged in a meal. That sluggish, heavy feeling afterward? In our lore, that’s the gravy blood kicking in.&lt;/p&gt;</description></item><item><title>Realtime BART Arrival Display</title><link>http://localhost:1313/real-time-bart-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/real-time-bart-display/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp"
+ srcset="http://localhost:1313/real-time-bart-display/hero_hu_450017297b1abdc7.webp 320w, http://localhost:1313/real-time-bart-display/hero_hu_7aef5596bce783c9.webp 480w, http://localhost:1313/real-time-bart-display/hero_hu_e12db5ce41397ca6.webp 768w, http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp 1024w, http://localhost:1313/real-time-bart-display/hero_hu_3315e40f3884d08.webp 1366w, http://localhost:1313/real-time-bart-display/hero_hu_ac7df583e9680712.webp 1536w, http://localhost:1313/real-time-bart-display/hero_hu_29e2fb8d38215dd9.webp 1920w, http://localhost:1313/real-time-bart-display/hero_hu_1d6e1990805d26cb.webp 2560w, http://localhost:1313/real-time-bart-display/hero_hu_c2bfe44487542c35.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBQCdASoqABoAPs1UoUejoiGVXAYAOwzE9IBhuCL2s2XBROoWIzmV0LtWT4H1RP4AAP74rKjISoUR6oH/ll2LUvxzRXqVKj/NFTdejIBbBGRNyDaYux7sUCP3h3IPeEPYft5Da4THpqzDB/dbKpZjsS6zdUz97aA2uBNEm9yBvLPbXKRABqlimYAAAA==);"
+ loading="lazy"
+ decoding="async"
+ alt="AI generated image of the physical BART display" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description></item><item><title>RTSP Video Stream on Raspberry Pi</title><link>http://localhost:1313/raspberry-pi-rtsp-viewer/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/raspberry-pi-rtsp-viewer/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp"
+ srcset="http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_d6edaea1a921cf1.webp 320w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_a06d31a72ebf6e72.webp 480w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_3d289d4d13974f9c.webp 768w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp 1024w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_c576e0c6a1a66b8c.webp 1366w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_4399f4c3c5e42616.webp 1536w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_c525388834f139a4.webp 1920w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_327a3bd16ee6db01.webp 2560w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_73b437e8d5d4cf3e.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpABAABXRUJQVlA4IIQBAACwBwCdASoqABwAPs1eo0qjoqGVXAQAOwzE9ABOmbHhTXoEq0GbeOX6RQiAsQmV1sJA&amp;#43;/H2zZ/NWC3MAw/n9wHbvqHGxUAAAP79epa7Agyu7NaR9iYi/a4/rLsz0KLyNKLcVvU/U/PblQbzAuFZtd/ud&amp;#43;I9kFULNDy/&amp;#43;&amp;#43;s6As/6/5Gpeqe4FiIp9ZfShLuj/r11XwRoIyAYUJ/l9pcZtNNYA0AecYsBuib4FdkC75nF4y/oi&amp;#43;FNKh1hOriHS6sS0AXqxlUdGbdw8exwa8mVCNecWRkTqcZi4jlpMaBa4uorO9wD1XFhM4J9/pOraYkQSVKC8o9Sfsu/L/9zecSKSfPkOVe6D92Igx4ESonQOWjk8mliw&amp;#43;G7CA6tw&amp;#43;p8ODz4fqiagO6Q&amp;#43;ltzcjENzVGEEreailCyX&amp;#43;yhF&amp;#43;qCSfNl6a6uyCHNbTZ0Ll9YvIT&amp;#43;b4pQQxBMnFszmsqpNEnoczkuzfaXmNkKZjnuom54knD7ktA0hT0b9DKVLDygkuuqwhkYsZBAAAAA);"
+ loading="lazy"
+ decoding="async"
+ alt="ChatGPT generated image of the cube" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent &lt;a href="https://www.doscher.com/arm-terminal-2-the-cube/" target="_blank" rel="noopener"&gt;ARM Terminal 2 - The Cube&lt;/a&gt;. I highly recommend taking a look at his blog, because if you&amp;rsquo;re reading this, you&amp;rsquo;re gonna love his stuff, &lt;a href="https://www.doscher.com" target="_blank" rel="noopener"&gt;doscher.com&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Nearby Aircraft Display</title><link>http://localhost:1313/nearest-aircraft-display/</link><pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/nearest-aircraft-display/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_a937f92e7d0723bf.webp"
+ srcset="http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_eb89949b4237f4e7.webp 320w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_77faa448519dee45.webp 480w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_d3e4e4459aecbcaa.webp 768w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_a937f92e7d0723bf.webp 1024w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_6827fad8d3e58e5f.webp 1366w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_1eac56635a22291f.webp 1536w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_b4d82e74d66c2f1e.webp 1920w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_6c67b50dd4d11464.webp 2560w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_f09bd449511e9eba.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRiQBAABXRUJQVlA4IBgBAAAwBwCdASoqABoAPs1OnUajoiEYDVQAOwzE8oBfuKCq87URfgaVxnMP0RBS/KTXE&amp;#43;dX3iEH7FRgC0SKWOryF&amp;#43;YUtwAA/vHK&amp;#43;8uuV5auhhnE2ma9LH7AkK16Lg6BWnrBtEIPjsRwQRrKBVE&amp;#43;XMdR1ztPfl&amp;#43;zI9xflqdvR4mouNUx9fqTDx3ix8Bt//&amp;#43;FwBjkYTPO45WwM&amp;#43;beVMb95bUot0z3HC9lksepEzzdfaCadNpQuBjx/khOhIrfCu4Xw&amp;#43;c8T596w2ur5x0JMwJQMPA1IiAnVbSEEzfav&amp;#43;38dsoc0Pqks7By9dYftvz8ku&amp;#43;py2F5idye1uUMIy5ZGueL26azvbtSZRvpcwQoj/uwJ&amp;#43;mGsr/iMdM1EcCDkAAA);"
+ loading="lazy"
+ decoding="async"
+ alt="ChatGPT generated image of Flight Display" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;I have an &lt;a href="http://localhost:1313/piaware-lcd-display/"&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description></item><item><title>PiAware Data Display</title><link>http://localhost:1313/piaware-lcd-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/piaware-lcd-display/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_e52aef69b3439081.webp"
+ srcset="http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_af20dc2c3bf59b52.webp 320w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_60570262f8a4fa61.webp 480w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_486ca8aa89684416.webp 768w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_e52aef69b3439081.webp 1024w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_7e0c01aa89738d8e.webp 1366w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_824642f47f29bf59.webp 1536w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_96a7f96ba4070e8b.webp 1920w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_c64ba71c49ee82a8.webp 2560w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_8db23ddcbae44646.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAACwBQCdASoqABoAPs1MnUejoiEYCq1UOwzE8gBdiP0RbIswRVWz7TMEOZydBda6sHG4aDZF9sAA/vfn&amp;#43;xq4VgTuXvBjKQ&amp;#43;dz5VYE3Ptc/Du5uvgulNlXrkJ1fGifg7xpDYpSMC1YBsfXBohYJLGL73V49&amp;#43;unmTWNkCyp2FuKCSd8UDPgDq87gsgI1hZjaOahxD1FVST5XiujdP4aBbinS8Hk8lpA1vlO/Hblt5odvhEZe6d2CWY61HDgkH/Y83O&amp;#43;A8JsH8MRgCI5kl4nJnfk6mpOCYP4y81mowpPk2YAXZKepMoAAA=);"
+ loading="lazy"
+ decoding="async"
+ alt="ChatGPT generated image of ADS-B Node" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;After setting up my PiAware receiver to track live flight data, I wanted a simple way to glance at some key stats without SSH-ing into the Pi or opening a browser. Enter the humble 20x4 I2C LCD screen.&lt;/p&gt;
+&lt;p&gt;This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.&lt;/p&gt;</description></item><item><title>MicroMV on OS X in 2018</title><link>http://localhost:1313/micromv-on-osx-in-2018/</link><pubDate>Fri, 05 Oct 2018 11:51:48 -0700</pubDate><guid>http://localhost:1313/micromv-on-osx-in-2018/</guid><description>&lt;p&gt;
+ &lt;img src="http://localhost:1313/images/micromv-on-osx-in-2018/micromv-header.png" alt="micromv-header-image"&gt;&lt;/p&gt;
+&lt;p&gt;What you need:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Apple Thunderbolt to FireWire Adapter&lt;/li&gt;
+&lt;li&gt;MicroMV playback device with FireWire port&lt;/li&gt;
+&lt;li&gt;FireWire cable&lt;/li&gt;
+&lt;li&gt;MicroMV tapes with footage&lt;/li&gt;
+&lt;li&gt;Apple computer running OS X 10.6 or higher&lt;/li&gt;
+&lt;li&gt;AVCVideoCap software (&lt;a href="https://nofile.io/f/mNaGHHh9297/AVCVideoCap.app.zip" target="_blank" rel="noopener"&gt;download&lt;/a&gt;)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Once you have all the hardware needed to connect everything up to a computer, turn it all on, insert the tape you want to ingest, and fire up the free AVCVideoCap application (download), which is actually a small app written by Apple to show off some capabilities of the FireWire protocol in XCode back in the day when FireWire was a thing. If when opening the app, you get a message like:&lt;/p&gt;</description></item></channel></rss>

@@ -1,33 +1,50 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Esp32 on Semicolons &amp; Side Projects</title>
-    <link>http://localhost:1313/tags/esp32/</link>
-    <description>Recent content in Esp32 on Semicolons &amp; Side Projects</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Mon, 10 Nov 2025 05:03:55 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/esp32/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Stark Medical Scanner... sort of</title>
-      <link>http://localhost:1313/medical-scanner/</link>
-      <pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate>
-      <guid>http://localhost:1313/medical-scanner/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/medical-scanner/hero_hu_c64e4a6c27a0b3a9.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/medical-scanner/hero_hu_a13ddbe9859e1f2f.webp 320w, http://localhost:1313/medical-scanner/hero_hu_27d2a4d0070798d.webp 480w, http://localhost:1313/medical-scanner/hero_hu_2503b0ef71210622.webp 768w, http://localhost:1313/medical-scanner/hero_hu_c64e4a6c27a0b3a9.webp 1024w, http://localhost:1313/medical-scanner/hero_hu_c175b2cabb5c85f6.webp 1366w, http://localhost:1313/medical-scanner/hero_hu_323079e5b035e624.webp 1536w, http://localhost:1313/medical-scanner/hero_hu_aa2d8ff5f6d0589a.webp 1920w, http://localhost:1313/medical-scanner/hero_hu_cd348162beb417d6.webp 2560w, http://localhost:1313/medical-scanner/hero_hu_b61396103279e550.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRkwBAABXRUJQVlA4IEABAAAwBwCdASoqABcAPs1anUgjoqEVVQA7DMTgCsM9R9Vn/PBjGnyuSDfbvPwJm/lbbMwcbJUQKifTUEYCPpVTvoQDzEAAzMMHmT3jT6NjOuZs95v//ZGB&amp;#43;7i&amp;#43;/NSDFZhjx3q&amp;#43;bq1y/8XQhgfm&amp;#43;VZz/PH4qdhi8SWC&amp;#43;bkKlpPBUu4Pt9XudYIdRqm2Sggh4ZyUpT3cXyP0RKy76YHnjWpC&amp;#43;a0MWKmR3BdGqtB&amp;#43;pqMBUaX0l55JpbO1&amp;#43;pDszzcE6TU2H&amp;#43;ijoz7JTiqIDckSvE1rVU/1UvNcc02F819aiqnxqrjzLri8GV6mr5rKu0cxh5jLzq68ai0c&amp;#43;&amp;#43;PxTrpHHd3BoaIavuvhAnyXE3Zuqlgw8FKdFMITjPUideOlO0Uw&amp;#43;W/ZOITzuLT9rm24cbUyfk0k8e23oNsIdl2frbgmXoa3tAAAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;AI generated image of the Stark Medical Scanner&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;Let’s get this out of the way — what is “gravy blood”, and who is “Damp”?&lt;/p&gt;&#xA;&lt;p&gt;This whole project started as an inside joke. My buddy and I would say we had gravy blood whenever we overindulged in a meal. That sluggish, heavy feeling afterward? In our lore, that’s the gravy blood kicking in.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Realtime BART Arrival Display</title>
-      <link>http://localhost:1313/real-time-bart-display/</link>
-      <pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate>
-      <guid>http://localhost:1313/real-time-bart-display/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/real-time-bart-display/hero_hu_5437165c78e81629.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/real-time-bart-display/hero_hu_384d86333cef2c5f.webp 320w, http://localhost:1313/real-time-bart-display/hero_hu_374ea9c597eb8080.webp 480w, http://localhost:1313/real-time-bart-display/hero_hu_3b7a87d9784d7720.webp 768w, http://localhost:1313/real-time-bart-display/hero_hu_5437165c78e81629.webp 1024w, http://localhost:1313/real-time-bart-display/hero_hu_e8af07cb6b8db4b2.webp 1366w, http://localhost:1313/real-time-bart-display/hero_hu_5ef2b6a07839bc46.webp 1536w, http://localhost:1313/real-time-bart-display/hero_hu_570e686afe88de15.webp 1920w, http://localhost:1313/real-time-bart-display/hero_hu_4ede7083b909d837.webp 2560w, http://localhost:1313/real-time-bart-display/hero_hu_fd14a829b2d2aec3.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRoYAAABXRUJQVlA4IHoAAADwBACdASoqABoAPs1Mm0YjoiEYDVVUOwzE9IBkph0&amp;#43;swQUqRXXHCEMNg/eXFaeggAA/vYA55UHWY1vYfbxsBF42UESXpfwg9itQcpS7mH&amp;#43;RfsO9Y3DM&amp;#43;H8RNYNMDaT9pS7FqGCZfIfCpxI2sSo8ZLRCrgJpJ7XAecAAA==);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;AI generated image of the physical BART display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Nearby Aircraft Display</title>
-      <link>http://localhost:1313/nearest-aircraft-display/</link>
-      <pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate>
-      <guid>http://localhost:1313/nearest-aircraft-display/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_153939f10a12373d.webp 320w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_d4c9a35156bde7dc.webp 480w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_59890c2ad19508e.webp 768w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp 1024w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_77129e117855f9eb.webp 1366w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_8a5602adb3d2f838.webp 1536w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_7f0fb93a88b74818.webp 1920w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_2136d08c7aa574cb.webp 2560w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_20972247bce3265f.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAABQBgCdASoqABoAPrlEmEUjoiEYBqg7C4TygFt9uTLei/e96t2&amp;#43;q5fcwJdIuf34j3Rt9uCsMLgN2snTAAD&amp;#43;83J6NAQyAToqF8VrR/hC2KdTPgL&amp;#43;pX5vR7p9VE02kQ4eGqEjEOlLRG5KR3yAwoEoU7JD6CdMg/Ya28zPeciIcAB43DQKxwHhAJgqsvUqRyVkxcXzAiy4iUGCwyKzJf2ULaFiFxD8x&amp;#43;hf4KMYeXI5jRpRoEh1w1FgMKNhjO7jBL0CrJQf9cYNx6K&amp;#43;Dby33ZFzHAHLLz9KQ25dOpMa7IYGjY/uiff&amp;#43;pHxIs4uuXcVfIWYvwSGUAOuf79DcTIdt/zYBwgAA);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of Flight Display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have an &lt;a href=&#34;http://localhost:1313/piaware-lcd-display/&#34;&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Esp32 on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/esp32/</link><description>Recent content in Esp32 on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 10 Nov 2025 05:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/esp32/index.xml" rel="self" type="application/rss+xml"/><item><title>Stark Medical Scanner... sort of</title><link>http://localhost:1313/medical-scanner/</link><pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate><guid>http://localhost:1313/medical-scanner/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/medical-scanner/hero_hu_3c5cf53c6ea38049.webp"
+ srcset="http://localhost:1313/medical-scanner/hero_hu_189be58636b69c08.webp 320w, http://localhost:1313/medical-scanner/hero_hu_b0872fb49446a2ca.webp 480w, http://localhost:1313/medical-scanner/hero_hu_ef9a00f41df241b.webp 768w, http://localhost:1313/medical-scanner/hero_hu_3c5cf53c6ea38049.webp 1024w, http://localhost:1313/medical-scanner/hero_hu_dc7a4457f8fbbc09.webp 1366w, http://localhost:1313/medical-scanner/hero_hu_a8bdda918bfc63e5.webp 1536w, http://localhost:1313/medical-scanner/hero_hu_c238e26b2cb93bf6.webp 1920w, http://localhost:1313/medical-scanner/hero_hu_7aed346eacae0938.webp 2560w, http://localhost:1313/medical-scanner/hero_hu_a72ec916085fd28f.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRmYBAABXRUJQVlA4IFoBAACQBwCdASoqABcAPs1WnEijoiEVVQA7DMTgC/a3C/iRn6ACHNBwyvVp/AZPlVIKjxUOITmsLrtK6xckknymPb9fB1fZiAAAzU5b2b2itSCu5TDhlVA&amp;#43;l4M8CWaGHzjCKR7XrUKxlymKarUMPI/OkQcjZz1uba0VOx0RsJ45/YHjocfo6hmm5ZnJbJeaCK0c6Xe6JkzzgfTvmVmckpIjTgHpRgqkATXf26SoMf9&amp;#43;LAHkmRkSOymKMKSVy2YCy0lhtju&amp;#43;RK62xD9J2mUXV&amp;#43;GxMqUkpO836kZLIkt52NFufi8eXFOjyQq/kG7op7TVlRMAbclrUxhDCevFCr5ruc6KdtzRJJSbpK0P62G67u9W9VKb1JjfSSrGSPb7TM0tht3OM5PgnPm/u77MJ71q1ru5V&amp;#43;yLoFqEwgHKs7VMiogddPwovZCQlPchYSBaJ8kFq30RBZflVksQb4zoAAAA);"
+ loading="lazy"
+ decoding="async"
+ alt="AI generated image of the Stark Medical Scanner" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;Let’s get this out of the way — what is “gravy blood”, and who is “Damp”?&lt;/p&gt;
+&lt;p&gt;This whole project started as an inside joke. My buddy and I would say we had gravy blood whenever we overindulged in a meal. That sluggish, heavy feeling afterward? In our lore, that’s the gravy blood kicking in.&lt;/p&gt;</description></item><item><title>Realtime BART Arrival Display</title><link>http://localhost:1313/real-time-bart-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/real-time-bart-display/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp"
+ srcset="http://localhost:1313/real-time-bart-display/hero_hu_450017297b1abdc7.webp 320w, http://localhost:1313/real-time-bart-display/hero_hu_7aef5596bce783c9.webp 480w, http://localhost:1313/real-time-bart-display/hero_hu_e12db5ce41397ca6.webp 768w, http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp 1024w, http://localhost:1313/real-time-bart-display/hero_hu_3315e40f3884d08.webp 1366w, http://localhost:1313/real-time-bart-display/hero_hu_ac7df583e9680712.webp 1536w, http://localhost:1313/real-time-bart-display/hero_hu_29e2fb8d38215dd9.webp 1920w, http://localhost:1313/real-time-bart-display/hero_hu_1d6e1990805d26cb.webp 2560w, http://localhost:1313/real-time-bart-display/hero_hu_c2bfe44487542c35.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBQCdASoqABoAPs1UoUejoiGVXAYAOwzE9IBhuCL2s2XBROoWIzmV0LtWT4H1RP4AAP74rKjISoUR6oH/ll2LUvxzRXqVKj/NFTdejIBbBGRNyDaYux7sUCP3h3IPeEPYft5Da4THpqzDB/dbKpZjsS6zdUz97aA2uBNEm9yBvLPbXKRABqlimYAAAA==);"
+ loading="lazy"
+ decoding="async"
+ alt="AI generated image of the physical BART display" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description></item><item><title>Nearby Aircraft Display</title><link>http://localhost:1313/nearest-aircraft-display/</link><pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/nearest-aircraft-display/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_a937f92e7d0723bf.webp"
+ srcset="http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_eb89949b4237f4e7.webp 320w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_77faa448519dee45.webp 480w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_d3e4e4459aecbcaa.webp 768w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_a937f92e7d0723bf.webp 1024w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_6827fad8d3e58e5f.webp 1366w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_1eac56635a22291f.webp 1536w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_b4d82e74d66c2f1e.webp 1920w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_6c67b50dd4d11464.webp 2560w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_f09bd449511e9eba.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRiQBAABXRUJQVlA4IBgBAAAwBwCdASoqABoAPs1OnUajoiEYDVQAOwzE8oBfuKCq87URfgaVxnMP0RBS/KTXE&amp;#43;dX3iEH7FRgC0SKWOryF&amp;#43;YUtwAA/vHK&amp;#43;8uuV5auhhnE2ma9LH7AkK16Lg6BWnrBtEIPjsRwQRrKBVE&amp;#43;XMdR1ztPfl&amp;#43;zI9xflqdvR4mouNUx9fqTDx3ix8Bt//&amp;#43;FwBjkYTPO45WwM&amp;#43;beVMb95bUot0z3HC9lksepEzzdfaCadNpQuBjx/khOhIrfCu4Xw&amp;#43;c8T596w2ur5x0JMwJQMPA1IiAnVbSEEzfav&amp;#43;38dsoc0Pqks7By9dYftvz8ku&amp;#43;py2F5idye1uUMIy5ZGueL26azvbtSZRvpcwQoj/uwJ&amp;#43;mGsr/iMdM1EcCDkAAA);"
+ loading="lazy"
+ decoding="async"
+ alt="ChatGPT generated image of Flight Display" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;I have an &lt;a href="http://localhost:1313/piaware-lcd-display/"&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description></item></channel></rss>

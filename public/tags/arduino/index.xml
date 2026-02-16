@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Arduino on Semicolons &amp; Side Projects</title>
-    <link>http://localhost:1313/tags/arduino/</link>
-    <description>Recent content in Arduino on Semicolons &amp; Side Projects</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 09 Sep 2025 19:05:55 -0700</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/arduino/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Nearby Aircraft Display</title>
-      <link>http://localhost:1313/nearest-aircraft-display/</link>
-      <pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate>
-      <guid>http://localhost:1313/nearest-aircraft-display/</guid>
-      <description>&lt;figure class=&#34;responsive-image&#34;&gt;&#xA;    &lt;img &#xA;      src=&#34;http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp&#34;&#xA;      srcset=&#34;http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_153939f10a12373d.webp 320w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_d4c9a35156bde7dc.webp 480w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_59890c2ad19508e.webp 768w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_5f0d7fa989fc2f5f.webp 1024w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_77129e117855f9eb.webp 1366w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_8a5602adb3d2f838.webp 1536w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_7f0fb93a88b74818.webp 1920w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_2136d08c7aa574cb.webp 2560w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_20972247bce3265f.webp 3840w&#34;&#xA;      sizes=&#34;100vw&#34;&#xA;      width=&#34;100%&#34;&#xA;      style=&#34;max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRgwBAABXRUJQVlA4IAABAABQBgCdASoqABoAPrlEmEUjoiEYBqg7C4TygFt9uTLei/e96t2&amp;#43;q5fcwJdIuf34j3Rt9uCsMLgN2snTAAD&amp;#43;83J6NAQyAToqF8VrR/hC2KdTPgL&amp;#43;pX5vR7p9VE02kQ4eGqEjEOlLRG5KR3yAwoEoU7JD6CdMg/Ya28zPeciIcAB43DQKxwHhAJgqsvUqRyVkxcXzAiy4iUGCwyKzJf2ULaFiFxD8x&amp;#43;hf4KMYeXI5jRpRoEh1w1FgMKNhjO7jBL0CrJQf9cYNx6K&amp;#43;Dby33ZFzHAHLLz9KQ25dOpMa7IYGjY/uiff&amp;#43;pHxIs4uuXcVfIWYvwSGUAOuf79DcTIdt/zYBwgAA);&#34;&#xA;      loading=&#34;lazy&#34;&#xA;      decoding=&#34;async&#34;&#xA;      alt=&#34;ChatGPT generated image of Flight Display&#34; /&gt;&#xA;    &#xA;    &#xA;    &#xA;    &#xA;  &lt;/figure&gt;&#xA;&#xA;&lt;p&gt;I have an &lt;a href=&#34;http://localhost:1313/piaware-lcd-display/&#34;&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description>
-    </item>
-  </channel>
-</rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Arduino on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/arduino/</link><description>Recent content in Arduino on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Tue, 09 Sep 2025 19:05:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/arduino/index.xml" rel="self" type="application/rss+xml"/><item><title>Nearby Aircraft Display</title><link>http://localhost:1313/nearest-aircraft-display/</link><pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/nearest-aircraft-display/</guid><description>&lt;figure class="responsive-image"&gt;
+ &lt;img 
+ src="http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_a937f92e7d0723bf.webp"
+ srcset="http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_eb89949b4237f4e7.webp 320w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_77faa448519dee45.webp 480w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_d3e4e4459aecbcaa.webp 768w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_a937f92e7d0723bf.webp 1024w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_6827fad8d3e58e5f.webp 1366w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_1eac56635a22291f.webp 1536w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_b4d82e74d66c2f1e.webp 1920w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_6c67b50dd4d11464.webp 2560w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_f09bd449511e9eba.webp 3840w"
+ sizes="100vw"
+ width="100%"
+ style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRiQBAABXRUJQVlA4IBgBAAAwBwCdASoqABoAPs1OnUajoiEYDVQAOwzE8oBfuKCq87URfgaVxnMP0RBS/KTXE&amp;#43;dX3iEH7FRgC0SKWOryF&amp;#43;YUtwAA/vHK&amp;#43;8uuV5auhhnE2ma9LH7AkK16Lg6BWnrBtEIPjsRwQRrKBVE&amp;#43;XMdR1ztPfl&amp;#43;zI9xflqdvR4mouNUx9fqTDx3ix8Bt//&amp;#43;FwBjkYTPO45WwM&amp;#43;beVMb95bUot0z3HC9lksepEzzdfaCadNpQuBjx/khOhIrfCu4Xw&amp;#43;c8T596w2ur5x0JMwJQMPA1IiAnVbSEEzfav&amp;#43;38dsoc0Pqks7By9dYftvz8ku&amp;#43;py2F5idye1uUMIy5ZGueL26azvbtSZRvpcwQoj/uwJ&amp;#43;mGsr/iMdM1EcCDkAAA);"
+ loading="lazy"
+ decoding="async"
+ alt="ChatGPT generated image of Flight Display" /&gt;
+ 
+ 
+ 
+ 
+ &lt;/figure&gt;
+
+&lt;p&gt;I have an &lt;a href="http://localhost:1313/piaware-lcd-display/"&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description></item></channel></rss>
