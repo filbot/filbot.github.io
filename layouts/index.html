@@ -1,61 +1,15 @@
 {{ define "main" }}
-{{ partial "profile.html" . }}
-
-<div id="list-page">
-    {{ $pages := where .Site.RegularPages "Type" "!=" "about" }}
-    {{ $paginator := .Paginate ($pages) }}
-    {{ range $paginator.Pages }}
-        {{ $page := . }}
-        <a href="{{ .RelPermalink }}" class="post-card">
-          {{- with .Params.cover -}}
-            {{- $cover := . -}}
-            {{- if strings.HasPrefix $cover "/" -}}
-              <img class="post-card__image" src="{{ $cover }}" alt="{{ $page.Title }}" loading="lazy">
-            {{- else -}}
-              {{- with $page.Resources.GetMatch $cover -}}
-                {{- $sq := .Fill "400x400 webp" -}}
-                {{- $wide := .Fill "640x360 webp" -}}
-                <img
-                  class="post-card__image"
-                  src="{{ $sq.RelPermalink }}"
-                  srcset="{{ $sq.RelPermalink }} 400w, {{ $wide.RelPermalink }} 640w"
-                  sizes="(max-width: 540px) calc(100vw - 2rem), 200px"
-                  alt="{{ $page.Title }}"
-                  loading="lazy"
-                  width="{{ $sq.Width }}"
-                  height="{{ $sq.Height }}">
-              {{- end -}}
-            {{- end -}}
-          {{- end -}}
-          <time class="post-card__date" datetime="{{ $page.PublishDate }}">{{ $page.PublishDate.Format "Jan 2, 2006" }}</time>
-          <div class="post-card__body">
-            <h2 class="post-card__title">{{ $page.Title }}</h2>
-            {{ with $page.Params.description }}
-              <p class="post-card__description">{{ . | plainify | htmlUnescape }}</p>
-            {{ end }}
-          </div>
-        </a>
+<section>
+    {{ with .Content }}
+        {{- . -}}
     {{ end }}
 
-    {{ if or ($paginator.HasPrev) ($paginator.HasNext) }}
-        <div class="pagination">
-          {{ if $paginator.HasPrev }}
-              <span class="prev">
-                  <a href="{{.Paginator.Prev.URL}}">
-                      <span class="arrow">←</span> {{ with .Site.Params.newerPosts }}{{ . }}{{ else }}{{ i18n "postsNewer" }}{{ end }}
-                  </a>
-            </span>
-          {{ end }}
-
-          {{ if $paginator.HasNext }}
-              <span class="next">
-                  <a href="{{.Paginator.Next.URL}}">
-                      {{ with .Site.Params.olderPosts }}{{ . }}{{ else }}{{ i18n "postsOlder" }}{{ end }} <span class="arrow">→</span>
-                  </a>
-              </span>
-          {{ end }}
-        </div>
+    {{ $projects := where .Site.RegularPages "Section" "projects" }}
+    {{ range $projects.ByDate.Reverse }}
+    <section class="projects">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      <p>{{ .Description }}</p>
+    </section>
     {{ end }}
-
-</div>
+</section>
 {{ end }}

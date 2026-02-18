@@ -1,0 +1,56 @@
+baseURL = "https://filbot.com/"
+languageCode = "en-us"
+title = "Semicolons & Side Projects"
+theme = "chicago7"
+timeout = "5m"
+
+[pagination]
+  pagerSize = 10
+
+googleAnalytics = "G-P5HRT1QBKC"
+
+[permalinks]
+  projects = "/projects/:title/"
+
+[markup.highlight]
+  guessSyntax = true
+  style = "bw"
+
+[markup.goldmark.renderer]
+  unsafe = false
+
+[[menu.header]]
+  name = "About"
+  url = "/about/"
+  weight = 10
+
+[params]
+  author = "Filip Grace"
+  bio = "A personal blog about building, learning, and stumbling forward in dev"
+  logo = "images/avatar.svg"
+
+  [params.social]
+    linkedin = "https://linkedin.com/in/filip-grace-1255b06"
+    github = "https://github.com/filbot"
+    instagram = "https://instagram.com/filipekadamczyk"
+    feed = "/index.xml"
+
+[imaging]
+  quality = 85
+  resampleFilter = "Lanczos"
+  anchor = "Smart"
+
+[security]
+  enableInlineShortcodes = false
+  [security.exec]
+    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
+
+[minify]
+  disableXML = false
+  minifyOutput = true
+  [minify.tdewolff.html]
+    keepWhitespace = false
+  [minify.tdewolff.css]
+    precision = 2
+  [minify.tdewolff.js]
+    precision = 2

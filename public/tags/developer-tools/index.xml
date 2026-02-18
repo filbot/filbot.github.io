@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developer-Tools on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/developer-tools/</link><description>Recent content in Developer-Tools on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 31 Mar 2025 16:34:28 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/developer-tools/index.xml" rel="self" type="application/rss+xml"/><item><title>AEM Developer Cheat Sheet</title><link>http://localhost:1313/aem-developer-cheat-sheet/</link><pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate><guid>http://localhost:1313/aem-developer-cheat-sheet/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_60d4b3ff176fdd27.webp"
- srcset="http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_e53ffad64abb9263.webp 320w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_5ea52dd0d0fad2ac.webp 480w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_959ad41643b55aa8.webp 768w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_60d4b3ff176fdd27.webp 1024w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_824eb9843c8212b2.webp 1366w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2aa0ff3263ff5b77.webp 1536w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_4b771cf48607484.webp 1920w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_ec0550216c7f26.webp 2560w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_edd0cc2a38ee3cf8.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAABQBgCdASoqABoAPs1YnUijoqEVXAYAOwzE4AHaMleB7kIfa9MCI7L6b&amp;#43;q78xfzCwIC7bT19JFzbezQAAD&amp;#43;/BMPyU0mT7LbvWTJMxW0OR4//VVPX43fwZbapNsrskhw4/0O7CnpJmmCbzjRbGKi3kxwctPc3D2dqxi9BoNfpsgW1cxTTh71fbjp/HNIqC4HDOwhuOK&amp;#43;hRwM2l0mIjSRcOpfqf3LFOC0YV/YPaAKjhe0&amp;#43;dLn7S77l&amp;#43;zuzwGoCnrMtdwpEw3DDcXqA2OgWJaBWGL3t6txgh/HeUqJm1JFaGQ3GANThfMcAA==);"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Developer-Tools on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/developer-tools/</link><description>Recent content in Developer-Tools on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 31 Mar 2025 16:34:28 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/developer-tools/index.xml" rel="self" type="application/rss+xml"/><item><title>AEM Developer Cheat Sheet</title><link>https://filbot.com/projects/aem-developer-cheat-sheet/</link><pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate><guid>https://filbot.com/projects/aem-developer-cheat-sheet/</guid><description>&lt;figure&gt;
+ &lt;img
+ src="https://filbot.com/projects/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_36f7b68df83f5dc4.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image of man riding Adobe logo" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
+
 
 &lt;p&gt;Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.&lt;/p&gt;</description></item></channel></rss>

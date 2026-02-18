@@ -10,7 +10,21 @@
       "Bash(else echo \"Completed\")",
       "Bash(fi)",
       "Bash(curl:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git submodule:*)",
+      "Bash(hugo version:*)",
+      "Bash(git checkout:*)",
+      "Bash(for dir in content/nearest-aircraft-display content/medical-scanner content/real-time-bart-display content/hero-dashboard content/piaware-lcd-display content/raspberry-pi-rtsp-viewer content/habit-tracker content/aem-developer-cheat-sheet content/understanding-jcr-in-aem)",
+      "Bash(do mv \"$dir\" content/projects/)",
+      "Bash(hugo:*)",
+      "Bash(/opt/homebrew/bin/hugo:*)",
+      "Bash(brew list:*)",
+      "Bash(brew install:*)",
+      "Bash(/opt/homebrew/bin/brew install:*)",
+      "Bash(/opt/homebrew/bin/sass:*)",
+      "Bash(PATH=\"/opt/homebrew/bin:$PATH\" /opt/homebrew/bin/hugo:*)"
     ]
   }
 }
