@@ -1,17 +1,42 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubiquity on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/ubiquity/</link><description>Recent content in Ubiquity on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 15 Sep 2025 08:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/ubiquity/index.xml" rel="self" type="application/rss+xml"/><item><title>RTSP Video Stream on Raspberry Pi</title><link>http://localhost:1313/raspberry-pi-rtsp-viewer/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/raspberry-pi-rtsp-viewer/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp"
- srcset="http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_d6edaea1a921cf1.webp 320w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_a06d31a72ebf6e72.webp 480w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_3d289d4d13974f9c.webp 768w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp 1024w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_c576e0c6a1a66b8c.webp 1366w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_4399f4c3c5e42616.webp 1536w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_c525388834f139a4.webp 1920w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_327a3bd16ee6db01.webp 2560w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_73b437e8d5d4cf3e.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpABAABXRUJQVlA4IIQBAACwBwCdASoqABwAPs1eo0qjoqGVXAQAOwzE9ABOmbHhTXoEq0GbeOX6RQiAsQmV1sJA&amp;#43;/H2zZ/NWC3MAw/n9wHbvqHGxUAAAP79epa7Agyu7NaR9iYi/a4/rLsz0KLyNKLcVvU/U/PblQbzAuFZtd/ud&amp;#43;I9kFULNDy/&amp;#43;&amp;#43;s6As/6/5Gpeqe4FiIp9ZfShLuj/r11XwRoIyAYUJ/l9pcZtNNYA0AecYsBuib4FdkC75nF4y/oi&amp;#43;FNKh1hOriHS6sS0AXqxlUdGbdw8exwa8mVCNecWRkTqcZi4jlpMaBa4uorO9wD1XFhM4J9/pOraYkQSVKC8o9Sfsu/L/9zecSKSfPkOVe6D92Igx4ESonQOWjk8mliw&amp;#43;G7CA6tw&amp;#43;p8ODz4fqiagO6Q&amp;#43;ltzcjENzVGEEreailCyX&amp;#43;yhF&amp;#43;qCSfNl6a6uyCHNbTZ0Ll9YvIT&amp;#43;b4pQQxBMnFszmsqpNEnoczkuzfaXmNkKZjnuom54knD7ktA0hT0b9DKVLDygkuuqwhkYsZBAAAAA);"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ubiquity on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/ubiquity/</link><description>Recent content in Ubiquity on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 15 Sep 2025 08:03:55 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/ubiquity/index.xml" rel="self" type="application/rss+xml"/><item><title>RTSP Video Stream on Raspberry Pi</title><link>https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/</guid><description>&lt;figure&gt;
+ &lt;img
+ src="https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/hero_hu_67167873140a7242.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image of the cube" /&gt;
- 
- 
- 
  
  &lt;/figure&gt;
 
-&lt;p&gt;My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent &lt;a href="https://www.doscher.com/arm-terminal-2-the-cube/" target="_blank" rel="noopener"&gt;ARM Terminal 2 - The Cube&lt;/a&gt;. I highly recommend taking a look at his blog, because if you&amp;rsquo;re reading this, you&amp;rsquo;re gonna love his stuff, &lt;a href="https://www.doscher.com" target="_blank" rel="noopener"&gt;doscher.com&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+
+&lt;p&gt;My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent &lt;a href="https://www.doscher.com/arm-terminal-2-the-cube/"&gt;ARM Terminal 2 - The Cube&lt;/a&gt;. I highly recommend taking a look at his blog, because if you&amp;rsquo;re reading this, you&amp;rsquo;re gonna love his stuff, &lt;a href="https://www.doscher.com"&gt;doscher.com&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="the-hardware"&gt;The Hardware&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi 4 running Raspberry Pi OS Lite (Bookworm)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.amazon.com/dp/B08N5VZN8R?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;amp;th=1"&gt;Geekworm Raspberry Pi 4 Heatsink&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.waveshare.com/wiki/4inch_HDMI_LCD_(C)"&gt;Waveshare 4inch HDMI LCD (C)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.doscher.com/arm-terminal-2-the-cube/"&gt;ARM Terminal 2 - The Cube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repurposed metal adjustable arm - &lt;a href="https://www.amazon.com/dp/B08FNQC6TZ?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_6&amp;amp;th=1"&gt;Example on Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
+ 
+
+
+
+
+ 
+ &lt;figure&gt;
+ &lt;img
+ src="https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/top-down-labels_hu_97b24daaea94900.webp"
+ loading="lazy"
+ decoding="async"
+ style="max-width: 100%; height: auto;"
+ alt="Labeled photo of hardware" /&gt;
+ 
+ &lt;/figure&gt;
+
+
+&lt;p&gt;My metal arm originally had a lamp attached, so I removed the lamp and saved it for parts. The clamp that came with the arm is not the strongest, but it works fine for the weight of this project. With a little creativity, you can attach it almost anywhere. I mounted mine to a monitor arm so I could position the screen just above my secondary monitor.&lt;/p&gt;</description></item></channel></rss>

@@ -1,136 +1,127 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semicolons &amp; Side Projects</title><link>http://localhost:1313/</link><description>Recent content on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>http://localhost:1313/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>http://localhost:1313/hero-dashboard/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/hero-dashboard/dashboard-angle_hu_50230a0bcc463134.webp"
- srcset="http://localhost:1313/hero-dashboard/dashboard-angle_hu_8110a10100222cc6.webp 320w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_eb560b7317618563.webp 480w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_212def6f4b28a81e.webp 768w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_50230a0bcc463134.webp 1024w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_dd37250b2e14cdbe.webp 1366w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_99a16d31bcc65fd8.webp 1536w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_fb4979b43811cabf.webp 1920w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_3b6506cfc3560fe5.webp 2560w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_a00f724287a89458.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRtIBAABXRUJQVlA4IMYBAADQCACdASoqABwAPs1YnkojoiEVXAUAOwzE84BevHgEx7Jd8kCKYGNlogZ2qxb1cwNk0UwutPMsAA9VOmmIlGDw1VDc01cJvgX/zd6eY2gAAP7/Cgl0zryJWB&amp;#43;rVuNhkcfM7JxkFXkKdxD0&amp;#43;X1lkNnYhlNQ&amp;#43;PeCmF7RLFu5TmuSZn3affs7T5uy5lglUhX2mztt&amp;#43;SmDN8Uv8GA/HWFlXjd1woMxv/&amp;#43;wz9cMIurvXnKz3cWQtk&amp;#43;HblpCnnzE49/oNMGc95GgJa8d5QCVPvAISASyKmL92BryBXGtBQK5baNe4ImQCNQdGt0T3nhbN/Qb9K9eS8IQaDZkXMJN5gQbirc2FY0Lo2ahBfpMzT3uSdgNMPXU138r&amp;#43;QCbprLPkR1vigoP6mtSGosca/T&amp;#43;nav&amp;#43;NK59OVBDymncSxs21S82tojiHNikVgyEh9ij0R8yD6FeGxknOAyQcf2CSHq58L0lICdrXMqOWQjxxl71RM2ZauXeooS555nE47EleHhXQLrWAMeR384tcxwdtXaQfE3NDr5axtdIeNSBuGtdf/4&amp;#43;8GSPE&amp;#43;9kccSAgLPRQewUEqFFiJyxlUJcYoZCvpjW46PQ3hGzijoKAAAA);"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Semicolons &amp; Side Projects</title><link>http://localhost:60248/</link><description>Recent content on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="http://localhost:60248/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>http://localhost:60248/projects/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>http://localhost:60248/projects/hero-dashboard/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/hero-dashboard/dashboard-angle_hu_20063b6b4cbcce92.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="Hero Dashboard" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
 
-&lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href="https://sfdlive.com" target="_blank" rel="noopener"&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;
-&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description></item><item><title>Stark Medical Scanner... sort of</title><link>http://localhost:1313/medical-scanner/</link><pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate><guid>http://localhost:1313/medical-scanner/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/medical-scanner/hero_hu_3c5cf53c6ea38049.webp"
- srcset="http://localhost:1313/medical-scanner/hero_hu_189be58636b69c08.webp 320w, http://localhost:1313/medical-scanner/hero_hu_b0872fb49446a2ca.webp 480w, http://localhost:1313/medical-scanner/hero_hu_ef9a00f41df241b.webp 768w, http://localhost:1313/medical-scanner/hero_hu_3c5cf53c6ea38049.webp 1024w, http://localhost:1313/medical-scanner/hero_hu_dc7a4457f8fbbc09.webp 1366w, http://localhost:1313/medical-scanner/hero_hu_a8bdda918bfc63e5.webp 1536w, http://localhost:1313/medical-scanner/hero_hu_c238e26b2cb93bf6.webp 1920w, http://localhost:1313/medical-scanner/hero_hu_7aed346eacae0938.webp 2560w, http://localhost:1313/medical-scanner/hero_hu_a72ec916085fd28f.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRmYBAABXRUJQVlA4IFoBAACQBwCdASoqABcAPs1WnEijoiEVVQA7DMTgC/a3C/iRn6ACHNBwyvVp/AZPlVIKjxUOITmsLrtK6xckknymPb9fB1fZiAAAzU5b2b2itSCu5TDhlVA&amp;#43;l4M8CWaGHzjCKR7XrUKxlymKarUMPI/OkQcjZz1uba0VOx0RsJ45/YHjocfo6hmm5ZnJbJeaCK0c6Xe6JkzzgfTvmVmckpIjTgHpRgqkATXf26SoMf9&amp;#43;LAHkmRkSOymKMKSVy2YCy0lhtju&amp;#43;RK62xD9J2mUXV&amp;#43;GxMqUkpO836kZLIkt52NFufi8eXFOjyQq/kG7op7TVlRMAbclrUxhDCevFCr5ruc6KdtzRJJSbpK0P62G67u9W9VKb1JjfSSrGSPb7TM0tht3OM5PgnPm/u77MJ71q1ru5V&amp;#43;yLoFqEwgHKs7VMiogddPwovZCQlPchYSBaJ8kFq30RBZflVksQb4zoAAAA);"
+
+&lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href="https://sfdlive.com"&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;
+&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description></item><item><title>Stark Medical Scanner... sort of</title><link>http://localhost:60248/projects/stark-medical-scanner...-sort-of/</link><pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate><guid>http://localhost:60248/projects/stark-medical-scanner...-sort-of/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/stark-medical-scanner...-sort-of/hero_hu_b1e1d3d4ea9b9295.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="AI generated image of the Stark Medical Scanner" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
+
 
 &lt;p&gt;Let’s get this out of the way — what is “gravy blood”, and who is “Damp”?&lt;/p&gt;
-&lt;p&gt;This whole project started as an inside joke. My buddy and I would say we had gravy blood whenever we overindulged in a meal. That sluggish, heavy feeling afterward? In our lore, that’s the gravy blood kicking in.&lt;/p&gt;</description></item><item><title>Realtime BART Arrival Display</title><link>http://localhost:1313/real-time-bart-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/real-time-bart-display/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp"
- srcset="http://localhost:1313/real-time-bart-display/hero_hu_450017297b1abdc7.webp 320w, http://localhost:1313/real-time-bart-display/hero_hu_7aef5596bce783c9.webp 480w, http://localhost:1313/real-time-bart-display/hero_hu_e12db5ce41397ca6.webp 768w, http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp 1024w, http://localhost:1313/real-time-bart-display/hero_hu_3315e40f3884d08.webp 1366w, http://localhost:1313/real-time-bart-display/hero_hu_ac7df583e9680712.webp 1536w, http://localhost:1313/real-time-bart-display/hero_hu_29e2fb8d38215dd9.webp 1920w, http://localhost:1313/real-time-bart-display/hero_hu_1d6e1990805d26cb.webp 2560w, http://localhost:1313/real-time-bart-display/hero_hu_c2bfe44487542c35.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBQCdASoqABoAPs1UoUejoiGVXAYAOwzE9IBhuCL2s2XBROoWIzmV0LtWT4H1RP4AAP74rKjISoUR6oH/ll2LUvxzRXqVKj/NFTdejIBbBGRNyDaYux7sUCP3h3IPeEPYft5Da4THpqzDB/dbKpZjsS6zdUz97aA2uBNEm9yBvLPbXKRABqlimYAAAA==);"
+&lt;p&gt;This whole project started as an inside joke. My buddy and I would say we had gravy blood whenever we overindulged in a meal. That sluggish, heavy feeling afterward? In our lore, that’s the gravy blood kicking in.&lt;/p&gt;
+&lt;p&gt;Then one night we were watching Iron Man 2 and saw the Stark Medical Scanner. Perfect, we joked that we needed our own version to check our gravy blood levels.&lt;/p&gt;</description></item><item><title>Realtime BART Arrival Display</title><link>http://localhost:60248/projects/realtime-bart-arrival-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>http://localhost:60248/projects/realtime-bart-arrival-display/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/realtime-bart-arrival-display/hero_hu_34d97afa6b29af39.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="AI generated image of the physical BART display" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
 
-&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description></item><item><title>RTSP Video Stream on Raspberry Pi</title><link>http://localhost:1313/raspberry-pi-rtsp-viewer/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/raspberry-pi-rtsp-viewer/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp"
- srcset="http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_d6edaea1a921cf1.webp 320w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_a06d31a72ebf6e72.webp 480w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_3d289d4d13974f9c.webp 768w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_f066b094e3dedea.webp 1024w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_c576e0c6a1a66b8c.webp 1366w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_4399f4c3c5e42616.webp 1536w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_c525388834f139a4.webp 1920w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_327a3bd16ee6db01.webp 2560w, http://localhost:1313/raspberry-pi-rtsp-viewer/hero_hu_73b437e8d5d4cf3e.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpABAABXRUJQVlA4IIQBAACwBwCdASoqABwAPs1eo0qjoqGVXAQAOwzE9ABOmbHhTXoEq0GbeOX6RQiAsQmV1sJA&amp;#43;/H2zZ/NWC3MAw/n9wHbvqHGxUAAAP79epa7Agyu7NaR9iYi/a4/rLsz0KLyNKLcVvU/U/PblQbzAuFZtd/ud&amp;#43;I9kFULNDy/&amp;#43;&amp;#43;s6As/6/5Gpeqe4FiIp9ZfShLuj/r11XwRoIyAYUJ/l9pcZtNNYA0AecYsBuib4FdkC75nF4y/oi&amp;#43;FNKh1hOriHS6sS0AXqxlUdGbdw8exwa8mVCNecWRkTqcZi4jlpMaBa4uorO9wD1XFhM4J9/pOraYkQSVKC8o9Sfsu/L/9zecSKSfPkOVe6D92Igx4ESonQOWjk8mliw&amp;#43;G7CA6tw&amp;#43;p8ODz4fqiagO6Q&amp;#43;ltzcjENzVGEEreailCyX&amp;#43;yhF&amp;#43;qCSfNl6a6uyCHNbTZ0Ll9YvIT&amp;#43;b4pQQxBMnFszmsqpNEnoczkuzfaXmNkKZjnuom54knD7ktA0hT0b9DKVLDygkuuqwhkYsZBAAAAA);"
+
+&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description></item><item><title>RTSP Video Stream on Raspberry Pi</title><link>http://localhost:60248/projects/rtsp-video-stream-on-raspberry-pi/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>http://localhost:60248/projects/rtsp-video-stream-on-raspberry-pi/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/rtsp-video-stream-on-raspberry-pi/hero_hu_67167873140a7242.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image of the cube" /&gt;
  
+ &lt;/figure&gt;
+
+
+&lt;p&gt;My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent &lt;a href="https://www.doscher.com/arm-terminal-2-the-cube/"&gt;ARM Terminal 2 - The Cube&lt;/a&gt;. I highly recommend taking a look at his blog, because if you&amp;rsquo;re reading this, you&amp;rsquo;re gonna love his stuff, &lt;a href="https://www.doscher.com"&gt;doscher.com&lt;/a&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id="the-hardware"&gt;The Hardware&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;Raspberry Pi 4 running Raspberry Pi OS Lite (Bookworm)&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.amazon.com/dp/B08N5VZN8R?ref=ppx_yo2ov_dt_b_fed_asin_title&amp;amp;th=1"&gt;Geekworm Raspberry Pi 4 Heatsink&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.waveshare.com/wiki/4inch_HDMI_LCD_(C)"&gt;Waveshare 4inch HDMI LCD (C)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.doscher.com/arm-terminal-2-the-cube/"&gt;ARM Terminal 2 - The Cube&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;Repurposed metal adjustable arm - &lt;a href="https://www.amazon.com/dp/B08FNQC6TZ?ref_=ppx_hzsearch_conn_dt_b_fed_asin_title_6&amp;amp;th=1"&gt;Example on Amazon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+
  
+
+
+
+
  
+ &lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/rtsp-video-stream-on-raspberry-pi/top-down-labels_hu_97b24daaea94900.webp"
+ loading="lazy"
+ decoding="async"
+ style="max-width: 100%; height: auto;"
+ alt="Labeled photo of hardware" /&gt;
  
  &lt;/figure&gt;
 
-&lt;p&gt;My doorbell camera provides an RTSP stream, which made me think it would be perfect to display on a small dedicated screen. I built this using Jay Doscher’s excellent &lt;a href="https://www.doscher.com/arm-terminal-2-the-cube/" target="_blank" rel="noopener"&gt;ARM Terminal 2 - The Cube&lt;/a&gt;. I highly recommend taking a look at his blog, because if you&amp;rsquo;re reading this, you&amp;rsquo;re gonna love his stuff, &lt;a href="https://www.doscher.com" target="_blank" rel="noopener"&gt;doscher.com&lt;/a&gt;.&lt;/p&gt;</description></item><item><title>Nearby Aircraft Display</title><link>http://localhost:1313/nearest-aircraft-display/</link><pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/nearest-aircraft-display/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_a937f92e7d0723bf.webp"
- srcset="http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_eb89949b4237f4e7.webp 320w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_77faa448519dee45.webp 480w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_d3e4e4459aecbcaa.webp 768w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_a937f92e7d0723bf.webp 1024w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_6827fad8d3e58e5f.webp 1366w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_1eac56635a22291f.webp 1536w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_b4d82e74d66c2f1e.webp 1920w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_6c67b50dd4d11464.webp 2560w, http://localhost:1313/nearest-aircraft-display/chatgpt-header-image_hu_f09bd449511e9eba.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRiQBAABXRUJQVlA4IBgBAAAwBwCdASoqABoAPs1OnUajoiEYDVQAOwzE8oBfuKCq87URfgaVxnMP0RBS/KTXE&amp;#43;dX3iEH7FRgC0SKWOryF&amp;#43;YUtwAA/vHK&amp;#43;8uuV5auhhnE2ma9LH7AkK16Lg6BWnrBtEIPjsRwQRrKBVE&amp;#43;XMdR1ztPfl&amp;#43;zI9xflqdvR4mouNUx9fqTDx3ix8Bt//&amp;#43;FwBjkYTPO45WwM&amp;#43;beVMb95bUot0z3HC9lksepEzzdfaCadNpQuBjx/khOhIrfCu4Xw&amp;#43;c8T596w2ur5x0JMwJQMPA1IiAnVbSEEzfav&amp;#43;38dsoc0Pqks7By9dYftvz8ku&amp;#43;py2F5idye1uUMIy5ZGueL26azvbtSZRvpcwQoj/uwJ&amp;#43;mGsr/iMdM1EcCDkAAA);"
+
+&lt;p&gt;My metal arm originally had a lamp attached, so I removed the lamp and saved it for parts. The clamp that came with the arm is not the strongest, but it works fine for the weight of this project. With a little creativity, you can attach it almost anywhere. I mounted mine to a monitor arm so I could position the screen just above my secondary monitor.&lt;/p&gt;</description></item><item><title>Nearby Aircraft Display</title><link>http://localhost:60248/projects/nearby-aircraft-display/</link><pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate><guid>http://localhost:60248/projects/nearby-aircraft-display/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/nearby-aircraft-display/chatgpt-header-image_hu_434c2a7fbb30301.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image of Flight Display" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
 
-&lt;p&gt;I have an &lt;a href="http://localhost:1313/piaware-lcd-display/"&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description></item><item><title>Understanding JCR in AEM</title><link>http://localhost:1313/understanding-jcr-in-aem/</link><pubDate>Wed, 02 Apr 2025 07:47:37 -0700</pubDate><guid>http://localhost:1313/understanding-jcr-in-aem/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/understanding-jcr-in-aem/header_hu_72aa6ecc69f662b4.webp"
- srcset="http://localhost:1313/understanding-jcr-in-aem/header_hu_f70ec7a890b2c0f.webp 320w, http://localhost:1313/understanding-jcr-in-aem/header_hu_dd273c16376d1d30.webp 480w, http://localhost:1313/understanding-jcr-in-aem/header_hu_fc86e8bf8dd229da.webp 768w, http://localhost:1313/understanding-jcr-in-aem/header_hu_72aa6ecc69f662b4.webp 1024w, http://localhost:1313/understanding-jcr-in-aem/header_hu_cbfaf3a43a7dbb9c.webp 1366w, http://localhost:1313/understanding-jcr-in-aem/header_hu_18fa014e0ccc8dd4.webp 1536w, http://localhost:1313/understanding-jcr-in-aem/header_hu_1753e9070a1fe595.webp 1920w, http://localhost:1313/understanding-jcr-in-aem/header_hu_f3cb368d63f1409.webp 2560w, http://localhost:1313/understanding-jcr-in-aem/header_hu_206d2a1d983ccbe.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRgACAABXRUJQVlA4IPQBAADQCQCdASoqABoAPs1YpkmjoqGStZg7DMT2AE6Zf/6r3a&amp;#43;TOAbYDnzNMz3l5frAAJUD3RC3afTqY/sAJJy84hT1x9VVFRH1zYfCZg27DzH8thnQv9VR60AA/sMBFp2vDmFOeOYoSWzmXQYsv69eP/T46/sJFlsMObolVEdPAiiJ5XoNoemU//sHsa&amp;#43;KVQWiAG1i2Krxa9PJJloHcs5&amp;#43;ou/TzRwX5h/ggxnuulK8OqEZvZ0d8MWkvdSw6mysgxwGggCHw516Z9cJPl8bn0iVOlbdgESd/Yn8wiVdhqWMG4Syx6Zjgjmdl8Tv8FqIhF277xhLpPgOAjxSlC&amp;#43;dy8x/AEYt/9ZavdGJn3UyxyAgY0BqvVCRpAwck0w2VPFXthOgkZH4itpcz7P6atd7kVE0tMzroJOFvjjSq7QPG0sBOb/cJ1WDjNWB9tKOfle5Y3EhJ9GVs/JKo7f9KuJTpr/JP3TG2R0v4Aby&amp;#43;YGj1r&amp;#43;AeY&amp;#43;vnrXgMntjM8k31D6CbXZuZ2Na5qFZfBtKqT5l76ONJWSuN3GzCJgQQeByDFluuX9zzyXL4bFcFU08eh3YE7UHd5T3gLo2vXEifuZQe/zNTT9s&amp;#43;gtTIKWFSZanLIhITBuwZD97JiJR1ruQPVYt9I3lNbbpeIjZHSK6BzoQc&amp;#43;xivqF9JMAAAA==);"
+
+&lt;p&gt;I have an &lt;a href="http://localhost:60248/projects/piaware-data-display/"&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description></item><item><title>Understanding JCR in AEM</title><link>http://localhost:60248/projects/understanding-jcr-in-aem/</link><pubDate>Wed, 02 Apr 2025 07:47:37 -0700</pubDate><guid>http://localhost:60248/projects/understanding-jcr-in-aem/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/understanding-jcr-in-aem/header_hu_8f7d52d85244d54d.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image lego ad" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
 
-&lt;p&gt;If you’re brand new to Adobe Experience Manager (AEM), one of the first things you’ll hear about is something called the &lt;strong&gt;JCR&lt;/strong&gt;—short for &lt;strong&gt;Java Content Repository&lt;/strong&gt;. That might sound intimidating, especially if you don’t have a Java background (I didn’t either), but don’t worry. This post is here to give you a simple, high-level mental model.&lt;/p&gt;</description></item><item><title>AEM Developer Cheat Sheet</title><link>http://localhost:1313/aem-developer-cheat-sheet/</link><pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate><guid>http://localhost:1313/aem-developer-cheat-sheet/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_60d4b3ff176fdd27.webp"
- srcset="http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_e53ffad64abb9263.webp 320w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_5ea52dd0d0fad2ac.webp 480w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_959ad41643b55aa8.webp 768w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_60d4b3ff176fdd27.webp 1024w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_824eb9843c8212b2.webp 1366w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_2aa0ff3263ff5b77.webp 1536w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_4b771cf48607484.webp 1920w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_ec0550216c7f26.webp 2560w, http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_edd0cc2a38ee3cf8.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRvIAAABXRUJQVlA4IOYAAABQBgCdASoqABoAPs1YnUijoqEVXAYAOwzE4AHaMleB7kIfa9MCI7L6b&amp;#43;q78xfzCwIC7bT19JFzbezQAAD&amp;#43;/BMPyU0mT7LbvWTJMxW0OR4//VVPX43fwZbapNsrskhw4/0O7CnpJmmCbzjRbGKi3kxwctPc3D2dqxi9BoNfpsgW1cxTTh71fbjp/HNIqC4HDOwhuOK&amp;#43;hRwM2l0mIjSRcOpfqf3LFOC0YV/YPaAKjhe0&amp;#43;dLn7S77l&amp;#43;zuzwGoCnrMtdwpEw3DDcXqA2OgWJaBWGL3t6txgh/HeUqJm1JFaGQ3GANThfMcAA==);"
+
+&lt;p&gt;If you’re brand new to Adobe Experience Manager (AEM), one of the first things you’ll hear about is something called the &lt;strong&gt;JCR&lt;/strong&gt;—short for &lt;strong&gt;Java Content Repository&lt;/strong&gt;. That might sound intimidating, especially if you don’t have a Java background (I didn’t either), but don’t worry. This post is here to give you a simple, high-level mental model.&lt;/p&gt;
+&lt;p&gt;And the model we’re going to use? Lego.&lt;/p&gt;</description></item><item><title>AEM Developer Cheat Sheet</title><link>http://localhost:60248/projects/aem-developer-cheat-sheet/</link><pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate><guid>http://localhost:60248/projects/aem-developer-cheat-sheet/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_36f7b68df83f5dc4.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image of man riding Adobe logo" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
 
-&lt;p&gt;Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.&lt;/p&gt;</description></item><item><title>About</title><link>http://localhost:1313/about/</link><pubDate>Sat, 29 Mar 2025 11:47:25 -0700</pubDate><guid>http://localhost:1313/about/</guid><description>&lt;p&gt;Hey, I’m a frontend developer whose day job is building modern web experiences in Adobe Experience Manager (AEM) environments. Outside of work, I can be found experimenting with CAD, 3D scanning and printing, and microcontroller projects—usually with more whimsy than usefulness. This blog is a space for documenting personal builds, sharing development insights, and exploring the overlap between software, hardware, and design.&lt;/p&gt;</description></item><item><title>PiAware Data Display</title><link>http://localhost:1313/piaware-lcd-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/piaware-lcd-display/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_e52aef69b3439081.webp"
- srcset="http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_af20dc2c3bf59b52.webp 320w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_60570262f8a4fa61.webp 480w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_486ca8aa89684416.webp 768w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_e52aef69b3439081.webp 1024w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_7e0c01aa89738d8e.webp 1366w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_824642f47f29bf59.webp 1536w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_96a7f96ba4070e8b.webp 1920w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_c64ba71c49ee82a8.webp 2560w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_8db23ddcbae44646.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAACwBQCdASoqABoAPs1MnUejoiEYCq1UOwzE8gBdiP0RbIswRVWz7TMEOZydBda6sHG4aDZF9sAA/vfn&amp;#43;xq4VgTuXvBjKQ&amp;#43;dz5VYE3Ptc/Du5uvgulNlXrkJ1fGifg7xpDYpSMC1YBsfXBohYJLGL73V49&amp;#43;unmTWNkCyp2FuKCSd8UDPgDq87gsgI1hZjaOahxD1FVST5XiujdP4aBbinS8Hk8lpA1vlO/Hblt5odvhEZe6d2CWY61HDgkH/Y83O&amp;#43;A8JsH8MRgCI5kl4nJnfk6mpOCYP4y81mowpPk2YAXZKepMoAAA=);"
+
+&lt;p&gt;Just a little something I wish I had when I first started working with AEM. Adobe Experience Manager can feel like a real chicken-and-egg situation—Adobe doesn’t provide an easy way to set up AEM instances for experimentation, so you’re kind of forced to learn on the job. That’s a tough spot to be in when a company is paying you to already know how to do AEM work.&lt;/p&gt;</description></item><item><title>About</title><link>http://localhost:60248/about/</link><pubDate>Sat, 29 Mar 2025 11:47:25 -0700</pubDate><guid>http://localhost:60248/about/</guid><description>&lt;p&gt;Hey, I’m a frontend developer whose day job is building modern web experiences in Adobe Experience Manager (AEM) environments. Outside of work, I can be found experimenting with CAD, 3D scanning and printing, and microcontroller projects—usually with more whimsy than usefulness. This blog is a space for documenting personal builds, sharing development insights, and exploring the overlap between software, hardware, and design.&lt;/p&gt;</description></item><item><title>PiAware Data Display</title><link>http://localhost:60248/projects/piaware-data-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>http://localhost:60248/projects/piaware-data-display/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+ &lt;img
+ src="http://localhost:60248/projects/piaware-data-display/piaware-lcd-chatgpt-generated_hu_80cb6da9e1331d12.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image of ADS-B Node" /&gt;
- 
- 
- 
  
  &lt;/figure&gt;
 
+
 &lt;p&gt;After setting up my PiAware receiver to track live flight data, I wanted a simple way to glance at some key stats without SSH-ing into the Pi or opening a browser. Enter the humble 20x4 I2C LCD screen.&lt;/p&gt;
-&lt;p&gt;This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.&lt;/p&gt;</description></item><item><title>MicroMV on OS X in 2018</title><link>http://localhost:1313/micromv-on-osx-in-2018/</link><pubDate>Fri, 05 Oct 2018 11:51:48 -0700</pubDate><guid>http://localhost:1313/micromv-on-osx-in-2018/</guid><description>&lt;p&gt;
- &lt;img src="http://localhost:1313/images/micromv-on-osx-in-2018/micromv-header.png" alt="micromv-header-image"&gt;&lt;/p&gt;
+&lt;p&gt;This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.&lt;/p&gt;</description></item><item><title>MicroMV on OS X in 2018</title><link>http://localhost:60248/projects/micromv-on-os-x-in-2018/</link><pubDate>Fri, 05 Oct 2018 11:51:48 -0700</pubDate><guid>http://localhost:60248/projects/micromv-on-os-x-in-2018/</guid><description>&lt;p&gt;&lt;img src="micromv-header.png" alt="micromv-header-image"&gt;&lt;/p&gt;
 &lt;p&gt;What you need:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Apple Thunderbolt to FireWire Adapter&lt;/li&gt;
@@ -138,6 +129,6 @@
 &lt;li&gt;FireWire cable&lt;/li&gt;
 &lt;li&gt;MicroMV tapes with footage&lt;/li&gt;
 &lt;li&gt;Apple computer running OS X 10.6 or higher&lt;/li&gt;
-&lt;li&gt;AVCVideoCap software (&lt;a href="https://nofile.io/f/mNaGHHh9297/AVCVideoCap.app.zip" target="_blank" rel="noopener"&gt;download&lt;/a&gt;)&lt;/li&gt;
+&lt;li&gt;AVCVideoCap software (&lt;a href="https://nofile.io/f/mNaGHHh9297/AVCVideoCap.app.zip"&gt;download&lt;/a&gt;)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Once you have all the hardware needed to connect everything up to a computer, turn it all on, insert the tape you want to ingest, and fire up the free AVCVideoCap application (download), which is actually a small app written by Apple to show off some capabilities of the FireWire protocol in XCode back in the day when FireWire was a thing. If when opening the app, you get a message like:&lt;/p&gt;</description></item></channel></rss>
