@@ -1,18 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/python/</link><description>Recent content in Python on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 01 Mar 2025 19:05:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>PiAware Data Display</title><link>http://localhost:1313/piaware-lcd-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/piaware-lcd-display/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_e52aef69b3439081.webp"
- srcset="http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_af20dc2c3bf59b52.webp 320w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_60570262f8a4fa61.webp 480w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_486ca8aa89684416.webp 768w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_e52aef69b3439081.webp 1024w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_7e0c01aa89738d8e.webp 1366w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_824642f47f29bf59.webp 1536w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_96a7f96ba4070e8b.webp 1920w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_c64ba71c49ee82a8.webp 2560w, http://localhost:1313/piaware-lcd-display/piaware-lcd-chatgpt-generated_hu_8db23ddcbae44646.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRvAAAABXRUJQVlA4IOQAAACwBQCdASoqABoAPs1MnUejoiEYCq1UOwzE8gBdiP0RbIswRVWz7TMEOZydBda6sHG4aDZF9sAA/vfn&amp;#43;xq4VgTuXvBjKQ&amp;#43;dz5VYE3Ptc/Du5uvgulNlXrkJ1fGifg7xpDYpSMC1YBsfXBohYJLGL73V49&amp;#43;unmTWNkCyp2FuKCSd8UDPgDq87gsgI1hZjaOahxD1FVST5XiujdP4aBbinS8Hk8lpA1vlO/Hblt5odvhEZe6d2CWY61HDgkH/Y83O&amp;#43;A8JsH8MRgCI5kl4nJnfk6mpOCYP4y81mowpPk2YAXZKepMoAAA=);"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Python on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/python/</link><description>Recent content in Python on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sat, 01 Mar 2025 19:05:55 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/python/index.xml" rel="self" type="application/rss+xml"/><item><title>PiAware Data Display</title><link>https://filbot.com/projects/piaware-data-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>https://filbot.com/projects/piaware-data-display/</guid><description>&lt;figure&gt;
+ &lt;img
+ src="https://filbot.com/projects/piaware-data-display/piaware-lcd-chatgpt-generated_hu_80cb6da9e1331d12.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image of ADS-B Node" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
+
 
 &lt;p&gt;After setting up my PiAware receiver to track live flight data, I wanted a simple way to glance at some key stats without SSH-ing into the Pi or opening a browser. Enter the humble 20x4 I2C LCD screen.&lt;/p&gt;
 &lt;p&gt;This post walks through how I wired up a character LCD to my Raspberry Pi, wrote some Python to pull flight data from PiAware, and got a tiny dashboard updating every second—all without needing to touch a GUI.&lt;/p&gt;</description></item></channel></rss>
