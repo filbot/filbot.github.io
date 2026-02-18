@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Howto on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/howto/</link><description>Recent content in Howto on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/howto/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>https://filbot.com/projects/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>https://filbot.com/projects/hero-dashboard/</guid><description>&lt;figure&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Howto on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/howto/</link><description>Recent content in Howto on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/howto/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>https://filbot.com/projects/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>https://filbot.com/projects/hero-dashboard/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
  src="https://filbot.com/projects/hero-dashboard/dashboard-angle_hu_20063b6b4cbcce92.webp"
  loading="lazy"
@@ -10,7 +10,7 @@
 
 
 &lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href="https://sfdlive.com"&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;
-&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description></item><item><title>Stark Medical Scanner... sort of</title><link>https://filbot.com/projects/stark-medical-scanner...-sort-of/</link><pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate><guid>https://filbot.com/projects/stark-medical-scanner...-sort-of/</guid><description>&lt;figure&gt;
+&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description></item><item><title>Stark Medical Scanner... sort of</title><link>https://filbot.com/projects/stark-medical-scanner...-sort-of/</link><pubDate>Mon, 10 Nov 2025 05:03:55 -0700</pubDate><guid>https://filbot.com/projects/stark-medical-scanner...-sort-of/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
  src="https://filbot.com/projects/stark-medical-scanner...-sort-of/hero_hu_b1e1d3d4ea9b9295.webp"
  loading="lazy"
@@ -23,7 +23,7 @@
 
 &lt;p&gt;Let’s get this out of the way — what is “gravy blood”, and who is “Damp”?&lt;/p&gt;
 &lt;p&gt;This whole project started as an inside joke. My buddy and I would say we had gravy blood whenever we overindulged in a meal. That sluggish, heavy feeling afterward? In our lore, that’s the gravy blood kicking in.&lt;/p&gt;
-&lt;p&gt;Then one night we were watching Iron Man 2 and saw the Stark Medical Scanner. Perfect, we joked that we needed our own version to check our gravy blood levels.&lt;/p&gt;</description></item><item><title>Realtime BART Arrival Display</title><link>https://filbot.com/projects/realtime-bart-arrival-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>https://filbot.com/projects/realtime-bart-arrival-display/</guid><description>&lt;figure&gt;
+&lt;p&gt;Then one night we were watching Iron Man 2 and saw the Stark Medical Scanner. Perfect, we joked that we needed our own version to check our gravy blood levels.&lt;/p&gt;</description></item><item><title>Realtime BART Arrival Display</title><link>https://filbot.com/projects/realtime-bart-arrival-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>https://filbot.com/projects/realtime-bart-arrival-display/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
  src="https://filbot.com/projects/realtime-bart-arrival-display/hero_hu_34d97afa6b29af39.webp"
  loading="lazy"
@@ -34,7 +34,7 @@
  &lt;/figure&gt;
 
 
-&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description></item><item><title>RTSP Video Stream on Raspberry Pi</title><link>https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/</guid><description>&lt;figure&gt;
+&lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description></item><item><title>RTSP Video Stream on Raspberry Pi</title><link>https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
  src="https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/hero_hu_67167873140a7242.webp"
  loading="lazy"
@@ -64,7 +64,7 @@
 
 
  
- &lt;figure&gt;
+ &lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
  src="https://filbot.com/projects/rtsp-video-stream-on-raspberry-pi/top-down-labels_hu_97b24daaea94900.webp"
  loading="lazy"
@@ -75,7 +75,7 @@
  &lt;/figure&gt;
 
 
-&lt;p&gt;My metal arm originally had a lamp attached, so I removed the lamp and saved it for parts. The clamp that came with the arm is not the strongest, but it works fine for the weight of this project. With a little creativity, you can attach it almost anywhere. I mounted mine to a monitor arm so I could position the screen just above my secondary monitor.&lt;/p&gt;</description></item><item><title>Nearby Aircraft Display</title><link>https://filbot.com/projects/nearby-aircraft-display/</link><pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate><guid>https://filbot.com/projects/nearby-aircraft-display/</guid><description>&lt;figure&gt;
+&lt;p&gt;My metal arm originally had a lamp attached, so I removed the lamp and saved it for parts. The clamp that came with the arm is not the strongest, but it works fine for the weight of this project. With a little creativity, you can attach it almost anywhere. I mounted mine to a monitor arm so I could position the screen just above my secondary monitor.&lt;/p&gt;</description></item><item><title>Nearby Aircraft Display</title><link>https://filbot.com/projects/nearby-aircraft-display/</link><pubDate>Tue, 09 Sep 2025 19:05:55 -0700</pubDate><guid>https://filbot.com/projects/nearby-aircraft-display/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
  src="https://filbot.com/projects/nearby-aircraft-display/chatgpt-header-image_hu_434c2a7fbb30301.webp"
  loading="lazy"
@@ -86,7 +86,7 @@
  &lt;/figure&gt;
 
 
-&lt;p&gt;I have an &lt;a href="https://filbot.com/projects/piaware-data-display/"&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description></item><item><title>PiAware Data Display</title><link>https://filbot.com/projects/piaware-data-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>https://filbot.com/projects/piaware-data-display/</guid><description>&lt;figure&gt;
+&lt;p&gt;I have an &lt;a href="https://filbot.com/projects/piaware-data-display/"&gt;ADS-B node&lt;/a&gt; feeding data into the vast network of flight trackers, but it mostly just sits on my roof humming along without any interaction from me. I can, and have, looked at the webpage that shows my local flight data and the planes on a map, but it didn’t quite have the whimsy I was after. I decided a wall-mounted device that displayed the aircraft type closest to my location at any given moment would be a fun build.&lt;/p&gt;</description></item><item><title>PiAware Data Display</title><link>https://filbot.com/projects/piaware-data-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>https://filbot.com/projects/piaware-data-display/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
  src="https://filbot.com/projects/piaware-data-display/piaware-lcd-chatgpt-generated_hu_80cb6da9e1331d12.webp"
  loading="lazy"
