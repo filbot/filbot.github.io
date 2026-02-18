@@ -1,17 +1,12 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bart on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/bart/</link><description>Recent content in Bart on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 09 Nov 2025 08:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/bart/index.xml" rel="self" type="application/rss+xml"/><item><title>Realtime BART Arrival Display</title><link>http://localhost:1313/real-time-bart-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/real-time-bart-display/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp"
- srcset="http://localhost:1313/real-time-bart-display/hero_hu_450017297b1abdc7.webp 320w, http://localhost:1313/real-time-bart-display/hero_hu_7aef5596bce783c9.webp 480w, http://localhost:1313/real-time-bart-display/hero_hu_e12db5ce41397ca6.webp 768w, http://localhost:1313/real-time-bart-display/hero_hu_38c51d4c16a5f0b0.webp 1024w, http://localhost:1313/real-time-bart-display/hero_hu_3315e40f3884d08.webp 1366w, http://localhost:1313/real-time-bart-display/hero_hu_ac7df583e9680712.webp 1536w, http://localhost:1313/real-time-bart-display/hero_hu_29e2fb8d38215dd9.webp 1920w, http://localhost:1313/real-time-bart-display/hero_hu_1d6e1990805d26cb.webp 2560w, http://localhost:1313/real-time-bart-display/hero_hu_c2bfe44487542c35.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRpgAAABXRUJQVlA4IIwAAAAQBQCdASoqABoAPs1UoUejoiGVXAYAOwzE9IBhuCL2s2XBROoWIzmV0LtWT4H1RP4AAP74rKjISoUR6oH/ll2LUvxzRXqVKj/NFTdejIBbBGRNyDaYux7sUCP3h3IPeEPYft5Da4THpqzDB/dbKpZjsS6zdUz97aA2uBNEm9yBvLPbXKRABqlimYAAAA==);"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Bart on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/bart/</link><description>Recent content in Bart on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Sun, 09 Nov 2025 08:03:55 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/bart/index.xml" rel="self" type="application/rss+xml"/><item><title>Realtime BART Arrival Display</title><link>https://filbot.com/projects/realtime-bart-arrival-display/</link><pubDate>Sun, 09 Nov 2025 08:03:55 -0700</pubDate><guid>https://filbot.com/projects/realtime-bart-arrival-display/</guid><description>&lt;figure&gt;
+ &lt;img
+ src="https://filbot.com/projects/realtime-bart-arrival-display/hero_hu_34d97afa6b29af39.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="AI generated image of the physical BART display" /&gt;
  
- 
- 
- 
  &lt;/figure&gt;
+
 
 &lt;p&gt;I have a love-hate relationship with BART. I’m grateful for it, but let’s just say it’s not always the most reliable so it&amp;rsquo;s nice to see before hand when the train you need is due to arrive. There are plenty of projects out there that show real-time BART arrival information. This one does that too, it’s nothing groundbreaking, but I wanted to build my own version that captures the vintage BART platform sign vibe I associate with commuting between the East Bay and my job in the city.&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,10 @@
+<header style="display: flex; flex-direction: column; align-items: center;">
+  {{ if .Site.Params.Logo }}
+  <a href="{{ $.Site.BaseURL }}">
+    <img src="{{ .Site.Params.Logo | relURL }}" alt="{{ .Site.Title }}" width="55">
+  </a>
+  {{ end }}
+  <hgroup>
+    <h1 style="text-align: center;"><a href="{{ $.Site.BaseURL }}">{{ .Site.Title }}</a></h1>
+  </hgroup>
+</header>
