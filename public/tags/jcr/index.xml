@@ -1,17 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JCR on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/jcr/</link><description>Recent content in JCR on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 02 Apr 2025 07:47:37 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/jcr/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding JCR in AEM</title><link>http://localhost:1313/understanding-jcr-in-aem/</link><pubDate>Wed, 02 Apr 2025 07:47:37 -0700</pubDate><guid>http://localhost:1313/understanding-jcr-in-aem/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/understanding-jcr-in-aem/header_hu_72aa6ecc69f662b4.webp"
- srcset="http://localhost:1313/understanding-jcr-in-aem/header_hu_f70ec7a890b2c0f.webp 320w, http://localhost:1313/understanding-jcr-in-aem/header_hu_dd273c16376d1d30.webp 480w, http://localhost:1313/understanding-jcr-in-aem/header_hu_fc86e8bf8dd229da.webp 768w, http://localhost:1313/understanding-jcr-in-aem/header_hu_72aa6ecc69f662b4.webp 1024w, http://localhost:1313/understanding-jcr-in-aem/header_hu_cbfaf3a43a7dbb9c.webp 1366w, http://localhost:1313/understanding-jcr-in-aem/header_hu_18fa014e0ccc8dd4.webp 1536w, http://localhost:1313/understanding-jcr-in-aem/header_hu_1753e9070a1fe595.webp 1920w, http://localhost:1313/understanding-jcr-in-aem/header_hu_f3cb368d63f1409.webp 2560w, http://localhost:1313/understanding-jcr-in-aem/header_hu_206d2a1d983ccbe.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRgACAABXRUJQVlA4IPQBAADQCQCdASoqABoAPs1YpkmjoqGStZg7DMT2AE6Zf/6r3a&amp;#43;TOAbYDnzNMz3l5frAAJUD3RC3afTqY/sAJJy84hT1x9VVFRH1zYfCZg27DzH8thnQv9VR60AA/sMBFp2vDmFOeOYoSWzmXQYsv69eP/T46/sJFlsMObolVEdPAiiJ5XoNoemU//sHsa&amp;#43;KVQWiAG1i2Krxa9PJJloHcs5&amp;#43;ou/TzRwX5h/ggxnuulK8OqEZvZ0d8MWkvdSw6mysgxwGggCHw516Z9cJPl8bn0iVOlbdgESd/Yn8wiVdhqWMG4Syx6Zjgjmdl8Tv8FqIhF277xhLpPgOAjxSlC&amp;#43;dy8x/AEYt/9ZavdGJn3UyxyAgY0BqvVCRpAwck0w2VPFXthOgkZH4itpcz7P6atd7kVE0tMzroJOFvjjSq7QPG0sBOb/cJ1WDjNWB9tKOfle5Y3EhJ9GVs/JKo7f9KuJTpr/JP3TG2R0v4Aby&amp;#43;YGj1r&amp;#43;AeY&amp;#43;vnrXgMntjM8k31D6CbXZuZ2Na5qFZfBtKqT5l76ONJWSuN3GzCJgQQeByDFluuX9zzyXL4bFcFU08eh3YE7UHd5T3gLo2vXEifuZQe/zNTT9s&amp;#43;gtTIKWFSZanLIhITBuwZD97JiJR1ruQPVYt9I3lNbbpeIjZHSK6BzoQc&amp;#43;xivqF9JMAAAA==);"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>JCR on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/jcr/</link><description>Recent content in JCR on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 02 Apr 2025 07:47:37 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/jcr/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding JCR in AEM</title><link>https://filbot.com/projects/understanding-jcr-in-aem/</link><pubDate>Wed, 02 Apr 2025 07:47:37 -0700</pubDate><guid>https://filbot.com/projects/understanding-jcr-in-aem/</guid><description>&lt;figure&gt;
+ &lt;img
+ src="https://filbot.com/projects/understanding-jcr-in-aem/header_hu_8f7d52d85244d54d.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="ChatGPT generated image lego ad" /&gt;
- 
- 
- 
  
  &lt;/figure&gt;
 
-&lt;p&gt;If you’re brand new to Adobe Experience Manager (AEM), one of the first things you’ll hear about is something called the &lt;strong&gt;JCR&lt;/strong&gt;—short for &lt;strong&gt;Java Content Repository&lt;/strong&gt;. That might sound intimidating, especially if you don’t have a Java background (I didn’t either), but don’t worry. This post is here to give you a simple, high-level mental model.&lt;/p&gt;</description></item></channel></rss>
+
+&lt;p&gt;If you’re brand new to Adobe Experience Manager (AEM), one of the first things you’ll hear about is something called the &lt;strong&gt;JCR&lt;/strong&gt;—short for &lt;strong&gt;Java Content Repository&lt;/strong&gt;. That might sound intimidating, especially if you don’t have a Java background (I didn’t either), but don’t worry. This post is here to give you a simple, high-level mental model.&lt;/p&gt;
+&lt;p&gt;And the model we’re going to use? Lego.&lt;/p&gt;</description></item></channel></rss>

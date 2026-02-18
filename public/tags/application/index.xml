@@ -1,18 +1,13 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Application on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/application/</link><description>Recent content in Application on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/application/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>http://localhost:1313/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>http://localhost:1313/hero-dashboard/</guid><description>&lt;figure class="responsive-image"&gt;
- &lt;img 
- src="http://localhost:1313/hero-dashboard/dashboard-angle_hu_50230a0bcc463134.webp"
- srcset="http://localhost:1313/hero-dashboard/dashboard-angle_hu_8110a10100222cc6.webp 320w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_eb560b7317618563.webp 480w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_212def6f4b28a81e.webp 768w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_50230a0bcc463134.webp 1024w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_dd37250b2e14cdbe.webp 1366w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_99a16d31bcc65fd8.webp 1536w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_fb4979b43811cabf.webp 1920w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_3b6506cfc3560fe5.webp 2560w, http://localhost:1313/hero-dashboard/dashboard-angle_hu_a00f724287a89458.webp 3840w"
- sizes="100vw"
- width="100%"
- style="max-width: 100%; height: auto; background-size: cover; background-image: url(data:image/webp;base64,UklGRtIBAABXRUJQVlA4IMYBAADQCACdASoqABwAPs1YnkojoiEVXAUAOwzE84BevHgEx7Jd8kCKYGNlogZ2qxb1cwNk0UwutPMsAA9VOmmIlGDw1VDc01cJvgX/zd6eY2gAAP7/Cgl0zryJWB&amp;#43;rVuNhkcfM7JxkFXkKdxD0&amp;#43;X1lkNnYhlNQ&amp;#43;PeCmF7RLFu5TmuSZn3affs7T5uy5lglUhX2mztt&amp;#43;SmDN8Uv8GA/HWFlXjd1woMxv/&amp;#43;wz9cMIurvXnKz3cWQtk&amp;#43;HblpCnnzE49/oNMGc95GgJa8d5QCVPvAISASyKmL92BryBXGtBQK5baNe4ImQCNQdGt0T3nhbN/Qb9K9eS8IQaDZkXMJN5gQbirc2FY0Lo2ahBfpMzT3uSdgNMPXU138r&amp;#43;QCbprLPkR1vigoP6mtSGosca/T&amp;#43;nav&amp;#43;NK59OVBDymncSxs21S82tojiHNikVgyEh9ij0R8yD6FeGxknOAyQcf2CSHq58L0lICdrXMqOWQjxxl71RM2ZauXeooS555nE47EleHhXQLrWAMeR384tcxwdtXaQfE3NDr5axtdIeNSBuGtdf/4&amp;#43;8GSPE&amp;#43;9kccSAgLPRQewUEqFFiJyxlUJcYoZCvpjW46PQ3hGzijoKAAAA);"
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Application on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/application/</link><description>Recent content in Application on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/application/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>https://filbot.com/projects/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>https://filbot.com/projects/hero-dashboard/</guid><description>&lt;figure&gt;
+ &lt;img
+ src="https://filbot.com/projects/hero-dashboard/dashboard-angle_hu_20063b6b4cbcce92.webp"
  loading="lazy"
  decoding="async"
+ style="max-width: 100%; height: auto;"
  alt="Hero Dashboard" /&gt;
- 
- 
- 
  
  &lt;/figure&gt;
 
-&lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href="https://sfdlive.com" target="_blank" rel="noopener"&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;
+
+&lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href="https://sfdlive.com"&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;
 &lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description></item></channel></rss>

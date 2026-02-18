@@ -1,26 +1,47 @@
-<footer id="footer">
-    {{ if .Site.Params.Social }}
-        {{ partial "social.html" . }}
+<footer class="footer" style="border-top: none;">
+    {{ if ne .Page.Title "About" }}
+    <nav aria-label="Main navigation" style="justify-content: center;">
+        <ul style="display: flex; justify-content: center; list-style: none; padding: 0; margin: 0;">
+            {{ range .Site.Menus.header.ByWeight }}
+            <li><a href="{{ .URL | relURL }}">{{- .Name -}}</a></li>
+            {{ end }}
+        </ul>
+    </nav>
     {{ end }}
-
-    <div class="copyright">
-    {{ with .Site.Params.copyright }}
-        {{ . | markdownify }}
-    {{ else }}
-       © Copyright
-       {{ now.Format "2006"}}
-       {{ .Site.Params.Author }}
+    {{ $icons := dict
+      "github" "github.svg"
+      "goodreads" "goodreads.svg"
+      "behance" "behance.svg"
+      "dribbble" "dribbble.svg"
+      "facebook" "facebook.svg"
+      "feed" "feed.svg"
+      "gplus" "gplus.svg"
+      "instagram" "instagram.svg"
+      "linkedin" "linkedin.svg"
+      "pinterest" "pinterest.svg"
+      "soundcloud" "soundcloud.svg"
+      "vimeo" "vimeo.svg"
+      "twitter" "twitter.svg"
+      "youtube" "youtube.svg"
+    }}
+    {{ with site.Params.social }}
+    <nav class="social">
+    <ul>
+    {{ range $key, $icon := $icons }}
+    {{ $url := index site.Params.social $key }}
+      {{ with $url }}
+        <li>
+          <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
+            {{ $svgPath := printf "static/icons/%s" $icon }}
+            {{ readFile $svgPath | safeHTML }}
+          </a>
+        </li>
+      {{ end }}
     {{ end }}
-    </div>
+    </ul>
+    </nav>
+    {{ end }}
+    <p>
+        &copy; {{ now.Year }} {{ .Site.Params.author }}
+    </p>
 </footer>
-
-{{/* Custom JS via Hugo Pipes for minification and fingerprinting */}}
-{{ $customJS := resources.Get "js/custom.js" }}
-{{ if $customJS }}
-  {{ if hugo.IsProduction }}
-    {{ $customJS = $customJS | js.Build | minify | fingerprint }}
-    <script src="{{ $customJS.RelPermalink }}" integrity="{{ $customJS.Data.Integrity }}" crossorigin="anonymous" defer></script>
-  {{ else }}
-    <script src="{{ $customJS.RelPermalink }}" defer></script>
-  {{ end }}
-{{ end }}
