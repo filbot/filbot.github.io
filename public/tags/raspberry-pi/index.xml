@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberry-Pi on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/raspberry-pi/</link><description>Recent content in Raspberry-Pi on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>http://localhost:1313/projects/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>http://localhost:1313/projects/hero-dashboard/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Raspberry-Pi on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/raspberry-pi/</link><description>Recent content in Raspberry-Pi on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Mon, 09 Feb 2026 05:03:55 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/raspberry-pi/index.xml" rel="self" type="application/rss+xml"/><item><title>Hero Dashboard</title><link>http://localhost:1313/hero-dashboard/</link><pubDate>Mon, 09 Feb 2026 05:03:55 -0700</pubDate><guid>http://localhost:1313/hero-dashboard/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
- src="http://localhost:1313/projects/hero-dashboard/dashboard-angle_hu_20063b6b4cbcce92.webp"
+ src="http://localhost:1313/hero-dashboard/dashboard-angle_hu_20063b6b4cbcce92.webp"
  loading="lazy"
  decoding="async"
  style="max-width: 100%; height: auto;"
@@ -10,9 +10,9 @@
 
 
 &lt;p&gt;The Seattle city government provides a public API for fire department emergency dispatch data. There’s a very cool project, &lt;a href="https://sfdlive.com"&gt;SFD Live&lt;/a&gt;, that visualizes this information (and a lot more) with a ton of features.&lt;/p&gt;
-&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description></item><item><title>RTSP Video Stream on Raspberry Pi</title><link>http://localhost:1313/projects/rtsp-video-stream-on-raspberry-pi/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/projects/rtsp-video-stream-on-raspberry-pi/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+&lt;p&gt;What I wanted, though, was something much simpler: a stripped-down view of the data that would be interesting, if not especially useful, on a dashboard I could glance at from across the room. I had an old monitor and a spare Raspberry Pi lying around, so slapping those together and running a web app in kiosk mode on the Pi felt like the perfect excuse for a small side project.&lt;/p&gt;</description></item><item><title>RTSP Video Stream on Raspberry Pi</title><link>http://localhost:1313/rtsp-video-stream-on-raspberry-pi/</link><pubDate>Mon, 15 Sep 2025 08:03:55 -0700</pubDate><guid>http://localhost:1313/rtsp-video-stream-on-raspberry-pi/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
- src="http://localhost:1313/projects/rtsp-video-stream-on-raspberry-pi/hero_hu_67167873140a7242.webp"
+ src="http://localhost:1313/rtsp-video-stream-on-raspberry-pi/hero_hu_67167873140a7242.webp"
  loading="lazy"
  decoding="async"
  style="max-width: 100%; height: auto;"
@@ -42,7 +42,7 @@
  
  &lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
- src="http://localhost:1313/projects/rtsp-video-stream-on-raspberry-pi/top-down-labels_hu_97b24daaea94900.webp"
+ src="http://localhost:1313/rtsp-video-stream-on-raspberry-pi/top-down-labels_hu_97b24daaea94900.webp"
  loading="lazy"
  decoding="async"
  style="max-width: 100%; height: auto;"
@@ -51,9 +51,9 @@
  &lt;/figure&gt;
 
 
-&lt;p&gt;My metal arm originally had a lamp attached, so I removed the lamp and saved it for parts. The clamp that came with the arm is not the strongest, but it works fine for the weight of this project. With a little creativity, you can attach it almost anywhere. I mounted mine to a monitor arm so I could position the screen just above my secondary monitor.&lt;/p&gt;</description></item><item><title>PiAware Data Display</title><link>http://localhost:1313/projects/piaware-data-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/projects/piaware-data-display/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+&lt;p&gt;My metal arm originally had a lamp attached, so I removed the lamp and saved it for parts. The clamp that came with the arm is not the strongest, but it works fine for the weight of this project. With a little creativity, you can attach it almost anywhere. I mounted mine to a monitor arm so I could position the screen just above my secondary monitor.&lt;/p&gt;</description></item><item><title>PiAware Data Display</title><link>http://localhost:1313/piaware-data-display/</link><pubDate>Sat, 01 Mar 2025 19:05:55 -0700</pubDate><guid>http://localhost:1313/piaware-data-display/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
- src="http://localhost:1313/projects/piaware-data-display/piaware-lcd-chatgpt-generated_hu_80cb6da9e1331d12.webp"
+ src="http://localhost:1313/piaware-data-display/piaware-lcd-chatgpt-generated_hu_80cb6da9e1331d12.webp"
  loading="lazy"
  decoding="async"
  style="max-width: 100%; height: auto;"
