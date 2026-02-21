@@ -10,7 +10,7 @@ timeout = "5m"
 googleAnalytics = "G-P5HRT1QBKC"
 
 [permalinks]
-  projects = "/projects/:title/"
+  projects = "/:slug/"
 
 [markup.highlight]
   guessSyntax = true
