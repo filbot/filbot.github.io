@@ -33,7 +33,9 @@
       "Bash(git -C /Users/filip.grace/Projects/filbot.github.io show e6adf3e --stat)",
       "Bash(git -C /Users/filip.grace/Projects/filbot.github.io show 4ae0638 --stat)",
       "Bash(git -C /Users/filip.grace/Projects/filbot.github.io show 4ae0638:hugo.toml)",
-      "Bash(git -C /Users/filip.grace/Projects/filbot.github.io log -p --reverse 4ae0638~1..4ae0638 -- hugo.toml)"
+      "Bash(git -C /Users/filip.grace/Projects/filbot.github.io log -p --reverse 4ae0638~1..4ae0638 -- hugo.toml)",
+      "Bash(unzip:*)",
+      "Bash(python3:*)"
     ]
   }
 }

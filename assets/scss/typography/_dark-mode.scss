@@ -1,0 +1,30 @@
+@use "../core/settings" as *;
+
+// Dark mode typography adjustments
+// Matches the selector pattern from theme/_schemes.scss
+
+@mixin dark-typography {
+  #{$css-var-prefix}font-weight: 350;
+  letter-spacing: 0.0015em;
+  #{$css-var-prefix}line-height: 1.6;
+
+  h1, h2 {
+    font-weight: 595; // 700 * 0.85
+  }
+  h3, h4, h5, h6 {
+    font-weight: 510; // 600 * 0.85
+  }
+}
+
+// Auto dark mode
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host(:not([data-theme])) {
+    @include dark-typography;
+  }
+}
+
+// Forced dark mode
+[data-theme="dark"] {
+  @include dark-typography;
+}

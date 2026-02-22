@@ -1599,36 +1599,6 @@ html {
   --pico-icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='rgb(136, 145, 164)' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
   --pico-icon-loading: url("data:image/svg+xml,%3Csvg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cstyle%3E g %7B animation: rotate 2s linear infinite; transform-origin: center center; %7D circle %7B stroke-dasharray: 75,100; stroke-dashoffset: -5; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; %7D @keyframes rotate %7B 0%25 %7B transform: rotate(0deg); %7D 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,100; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; %7D 100%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -62; %7D %7D %3C/style%3E%3Cg%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='rgb(136, 145, 164)' stroke-width='4' /%3E%3C/g%3E%3C/svg%3E");
 }
-@media (min-width: 576px) {
-  :root,
-  :host {
-    --pico-font-size: 106.25%;
-  }
-}
-@media (min-width: 768px) {
-  :root,
-  :host {
-    --pico-font-size: 112.5%;
-  }
-}
-@media (min-width: 1024px) {
-  :root,
-  :host {
-    --pico-font-size: 118.75%;
-  }
-}
-@media (min-width: 1280px) {
-  :root,
-  :host {
-    --pico-font-size: 125%;
-  }
-}
-@media (min-width: 1536px) {
-  :root,
-  :host {
-    --pico-font-size: 131.25%;
-  }
-}
 
 a {
   text-decoration-thickness: 10%;
@@ -2244,4 +2214,194 @@ section > header {
 }
 .not-found-404 h1 {
   font-size: 4rem;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("/fonts/InterVariable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Inter Fallback";
+  src: local("Arial");
+  size-adjust: 107%;
+  ascent-override: 90%;
+  descent-override: 22%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+:root,
+:host {
+  --text--2: clamp(0.6944rem, 0.6799rem + 0.0647vw, 0.8rem);
+  --text--1: clamp(0.8333rem, 0.7977rem + 0.1582vw, 1rem);
+  --text-0: clamp(1.125rem, 1.0536rem + 0.3175vw, 1.25rem);
+  --text-1: clamp(1.35rem, 1.0821rem + 0.5249vw, 1.5625rem);
+  --text-2: clamp(1.62rem, 1.2585rem + 0.8067vw, 1.9531rem);
+  --text-3: clamp(1.944rem, 1.4581rem + 1.1995vw, 2.4414rem);
+  --text-4: clamp(2.3328rem, 1.6778rem + 1.7612vw, 3.0518rem);
+  --text-5: clamp(2.7994rem, 1.9106rem + 2.5699vw, 3.8147rem);
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --pico-font-family: "Inter", "Inter Fallback", system-ui, -apple-system, sans-serif;
+  --pico-font-family-monospace: "JetBrains Mono", ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --pico-font-family-header: "Inter", "Inter Fallback", system-ui, -apple-system, sans-serif;
+  --pico-font-size: var(--text-0);
+  --pico-line-height: 1.5;
+  --pico-font-weight: 400;
+}
+
+html {
+  font-size: 100%;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  --pico-font-family: "Inter", "Inter Fallback", system-ui, sans-serif;
+}
+
+h1 {
+  --pico-font-size: var(--text-5);
+  --pico-line-height: 1.1;
+  --pico-font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-top: 0;
+  margin-bottom: var(--space-sm);
+}
+
+h2 {
+  --pico-font-size: var(--text-4);
+  --pico-line-height: 1.2;
+  --pico-font-weight: 700;
+  letter-spacing: -0.01em;
+  margin-top: var(--space-2xl);
+  margin-bottom: var(--space-sm);
+}
+
+h3 {
+  --pico-font-size: var(--text-3);
+  --pico-line-height: 1.25;
+  --pico-font-weight: 600;
+  margin-top: var(--space-xl);
+  margin-bottom: var(--space-xs);
+}
+
+h4 {
+  --pico-font-size: var(--text-2);
+  --pico-line-height: 1.3;
+  --pico-font-weight: 600;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+h5 {
+  --pico-font-size: var(--text-1);
+  --pico-line-height: 1.35;
+  --pico-font-weight: 600;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+h6 {
+  --pico-font-size: var(--text-0);
+  --pico-line-height: 1.4;
+  --pico-font-weight: 600;
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-xs);
+}
+
+small, .caption {
+  font-size: var(--text--1);
+}
+
+figcaption {
+  font-size: var(--text--2);
+}
+
+article section {
+  max-width: 65ch;
+}
+
+article pre,
+article table,
+article figure,
+article img,
+article video {
+  max-width: 100%;
+}
+
+p, ul, ol, blockquote {
+  margin-bottom: 1.25em;
+}
+
+code, pre, kbd, samp {
+  --pico-font-family: var(--pico-font-family-monospace);
+}
+
+:not(pre) > code {
+  font-size: 0.875em;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.25rem;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+pre {
+  font-size: 0.875em;
+  line-height: 1.45;
+  padding: var(--space-md) var(--space-lg);
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  tab-size: 2;
+}
+
+pre code {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-size: inherit;
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme]),
+  :host(:not([data-theme])) {
+    --pico-font-weight: 350;
+    letter-spacing: 0.0015em;
+    --pico-line-height: 1.6;
+  }
+  :root:not([data-theme]) h1, :root:not([data-theme]) h2,
+  :host(:not([data-theme])) h1,
+  :host(:not([data-theme])) h2 {
+    font-weight: 595;
+  }
+  :root:not([data-theme]) h3, :root:not([data-theme]) h4, :root:not([data-theme]) h5, :root:not([data-theme]) h6,
+  :host(:not([data-theme])) h3,
+  :host(:not([data-theme])) h4,
+  :host(:not([data-theme])) h5,
+  :host(:not([data-theme])) h6 {
+    font-weight: 510;
+  }
+}
+[data-theme=dark] {
+  --pico-font-weight: 350;
+  letter-spacing: 0.0015em;
+  --pico-line-height: 1.6;
+}
+[data-theme=dark] h1, [data-theme=dark] h2 {
+  font-weight: 595;
+}
+[data-theme=dark] h3, [data-theme=dark] h4, [data-theme=dark] h5, [data-theme=dark] h6 {
+  font-weight: 510;
 }
