@@ -14,7 +14,8 @@ googleAnalytics = "G-P5HRT1QBKC"
 
 [markup.highlight]
   guessSyntax = true
-  style = "bw"
+  noClasses = false
+  tabWidth = 2
 
 [markup.goldmark.renderer]
   unsafe = false

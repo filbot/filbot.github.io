@@ -1,0 +1,43 @@
+// Setup Pico Framework
+@use "core/pico" with (
+  $enable-semantic-container: true,
+  $enable-viewport: true,
+  $enable-responsive-typography: false, // Replaced by fluid clamp() scale
+  $theme-color: "default",
+  $modules: (
+      "components/card": false,
+      "components/dropdown": false,
+      "components/tooltip": false,
+
+      "forms/checkbox-radio-switch": false,
+      "forms/input-color": false,
+      "forms/input-date": false,
+      "forms/input-file": false,
+      "forms/input-range": false,
+
+      "themes/default": false,
+
+      "utilities/accessibility": false,
+      "utilities/reduce-motion": false,
+    )
+);
+@use "core/settings" as *;
+
+// Theme base styles and color schemes (from submodule)
+@use "theme/styles";
+@use "theme/schemes";
+
+// Components (from submodule)
+@use "components/button";
+@use "components/header";
+@use "components/footer";
+@use "components/single";
+@use "components/list";
+@use "components/page";
+
+// Typography system overrides (project-level, loaded after theme)
+@use "typography/fonts";
+@use "typography/scale";
+@use "typography/prose";
+@use "typography/code";
+@use "typography/dark-mode";
