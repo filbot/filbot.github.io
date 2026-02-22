@@ -1,0 +1,33 @@
+{{ define "main" }}
+<article>
+  <nav aria-label="All projects">
+    <a href="/">&larr; Back to All Projects</a>
+  </nav>
+  <header>
+    <h1>{{ .Title }}</h1>
+    {{ if .Params.repository }}
+     <nav>
+          <ul>
+            <li>
+              <a href="{{ .Params.repository | absLangURL }}"  class="button">Repository</a>
+            </li>
+          </ul>
+     </nav>
+    {{ end }}
+  </header>
+
+{{- /* Table of contents */ -}}
+{{ if or .Params.Toc $.Site.Params.Toc }}
+ {{ if ne .Params.Toc false }}
+<nav aria-label="Table of Contents">
+   {{ .TableOfContents }}
+</nav>
+ {{ end }}
+{{ end }}
+
+{{- /* Content */ -}}
+{{ .Content }}
+
+
+</article>
+{{ end }}

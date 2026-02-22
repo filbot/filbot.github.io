@@ -21,8 +21,6 @@
     "outputStyle" (cond hugo.IsDevelopment "expanded" "compressed")
     "targetPath" "css/main.css"
     "transpiler" "dartsass"
-    "vars" site.Params.styles
-    "includePaths" (slice "node_modules/bootstrap/scss")
   }}
   {{ with . | toCSS $opts }}
     {{ if hugo.IsDevelopment }}

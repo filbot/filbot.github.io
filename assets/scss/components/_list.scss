@@ -1,0 +1,28 @@
+@use "../core/settings" as *;
+
+section>header {
+  margin-bottom: 2rem;
+}
+
+.meta {
+  color: var(#{$css-var-prefix}muted-color);
+  font-size: 0.8rem;
+}
+
+.posts {
+  grid-template-columns: 6rem 1fr;
+}
+
+
+.tags {
+  grid-template-columns: 2rem 1fr;
+  color: var(#{$css-var-prefix}muted-color);
+
+  span {
+    text-align: center;
+  }
+}
+
+.pagination {
+  margin-top: 2rem;
+}

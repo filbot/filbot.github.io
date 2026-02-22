@@ -41,8 +41,6 @@ jobs:
         run: sudo snap install dart-sass
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          submodules: recursive
       - name: Cache Hugo resources
         uses: actions/cache@v4
         with:

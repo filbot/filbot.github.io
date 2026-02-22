@@ -1,0 +1,40 @@
+@use "../core/settings" as *;
+
+article {
+  nav {
+    padding: 1rem 0 2rem 0;
+
+    a {
+      font-size: 0.9rem;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+    }
+  }
+
+  header {
+    margin-bottom: 1rem;
+
+    time {
+      color: var(#{$css-var-prefix}muted-color);
+      white-space: nowrap;
+    }
+
+    nav {
+      justify-content: left;
+      padding: 0.5rem 0 1rem 0;
+
+      ul {
+        display: block;
+
+        &:last-of-type {
+          margin-left: 0
+        }
+
+        li {
+          padding: calc(var(#{$css-var-prefix}nav-element-spacing-vertical)/2) var(#{$css-var-prefix}nav-element-spacing-horizontal);
+          padding-right: 1.2rem;
+        }
+      }
+    }
+  }
+}

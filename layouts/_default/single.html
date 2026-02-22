@@ -1,0 +1,36 @@
+{{ define "main" }}
+<article>
+  <nav aria-label="All posts">
+    <a href="{{ .Section | relURL }}">&larr; Back to All Posts</a>
+  </nav>
+  <header>
+    <h1>{{ .Title }}</h1>
+    <time datetime="{{ .PublishDate.Format "2006-01-02" }}">{{ .PublishDate.Format "January 02, 2006" }}</time>
+    {{ if .Params.tags }}
+     <nav>
+          <ul>
+          {{ range .Params.tags }}
+          <li>
+            <a href="{{ (urlize (printf "tags/%s/" . )) | absLangURL }}" class="button">
+            {{- . -}}
+            </a>
+          </li>
+          {{ end }}
+          </ul>
+     </nav>
+    {{ end }}
+  </header>
+
+{{- /* Table of contents */ -}}
+{{ if or .Params.Toc $.Site.Params.Toc }}
+ {{ if ne .Params.Toc false }}
+<nav aria-label="Table of Contents">
+   {{ .TableOfContents }}
+</nav>
+ {{ end }}
+{{ end }}
+
+{{- /* Content */ -}}
+{{ .Content }}
+</article>
+{{ end }}
