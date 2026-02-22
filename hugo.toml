@@ -42,8 +42,6 @@ googleAnalytics = "G-P5HRT1QBKC"
 
 [security]
   enableInlineShortcodes = false
-  [security.exec]
-    allow = ['^(dart-)?sass(-embedded)?$', '^go$', '^npx$', '^postcss$']
 
 [minify]
   disableXML = false
