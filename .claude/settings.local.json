@@ -39,7 +39,8 @@
       "Bash(find:*)",
       "Bash(git rm:*)",
       "Bash(git -C /Users/filip.grace/Projects/filbot.github.io status)",
-      "Bash(git -C /Users/filip.grace/Projects/filbot.github.io rm:*)"
+      "Bash(git -C /Users/filip.grace/Projects/filbot.github.io rm:*)",
+      "Bash(HUGO_ENVIRONMENT=development hugo:*)"
     ]
   }
 }
