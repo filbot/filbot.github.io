@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AEM on Semicolons &amp; Side Projects</title><link>http://localhost:1313/tags/aem/</link><description>Recent content in AEM on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 02 Apr 2025 07:47:37 -0700</lastBuildDate><atom:link href="http://localhost:1313/tags/aem/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding JCR in AEM</title><link>http://localhost:1313/understanding-jcr-in-aem/</link><pubDate>Wed, 02 Apr 2025 07:47:37 -0700</pubDate><guid>http://localhost:1313/understanding-jcr-in-aem/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>AEM on Semicolons &amp; Side Projects</title><link>https://filbot.com/tags/aem/</link><description>Recent content in AEM on Semicolons &amp; Side Projects</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Wed, 02 Apr 2025 07:47:37 -0700</lastBuildDate><atom:link href="https://filbot.com/tags/aem/index.xml" rel="self" type="application/rss+xml"/><item><title>Understanding JCR in AEM</title><link>https://filbot.com/understanding-jcr-in-aem/</link><pubDate>Wed, 02 Apr 2025 07:47:37 -0700</pubDate><guid>https://filbot.com/understanding-jcr-in-aem/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
- src="http://localhost:1313/understanding-jcr-in-aem/header_hu_8f7d52d85244d54d.webp"
+ src="https://filbot.com/understanding-jcr-in-aem/header_hu_8f7d52d85244d54d.webp"
  loading="lazy"
  decoding="async"
  style="max-width: 100%; height: auto;"
@@ -10,9 +10,9 @@
 
 
 &lt;p&gt;If you’re brand new to Adobe Experience Manager (AEM), one of the first things you’ll hear about is something called the &lt;strong&gt;JCR&lt;/strong&gt;—short for &lt;strong&gt;Java Content Repository&lt;/strong&gt;. That might sound intimidating, especially if you don’t have a Java background (I didn’t either), but don’t worry. This post is here to give you a simple, high-level mental model.&lt;/p&gt;
-&lt;p&gt;And the model we’re going to use? Lego.&lt;/p&gt;</description></item><item><title>AEM Developer Cheat Sheet</title><link>http://localhost:1313/aem-developer-cheat-sheet/</link><pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate><guid>http://localhost:1313/aem-developer-cheat-sheet/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
+&lt;p&gt;And the model we’re going to use? Lego.&lt;/p&gt;</description></item><item><title>AEM Developer Cheat Sheet</title><link>https://filbot.com/aem-developer-cheat-sheet/</link><pubDate>Mon, 31 Mar 2025 16:34:28 -0700</pubDate><guid>https://filbot.com/aem-developer-cheat-sheet/</guid><description>&lt;figure style="margin: 1.5rem 0;"&gt;
  &lt;img
- src="http://localhost:1313/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_36f7b68df83f5dc4.webp"
+ src="https://filbot.com/aem-developer-cheat-sheet/aem-developer-cheat-sheet-header-image_hu_36f7b68df83f5dc4.webp"
  loading="lazy"
  decoding="async"
  style="max-width: 100%; height: auto;"

@@ -5,11 +5,8 @@
     {{ end }}
 
     {{ range .Paginator.Pages }}
-    <section class="projects">
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <p>{{ .Description }}</p>
-    </section>
-    {{end}}
+      {{ partial "project-card.html" . }}
+    {{ end }}
 
     {{ partial "pagination.html" . }}
 

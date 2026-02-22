@@ -6,10 +6,7 @@
 
     {{ $projects := where .Site.RegularPages "Section" "projects" }}
     {{ range $projects.ByDate.Reverse }}
-    <section class="projects">
-      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
-      <p>{{ .Description }}</p>
-    </section>
+      {{ partial "project-card.html" . }}
     {{ end }}
 </section>
 {{ end }}
