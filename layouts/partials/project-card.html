@@ -1,0 +1,22 @@
+<section class="project-card">
+  <div class="project-card__image">
+    {{ with .Params.cover }}
+      {{ with $.Resources.GetMatch . }}
+        {{ $thumb := .Fill "480x320 webp q85" }}
+        <a href="{{ $.Permalink }}" tabindex="-1" aria-hidden="true">
+          <img
+            src="{{ $thumb.RelPermalink }}"
+            width="{{ $thumb.Width }}"
+            height="{{ $thumb.Height }}"
+            alt=""
+            loading="lazy"
+            decoding="async" />
+        </a>
+      {{ end }}
+    {{ end }}
+  </div>
+  <div class="project-card__body">
+    <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+    <p>{{ .Description }}</p>
+  </div>
+</section>
