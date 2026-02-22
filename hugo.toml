@@ -1,8 +1,7 @@
 baseURL = "https://filbot.com/"
 languageCode = "en-us"
 title = "Semicolons & Side Projects"
-theme = "chicago7"
-timeout = "5m"
+disableKinds = ["taxonomy", "term"]
 
 [pagination]
   pagerSize = 10

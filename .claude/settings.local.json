@@ -35,7 +35,11 @@
       "Bash(git -C /Users/filip.grace/Projects/filbot.github.io show 4ae0638:hugo.toml)",
       "Bash(git -C /Users/filip.grace/Projects/filbot.github.io log -p --reverse 4ae0638~1..4ae0638 -- hugo.toml)",
       "Bash(unzip:*)",
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(find:*)",
+      "Bash(git rm:*)",
+      "Bash(git -C /Users/filip.grace/Projects/filbot.github.io status)",
+      "Bash(git -C /Users/filip.grace/Projects/filbot.github.io rm:*)"
     ]
   }
 }

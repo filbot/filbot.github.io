@@ -1,0 +1,343 @@
+@use "sass:map";
+@use "../core/colors" as *;
+@use "../core/settings" as *;
+@use "../core/helpers/functions";
+@use "theme-colors";
+
+/**
+ * Styles
+ */
+
+html {
+  font-size: 16px;
+  line-height: 1.8rem;
+}
+
+@media (min-width: 1280px) {
+  body > :is(header, main, footer) {
+    max-width: 950px;
+  }
+}
+
+:root,
+:host {
+
+  // Typography
+  #{$css-var-prefix}font-family-header:
+    "ChicagoFLF";
+  #{$css-var-prefix}font-family-emoji:
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  #{$css-var-prefix}font-family-monospace:
+    "Roboto Mono", SFMono-Regular, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace,
+    var(#{$css-var-prefix}font-family-header), var(#{$css-var-prefix}font-family-emoji);
+  #{$css-var-prefix}font-family: var(#{$css-var-prefix}font-family-monospace);
+  #{$css-var-prefix}line-height: 1.6;
+  #{$css-var-prefix}font-weight: 400;
+  #{$css-var-prefix}font-size: 100%;
+  #{$css-var-prefix}text-underline-offset: 0.25rem;
+
+  // Borders
+  #{$css-var-prefix}border-radius: 0.25rem;
+  #{$css-var-prefix}border-width: 0.0625rem;
+  #{$css-var-prefix}outline-width: 0.125rem;
+
+  // Transitions
+  #{$css-var-prefix}transition: 0.2s ease-in-out;
+
+  // Spacings
+  #{$css-var-prefix}spacing: 1rem;
+
+  // Spacings for typography elements
+  @if map.get($modules, "content/typography") {
+    #{$css-var-prefix}typography-spacing-vertical: 1rem;
+  }
+
+  // Spacings for body > header, body > main, body > footer, section, article
+  @if map.get($modules, "layout/landmarks") or map.get($modules, "layout/section") or map.get($modules, "components/card") or map.get($modules, "components/modal") {
+    #{$css-var-prefix}block-spacing-vertical: var(#{$css-var-prefix}spacing);
+    #{$css-var-prefix}block-spacing-horizontal: var(#{$css-var-prefix}spacing);
+  }
+
+  @if map.get($modules, "layout/grid") and $enable-classes {
+    #{$css-var-prefix}grid-column-gap: var(#{$css-var-prefix}spacing);
+    #{$css-var-prefix}grid-row-gap: var(#{$css-var-prefix}spacing);
+  }
+
+  // Spacings for form elements and button
+  @if map.get($modules, "content/button") or map.get($modules, "forms/basic") {
+    #{$css-var-prefix}form-element-spacing-vertical: 0.75rem;
+    #{$css-var-prefix}form-element-spacing-horizontal: 1rem;
+  }
+
+  // Font weight for form labels & fieldsets legend
+  @if map.get($modules, "forms/basic") {
+    #{$css-var-prefix}form-label-font-weight: var(#{$css-var-prefix}font-weight);
+  }
+
+  // Group (role="group")
+  @if map.get($modules, "components/group") {
+    #{$css-var-prefix}group-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    #{$css-var-prefix}group-box-shadow-focus-with-button: 0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}primary-focus);
+    #{$css-var-prefix}group-box-shadow-focus-with-input: 0 0 0 0.0625rem var(#{$css-var-prefix}form-element-border-color);
+  }
+
+  // Modal (<dialog>)
+  @if map.get($modules, "components/modal") {
+    #{$css-var-prefix}modal-overlay-backdrop-filter: blur(0.375rem);
+  }
+
+  // Spacings for nav component
+  @if map.get($modules, "components/nav") {
+    #{$css-var-prefix}nav-element-spacing-vertical: 1rem;
+    #{$css-var-prefix}nav-element-spacing-horizontal: 0.5rem;
+    #{$css-var-prefix}nav-link-spacing-vertical: 0.5rem;
+    #{$css-var-prefix}nav-link-spacing-horizontal: 0.5rem;
+    #{$css-var-prefix}nav-breadcrumb-divider: ">";
+  }
+
+  // Chevron icons
+  @if map.get($modules, "forms/basics") or map.get($modules, "components/accordion") or map.get($modules, "components/dropdown") {
+    #{$css-var-prefix}icon-chevron: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-400)}' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  }
+
+  // Search icon
+  @if map.get($modules, "forms/input-search") {
+    #{$css-var-prefix}icon-search: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-400)}' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='11' cy='11' r='8'%3E%3C/circle%3E%3Cline x1='21' y1='21' x2='16.65' y2='16.65'%3E%3C/line%3E%3C/svg%3E");
+  }
+
+  // Close icon
+  @if map.get($modules, "components/modal") {
+    #{$css-var-prefix}icon-close: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='#{functions.display-rgb($zinc-400)}' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cline x1='18' y1='6' x2='6' y2='18'%3E%3C/line%3E%3Cline x1='6' y1='6' x2='18' y2='18'%3E%3C/line%3E%3C/svg%3E");
+  }
+
+  // Loading icon (animated)
+  @if map.get($modules, "components/loading") {
+    // Inspired by https://codepen.io/aleksander351/pen/KzgKPo
+    #{$css-var-prefix}icon-loading: url("data:image/svg+xml,%3Csvg fill='none' height='24' width='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' %3E%3Cstyle%3E g %7B animation: rotate 2s linear infinite; transform-origin: center center; %7D circle %7B stroke-dasharray: 75,100; stroke-dashoffset: -5; animation: dash 1.5s ease-in-out infinite; stroke-linecap: round; %7D @keyframes rotate %7B 0%25 %7B transform: rotate(0deg); %7D 100%25 %7B transform: rotate(360deg); %7D %7D @keyframes dash %7B 0%25 %7B stroke-dasharray: 1,100; stroke-dashoffset: 0; %7D 50%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -17.5; %7D 100%25 %7B stroke-dasharray: 44.5,100; stroke-dashoffset: -62; %7D %7D %3C/style%3E%3Cg%3E%3Ccircle cx='12' cy='12' r='10' fill='none' stroke='#{functions.display-rgb($zinc-400)}' stroke-width='4' /%3E%3C/g%3E%3C/svg%3E");
+  }
+
+}
+
+// Link
+@if map.get($modules, "content/link") {
+  a {
+    text-decoration-thickness: 10%;
+    text-underline-offset: 25%;
+
+    #{$css-var-prefix}text-decoration: underline;
+
+    // Secondary & Contrast
+    @if $enable-classes {
+
+      &.secondary,
+      &.contrast {
+        #{$css-var-prefix}text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Separator
+hr {
+  opacity: 0.22;
+  overflow: visible;
+  padding: 0;
+  border: none;
+  border-top: medium double var(#{$css-var-prefix}primary);
+  color: var(#{$css-var-prefix}primary);
+  text-align: center;
+  margin: 3rem 0;
+
+  &:after {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: var(#{$css-var-prefix}primary-background);
+  }
+}
+
+// Typography
+@if map.get($modules, "content/typography") {
+
+  // Small
+  small {
+    #{$css-var-prefix}font-size: 0.875em;
+  }
+
+  // Headings
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    #{$css-var-prefix}font-weight: 700;
+    #{$css-var-prefix}font-family: var(#{$css-var-prefix}font-family-header);
+  }
+
+  h1 {
+    #{$css-var-prefix}font-size: 1.5rem;
+    #{$css-var-prefix}line-height: 1.175;
+    #{$css-var-prefix}typography-spacing-top: 2.25rem;
+  }
+
+  h2 {
+    #{$css-var-prefix}font-size: 1.25rem;
+    #{$css-var-prefix}line-height: 1.2;
+    #{$css-var-prefix}typography-spacing-top: 1.874rem;
+  }
+
+  h3 {
+    #{$css-var-prefix}font-size: 1.125rem;
+    #{$css-var-prefix}line-height: 1.225;
+    #{$css-var-prefix}typography-spacing-top: 1.6875rem;
+  }
+
+  h4,
+  h5,
+  h6 {
+    #{$css-var-prefix}font-size: 1rem;
+    #{$css-var-prefix}line-height: 1.25;
+    #{$css-var-prefix}typography-spacing-top: 1.5rem;
+  }
+}
+
+// Table
+@if map.get($modules, "content/table") {
+
+  thead,
+  tfoot {
+
+    th,
+    td {
+      #{$css-var-prefix}font-weight: 600;
+      #{$css-var-prefix}border-width: 0.1875rem;
+    }
+  }
+}
+
+// Code
+@if map.get($modules, "content/code") {
+
+  pre,
+  code,
+  kbd,
+  samp {
+    #{$css-var-prefix}font-family: var(#{$css-var-prefix}font-family-monospace);
+  }
+
+  kbd {
+    #{$css-var-prefix}font-weight: bolder;
+  }
+
+  :not(pre)>code {
+    border: 0;
+    background: var(#{$css-var-prefix}primary);
+    color: var(#{$css-var-prefix}primary-inverse);
+  }
+
+  pre {
+    border: 0.1rem solid;
+    box-shadow: 4px 4px 0px black;
+    padding: 1em;
+    width: 100%;
+    background: var(#{$css-var-prefix}code-background-color) !important;
+  }
+}
+
+// Inputs and Selects
+input:not([type="submit"],
+  [type="button"],
+  [type="reset"],
+  [type="checkbox"],
+  [type="radio"],
+  [type="file"]),
+:where(select, textarea) {
+  #{$css-var-prefix}outline-width: 0.0625rem;
+}
+
+[type="search"] {
+  #{$css-var-prefix}border-radius: 5rem;
+}
+
+// Group (role="group")
+@if map.get($modules, "components/group") {
+  [role="search"] {
+    #{$css-var-prefix}border-radius: 5rem;
+  }
+
+  [role="search"],
+  [role="group"] {
+    @if $enable-classes {
+
+      &:has(button.secondary:focus,
+        [type="submit"].secondary:focus,
+        [type="button"].secondary:focus,
+        [role="button"].secondary:focus) {
+        #{$css-var-prefix}group-box-shadow-focus-with-button: 0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}secondary-focus);
+      }
+
+      &:has(button.contrast:focus,
+        [type="submit"].contrast:focus,
+        [type="button"].contrast:focus,
+        [role="button"].contrast:focus) {
+        #{$css-var-prefix}group-box-shadow-focus-with-button: 0 0 0 var(#{$css-var-prefix}outline-width) var(#{$css-var-prefix}contrast-focus);
+      }
+    }
+
+    button,
+    [type="submit"],
+    [type="button"],
+    [role="button"] {
+      #{$css-var-prefix}form-element-spacing-horizontal: 2rem;
+    }
+  }
+}
+
+// Chevron icons
+// Change the icon color to white for accordion and dropdown buttons
+@if map.get($modules, "components/accordion") or map.get($modules, "components/dropdown") {
+  #{$parent-selector} details {
+    summary {
+      $selector: '&[role="button"]';
+
+      @if $enable-classes {
+        $selector: "#{$selector}:not(.outline)";
+      }
+
+      #{$selector} {
+        &::after {
+          filter: brightness(0) invert(1);
+        }
+      }
+    }
+  }
+}
+
+// Loading icon (animated)
+@if map.get($modules, "components/loading") {
+
+  // Change the icon color to white for buttons
+  #{$parent-selector} [aria-busy="true"]:not(input, select, textarea) {
+    $selector: '&:is(button, [type="submit"], [type="button"], [type="reset"], [role="button"])';
+
+    @if $enable-classes {
+      $selector: "#{$selector}:not(.outline)";
+    }
+
+    #{$selector} {
+      &::before {
+        @if theme-colors.get("primary-inverse", "dark")==$white {
+          filter: brightness(0) invert(1);
+        }
+
+        @else {
+          filter: brightness(0) invert(0);
+        }
+      }
+    }
+  }
+}
