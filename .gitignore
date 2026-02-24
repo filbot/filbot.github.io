@@ -3,3 +3,4 @@ _site
 public/
 resources/_gen/
 .claude
+.hugo_build.lock
