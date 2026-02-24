@@ -59,7 +59,7 @@ I designed the part and cut it out so I could paint it and let it cure before mo
 
 The following picture and video are from my first attempt, where I reversed the order of operations: I painted the acrylic, engraved it, and then cut the faceplate out. That left white edges on the inside of the cutouts, which I didn’t want in the final product. So, when it came time to make the real deal, I changed the order of operations even though it meant having to register the faceplate correctly for the engraving which turned out okay.
 
-{{< video src="faceplate-engraving-clip.mov" >}}
+{{< video src="faceplate-engraving-clip.mp4" >}}
 
 {{< img src="fresh-faceplate.jpeg" alt="faceplate engraved" >}}
 
@@ -105,13 +105,13 @@ With the paint and glue all dried, it was finally time to hide all my crimes and
 
 {{< img src="final-product.jpg" alt="The final product" >}}
 
-{{< video src="final-product-demo.mov" >}}
+{{< video src="final-product-demo.mp4" >}}
 
 The plan was always to have it wall mounted next to my monitor so it would be in view while I was at my desk. Even though that was the plan from the start, I didn’t include any provisions in the three-hour print of the housing to actually mount it on a wall, and I wasn’t about to reprint it just for that. I could have gone with double-sided tape, but I had always wanted to try embedding magnets into a print. So, I designed a split-frame mount: one half is screwed to the back of the housing, and the other to the wall. The center is open for the power cable passthrough as well as to cut down on material.
 
 I used small magnets around the entire perimeter, and I underestimated how dense this little project was. The magnets were just strong enough. Even though they did hold, I was worried about sag, so I added a small shelf to the bracket. That way the display had something to keep it aligned and prevent sagging.
 
-{{< video src="wall-mount-clip.mov" >}}
+{{< video src="wall-mount-clip.mp4" >}}
 
 {{< img src="wall-mounted.jpg" alt="Wall mounted" >}}
 
