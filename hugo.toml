@@ -6,7 +6,8 @@ disableKinds = ["taxonomy", "term"]
 [pagination]
   pagerSize = 10
 
-googleAnalytics = "G-P5HRT1QBKC"
+[services.googleAnalytics]
+  ID = "G-P5HRT1QBKC"
 
 [permalinks]
   projects = "/:slug/"
