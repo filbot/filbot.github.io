@@ -6,6 +6,7 @@ description = 'Mini model of the old school BART platform displays with live dat
 tags = ["esp32", "lcd", "howto", "bart"]
 cover = 'hero.webp'
 repository = 'https://github.com/filbot/bart-proxy'
+aliases = ['/real-time-bart-display/']
 +++
 
 {{< img src="hero.webp" alt="AI generated image of the physical BART display" >}}
