@@ -6,6 +6,7 @@ description = 'Tracking the ISS using an old Raspberry Pi'
 tags = ['spi', 'display', 'cnc', 'raspberrypi']
 cover = 'iss-tracker.jpg'
 repository = 'https://github.com/filbot/iss-tracker'
+aliases = ['/international-space-station-tracker/']
 +++
 
 {{< img src="iss-tracker.jpg" alt="ISS tracker device mounted on wall" >}}
