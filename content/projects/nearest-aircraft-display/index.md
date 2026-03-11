@@ -6,6 +6,7 @@ description = 'A custom-built OLED display with mechanical relays and aircraft-t
 tags = ["esp32", "arduino", "ads-b", "lcd", "flight-tracking", "howto", "cnc", "3d printing"]
 cover = 'chatgpt-header-image.jpg'
 repository = 'https://github.com/filbot/flight-display'
+aliases = ['/nearest-aircraft-display/']
 +++
 
 {{< img src="chatgpt-header-image.jpg" alt="ChatGPT generated image of Flight Display" >}}
