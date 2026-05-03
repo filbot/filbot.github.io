@@ -4,4 +4,5 @@ draft = false
 title = 'About'
 +++
 
-Hey, I’m a frontend developer whose day job is building modern web experiences in Adobe Experience Manager (AEM) environments. Outside of work, I can be found experimenting with CAD, 3D scanning and printing, and microcontroller projects—usually with more whimsy than usefulness. This blog is a space for documenting personal builds, sharing development insights, and exploring the overlap between software, hardware, and design.
+Hey, I'm a frontend developer. My day job is building in Adobe Experience Manager (AEM). After hours, I'm tinkering with CAD, 3D scanning and printing, and microcontroller projects, usually with more whimsy than usefulness. This blog covers personal builds, dev notes, and whatever falls between software, hardware, and design.
+
