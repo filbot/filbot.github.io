@@ -1,12 +1,15 @@
 {{ define "main" }}
-<section>
-    {{ with .Content }}
-        {{- . -}}
-    {{ end }}
-
-    {{ $projects := where .Site.RegularPages "Section" "projects" }}
-    {{ range $projects.ByDate.Reverse }}
-      {{ partial "project-card.html" . }}
-    {{ end }}
+<section class="home">
+  {{ $projects := where .Site.RegularPages "Section" "projects" }}
+  {{ if $projects }}
+    <section class="home-projects" aria-labelledby="recent-projects">
+      <h2 id="recent-projects" class="section-eyebrow">Recent Projects</h2>
+      <div class="project-list">
+        {{ range $projects.ByDate.Reverse }}
+          {{ partial "project-card.html" . }}
+        {{ end }}
+      </div>
+    </section>
+  {{ end }}
 </section>
 {{ end }}

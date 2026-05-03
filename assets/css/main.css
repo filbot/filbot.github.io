@@ -2198,19 +2198,32 @@ section > header {
   font-size: 4rem;
 }
 
+/* Section eyebrow */
+.section-eyebrow {
+  --pico-font-size: var(--text--1);
+  --pico-line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--pico-muted-color);
+  margin: 0 0 var(--space-xl);
+  padding-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--pico-muted-border-color);
+}
+
+/* Project list — vertical rhythm between cards */
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3xl);
+}
+
+/* Card */
 .project-card {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-md);
-  max-width: 32rem;
-  margin-inline: auto;
-  margin-bottom: var(--pico-block-spacing-vertical);
-}
-@media (min-width: 576px) {
-  .project-card {
-    grid-template-columns: 1fr 1fr;
-    align-items: start;
-  }
+  gap: var(--space-lg);
+  align-items: start;
 }
 
 .project-card__image {
@@ -2220,6 +2233,7 @@ section > header {
   box-shadow: 2px 2px 0px black;
   aspect-ratio: 3/2;
   background: var(--pico-muted-border-color);
+  transition: transform 180ms ease, box-shadow 180ms ease;
 }
 .project-card__image a {
   display: block;
@@ -2231,24 +2245,78 @@ section > header {
   height: 100%;
   object-fit: cover;
 }
+.project-card:hover .project-card__image {
+  transform: translate(-1px, -1px);
+  box-shadow: 3px 3px 0px black;
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-card__image { transition: none; }
+  .project-card:hover .project-card__image {
+    transform: none;
+    box-shadow: 2px 2px 0px black;
+  }
+}
 
 .project-card__body {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
+  gap: var(--space-sm);
+  padding-block: var(--space-xs);
+}
+.project-card__date {
+  font-size: var(--text--2);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--pico-muted-color);
 }
 .project-card__body h3 {
-  margin-top: 0;
-  margin-bottom: 0;
-  --pico-font-size: var(--text-1);
+  margin: 0;
+  --pico-font-size: var(--text-2);
+  --pico-line-height: 1.2;
+  --pico-font-weight: 600;
+  letter-spacing: -0.01em;
 }
 .project-card__body h3 a {
   text-decoration: none;
+  color: inherit;
+}
+.project-card__body h3 a:hover {
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.15em;
 }
 .project-card__body p {
   color: var(--pico-muted-color);
-  font-size: var(--text--1);
-  margin-bottom: 0;
+  font-size: var(--text-0);
+  line-height: 1.55;
+  margin: 0;
+  max-width: 60ch;
+}
+
+/* Tablet: balanced side-by-side */
+@media (min-width: 768px) {
+  .project-card {
+    grid-template-columns: 1fr 1.2fr;
+    gap: var(--space-xl);
+    align-items: center;
+  }
+}
+
+/* Desktop: editorial asymmetry */
+@media (min-width: 1024px) {
+  .project-card {
+    grid-template-columns: 5fr 7fr;
+    gap: var(--space-2xl);
+  }
+}
+
+/* Wide desktop: lean further into asymmetry */
+@media (min-width: 1280px) {
+  .project-card {
+    grid-template-columns: 4fr 6fr;
+    gap: var(--space-3xl);
+  }
 }
 
 @font-face {
