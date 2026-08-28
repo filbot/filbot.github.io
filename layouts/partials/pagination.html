@@ -1,12 +1,12 @@
-<section class="pagination">
-  {{ if .Paginator.HasPrev }}
-    <a href="{{ .Paginator.Prev.URL }}" class="button">
-      &#9664; {{ $.Site.Params.NewerPosts | default "Newer" }}
-    </a>
+{{ with .Paginator }}
+  {{ if gt .TotalPages 1 }}
+    <nav class="pagination" aria-label="Pagination">
+      {{ if .HasPrev }}
+        <a href="{{ .Prev.URL }}" class="button" rel="prev">&#9664; {{ site.Params.newerPosts | default "Newer" }}</a>
+      {{ end }}
+      {{ if .HasNext }}
+        <a href="{{ .Next.URL }}" class="button" rel="next">{{ site.Params.olderPosts | default "Older" }} &#9658;</a>
+      {{ end }}
+    </nav>
   {{ end }}
-  {{ if .Paginator.HasNext }}
-    <a href="{{ .Paginator.Next.URL }}" class="button">
-      {{ $.Site.Params.OlderPosts | default "Older" }} &#9658;
-    </a>
-  {{ end }}
-</section>
+{{ end }}

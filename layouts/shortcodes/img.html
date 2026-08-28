@@ -1,25 +1,32 @@
-{{ $src := .Get "src" }}
-{{ $image := "" }}
-{{ if .Page.Resources }}
-  {{ $image = .Page.Resources.GetMatch $src }}
-{{ end }}
-{{ if not $image }}
-  {{ $image = resources.GetMatch $src }}
-{{ end }}
+{{- $src := .Get "src" -}}
+{{- $alt := .Get "alt" | default "" -}}
+{{- $image := "" -}}
+{{- with .Page.Resources.GetMatch $src }}{{ $image = . }}{{ end -}}
+{{- if not $image }}{{ with resources.GetMatch $src }}{{ $image = . }}{{ end }}{{ end -}}
 
-{{ if $image }}
-  {{ $defaultImage := $image.Resize "1024x webp q90" }}
-  <figure style="margin: 1.5rem 0;">
+{{- if $image -}}
+  {{- /* Cap at 1024w but never upscale a smaller source. */ -}}
+  {{- $w := int (math.Min $image.Width 1024) -}}
+  {{- $base := $image.Process (printf "resize %dx webp q90" $w) -}}
+  {{- $srcset := slice -}}
+  {{- range (slice 512 768 1024 1536) -}}
+    {{- if le . $image.Width -}}
+      {{- $r := $image.Process (printf "resize %dx webp q90" .) -}}
+      {{- $srcset = $srcset | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
+    {{- end -}}
+  {{- end -}}
+  <figure class="figure">
     <img
-      src="{{ $defaultImage.RelPermalink }}"
+      src="{{ $base.RelPermalink }}"
+      {{ with $srcset }}srcset="{{ delimit . ", " }}"
+      sizes="(min-width: 768px) 768px, 100vw"{{ end }}
+      width="{{ $base.Width }}"
+      height="{{ $base.Height }}"
+      alt="{{ $alt }}"
       loading="lazy"
-      decoding="async"
-      style="max-width: 100%; height: auto;"
-      {{ with .Get "alt" }}alt="{{ . }}"{{ else }}alt=""{{ end }} />
-    {{ with .Get "caption" }}
-    <figcaption>{{ . }}</figcaption>
-    {{ end }}
+      decoding="async">
+    {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
   </figure>
-{{ else }}
-  <img src="{{ $src }}" {{ with .Get "alt" }}alt="{{ . }}"{{ end }} />
-{{ end }}
+{{- else -}}
+  {{- errorf "img shortcode: no resource matching %q on page %s" $src .Page.Path -}}
+{{- end -}}

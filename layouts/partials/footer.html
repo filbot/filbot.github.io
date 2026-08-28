@@ -1,37 +1,36 @@
-<footer class="footer" style="border-top: none;">
-    {{ if ne .Page.Title "About" }}
-    <nav aria-label="Main navigation" style="justify-content: center;">
-        <ul style="display: flex; justify-content: center; list-style: none; padding: 0; margin: 0;">
-            {{ range .Site.Menus.header.ByWeight }}
-            <li><a href="{{ .URL | relURL }}">{{- .Name -}}</a></li>
-            {{ end }}
-        </ul>
+<footer class="footer">
+  {{ with site.Menus.header }}
+    <nav aria-label="Site navigation" class="footer__nav">
+      <ul>
+        {{ range .ByWeight }}
+          <li><a href="{{ .URL | relURL }}"{{ if $.IsMenuCurrent "header" . }} aria-current="page"{{ end }}>{{ .Name }}</a></li>
+        {{ end }}
+      </ul>
     </nav>
-    {{ end }}
-    {{ $icons := dict
-      "github" "github.svg"
-      "feed" "feed.svg"
-      "instagram" "instagram.svg"
-      "linkedin" "linkedin.svg"
-    }}
-    {{ with site.Params.social }}
-    <nav class="social">
-    <ul>
-    {{ range $key, $icon := $icons }}
-    {{ $url := index site.Params.social $key }}
-      {{ with $url }}
-        <li>
-          <a href="{{ . }}" target="_blank" rel="noopener noreferrer">
-            {{ $svgPath := printf "static/icons/%s" $icon }}
-            {{ readFile $svgPath | safeHTML }}
-          </a>
-        </li>
-      {{ end }}
-    {{ end }}
-    </ul>
+  {{ end }}
+
+  {{- /* Ordered so the icons render predictably; label each link for screen readers. */ -}}
+  {{ $networks := slice
+    (dict "key" "github"    "icon" "github.svg"    "label" "GitHub")
+    (dict "key" "linkedin"  "icon" "linkedin.svg"  "label" "LinkedIn")
+    (dict "key" "instagram" "icon" "instagram.svg" "label" "Instagram")
+    (dict "key" "feed"      "icon" "feed.svg"      "label" "RSS feed")
+  }}
+  {{ with site.Params.social }}
+    <nav class="social" aria-label="Social links">
+      <ul>
+        {{ range $n := $networks }}
+          {{ with index site.Params.social $n.key }}
+            <li>
+              <a href="{{ . }}" aria-label="{{ $n.label }}"{{ if not (strings.HasPrefix . "/") }} target="_blank" rel="noopener noreferrer"{{ end }}>
+                {{ with resources.Get (printf "icons/%s" $n.icon) }}{{ .Content | safeHTML }}{{ end }}
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
     </nav>
-    {{ end }}
-    <p>
-        &copy; {{ now.Year }} {{ .Site.Params.author }}
-    </p>
+  {{ end }}
+
+  <p class="footer__copyright">&copy; {{ now.Year }} {{ site.Params.author }}</p>
 </footer>
