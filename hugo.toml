@@ -1,7 +1,8 @@
 baseURL = "https://filbot.com/"
-languageCode = "en-us"
+locale = "en-us"
 title = "Semicolons & Side Projects"
 disableKinds = ["taxonomy", "term"]
+enableRobotsTXT = true
 
 [pagination]
   pagerSize = 10
@@ -27,7 +28,7 @@ disableKinds = ["taxonomy", "term"]
 
 [params]
   author = "Filip Grace"
-  bio = "A personal blog about building, learning, and stumbling forward in dev"
+  description = "A personal blog about building, learning, and stumbling forward in dev"
   logo = "images/avatar.svg"
 
   [params.social]
