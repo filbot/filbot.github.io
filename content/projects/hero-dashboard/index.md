@@ -6,6 +6,7 @@ description = 'Emergency Services dashboard running on a Raspberry Pi kiosk'
 tags = ["raspberry pi", "application", "howto"]
 cover = 'dashboard-angle.jpg'
 repository = 'https://github.com/filbot/emergency-map'
+slug = 'hero-dashboard'
 +++
 
 {{< img src="dashboard-angle.jpg" alt="Hero Dashboard" >}}
