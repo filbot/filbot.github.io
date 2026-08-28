@@ -37,7 +37,7 @@ The toggle switch is mostly to add whimsy. I ordered a batch of these aluminum c
 
 I made a last minute decision to CNC the faceplate out of aluminum. It just felt like the right move given the switch guard is aluminum and I had the material from a previous project. I wouldn't say the CNC I have is great at aluminum but, with a light enough cut, it can be done. This faceplate represents over an hour of machine time, which is laughable for any real deal CNC machine doing this type of work. My CNC is in my home office so it's the best I got.
 
-{{< video src="cnc.mov" >}}
+{{< video src="cnc.mp4" >}}
 {{< img src="cnc-plate-finished.jpg" alt="Finished CNC machined aluminum faceplate" >}}
 
 ## Painting
@@ -75,4 +75,4 @@ This project was always intended to look like a NASA module that would be instal
 
 As is the common theme among most of my projects, I have no real world use for this data, but that's hardly the point. It's all about whimsy. Most of my projects are ideas born out of wanting to use up some spare parts or finding an interesting API. Below is a quick video of the device in action...
 
-{{< video src="device-in-action.mov" >}}
+{{< video src="device-in-action.mp4" >}}
