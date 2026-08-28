@@ -2585,8 +2585,13 @@ p.site-header__title {
 }
 
 .video {
+  /* `max-width` alone leaves a <video> at its 300x150 default until metadata
+     loads, so these rendered as thumbnails. `width` makes it fill the column;
+     `height: auto` keeps the real aspect ratio once dimensions are known. */
   display: block;
+  width: 100%;
   max-width: 100%;
   height: auto;
   margin: 1.5rem 0;
+  background: var(--pico-muted-border-color);
 }
