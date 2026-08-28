@@ -5,6 +5,7 @@ title = 'Understanding JCR in AEM'
 description = "A beginner-friendly analogy that breaks down AEM's content repository by stacking concepts like LEGO bricks—literally"
 tags = ['AEM', 'JCR', 'Content Repository']
 cover = 'header.jpg'
+slug = 'understanding-jcr-in-aem'
 +++
 
 {{< img src="header.jpg" alt="ChatGPT generated image lego ad" >}}

@@ -6,6 +6,7 @@ description = 'How I connected a 20x4 I2C LCD to my Raspberry Pi running PiAware
 tags = ["raspberry-pi", "piaware", "ads-b", "lcd", "python", "flight-tracking", "howto"]
 cover = 'piaware-lcd-chatgpt-generated.jpg'
 repository = 'https://gist.github.com/filbot/0e98902e0be5b642649541b9df85aaa3'
+slug = 'piaware-data-display'
 aliases = ['/piaware-lcd-display/']
 +++
 

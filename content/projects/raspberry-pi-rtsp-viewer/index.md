@@ -5,6 +5,7 @@ title = 'RTSP Video Stream on Raspberry Pi'
 description = 'How to build a Raspberry Pi configured to act as a simple, dedicated fullscreen RTSP video display.'
 tags = ["raspberry-pi", "lcd", "howto", "unifi", "ubiquity", "rtsp"]
 cover = 'hero.jpg'
+slug = 'rtsp-video-stream-on-raspberry-pi'
 aliases = ['/raspberry-pi-rtsp-viewer/']
 +++
 

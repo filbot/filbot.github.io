@@ -5,6 +5,7 @@ title = 'MicroMV on OS X in 2018'
 description = 'How to digitize your old MicroMV tapes on a modern Apple computer using legacy hardware and software tools like AVCVideoCap and HandBrake'
 tags = ['howto', 'osx']
 cover = 'micromv-header.webp'
+slug = 'micromv-on-os-x-in-2018'
 aliases = ['/micromv-on-osx-in-2018/']
 +++
 

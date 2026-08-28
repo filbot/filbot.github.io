@@ -6,7 +6,8 @@ description = 'Not so screen accurate version of the Stark Medical Scanner'
 tags = ["esp32", "lcd", "howto", "marvel", "ironman"]
 cover = 'hero.webp'
 repository = 'https://github.com/filbot/stark-medical-scanner'
-aliases = ['/medical-scanner/']
+slug = 'stark-medical-scanner'
+aliases = ['/medical-scanner/', '/stark-medical-scanner...-sort-of/']
 +++
 
 {{< img src="hero.webp" alt="AI generated image of the Stark Medical Scanner" >}}
