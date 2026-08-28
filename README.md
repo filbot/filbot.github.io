@@ -61,7 +61,26 @@ Then reference them in your markdown using shortcodes:
 {{< video src="demo.mp4" >}}
 ```
 
-Images are automatically resized, converted to WebP, and lazy-loaded. You don't need to do anything special — just use reasonably sized source files (under 2 MB or so) and the build handles the rest.
+Images are automatically resized, converted to WebP, given a `srcset`, and
+lazy-loaded with explicit dimensions so the page doesn't jump as they load. The
+`alt` attribute is worth filling in — it's what screen readers announce. A
+missing image now fails the build loudly rather than emitting a broken `<img>`.
+
+### Videos
+
+Keep videos to **1080p H.264 MP4**, encoded with `+faststart` so playback can
+begin before the file finishes downloading. Phones shoot 4K by default, which
+produces absurd files — a 21-second 4K clip in this repo was 78 MB before it was
+re-encoded. Convert before committing:
+
+```sh
+ffmpeg -i clip.mov -vf "scale=-2:'min(1080,ih)'" \
+  -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p \
+  -c:a aac -b:a 128k -movflags +faststart clip.mp4
+```
+
+If you drop a `demo-poster.jpg` next to `demo.mp4`, the shortcode picks it up
+automatically as the video's poster frame — no extra markup needed.
 
 ### Cover images
 
@@ -69,6 +88,25 @@ The `cover` field in the post metadata sets the image that appears on the card o
 
 ```toml
 cover = 'cover.jpg'
+```
+
+The same image is cropped to 1200x630 and used as the social-sharing card
+(`og:image`), so pick something that reads well at that aspect ratio.
+
+### URLs
+
+A post's URL comes from its `slug`, not its title or folder name:
+
+```toml
+slug = 'my-post-name'
+```
+
+**Always set it.** Without a slug Hugo derives the URL from the title, which
+means renaming a post silently breaks its links. If you ever do need to change a
+published URL, add the old one to `aliases` so the old link keeps working:
+
+```toml
+aliases = ['/the-old-url/']
 ```
 
 ### Drafts
@@ -83,10 +121,10 @@ hugo server -D
 
 ```
 archetypes/        Templates for new content (used by `hugo new`)
-assets/css/        Stylesheets
-  main.css         Main stylesheet (based on Pico CSS)
-  syntax-light.css Code block colors (light mode)
-  syntax-dark.css  Code block colors (dark mode)
+assets/            Processed at build time
+  css/main.css     Main stylesheet (based on Pico CSS)
+  css/syntax-*.css Code block colors (light / dark mode)
+  icons/           Social icons (inlined into the page at build time)
 content/           All the posts and pages
   projects/        Blog posts (each in its own folder)
   about.md         The about page
@@ -95,13 +133,18 @@ layouts/           HTML templates
   partials/        Reusable pieces (head, header, footer, etc.)
   shortcodes/      Custom markdown helpers (img, video)
   projects/        Post-specific template
-static/            Files served as-is (fonts, icons, favicon)
+static/            Files served as-is (fonts, favicon, CNAME)
 hugo.toml          Site configuration
 ```
 
 ## How it builds and deploys
 
 Pushing to `master` triggers a GitHub Actions workflow that builds the site and deploys it to GitHub Pages. The workflow lives at `.github/workflows/hugo.yml`. You don't need to build anything manually — just push your changes and the site updates within a couple of minutes.
+
+The workflow pins a Hugo version (`HUGO_VERSION`). Keep it in step with the Hugo
+you run locally, or a template that works on your machine can fail in CI. The
+custom domain is held by `static/CNAME`, so it survives even if the repo's Pages
+setting is ever reset.
 
 ## Editing the styles
 
