@@ -2365,10 +2365,22 @@ section > header {
 }
 
 html {
+  /* Stays at the user's preferred base size so 1rem == 16px-ish and the
+     --text-* clamps below resolve against a stable anchor. Do NOT move the
+     fluid body size here: rem on the root element resolves against the
+     initial font size, so every step of the scale would compound. */
   font-size: 100%;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Pico applies the body size via `:where(:root)`, which has zero specificity
+   and loses to the `html` rule above — so the fluid --text-0 body size was
+   never actually applying and body copy rendered at a flat 16px. Headings
+   were unaffected because h1-h6 set font-size on themselves. */
+body {
+  font-size: var(--pico-font-size);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -2430,11 +2442,23 @@ small, .caption {
 }
 
 figcaption {
-  font-size: var(--text--2);
+  font-size: var(--text--1);
 }
 
-article section {
-  max-width: 65ch;
+/* Measure: hold the whole article to a readable column and centre it, so
+   running text and media share one axis. Constraining only the text children
+   left prose ragged left against full-width figures.
+
+   Scoped to `main > article` because the homepage project cards are also
+   <article> elements and must keep their own full-width grid.
+
+   52ch, not 65ch: the `ch` unit is the advance of "0", which in Inter is
+   0.631em, while the average character in this site's prose is 0.473em — so a
+   `ch` is ~1.34 actual characters. 52ch resolves to ~69 characters per line;
+   65ch would have been ~87. */
+main > article {
+  max-width: 52ch;
+  margin-inline: auto;
 }
 
 article pre,
