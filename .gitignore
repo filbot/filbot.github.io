@@ -2,5 +2,5 @@ _site
 .DS_Store
 public/
 resources/_gen/
-.claude
+.claude/settings.local.json
 .hugo_build.lock
