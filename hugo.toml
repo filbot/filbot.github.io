@@ -38,9 +38,12 @@ enableRobotsTXT = true
     feed = "/index.xml"
 
 [imaging]
-  quality = 85
   resampleFilter = "Lanczos"
   anchor = "Smart"
+  [imaging.jpeg]
+    quality = 85
+  [imaging.webp]
+    quality = 85
 
 [security]
   enableInlineShortcodes = false
