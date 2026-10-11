@@ -46,10 +46,15 @@
 <!-- Icons -->
 <link rel="icon" href="{{ site.Params.favicon | default "favicon.svg" | relURL }}">
 
-{{- /* Social cards. A processed 1200x630 cover drives the large Twitter card. */ -}}
+{{- /* Social cards. A processed 1200x630 cover drives the large Twitter card.
+     Pages without a cover (home, About) borrow the newest project's. */ -}}
+{{ $coverPage := . }}
+{{ if not .Params.cover }}
+  {{ $coverPage = index (where (where site.RegularPages "Section" "projects") "Params.cover" "!=" nil).ByDate.Reverse 0 }}
+{{ end }}
 {{ $cover := "" }}
-{{ with .Params.cover }}
-  {{ with $.Resources.GetMatch . }}
+{{ with $coverPage }}
+  {{ with .Resources.GetMatch .Params.cover }}
     {{ with .Fill "1200x630 jpg q85" }}
       {{ $cover = .Permalink }}
     {{ end }}
@@ -72,6 +77,8 @@
     <meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
   {{ end }}
 {{ end }}
+
+{{ partial "schema.html" (dict "page" . "image" $cover "description" ($description | default site.Params.description | plainify | chomp)) }}
 
 <!-- RSS -->
 {{ with .OutputFormats.Get "RSS" }}
