@@ -2595,3 +2595,10 @@ p.site-header__title {
   margin: 1.5rem 0;
   background: var(--pico-muted-border-color);
 }
+
+/* Post publish/updated dates under the title */
+.post-dates {
+  font-size: var(--text--1);
+  color: var(--pico-muted-color);
+  margin-bottom: var(--space-md);
+}

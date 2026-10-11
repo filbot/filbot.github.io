@@ -1,0 +1,8 @@
+{{- /* Table of contents (opt in with `toc = true`, or site-wide with params.toc) and the page content. Shared by every single-page template. */ -}}
+{{ if and (or .Params.toc site.Params.toc) (ne .Params.toc false) }}
+  <nav aria-label="Table of Contents">
+    {{ .TableOfContents }}
+  </nav>
+{{ end }}
+
+{{ .Content }}
