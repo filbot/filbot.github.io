@@ -1,32 +1,12 @@
 {{- $src := .Get "src" -}}
-{{- $alt := .Get "alt" | default "" -}}
-{{- $image := "" -}}
-{{- with .Page.Resources.GetMatch $src }}{{ $image = . }}{{ end -}}
-{{- if not $image }}{{ with resources.GetMatch $src }}{{ $image = . }}{{ end }}{{ end -}}
-
-{{- if $image -}}
-  {{- /* Cap at 1024w but never upscale a smaller source. */ -}}
-  {{- $w := int (math.Min $image.Width 1024) -}}
-  {{- $base := $image.Process (printf "resize %dx webp q90" $w) -}}
-  {{- $srcset := slice -}}
-  {{- range (slice 512 768 1024 1536) -}}
-    {{- if le . $image.Width -}}
-      {{- $r := $image.Process (printf "resize %dx webp q90" .) -}}
-      {{- $srcset = $srcset | append (printf "%s %dw" $r.RelPermalink $r.Width) -}}
-    {{- end -}}
-  {{- end -}}
-  <figure class="figure">
-    <img
-      src="{{ $base.RelPermalink }}"
-      {{ with $srcset }}srcset="{{ delimit . ", " }}"
-      sizes="(min-width: 768px) 768px, 100vw"{{ end }}
-      width="{{ $base.Width }}"
-      height="{{ $base.Height }}"
-      alt="{{ $alt }}"
-      loading="lazy"
-      decoding="async">
-    {{ with .Get "caption" }}<figcaption>{{ . }}</figcaption>{{ end }}
-  </figure>
+{{- with or (.Page.Resources.GetMatch $src) (resources.GetMatch $src) -}}
+  {{- /* The first image in a post is usually on screen at load, so fetch it eagerly. */ -}}
+  {{- partial "picture.html" (dict
+    "image" .
+    "alt" ($.Get "alt")
+    "caption" ($.Get "caption")
+    "eager" (eq $.Ordinal 0)
+  ) -}}
 {{- else -}}
   {{- errorf "img shortcode: no resource matching %q on page %s" $src .Page.Path -}}
 {{- end -}}

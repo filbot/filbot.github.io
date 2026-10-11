@@ -1,0 +1,46 @@
+{{- /*
+Responsive <picture> for an image resource: AVIF with a WebP fallback, at
+widths up to 1536px (never upscaled).
+
+Context: dict with
+  image   (resource, required)
+  alt     (string)
+  caption (string, optional)
+  eager   (bool; true for an image likely to be visible on load)
+  inline  (bool; true to skip the <figure> wrapper)
+*/ -}}
+{{- $image := .image -}}
+{{- $widths := slice -}}
+{{- range slice 512 768 1024 1536 -}}
+  {{- if lt . $image.Width }}{{ $widths = $widths | append . }}{{ end -}}
+{{- end -}}
+{{- if le $image.Width 1536 }}{{ $widths = $widths | append $image.Width }}{{ end -}}
+
+{{- $avif := slice -}}
+{{- $webp := slice -}}
+{{- range $widths -}}
+  {{- $a := $image.Process (printf "resize %dx avif" .) -}}
+  {{- $w := $image.Process (printf "resize %dx webp q90" .) -}}
+  {{- $avif = $avif | append (printf "%s %dw" $a.RelPermalink $a.Width) -}}
+  {{- $webp = $webp | append (printf "%s %dw" $w.RelPermalink $w.Width) -}}
+{{- end -}}
+{{- $fallback := $image.Process (printf "resize %dx webp q90" (int (math.Min $image.Width 1024))) -}}
+{{- $sizes := "(min-width: 768px) 768px, 100vw" -}}
+
+{{- if not .inline }}<figure class="figure">{{ end -}}
+<picture>
+  <source type="image/avif" srcset="{{ delimit $avif ", " }}" sizes="{{ $sizes }}">
+  <img
+    src="{{ $fallback.RelPermalink }}"
+    srcset="{{ delimit $webp ", " }}"
+    sizes="{{ $sizes }}"
+    width="{{ $fallback.Width }}"
+    height="{{ $fallback.Height }}"
+    alt="{{ .alt }}"
+    {{ if .eager }}fetchpriority="high"{{ else }}loading="lazy"{{ end }}
+    decoding="async">
+</picture>
+{{- if not .inline }}
+  {{- with .caption }}<figcaption>{{ . }}</figcaption>{{ end -}}
+</figure>
+{{- end -}}

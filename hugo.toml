@@ -21,6 +21,10 @@ enableRobotsTXT = true
 [markup.goldmark.renderer]
   unsafe = false
 
+# Lets the image render hook emit a <figure> for an image on its own line.
+[markup.goldmark.parser]
+  wrapStandAloneImageWithinParagraph = false
+
 [[menu.header]]
   name = "About"
   url = "/about/"

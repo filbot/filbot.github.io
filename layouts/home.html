@@ -6,8 +6,9 @@
     <section class="home-projects" aria-labelledby="recent-projects">
       <h2 id="recent-projects" class="section-eyebrow">Recent Projects</h2>
       <div class="project-list">
-        {{ range $paginator.Pages }}
-          {{ partial "project-card.html" . }}
+        {{- /* The first two cards are on screen at load, so their images load eagerly. */ -}}
+        {{ range $i, $p := $paginator.Pages }}
+          {{ partial "project-card.html" (dict "page" $p "eager" (lt $i 2)) }}
         {{ end }}
       </div>
     </section>

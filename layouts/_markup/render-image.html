@@ -1,0 +1,21 @@
+{{- /*
+Markdown images (![alt](file.jpg "caption")) get the same processing as the
+img shortcode. Originals are not published, so a local file must resolve to a
+page resource; remote URLs pass through untouched.
+*/ -}}
+{{- $u := urls.Parse .Destination -}}
+{{- if $u.IsAbs -}}
+  <img src="{{ .Destination }}" alt="{{ .PlainText }}" loading="lazy" decoding="async">
+{{- else -}}
+  {{- with or (.Page.Resources.GetMatch $u.Path) (resources.GetMatch $u.Path) -}}
+    {{- partial "picture.html" (dict
+      "image" .
+      "alt" $.PlainText
+      "caption" $.Title
+      "eager" (eq $.Ordinal 0)
+      "inline" (not $.IsBlock)
+    ) -}}
+  {{- else -}}
+    {{- errorf "markdown image: no resource matching %q on page %s" .Destination .Page.Path -}}
+  {{- end -}}
+{{- end -}}

@@ -2239,6 +2239,10 @@ section > header {
   display: block;
   height: 100%;
 }
+.project-card__image picture {
+  display: block;
+  height: 100%;
+}
 .project-card__image img {
   display: block;
   width: 100%;
@@ -2577,6 +2581,10 @@ p.site-header__title {
 
 .figure {
   margin: 1.5rem 0;
+}
+
+.figure picture {
+  display: block;
 }
 
 .figure img {

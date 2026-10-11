@@ -1,4 +1,5 @@
 {{- /* Publish date, plus an "Updated" date when front matter sets a `lastmod` on a later day. */ -}}
+{{- if not .Date.IsZero }}
 <p class="post-dates">
   <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>
   {{- if and .Params.lastmod (gt (.Lastmod.Format "2006-01-02") (.Date.Format "2006-01-02")) }}
@@ -6,3 +7,4 @@
     Updated <time datetime="{{ .Lastmod.Format "2006-01-02" }}">{{ .Lastmod.Format "January 2, 2006" }}</time>
   {{- end }}
 </p>
+{{- end }}
