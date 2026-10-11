@@ -21,9 +21,8 @@
 {{ end }}
 <link rel="canonical" href="{{ .Permalink }}">
 
-<!-- Font preloading -->
+<!-- Font preloading. JetBrains Mono is left to load on demand: only posts with code use it. -->
 <link rel="preload" href="/fonts/InterVariable.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/fonts/JetBrainsMono-Regular.woff2" as="font" type="font/woff2" crossorigin>
 
 {{- /* Stylesheets: plain in development, minified + fingerprinted in production. */ -}}
 {{ $sheets := slice
