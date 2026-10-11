@@ -3,7 +3,7 @@ date = '2025-04-02T07:47:37-07:00'
 draft = false
 title = 'Understanding JCR in AEM'
 description = "A beginner-friendly analogy that breaks down AEM's content repository by stacking concepts like LEGO bricks—literally"
-tags = ['AEM', 'JCR', 'Content Repository']
+tags = ['aem', 'jcr', 'content-repository']
 cover = 'header.jpg'
 slug = 'understanding-jcr-in-aem'
 +++

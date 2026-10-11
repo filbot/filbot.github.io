@@ -25,6 +25,15 @@ enableRobotsTXT = true
 [markup.goldmark.parser]
   wrapStandAloneImageWithinParagraph = false
 
+# "More projects" at the end of each post, matched on shared tags.
+[related]
+  includeNewer = true
+  threshold = 20
+  toLower = true
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
 [[menu.header]]
   name = "About"
   url = "/about/"

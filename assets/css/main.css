@@ -2610,3 +2610,24 @@ p.site-header__title {
   color: var(--pico-muted-color);
   margin-bottom: var(--space-md);
 }
+
+/* "More projects" list at the end of a post */
+.related {
+  margin-top: var(--space-3xl);
+}
+.related ul {
+  padding: 0;
+  list-style: none;
+}
+.related li {
+  list-style: none;
+  margin-bottom: var(--space-lg);
+}
+.related li a {
+  font-weight: 600;
+}
+.related li p {
+  margin: var(--space-xs) 0 0;
+  color: var(--pico-muted-color);
+  font-size: var(--text--1);
+}

@@ -3,7 +3,7 @@ date = '2026-02-10T16:34:28-07:00'
 draft = true
 title = 'E-Ink Habit Tracker'
 description = 'Simple one button habit tracker powered by a Raspberry Pi W 2.'
-tags = ['button', 'display', 'eink', 'raspberrypi']
+tags = ['button', 'display', 'eink', 'raspberry-pi']
 cover = 'wyao-device.jpg'
 slug = 'e-ink-habit-tracker'
 +++
