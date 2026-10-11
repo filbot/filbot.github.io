@@ -61,10 +61,18 @@ Then reference them in your markdown using shortcodes:
 {{< video src="demo.mp4" >}}
 ```
 
-Images are automatically resized, converted to WebP, given a `srcset`, and
-lazy-loaded with explicit dimensions so the page doesn't jump as they load. The
-`alt` attribute is worth filling in — it's what screen readers announce. A
-missing image now fails the build loudly rather than emitting a broken `<img>`.
+Plain Markdown images work too, and get the same treatment. The optional quoted
+title becomes the caption:
+
+```
+![Close-up of the wiring](wiring-closeup.png "Final wiring")
+```
+
+Images are automatically resized, converted to AVIF and WebP, given a `srcset`,
+and sized explicitly so the page doesn't jump as they load. The first image in a
+post loads right away and the rest load as you scroll. The `alt` attribute is
+worth filling in, since it's what screen readers announce. A missing image now fails
+the build loudly rather than emitting a broken `<img>`.
 
 Phone photos carry GPS coordinates and other camera metadata, and this repo is
 public. Before committing new photos, run:
@@ -122,6 +130,18 @@ published URL, add the old one to `aliases` so the old link keeps working:
 
 ```toml
 aliases = ['/the-old-url/']
+```
+
+### Tags and dates
+
+Tags pick the "More projects" links at the end of each post, so reuse existing
+ones where they fit and keep them lowercase and hyphenated (`raspberry-pi`).
+
+Posts show their publish date. To show an "Updated" date after a real change,
+add it to the post metadata:
+
+```toml
+lastmod = '2026-10-11'
 ```
 
 ### Drafts
