@@ -66,6 +66,19 @@ lazy-loaded with explicit dimensions so the page doesn't jump as they load. The
 `alt` attribute is worth filling in — it's what screen readers announce. A
 missing image now fails the build loudly rather than emitting a broken `<img>`.
 
+Phone photos carry GPS coordinates and other camera metadata, and this repo is
+public. Before committing new photos, run:
+
+```sh
+scripts/clean-images.py content/projects/my-post-name
+```
+
+It strips all metadata and shrinks anything larger than 2560px on the long
+edge. It needs Pillow (`pip install pillow`) and exiftool
+(`brew install exiftool`). The deploy fails if a photo or video with GPS data
+gets pushed anyway. Only the resized copies are published to the site; the
+originals stay in the repo.
+
 ### Videos
 
 Keep videos to **1080p H.264 MP4**, encoded with `+faststart` so playback can
@@ -76,8 +89,10 @@ re-encoded. Convert before committing:
 ```sh
 ffmpeg -i clip.mov -vf "scale=-2:'min(1080,ih)'" \
   -c:v libx264 -crf 23 -preset slow -pix_fmt yuv420p \
-  -c:a aac -b:a 128k -movflags +faststart clip.mp4
+  -c:a aac -b:a 128k -movflags +faststart -map_metadata -1 clip.mp4
 ```
+
+`-map_metadata -1` drops the clip's metadata, including where it was filmed.
 
 If you drop a `demo-poster.jpg` next to `demo.mp4`, the shortcode picks it up
 automatically as the video's poster frame — no extra markup needed.
@@ -133,6 +148,7 @@ layouts/           HTML templates
   partials/        Reusable pieces (head, header, footer, etc.)
   shortcodes/      Custom markdown helpers (img, video)
   projects/        Post-specific template
+scripts/           clean-images.py (strip photo metadata, cap size)
 static/            Files served as-is (fonts, favicon, CNAME)
 hugo.toml          Site configuration
 ```
@@ -145,6 +161,10 @@ The workflow pins a Hugo version (`HUGO_VERSION`). Keep it in step with the Hugo
 you run locally, or a template that works on your machine can fail in CI. The
 custom domain is held by `static/CNAME`, so it survives even if the repo's Pages
 setting is ever reset.
+
+The workflow checks the Hugo download against its published checksum, and the
+GitHub Actions it uses are pinned to exact commits. Dependabot opens a monthly
+PR when those Actions have new releases. Bump `HUGO_VERSION` by hand.
 
 ## Editing the styles
 
