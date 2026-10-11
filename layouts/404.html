@@ -1,6 +1,16 @@
 {{ define "main" }}
 <section class="not-found-404">
-  <h1>404</h1> 
-  <p>{{ $.Site.Params.missingContentMessage | default "Page not found..." }}</p>
+  <h1>404</h1>
+  <p>{{ site.Params.missingContentMessage | default "That page doesn't exist, or it moved." }}</p>
 </section>
+{{ with first 3 (where site.RegularPages "Section" "projects").ByDate.Reverse }}
+  <section class="home-projects" aria-labelledby="recent-projects">
+    <h2 id="recent-projects" class="section-eyebrow">Recent Projects</h2>
+    <div class="project-list">
+      {{ range . }}
+        {{ partial "project-card.html" (dict "page" . "eager" false) }}
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
 {{ end }}
