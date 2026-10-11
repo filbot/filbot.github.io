@@ -143,10 +143,9 @@ assets/            Processed at build time
 content/           All the posts and pages
   projects/        Blog posts (each in its own folder)
   about.md         The about page
-layouts/           HTML templates
-  _default/        Base page wrappers
-  partials/        Reusable pieces (head, header, footer, etc.)
-  shortcodes/      Custom markdown helpers (img, video)
+layouts/           HTML templates (baseof, home, single, 404)
+  _partials/       Reusable pieces (head, header, footer, etc.)
+  _shortcodes/     Custom markdown helpers (img, video)
   projects/        Post-specific template
 scripts/           clean-images.py (strip photo metadata, cap size)
 static/            Files served as-is (fonts, favicon, CNAME)
